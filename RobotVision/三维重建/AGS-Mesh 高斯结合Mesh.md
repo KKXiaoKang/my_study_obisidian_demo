@@ -29,7 +29,7 @@ python train.py -s dataset/room_datasets/vr_room/iphone/ --model_path output/mus
 ```bash
 # use isooctree-based mesh extraction
 ## first get rendered training image
-python render.py -m output/mushroom/vr_room -s dataset/room_datasets/vr_room/iphone/  --iteration 30000 --skip_mesh  --skip_test
+python render.py -m output/mushroom/vr_room -s dataset/room_datasets/vr_room/iphone/ --iteration 30000 --skip_mesh --skip_test
 
 
 ## get mesh with IsoOctree-based method 
