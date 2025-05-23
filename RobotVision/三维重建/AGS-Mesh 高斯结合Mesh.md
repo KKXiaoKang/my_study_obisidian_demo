@@ -25,3 +25,14 @@ cd /home/lab/3D_Gaussian_Splatting/AGS_Mesh
 # 模型训练（model_path指向生成的深度掩码output的位置）
 python train.py -s dataset/room_datasets/vr_room/iphone/ --model_path output/mushroom/vr_room --depth_supervision --normal_supervision 
 ```
+
+```bash
+# use isooctree-based mesh extraction
+## first get rendered training image
+python render.py -m output/mushroom/vr_room -s dataset/room_datasets/vr_room/iphone/  --iteration 30000 --skip_mesh  --skip_test
+
+
+## get mesh with IsoOctree-based method 
+### mushroom
+python isooctree.py  output/MuSHRoom/vr_room/train/ours_30000/ --transformation_path dataset/room_datasets/vr_room/iphone/long_capture/transformations_colmap.json --tsdf_rel 0.03 --output_mesh_file output.ply --subdivision_threshold=100
+```
