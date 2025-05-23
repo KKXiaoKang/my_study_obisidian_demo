@@ -126,7 +126,7 @@ I0428 14:23:30.628822 523255 incremental_pipeline.cc:408] => Image sees 438 / 57
 
 ```
 # 二、开始训练
-## 开始进行高斯球的参数优化
+## 开始进行高斯球的参数优化 - 参数优化
 ```bash
 
 python3 train.py -s data/crane/
