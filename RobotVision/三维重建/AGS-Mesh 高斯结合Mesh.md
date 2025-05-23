@@ -26,6 +26,7 @@ cd /home/lab/3D_Gaussian_Splatting/AGS_Mesh
 python train.py -s dataset/room_datasets/vr_room/iphone/ --model_path output/mushroom/vr_room --depth_supervision --normal_supervision 
 ```
 
+#### 获取深度图，提取mesh网格
 ```bash
 # use isooctree-based mesh extraction
 ## first get rendered training image
@@ -36,3 +37,7 @@ python render.py -m output/mushroom/vr_room -s dataset/room_datasets/vr_room/iph
 ### mushroom
 python isooctree.py output/mushroom/vr_room/train/ours_30000 --transformation_path dataset/room_datasets/vr_room/iphone/long_capture/transformations_colmap.json --tsdf_rel 0.03 --output_mesh_file output.ply --subdivision_threshold=100
 ```
+
+#### 生成的网格没有进行强uv纹理强绑定 顶点没有颜色信息
+![[Pasted image 20250523143602.png]]
+![[Pasted image 20250523143539.png]]
