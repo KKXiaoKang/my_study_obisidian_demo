@@ -34,5 +34,5 @@ python render.py -m output/mushroom/vr_room -s dataset/room_datasets/vr_room/iph
 
 ## get mesh with IsoOctree-based method 
 ### mushroom
-python isooctree.py  output/MuSHRoom/vr_room/train/ours_30000/ --transformation_path dataset/room_datasets/vr_room/iphone/long_capture/transformations_colmap.json --tsdf_rel 0.03 --output_mesh_file output.ply --subdivision_threshold=100
+python isooctree.py output/mushroom/vr_room/train/ours_30000 --transformation_path dataset/room_datasets/vr_room/iphone/long_capture/transformations_colmap.json --tsdf_rel 0.03 --output_mesh_file output.ply --subdivision_threshold=100
 ```
