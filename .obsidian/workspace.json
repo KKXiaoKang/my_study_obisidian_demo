@@ -11,17 +11,30 @@
             "id": "b37a5f3d3744cb6a",
             "type": "leaf",
             "state": {
+              "type": "image",
+              "state": {
+                "file": "Robotmanipulation/Imitation learning/IMG/38427f17b969e6342f23005284e5e691.jpg"
+              },
+              "icon": "lucide-image",
+              "title": "38427f17b969e6342f23005284e5e691"
+            }
+          },
+          {
+            "id": "adbb8d9b4530e638",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotSim/机器人base_link预备姿态.md",
+                "file": "Robotmanipulation/Imitation learning/※ ACT -  Action Chunking Transformer.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "机器人base_link预备姿态"
+              "title": "※ ACT -  Action Chunking Transformer"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -180,10 +193,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b37a5f3d3744cb6a",
+  "active": "adbb8d9b4530e638",
   "lastOpenFiles": [
-    "RobotVision/三维重建/3D_Gaussian/splatviz - 高斯离线本地可视化渲染器.md",
+    "Robotmanipulation/Imitation learning/IMG/38427f17b969e6342f23005284e5e691.jpg",
+    "Robotmanipulation/Imitation learning/IMG/42117e812e50c95b7cdfff131bfb7f58.jpg",
+    "Robotmanipulation/Imitation learning/※ ACT -  Action Chunking Transformer.md",
+    "Robotmanipulation/Imitation learning/IMG/e4a3e17905646a97bdb06334d854cee9.jpg",
     "RobotSim/机器人base_link预备姿态.md",
+    "RobotVision/三维重建/3D_Gaussian/splatviz - 高斯离线本地可视化渲染器.md",
     "RobotVision/三维重建/AGS-Mesh 高斯结合Mesh.md",
     "RobotVision/三维重建/IMG/Pasted image 20250523143539.png",
     "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
@@ -207,10 +224,7 @@
     "RobotVision/工具流讲解/IMG/Pasted image 20250514175234.png",
     "RobotVision/工具流讲解/IMG/Pasted image 20250514175436.png",
     "RobotVision/工具流讲解/IMG/Pasted image 20250514175629.png",
-    "RobotVision/工具流讲解/IMG/Pasted image 20250514175249.png",
-    "RobotVision/SLAM/IMG/Pasted image 20250513141611.png",
     "RobotVision/SLAM/MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM.md",
-    "RobotVision/工具流讲解/IMG/Pasted image 20250514175618.png",
     "RobotVision/SLAM/IMG",
     "RobotVision/SLAM",
     "RobotVision/工具流讲解/IMG",
@@ -226,8 +240,6 @@
     "RobotVision/高精度地图测绘",
     "Robotmanipulation/优化规划/ESDF - 多球模型.md",
     "RobotDynamic/最优估计/多接触惯性参数估计/未知负载下 - 估计机器人自身位置.md",
-    "Robot工具/添加catkin_tools权限/catkin tools.md",
-    "Robot工具/零点标定优化问题/优化问题.md",
     "未命名.canvas"
   ]
 }
