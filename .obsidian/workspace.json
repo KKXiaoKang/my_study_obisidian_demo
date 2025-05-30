@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#AE架构如下",
+                "query": "tag:#VAE架构",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -180,8 +180,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b37a5f3d3744cb6a",
+  "active": "86eaf77f5f480c18",
   "lastOpenFiles": [
+    "Robotmanipulation/Imitation learning/编码器/IMG/Pasted image 20250530125141.png",
+    "Robotmanipulation/Imitation learning/编码器/IMG/Pasted image 20250530124846.png",
     "Robotmanipulation/Imitation learning/编码器/IMG/Pasted image 20250530120758.png",
     "Robotmanipulation/Imitation learning/编码器/IMG/Pasted image 20250530120549.png",
     "Robotmanipulation/Imitation learning/编码器/AE - 自动编码器.md",
@@ -201,9 +203,7 @@
     "RobotSim/机器人base_link预备姿态.md",
     "RobotVision/三维重建/3D_Gaussian/splatviz - 高斯离线本地可视化渲染器.md",
     "RobotVision/三维重建/AGS-Mesh 高斯结合Mesh.md",
-    "RobotVision/三维重建/IMG/Pasted image 20250523143539.png",
     "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
-    "RobotVision/三维重建/IMG/Pasted image 20250523143602.png",
     "RobotVision/三维重建/3D_Gaussian/3D GS 训练过程 - 3DGS散点ply训练.md",
     "未命名.md",
     "RobotVision/三维重建/3D_Gaussian/3D Gaussian Splatting 原理.md",
