@@ -21,4 +21,11 @@
 VAE的loss函数
 * 1. 为了让输出和输入尽可能像，所以要让输出和输入的差距尽可能小，此部分用MSELoss来计算，即最小化MSELoss
 * 2. 训练过程当中，如果仅使输入和输出的误差尽可能小，那么随着不断训练，会使得σσ趋近于0，这样就使得VAE越来越像AE，丢失了随机性。对数据产生了过拟合，编码的噪声也会消失，导致无法生成未见过的数据(为了解决这个问题，我们要对μμ和σσ加以约束，使其构成的正态分布尽可能像标准正态分布，具体做法是计算N(μ,σ2)N(μ,σ2)与N(0,1)N(0,1)之间的KL散度，即最小化下式)
-$$ \mathrm{KL}(\mathcal{N}(\mu, \sigma^2) \,\|\, \mathcal{N}(0, 1)) = \frac{1}{2} \left( -\log \sigma^2 + \mu^2 + \sigma^2 - 1 \right $$
+$$
+\mathrm{KL}(\mathcal{N}(\mu, \sigma^2) \,\|\, \mathcal{N}(0, 1)) = \frac{1}{2} \left( -\log \sigma^2 + \mu^2 + \sigma^2 - 1 \right)
+$$
+
+#### KL散度计算（求导技巧）
+具体的code是从正态分布采样得到的，此时的这个采样的操作是不可导的，这会导致在反向传播时$Z$对$\mu$和$\sigma$无法直接求导，因此这里用到一个trick：重参数化技巧（reparametrize）。具体思想是：
+*  从$\mathcal{N}(0, 1)$ 当中采样一个$\varepsilon$    , 然后 $Z = \mu + \varepsilon \times \sigma$ ，相当于直接从$\mathcal{N}(\mu, \sigma^2)$ 采样$Z$ 
+![[Pasted image 20250530133940.png]]
