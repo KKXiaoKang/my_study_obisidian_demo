@@ -25,3 +25,20 @@
 ##### 3)回环检测和全局优化
 ![[Pasted image 20250513143728.png]]    图 3：MASt3R-SLAM 的系统图。新图像通过预测 MASt3R 的点云图并使用我们高效的迭代投影点云图匹配来找到像素匹配，与当前关键帧进行跟踪。跟踪估计当前姿态并执行局部点云图融合。当新关键帧添加到后端时，通过使用编码的 MASt3R 特征查询检索数据库来选择回环关闭候选者。候选者由 MASt3R 解码，如果找到足够数量的匹配，则将边添加到后端图中。大规模二阶优化实现姿态和密集几何的全局一致性
 ![[Pasted image 20250513153805.png]]
+
+
+#### 构建过程
+##### （1） 准备MP4视频，同时将其分割为png
+```bash
+ffmpeg -i VID_20250611_165341.mp4 -qscale:v 1 -qmin 1 -vf fps=4 %04d.png
+```
+
+##### （2）实时重建
+ *  无需相机内参，直接使用图片
+```bash
+python3 main.py --dataset datasets/our_data/new_huawei_scene_dp_train --config config/base.yaml
+```
+* realsense相机使用相机内参
+```bash
+python3 main.py --dataset datasets/our_data/realsense_DP_train --config config/base.yaml --calib config/intrinsics_realsense.yaml
+```
