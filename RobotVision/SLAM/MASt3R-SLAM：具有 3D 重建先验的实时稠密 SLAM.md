@@ -33,7 +33,7 @@
 ffmpeg -i VID_20250611_165341.mp4 -qscale:v 1 -qmin 1 -vf fps=4 %04d.png
 ```
 
-##### （2）实时重建
+##### （2）实时重建ply
  *  无需相机内参，直接使用图片
 ```bash
 python3 main.py --dataset datasets/our_data/new_huawei_scene_dp_train --config config/base.yaml
@@ -42,3 +42,10 @@ python3 main.py --dataset datasets/our_data/new_huawei_scene_dp_train --config c
 ```bash
 python3 main.py --dataset datasets/our_data/realsense_DP_train --config config/base.yaml --calib config/intrinsics_realsense.yaml
 ```
+
+##### (3) 重建mesh 
+* 自用泊松重建
+```bash
+python3 tool_ply2mesh_only_ply.py
+```
+* 商用软件可使用CloudCompare进行泊松重建
