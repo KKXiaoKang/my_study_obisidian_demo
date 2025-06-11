@@ -48,7 +48,7 @@ python3 main.py --dataset datasets/our_data/realsense_DP_train --config config/b
 * 自用泊松重建
 ```bash
 # lab @ lab in ~/SLAM/MASt3R-SLAM/logs on git:main x [17:38:39] 
-$ python3 tool_ply2mesh_only_ply.py new_huawei_scene_act_train.ply --depth 10 --visualize --use_gpu 
+$ python3 tool_ply2mesh_only_ply.py new_huawei_scene_act_train.ply --depth 11 --visualize --use_gpu
 :: 检测到GPU支持! 可用GPU设备数: 1
 :: 加载点云: new_huawei_scene_act_train.ply
 :: 原始点云包含 8837722 个点

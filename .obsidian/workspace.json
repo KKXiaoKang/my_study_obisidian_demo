@@ -35,7 +35,8 @@
               "title": "MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -194,10 +195,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b37a5f3d3744cb6a",
+  "active": "dea3503d6ec3f784",
   "lastOpenFiles": [
-    "RobotVision/SLAM/MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM.md",
     "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
+    "RobotVision/SLAM/MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM.md",
     "RobotVision/SLAM/IMG/Pasted image 20250611174007.png",
     "RobotVision/SLAM/IMG/Pasted image 20250513153805.png",
     "RobotVision/SLAM/IMG/Pasted image 20250513143728.png",
