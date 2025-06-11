@@ -3,7 +3,7 @@
 *  通过open3d泊松重建为mesh面，带颜色的obj文件
 *  使用meshlab软件提取obj当中的颜色纹理特征
 
-### 构建带颜色的ply点云文件
+#构建带颜色的ply点云文件
 *  带RGB的点云文件
 ![[Pasted image 20250514171543.png]]
 

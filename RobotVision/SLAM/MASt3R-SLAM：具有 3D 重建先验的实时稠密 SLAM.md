@@ -44,6 +44,7 @@ python3 main.py --dataset datasets/our_data/realsense_DP_train --config config/b
 ```
 ![[Pasted image 20250611174007.png]]
 ##### (3) 重建mesh 
+###### 先重建为obj文件
 * 自用泊松重建
 ```bash
 # lab @ lab in ~/SLAM/MASt3R-SLAM/logs on git:main x [17:38:39] 
@@ -54,3 +55,6 @@ $ python3 tool_ply2mesh_only_ply.py new_huawei_scene_act_train.ply --depth 10 --
 :: 计算法线...
 ```
 * 商用软件可使用CloudCompare进行泊松重建
+
+###### 使用meshlab烘烤纹理
+* #构建带颜色的ply点云文件 

@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "a17dcd8e904118cd",
+            "id": "dea3503d6ec3f784",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -35,8 +35,7 @@
               "title": "MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -68,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "MASt3R",
+                "query": "tag:#构建带颜色的ply点云文件",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -195,11 +194,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a17dcd8e904118cd",
+  "active": "b37a5f3d3744cb6a",
   "lastOpenFiles": [
-    "RobotVision/SLAM/IMG/Pasted image 20250611174007.png",
-    "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
     "RobotVision/SLAM/MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM.md",
+    "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
+    "RobotVision/SLAM/IMG/Pasted image 20250611174007.png",
     "RobotVision/SLAM/IMG/Pasted image 20250513153805.png",
     "RobotVision/SLAM/IMG/Pasted image 20250513143728.png",
     "RobotVision/SLAM/IMG/Pasted image 20250513141611.png",
@@ -214,7 +213,6 @@
     "Robotmanipulation/Imitation learning/编码器/IMG/Pasted image 20250530120758.png",
     "Robotmanipulation/Imitation learning/编码器/IMG/Pasted image 20250530120549.png",
     "Robotmanipulation/Imitation learning/IMG/Pasted image 20250530114410.png",
-    "Pasted image 20250530113505.png",
     "Robotmanipulation/Imitation learning/编码器/IMG",
     "RobotVision/SLAM+GS/HI-SLAM2.md",
     "Robotmanipulation/Imitation learning/编码器",
