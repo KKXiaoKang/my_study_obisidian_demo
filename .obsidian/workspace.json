@@ -225,10 +225,10 @@
   },
   "active": "79df426215a7a04d",
   "lastOpenFiles": [
-    "RobotVision/三维重建/3D_Gaussian/3D GS 导入场景 Omniverse - 仅用于背景像素渲染.md",
-    "RobotRL/stable-baselines3 框架解析/common.base_class.BaseAlgorithm.md",
     "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
     "RobotVision/SLAM/MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM.md",
+    "RobotVision/三维重建/3D_Gaussian/3D GS 导入场景 Omniverse - 仅用于背景像素渲染.md",
+    "RobotRL/stable-baselines3 框架解析/common.base_class.BaseAlgorithm.md",
     "RobotVision/三维重建/3D_Gaussian/3D GS 训练过程 - 3DGS散点ply训练.md",
     "RobotVision/三维重建/3D_Gaussian/Gaussian Opacity Fields - 高斯不透明度场.md",
     "RobotVision/三维重建/3D_Gaussian/splatviz - 高斯离线本地可视化渲染器.md",

@@ -1,5 +1,7 @@
 {
   "theme": "obsidian",
-  "cssTheme": "Vicious",
-  "accentColor": ""
+  "cssTheme": "Blue Topaz",
+  "accentColor": "",
+  "baseFontSize": 16,
+  "baseFontSizeAction": true
 }
