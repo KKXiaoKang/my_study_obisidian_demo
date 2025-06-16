@@ -1,4 +1,4 @@
-### QN 讲解
+### Q learning 讲解
 * 这是一个[Flappy Bird](https://zhida.zhihu.com/search?content_id=120377040&content_type=Article&match_order=1&q=Flappy+Bird&zhida_source=entity)小游戏
 ![[Pasted image 20250616153000.png]]
 * **状态State**：将每一帧作为一个状态，取小鸟离下一个地面上柱子在水平和竖直方向上的距离作为状态的观测值，即下图中的(△x, △y)；
