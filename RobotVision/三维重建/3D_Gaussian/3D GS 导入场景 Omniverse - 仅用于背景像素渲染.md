@@ -5,7 +5,7 @@
     - （1）VanillaGS - 作为后端渲染器
     - （2）Isaac-Lab - 作为前端可视化插件
 * ![[Pasted image 20250430113713.png]]
-> 注意，该工作基于Docker镜像工作，IsaacLab仅仅作为可视化RGB前端
+> 注意，该工作基于Docker镜像工作，IsaacLab仅仅作为可视化RGB前端 
 *  优点：作为静态场景可以很快的引入到IsaacLab的场景当中，具有高拟真的RGB信息
  * 缺点：不具备Depth深度信息，在场景当中无法拥有碰撞属性进行交互（在IsaacLab当中需要使用mesh文件作为碰撞的交互信息）
 ### GS-To-PC
