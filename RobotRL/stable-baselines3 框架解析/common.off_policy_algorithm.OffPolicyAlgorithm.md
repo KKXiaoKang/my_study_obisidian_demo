@@ -1,11 +1,11 @@
-* 定义：所有RL算法的通用接口
-
+*  基础离线策略的实现类，比如（`SAC`）和 （`TD3`）
+*  继承于`BaseAlgorithm`
 ```python
-class BaseAlgorithm(ABC):
+class OffPolicyAlgorithm(BaseAlgorithm):
 
 """
 
-The base of RL algorithms
+The base for Off-Policy algorithms (ex: SAC/TD3)
 
   
 
@@ -18,6 +18,42 @@ The base of RL algorithms
 :param learning_rate: learning rate for the optimizer,
 
 it can be a function of the current progress remaining (from 1 to 0)
+
+:param buffer_size: size of the replay buffer
+
+:param learning_starts: how many steps of the model to collect transitions for before learning starts
+
+:param batch_size: Minibatch size for each gradient update
+
+:param tau: the soft update coefficient ("Polyak update", between 0 and 1)
+
+:param gamma: the discount factor
+
+:param train_freq: Update the model every ``train_freq`` steps. Alternatively pass a tuple of frequency and unit
+
+like ``(5, "step")`` or ``(2, "episode")``.
+
+:param gradient_steps: How many gradient steps to do after each rollout (see ``train_freq``)
+
+Set to ``-1`` means to do as many gradient steps as steps done in the environment
+
+during the rollout.
+
+:param action_noise: the action noise type (None by default), this can help
+
+for hard exploration problem. Cf common.noise for the different action noise type.
+
+:param replay_buffer_class: Replay buffer class to use (for instance ``HerReplayBuffer``).
+
+If ``None``, it will be automatically selected.
+
+:param replay_buffer_kwargs: Keyword arguments to pass to the replay buffer on creation.
+
+:param optimize_memory_usage: Enable a memory efficient variant of the replay buffer
+
+at a cost of more complexity.
+
+See https://github.com/DLR-RM/stable-baselines3/issues/37#issuecomment-637501195
 
 :param policy_kwargs: Additional arguments to be passed to the policy on creation
 
@@ -47,7 +83,7 @@ or not in a Monitor wrapper.
 
 :param seed: Seed for the pseudo random generators
 
-:param use_sde: Whether to use generalized State Dependent Exploration (gSDE)
+:param use_sde: Whether to use State Dependent Exploration (SDE)
 
 instead of action noise exploration (default: False)
 
@@ -55,37 +91,25 @@ instead of action noise exploration (default: False)
 
 Default: -1 (only sample at the beginning of the rollout)
 
+:param use_sde_at_warmup: Whether to use gSDE instead of uniform sampling
+
+during the warm up phase (before learning starts)
+
+:param sde_support: Whether the model support gSDE or not
+
 :param supported_action_spaces: The action spaces supported by the algorithm.
 
 """
 ```
-
 #### 基础参数Parameters解析
+##### 父类继承
 * ***policy** `[str, type[BasePolicy]] `
     * 基础策略模型，比如 MlpPolicy CnnPolicy
 * ***env**  `[GymEnv, str, None]`
     * 学习所用的环境，如果已注册在Gym当中，可以是str。也可以是加载训练好的模型而设为None
 * ***learning_rate** `[float |Callable[float]]`
     *  优化器的学习率，可以是当前剩余进度（从 1 到 0）的函数
-* ***policy_kwargs** `[dict [str,Any] | None]`
-    *   策略参数 (dict[str, Any] | None) – 创建策略时传递的额外参数
-* ***stats_window_size**  `[int]`
-    * 状态窗口大小 (int) – 推理日志的窗口大小，指定要平均报告的成功率、平均回合长度和平均奖励的回合数量
-* ***tensorboard_log**   `(str | None)`
-    *  tensorboard 日志 (str | None) – tensorboard 的日志位置（如果为 None，则不进行日志记录）
-* ***verbose**  `(int)`
-    *  verbose (int) – 日志级别：0 表示不输出，1 表示输出信息（如设备或包装器使用情况），2 表示输出调试信息
-* ***device** `[device | int]`
-    *  device (device | str) – 代码应运行的设备。默认情况下，会尝试使用兼容 Cuda 的设备，如果不可行则回退到 CPU
-* ***support_multi_env** `[bool]`
-    *  – 算法是否支持使用多个环境进行训练（比如`A2C`）
-* ***monitor_wrapper** `[bool]`
-    * 在创建环境时，是否用`Monitor`包装器进行包装
-* ***seed** `[int | None]`
-    * 随机数生成的种子
-* ***use_sde** `[bool]`
-    *  是否使用广义状态依赖探索（gSDE）而不是动作噪声探索（默认：False）
-* ***sde_sample_freq** `[int]`
-    *  使用 gSDE 时，每 n 步采样一个新的噪声矩阵。默认：-1（仅在展开开始时采样）
-*  ***supported_action_spaces** `[tuple[type[Space],...] | None ]`
-    *  算法支持的动作空间。
+
+##### 本类特有
+* ***buffer_size** `[int]`
+    *   回放缓冲区的大小
