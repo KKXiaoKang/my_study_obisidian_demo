@@ -61,8 +61,31 @@ Default: -1 (only sample at the beginning of the rollout)
 ```
 
 #### 基础参数Parameters解析
-* **policy** `[str, type[BasePolicy]] `
+* ***policy** `[str, type[BasePolicy]] `
     * 基础策略模型，比如 MlpPolicy CnnPolicy
-*  **env**  `[GymEnv, str, None]`
+* ***env**  `[GymEnv, str, None]`
     * 学习所用的环境，如果已注册在Gym当中，可以是str。也可以是加载训练好的模型而设为None
-*  **learning_rate** 
+* ***learning_rate** `[float |Callable[float]]`
+    *  优化器的学习率，可以是当前剩余进度（从 1 到 0）的函数
+* ***policy_kwargs** `[dict [str,Any] | None]`
+    *   策略参数 (dict[str, Any] | None) – 创建策略时传递的额外参数
+* ***stats_window_size**  `[int]`
+    * 状态窗口大小 (int) – 推理日志的窗口大小，指定要平均报告的成功率、平均回合长度和平均奖励的回合数量
+* ***tensorboard_log**   `(str | None)`
+    *  tensorboard 日志 (str | None) – tensorboard 的日志位置（如果为 None，则不进行日志记录）
+* ***verbose**  `(int)`
+    *  verbose (int) – 日志级别：0 表示不输出，1 表示输出信息（如设备或包装器使用情况），2 表示输出调试信息
+* ***device** `[device | int]`
+    *  device (device | str) – 代码应运行的设备。默认情况下，会尝试使用兼容 Cuda 的设备，如果不可行则回退到 CPU
+* ***support_multi_env** `[bool]`
+    *  – 算法是否支持使用多个环境进行训练（比如`A2C`）
+* ***monitor_wrapper** `[bool]`
+    * 在创建环境时，是否用`Monitor`包装器进行包装
+* ***seed** `[int | None]`
+    * 随机数生成的种子
+* ***use_sde** `[bool]`
+    *  是否使用广义状态依赖探索（gSDE）而不是动作噪声探索（默认：False）
+* ***sde_sample_freq** `[int]`
+    *  使用 gSDE 时，每 n 步采样一个新的噪声矩阵。默认：-1（仅在展开开始时采样）
+*  ***supported_action_spaces** `[tuple[type[Space],...] | None ]`
+    *  
