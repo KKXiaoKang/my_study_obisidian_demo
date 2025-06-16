@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -223,10 +223,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5ed23f53f1f9b131",
+  "active": "79df426215a7a04d",
   "lastOpenFiles": [
-    "RobotRL/Q-learing变化表.md",
     "RobotRL/Deep Q Net-work.md",
+    "RobotRL/IMG/Pasted image 20250616173015.png",
+    "RobotRL/Q-learing变化表.md",
     "RobotRL/IMG/Pasted image 20250616171617.png",
     "RobotVision/SLAM/MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM.md",
     "RobotRL/Agent - basepipeline.md",
@@ -252,7 +253,6 @@
     "RobotRL",
     "RobotVision/SLAM/IMG/Pasted image 20250611174007.png",
     "RobotVision/SLAM/IMG/Pasted image 20250513153805.png",
-    "RobotVision/SLAM/IMG/Pasted image 20250513143728.png",
     "Robotmanipulation/Imitation learning/编码器/VAE - 变分自动编码器.md",
     "Robotmanipulation/Imitation learning/编码器/CVAE - 差分变分自动编码器.md",
     "Robotmanipulation/Imitation learning/编码器/AE - 自动编码器.md",
