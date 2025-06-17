@@ -69,16 +69,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotRL/Deep Q Net-work.md",
+                "file": "RobotRL/stable-baselines3 框架解析/common.base_class.BaseAlgorithm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Deep Q Net-work"
+              "title": "common.base_class.BaseAlgorithm"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -237,13 +237,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4a730b234caa01b5",
+  "active": "5ed23f53f1f9b131",
   "lastOpenFiles": [
+    "RobotRL/stable-baselines3 框架解析/common.base_class.BaseAlgorithm.md",
     "RobotRL/stable-baselines3 框架解析/common.off_policy_algorithm.OffPolicyAlgorithm.md",
+    "RobotRL/Deep Q Net-work.md",
+    "RobotRL/DQN 变换表.md",
     "RobotVision/SLAM/MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM.md",
     "RobotRL/Agent - basepipeline.md",
-    "RobotRL/DQN 变换表.md",
-    "RobotRL/Deep Q Net-work.md",
     "RobotRL/Q-learing变化表.md",
     "RobotRL/IMG/Pasted image 20250616181518.png",
     "RobotRL/SAC - (actor-Critic 架构).md",
@@ -254,7 +255,6 @@
     "RobotRL/IMG/Pasted image 20250616153015.png",
     "RobotRL/IMG/Pasted image 20250616153000.png",
     "RobotRL/IMG/Pasted image 20250616151927.png",
-    "RobotRL/stable-baselines3 框架解析/common.base_class.BaseAlgorithm.md",
     "RobotRL/IMG/Pasted image 20250616150958.png",
     "RobotRL/IMG",
     "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
