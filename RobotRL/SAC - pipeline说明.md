@@ -53,13 +53,55 @@ clipped_obs = torch.clamp(normalized_obs, -10.0, 10.0)
 clipped_next_obs = torch.clamp(normalized_next_obs, -10.0, 10.0)
 ```
 
-#### 3) 更新Critic
+#### 3) 更新Critic评论家
+* ***calculate_loss_q** 函数就是计算Q值损失
+![[Pasted image 20250616171617.png]]
 ```python
+# 计算Q值损失
 q_loss = self.policy.calculate_loss_q(clipped_obs, actions, rewards, clipped_next_obs, dones, self.gamma)
 
+# 评论家
 self.policy.critic_optimizer.zero_grad()
 
+# 反向传播
 q_loss.backward()
 
+# 评论家step
 self.policy.critic_optimizer.step()
+```
+```python
+def calculate_loss_q(self, obs, actions, rewards, next_obs, dones, gamma):
+"""
+计算Q值损失
+:param obs: 当前状态
+:param actions: 当前动作
+:param rewards: 奖励
+:param next_obs: 下一个状态
+:param dones: 是否结束
+:param gamma: 折扣因子
+"""
+	# 目标网络无梯度计算Q值
+	with torch.no_grad():
+		next_actions, log_pi_next, _ = self.actor(next_obs)
+		target_q_values = self.critic_target(next_obs, next_actions)
+		target_q_min = target_q_values.min(1)[0]
+		target_q = rewards + (1 - dones) * gamma * (target_q_min - \
+		           self.get_alpha().detach() * log_pi_next)
+	# 当前网络计算Q值
+	current_q = self.critic(obs, actions) # [batch_size, n_critics]
+	# 计算Q值损失
+	q_loss = 0.5 * (current_q - target_q.unsqueeze(1)).pow(2).sum(dim=1).mean()
+	return q_loss
+```
+
+
+#### 4) 更新策略网络Actor
+```python
+alpha_loss = self.policy.calculate_loss_alpha(log_pi)
+
+self.policy.alpha_optimizer.zero_grad()
+
+alpha_loss.backward()
+
+self.policy.alpha_optimizer.step()
 ```
