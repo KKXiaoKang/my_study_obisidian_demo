@@ -98,10 +98,17 @@ def calculate_loss_q(self, obs, actions, rewards, next_obs, dones, gamma):
 #### 4) 更新策略网络Actor
 ```python
 alpha_loss = self.policy.calculate_loss_alpha(log_pi)
-
 self.policy.alpha_optimizer.zero_grad()
-
 alpha_loss.backward()
-
 self.policy.alpha_optimizer.step()
+```
+```python
+def calculate_loss_pi(self, obs):
+    actions, log_pi, _ = self.actor(obs)  # 从策略网络采样动作
+    q_values = self.critic(obs, actions)  # 评估该动作的 Q 值（多个critic）
+    min_q = q_values.min(1)[0]            # 取最小值，防止过估计
+    alpha = self.get_alpha()
+    # 策略损失 = α * log π - Q
+    loss_pi = (alpha * log_pi - min_q).mean()
+    return loss_pi
 ```
