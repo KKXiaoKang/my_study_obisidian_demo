@@ -1,6 +1,15 @@
 ![[Pasted image 20250616150958.png]]
 Soft Actor-Critic（SAC）是一种基于最大熵强化学习的off-policy算法，核心目标是在获得高回报的同时，最大化策略的熵（即探索性）。下面结合你给出的伪代码，详细解析其算法流程和核心逻辑：
 
+### SAC loss 函数
+## 🧠
+
+$$
+\text{target}_Q = r + \gamma \cdot (1 - \text{done}) \cdot \left[ \min_i Q_{\text{target}}(s', a') - \alpha \cdot \log \pi(a'|s') \right]
+$$
+* 这和 SAC 的核心思想一致：**最大化预期回报 + 保持策略多样性（熵项）**。
+
+### SAC train流程如下
 ---
 
 ### 1. **初始化参数**

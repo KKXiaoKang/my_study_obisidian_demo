@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotRL/SAC - pipeline说明.md",
+                "file": "RobotRL/SAC - (actor-Critic 架构).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SAC - pipeline说明"
+              "title": "SAC - (actor-Critic 架构)"
             }
           },
           {
@@ -239,11 +239,11 @@
   },
   "active": "5ed23f53f1f9b131",
   "lastOpenFiles": [
+    "RobotRL/SAC - pipeline说明.md",
     "RobotRL/Deep Q Net-work.md",
     "RobotRL/DQN 变换表.md",
     "RobotRL/Q-learing变化表.md",
     "RobotRL/SAC - (actor-Critic 架构).md",
-    "RobotRL/SAC - pipeline说明.md",
     "未命名.md",
     "RobotRL/stable-baselines3 框架解析/common.off_policy_algorithm.OffPolicyAlgorithm.md",
     "RobotRL/未命名",
