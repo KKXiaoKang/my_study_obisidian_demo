@@ -54,8 +54,14 @@ clipped_next_obs = torch.clamp(normalized_next_obs, -10.0, 10.0)
 ```
 
 #### 3) 更新Critic评论家
-* ***calculate_loss_q** 函数就是计算Q值损失
-![[Pasted image 20250616171617.png]]
+* ***calculate_loss_q** 函数就是计算Q值损失(双目标Q网络，防止过高估计)
+    *  `最大化预期回报 + 保持策略多样性（熵项）`
+    * `目标Q值函数公式如下`
+$$
+\text{target}_Q = r + \gamma \cdot (1 - \text{done}) \cdot \left[ \min_i Q_{\text{target}}(s', a') - \alpha \cdot \log \pi(a'|s') \right]
+$$
+* 任意函数Q的损失函数定义如下
+![[Pasted image 20250618183018.png]]
 ```python
 # 计算Q值损失
 q_loss = self.policy.calculate_loss_q(clipped_obs, actions, rewards, clipped_next_obs, dones, self.gamma)
