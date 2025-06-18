@@ -54,3 +54,12 @@ clipped_next_obs = torch.clamp(normalized_next_obs, -10.0, 10.0)
 ```
 
 #### 3) 更新Critic
+```python
+q_loss = self.policy.calculate_loss_q(clipped_obs, actions, rewards, clipped_next_obs, dones, self.gamma)
+
+self.policy.critic_optimizer.zero_grad()
+
+q_loss.backward()
+
+self.policy.critic_optimizer.step()
+```
