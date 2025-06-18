@@ -60,7 +60,7 @@ clipped_next_obs = torch.clamp(normalized_next_obs, -10.0, 10.0)
 $$
 \text{target}_Q = r + \gamma \cdot (1 - \text{done}) \cdot \left[ \min_i Q_{\text{target}}(s', a') - \alpha \cdot \log \pi(a'|s') \right]
 $$
-* 任意函数Q的损失函数定义如下
+* 任意`函数Q的损失函数`定义如下
 ![[Pasted image 20250618183018.png]]
 ```python
 # 计算Q值损失
@@ -102,6 +102,11 @@ def calculate_loss_q(self, obs, actions, rewards, next_obs, dones, gamma):
 
 
 #### 4) 更新策略网络Actor
+* 策略函数的损失函数如下：
+
+$$
+\mathcal{L}_\pi = \mathbb{E}_{s \sim D,\, a \sim \pi(\cdot|s)} \left[ \alpha \cdot \log \pi(a|s) - Q(s, a) + \text{action penalty} \right]
+$$
 ```python
 alpha_loss = self.policy.calculate_loss_alpha(log_pi)
 self.policy.alpha_optimizer.zero_grad()
@@ -110,11 +115,38 @@ self.policy.alpha_optimizer.step()
 ```
 ```python
 def calculate_loss_pi(self, obs):
-    actions, log_pi, _ = self.actor(obs)  # 从策略网络采样动作
-    q_values = self.critic(obs, actions)  # 评估该动作的 Q 值（多个critic）
-    min_q = q_values.min(1)[0]            # 取最小值，防止过估计
-    alpha = self.get_alpha()
-    # 策略损失 = α * log π - Q
-    loss_pi = (alpha * log_pi - min_q).mean()
-    return loss_pi
+	"""
+	计算策略损失
+	:param obs: 当前状态
+	"""
+	actions_pi, log_pi, action_penalty = self.actor(obs) # 当前网络计算动作
+	q_values_pi = self.critic(obs, actions_pi)
+	min_qf_pi = q_values_pi.min(1)[0]
+	policy_loss = (self.get_alpha().detach() * log_pi - min_qf_pi + action_penalty).mean()
+	
+	return policy_loss, log_pi
 ```
+
+#### 5) 更新alpha - 更新熵参数
+```python
+def calculate_loss_alpha(self, log_pi):
+	alpha_loss = (-self.log_alpha * (log_pi + self.target_entropy).detach()).mean()
+	return alpha_loss
+```
+🧠 对应的数学公式
+这个损失函数对应的是下面这个目标的负梯度方向：
+$$
+\mathcal{L}_\alpha = \mathbb{E}_{a \sim \pi} \left[ \alpha \cdot \left( -\log \pi(a|s) - \mathcal{H}_{\text{target}} \right) \right]
+$$
+令 $\alpha = \exp(\log \alpha)$，实际上优化的是：
+$$
+\mathcal{L}_{\log \alpha} = -\log \alpha \cdot \left( \log \pi(a|s) + \mathcal{H}_{\text{target}} \right)
+$$
+#### 6) 更新目标网络
+```python
+def update_target_network(self, tau=0.005):
+	# 软更新目标网络
+	for target_param, param in zip(self.critic_target.parameters(), self.critic.parameters()):
+		target_param.data.copy_(tau * param.data + (1 - tau) * target_param.data)
+```
+*（如 θ′←τθ+(1−τ)θ′θ′←τθ+(1−τ)θ′）
