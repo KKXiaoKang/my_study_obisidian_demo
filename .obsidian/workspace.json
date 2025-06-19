@@ -106,7 +106,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -265,11 +265,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4a730b234caa01b5",
+  "active": "63099ea261542e5f",
   "lastOpenFiles": [
+    "RobotRL/SAC/IMG/Pasted image 20250619111249.png",
+    "RobotRL/SAC/SAC - train and learn.md",
     "RobotRL/SAC/SAC - (actor-Critic 架构).md",
     "RobotRL/SAC/SAC - load or save model.md",
-    "RobotRL/SAC/SAC - train and learn.md",
     "RobotRL/SAC/IMG/Pasted image 20250619104646.png",
     "RobotRL/SAC/IMG",
     "RobotRL/Q-learning DQN/Deep Q Net-work.md",

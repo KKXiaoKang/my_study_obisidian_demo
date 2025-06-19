@@ -19,8 +19,10 @@ Load model parameters and attributes from a file.
      * 保存`critic`当前网络的`weight` 和 `bias`
      * 保存`critic_target`目标网络的权重
      * 保存超参数$log({\alpha})$   ：用于控制策略的探索程度（熵）和期望回报之间的权衡
-         * 关于为什么要取$\log$ 对数，为了始终保证$\alpha$ 为正数 
+         * 关于为什么要取$\log$ 对数，为了始终保证$\alpha = exp(x)$ 为正数，其中的$x=log(\alpha)$
          * $exp(log(\alpha))$ 可以将参数还原为真实值
+![[Pasted image 20250619111249.png]]
+> `Tips`:在这里训练$\alpha$的时候，实际上在训练$log(\alpha)$ 这个参数
 ```bash
 {
   'actor.fc1.weight': tensor(...),
