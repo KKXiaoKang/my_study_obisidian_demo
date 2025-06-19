@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotRL/SAC/SAC - (actor-Critic 架构).md",
+                "file": "RobotRL/SAC/SAC - train and learn.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SAC - (actor-Critic 架构)"
+              "title": "SAC - train and learn"
             }
           },
           {
@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotRL/SAC/SAC - train and learn.md",
+                "file": "RobotRL/SAC/SAC - load or save model.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SAC - train and learn"
+              "title": "SAC - load or save model"
             }
           },
           {
@@ -106,7 +106,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -265,10 +265,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "63099ea261542e5f",
+  "active": "4a730b234caa01b5",
   "lastOpenFiles": [
-    "RobotRL/SAC/SAC - load or save model.md",
     "RobotRL/SAC/SAC - (actor-Critic 架构).md",
+    "RobotRL/SAC/SAC - load or save model.md",
     "RobotRL/SAC/SAC - train and learn.md",
     "RobotRL/SAC/IMG/Pasted image 20250619104646.png",
     "RobotRL/SAC/IMG",

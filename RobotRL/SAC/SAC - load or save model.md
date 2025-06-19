@@ -20,6 +20,7 @@ Load model parameters and attributes from a file.
      * 保存`critic_target`目标网络的权重
      * 保存超参数$log({\alpha})$   ：用于控制策略的探索程度（熵）和期望回报之间的权衡
          * 关于为什么要取$\log$ 对数，为了始终保证$\alpha$ 为正数 
+         * $exp(log(\alpha))$ 可以将参数还原为真实值
 ```bash
 {
   'actor.fc1.weight': tensor(...),
