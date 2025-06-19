@@ -1,4 +1,5 @@
 ## `tain` 过程详解 
+![[Pasted image 20250619104646.png]]
 #### 1) 从buffer中采样历史数据
 ```python
 obs, actions, rewards, next_obs, dones = self.replay_buffer.sample(self.batch_size)
@@ -149,4 +150,10 @@ def update_target_network(self, tau=0.005):
 	for target_param, param in zip(self.critic_target.parameters(), self.critic.parameters()):
 		target_param.data.copy_(tau * param.data + (1 - tau) * target_param.data)
 ```
-*（如 θ′←τθ+(1−τ)θ′θ′←τθ+(1−τ)θ′）
+* 软更新公式如下：
+$$
+\begin{aligned}
+\bar{\omega}_1 &\leftarrow \tau \omega_1 + (1 - \tau) \bar{\omega}_1 \\
+\bar{\omega}_2 &\leftarrow \tau \omega_2 + (1 - \tau) \bar{\omega}_2
+\end{aligned}
+$$
