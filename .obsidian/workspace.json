@@ -97,16 +97,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotRL/SAC/SAC - load or save model.md",
+                "file": "RobotRL/SAC/SAC - `RunningMeanStd` 观测归一化工具.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SAC - load or save model"
+              "title": "SAC - `RunningMeanStd` 观测归一化工具"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -265,12 +265,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "63099ea261542e5f",
+  "active": "616c080f7bf42066",
   "lastOpenFiles": [
+    "RobotRL/SAC/SAC - load or save model.md",
+    "RobotRL/SAC/SAC - `RunningMeanStd` 观测归一化工具.md",
     "RobotRL/SAC/IMG/Pasted image 20250619111249.png",
     "RobotRL/SAC/SAC - train and learn.md",
     "RobotRL/SAC/SAC - (actor-Critic 架构).md",
-    "RobotRL/SAC/SAC - load or save model.md",
     "RobotRL/SAC/IMG/Pasted image 20250619104646.png",
     "RobotRL/SAC/IMG",
     "RobotRL/Q-learning DQN/Deep Q Net-work.md",
@@ -292,7 +293,6 @@
     "RobotRL/IMG/Pasted image 20250616154526.png",
     "RobotRL/IMG/Pasted image 20250616153015.png",
     "RobotRL/IMG/Pasted image 20250616153000.png",
-    "RobotRL/IMG/Pasted image 20250616151927.png",
     "RobotRL/IMG",
     "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
     "RobotVision/三维重建/3D_Gaussian/3D GS 导入场景 Omniverse - 仅用于背景像素渲染.md",
