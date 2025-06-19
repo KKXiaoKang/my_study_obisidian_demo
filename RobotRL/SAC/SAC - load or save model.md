@@ -14,6 +14,22 @@ Load model parameters and attributes from a file.
 ```
 
 ### `save`  模型保存参数如下
+##### RunningMeanStd状态
+**恢复 `RunningMeanStd` 的状态**，让新环境下来的观测能使用跟训练一致的归一化
+* ***obs_rms_mean**
+	- 表示：训练期间所有观测的滑动 **均值**
+	- 类型：`np.ndarray`，维度等于 `observation_space.shape`
+	- 用途：用于观测归一化的中心化：`obs - mean`
+* ***obs_rms_var**
+	- 表示：训练期间所有观测的滑动 **方差**
+	- 类型：`np.ndarray`    
+	- 用途：用于标准化观测：`(obs - mean) / sqrt(var)` 
+* ***obs_rms_count** 
+	- 表示：累计更新的观测数量（用于增量计算 mean/var）
+	- 类型：`float`
+	- 用途：保持归一化过程的一致性和数值稳定性
+
+##### 模型组相关参数
 *  ***policy_state_dict** 
      * 保存`actor`网络的`weight`和`bias`
      * 保存`critic`当前网络的`weight` 和 `bias`
