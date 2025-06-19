@@ -27,26 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotRL/Agent - basepipeline.md",
+                "file": "RobotRL/Agent - basepipeline -  马尔可夫决策过程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Agent - basepipeline"
-            }
-          },
-          {
-            "id": "79df426215a7a04d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RobotRL/DQN 变换表.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "DQN 变换表"
+              "title": "Agent - basepipeline -  马尔可夫决策过程"
             }
           },
           {
@@ -69,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotRL/SAC/SAC - train and learn.md",
+                "file": "RobotRL/Agent - basepipeline -  马尔可夫决策过程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SAC - train and learn"
+              "title": "Agent - basepipeline -  马尔可夫决策过程"
             }
           },
           {
@@ -97,16 +83,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotRL/SAC/SAC - `RunningMeanStd` 观测归一化工具.md",
+                "file": "RobotRL/Q-learning DQN/Q-learing变化表.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SAC - `RunningMeanStd` 观测归一化工具"
+              "title": "Q-learing变化表"
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -265,27 +251,33 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "616c080f7bf42066",
+  "active": "63099ea261542e5f",
   "lastOpenFiles": [
+    "RobotRL/Agent - basepipeline -  马尔可夫决策过程.md",
+    "RobotRL/SAC/SAC - train and learn.md",
+    "RobotVision/SLAM/MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM.md",
+    "RobotRL/Q-learning DQN/Deep Q Net-work.md",
     "RobotRL/SAC/SAC - load or save model.md",
+    "RobotRL/Q-learning DQN/Q-learing变化表.md",
+    "RobotRL/Q-learning DQN/DQN 变换表.md",
+    "RobotVision/三维重建/3D_Gaussian/3D Gaussian Splatting 原理.md",
+    "RobotVision/三维重建/3D_Gaussian/3D GS 导入场景 Omniverse - 仅用于背景像素渲染.md",
+    "RobotVision/三维重建/3D_Gaussian/3D GS 训练过程 - 3DGS散点ply训练.md",
+    "RobotVision/三维重建/3D_Gaussian/Gaussian Opacity Fields - 高斯不透明度场.md",
+    "RobotVision/三维重建/3D_Gaussian/splatviz - 高斯离线本地可视化渲染器.md",
+    "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
     "RobotRL/SAC/SAC - `RunningMeanStd` 观测归一化工具.md",
     "RobotRL/SAC/IMG/Pasted image 20250619111249.png",
-    "RobotRL/SAC/SAC - train and learn.md",
     "RobotRL/SAC/SAC - (actor-Critic 架构).md",
     "RobotRL/SAC/IMG/Pasted image 20250619104646.png",
     "RobotRL/SAC/IMG",
-    "RobotRL/Q-learning DQN/Deep Q Net-work.md",
-    "RobotRL/Agent - basepipeline.md",
     "RobotRL/Q-learning DQN",
     "RobotRL/SAC",
     "S",
-    "RobotRL/Q-learning DQN/DQN 变换表.md",
     "RobotRL/IMG/Pasted image 20250618183018.png",
     "RobotRL/stable-baselines3 框架解析/common.base_class.BaseAlgorithm.md",
-    "RobotRL/Q-learning DQN/Q-learing变化表.md",
     "未命名.md",
     "RobotRL/stable-baselines3 框架解析/common.off_policy_algorithm.OffPolicyAlgorithm.md",
-    "RobotVision/SLAM/MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM.md",
     "RobotRL/IMG/Pasted image 20250616181518.png",
     "RobotRL/IMG/Pasted image 20250616173015.png",
     "RobotRL/IMG/Pasted image 20250616171617.png",
@@ -295,11 +287,6 @@
     "RobotRL/IMG/Pasted image 20250616153000.png",
     "RobotRL/IMG",
     "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
-    "RobotVision/三维重建/3D_Gaussian/3D GS 导入场景 Omniverse - 仅用于背景像素渲染.md",
-    "RobotVision/三维重建/3D_Gaussian/3D GS 训练过程 - 3DGS散点ply训练.md",
-    "RobotVision/三维重建/3D_Gaussian/Gaussian Opacity Fields - 高斯不透明度场.md",
-    "RobotVision/三维重建/3D_Gaussian/splatviz - 高斯离线本地可视化渲染器.md",
-    "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
     "RobotVision/三维重建/MLP - 多层感知机.md",
     "RobotVision/三维重建/AGS-Mesh 高斯结合Mesh.md",
     "RobotRL/stable-baselines3 框架解析",
@@ -310,7 +297,6 @@
     "Robotmanipulation/Imitation learning/GenDP - 机器人操作语义几何表示.md",
     "Robotmanipulation/Imitation learning/※ ACT -  Action Chunking Transformer.md",
     "Robotmanipulation/Imitation learning/编码器/IMG",
-    "RobotVision/SLAM+GS/HI-SLAM2.md",
     "Robotmanipulation/Imitation learning/编码器",
     "Robotmanipulation/LeRobot",
     "未命名.canvas"
