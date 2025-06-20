@@ -54,7 +54,7 @@ clipped_obs = torch.clamp(normalized_obs, -10.0, 10.0)
 clipped_next_obs = torch.clamp(normalized_next_obs, -10.0, 10.0)
 ```
 
-#### 3) 更新Critic评论家
+#### 3) 更新Critic评论家 - 更新Q值网络
 * ***calculate_loss_q** 函数就是计算Q值损失(双目标Q网络，防止过高估计)
     *  `最大化预期回报 + 保持策略多样性（熵项）`
     * `目标Q值函数公式如下`
@@ -109,10 +109,11 @@ $$
 \mathcal{L}_\pi = \mathbb{E}_{s \sim D,\, a \sim \pi(\cdot|s)} \left[ \alpha \cdot \log \pi(a|s) - Q(s, a) + \text{action penalty} \right]
 $$
 ```python
-alpha_loss = self.policy.calculate_loss_alpha(log_pi)
-self.policy.alpha_optimizer.zero_grad()
-alpha_loss.backward()
-self.policy.alpha_optimizer.step()
+# 更新Actor
+policy_loss, log_pi = self.policy.calculate_loss_pi(clipped_obs)
+self.policy.actor_optimizer.zero_grad()
+policy_loss.backward()
+self.policy.actor_optimizer.step()
 ```
 ```python
 def calculate_loss_pi(self, obs):
@@ -130,6 +131,13 @@ def calculate_loss_pi(self, obs):
 
 #### 5) 更新alpha - 更新熵参数
 ```python
+# 更新alpha
+
+alpha_loss = self.policy.calculate_loss_alpha(log_pi)
+self.policy.alpha_optimizer.zero_grad()
+alpha_loss.backward()
+self.policy.alpha_optimizer.step()
+
 def calculate_loss_alpha(self, log_pi):
 	alpha_loss = (-self.log_alpha * (log_pi + self.target_entropy).detach()).mean()
 	return alpha_loss
@@ -145,6 +153,12 @@ $$
 $$
 #### 6) 更新目标网络
 ```python
+
+# 更新目标网络
+if self._n_updates % self.target_update_interval == 0:
+	self.policy.update_target_network(self.tau)
+
+
 def update_target_network(self, tau=0.005):
 	# 软更新目标网络
 	for target_param, param in zip(self.critic_target.parameters(), self.critic.parameters()):
