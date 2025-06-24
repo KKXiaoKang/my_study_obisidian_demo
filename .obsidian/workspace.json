@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#构建带颜色的ply点云文件",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -209,7 +209,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bf72a414addda205",
+  "active": "86eaf77f5f480c18",
   "lastOpenFiles": [
     "Robotmanipulation/LeRobot/LeRobot - PipeLine.md",
     "Robotmanipulation/Imitation learning/GenDP - 机器人操作语义几何表示.md",
