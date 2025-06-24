@@ -1,3 +1,5 @@
+
+
 ```mermaid
 
 graph LR
@@ -21,7 +23,6 @@ RGB图片---缺点:无法对场景进行泛化,换一个颜色模型就会失效
 
 关键点---缺点:低维且稀疏,丢失几何细节,限制了任务的范围
 ```
-
 
 ### 3D Sematic Fields - 3D语义场构建
 * [GenDP: 3D Semantic Fields for Category-Level Generalizable Diffusion Policy](https://arxiv.org/html/2410.17488?_immersive_translate_auto_translate=1)
