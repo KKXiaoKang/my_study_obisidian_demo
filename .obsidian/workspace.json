@@ -4,95 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "24150737d492a326",
+        "id": "f64d02ff321cdc53",
         "type": "tabs",
         "children": [
           {
-            "id": "dea3503d6ec3f784",
+            "id": "caaf4771adaa61ee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotVision/SLAM/MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM.md",
+                "file": "Robotmanipulation/LeRobot/LeRobot - PipeLine.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM"
+              "title": "LeRobot - PipeLine"
             }
           },
           {
-            "id": "faca8acb18803d2f",
+            "id": "bf72a414addda205",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotRL/Agent - basepipeline -  马尔可夫决策过程.md",
+                "file": "Robotmanipulation/运动规划方法一览.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Agent - basepipeline -  马尔可夫决策过程"
-            }
-          },
-          {
-            "id": "5ed23f53f1f9b131",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RobotRL/SAC/SAC - train and learn.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SAC - train and learn"
-            }
-          },
-          {
-            "id": "4a730b234caa01b5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RobotRL/Agent - basepipeline -  马尔可夫决策过程.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Agent - basepipeline -  马尔可夫决策过程"
-            }
-          },
-          {
-            "id": "63099ea261542e5f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RobotRL/SAC/SAC - load or save model.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SAC - load or save model"
-            }
-          },
-          {
-            "id": "616c080f7bf42066",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RobotRL/Q-learning DQN/Q-learing变化表.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Q-learing变化表"
+              "title": "运动规划方法一览"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -251,16 +195,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5ed23f53f1f9b131",
+  "active": "86eaf77f5f480c18",
   "lastOpenFiles": [
+    "Robotmanipulation/LeRobot/LeRobot - PipeLine.md",
+    "Robotmanipulation/运动规划方法一览.md",
+    "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
+    "Robotmanipulation/优化规划/ESDF - 多球模型.md",
+    "Robotmanipulation/Imitation learning/※ ACT -  Action Chunking Transformer.md",
+    "RobotRL/Agent - basepipeline -  马尔可夫决策过程.md",
+    "RobotRL/SAC/SAC - train and learn.md",
     "RobotRL/SAC/SAC - load or save model.md",
     "RobotRL/SAC/SAC - `RunningMeanStd` 观测归一化工具.md",
     "RobotRL/SAC/SAC - (actor-Critic 架构).md",
-    "RobotRL/SAC/SAC - train and learn.md",
     "RobotRL/Q-learning DQN/Deep Q Net-work.md",
     "RobotRL/Q-learning DQN/DQN 变换表.md",
     "RobotRL/Q-learning DQN/Q-learing变化表.md",
-    "RobotRL/Agent - basepipeline -  马尔可夫决策过程.md",
     "RobotVision/SLAM/MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM.md",
     "RobotVision/三维重建/3D_Gaussian/3D Gaussian Splatting 原理.md",
     "RobotVision/三维重建/3D_Gaussian/3D GS 导入场景 Omniverse - 仅用于背景像素渲染.md",
@@ -276,7 +225,6 @@
     "S",
     "RobotRL/IMG/Pasted image 20250618183018.png",
     "RobotRL/stable-baselines3 框架解析/common.base_class.BaseAlgorithm.md",
-    "未命名.md",
     "RobotRL/stable-baselines3 框架解析/common.off_policy_algorithm.OffPolicyAlgorithm.md",
     "RobotRL/IMG/Pasted image 20250616181518.png",
     "RobotRL/IMG/Pasted image 20250616173015.png",
@@ -292,10 +240,6 @@
     "RobotRL/stable-baselines3 框架解析",
     "RobotRL",
     "Robotmanipulation/Imitation learning/编码器/VAE - 变分自动编码器.md",
-    "Robotmanipulation/Imitation learning/编码器/CVAE - 差分变分自动编码器.md",
-    "Robotmanipulation/Imitation learning/编码器/AE - 自动编码器.md",
-    "Robotmanipulation/Imitation learning/GenDP - 机器人操作语义几何表示.md",
-    "Robotmanipulation/Imitation learning/※ ACT -  Action Chunking Transformer.md",
     "Robotmanipulation/Imitation learning/编码器/IMG",
     "Robotmanipulation/Imitation learning/编码器",
     "Robotmanipulation/LeRobot",
