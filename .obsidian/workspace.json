@@ -195,8 +195,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "86eaf77f5f480c18",
+  "active": "bf72a414addda205",
   "lastOpenFiles": [
+    "Robotmanipulation/IMG/Pasted image 20250624163407.png",
+    "Robotmanipulation/IMG",
     "Robotmanipulation/LeRobot/LeRobot - PipeLine.md",
     "Robotmanipulation/运动规划方法一览.md",
     "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
@@ -239,10 +241,8 @@
     "RobotVision/三维重建/AGS-Mesh 高斯结合Mesh.md",
     "RobotRL/stable-baselines3 框架解析",
     "RobotRL",
-    "Robotmanipulation/Imitation learning/编码器/VAE - 变分自动编码器.md",
     "Robotmanipulation/Imitation learning/编码器/IMG",
     "Robotmanipulation/Imitation learning/编码器",
-    "Robotmanipulation/LeRobot",
     "未命名.canvas"
   ]
 }
