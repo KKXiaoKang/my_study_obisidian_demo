@@ -197,6 +197,7 @@
   },
   "active": "147e0a122caac8e5",
   "lastOpenFiles": [
+    "Robotmanipulation/IMG/Pasted image 20250624220407.png",
     "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
     "Robotmanipulation/运动规划方法一览.md",
     "Robotmanipulation/LeRobot/LeRobot - PipeLine.md",
@@ -238,7 +239,6 @@
     "RobotRL/IMG",
     "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
     "RobotVision/三维重建/MLP - 多层感知机.md",
-    "RobotVision/三维重建/AGS-Mesh 高斯结合Mesh.md",
     "RobotRL/stable-baselines3 框架解析",
     "RobotRL",
     "Robotmanipulation/Imitation learning/编码器/IMG",
