@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation/运动规划方法一览.md",
+                "file": "Robotmanipulation/chomp代价函数_梯度计算设计技巧.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "运动规划方法一览"
+              "title": "chomp代价函数_梯度计算设计技巧"
             }
           }
         ],
@@ -211,9 +211,9 @@
   },
   "active": "31ad9d64a762d68b",
   "lastOpenFiles": [
+    "Robotmanipulation/运动规划方法一览.md",
     "Robotmanipulation/chomp代价函数_梯度计算设计技巧.md",
     "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
-    "Robotmanipulation/运动规划方法一览.md",
     "未命名.md",
     "Robotmanipulation/IMG/Pasted image 20250624220407.png",
     "Robotmanipulation/LeRobot/LeRobot - PipeLine.md",
