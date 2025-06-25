@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation/chomp代价函数_梯度计算设计技巧.md",
+                "file": "Robotmanipulation/运动规划方法一览.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chomp代价函数_梯度计算设计技巧"
+              "title": "运动规划方法一览"
             }
           },
           {
@@ -41,16 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation/chomp代价函数_梯度计算设计技巧.md",
+                "file": "Robotmanipulation/显式策略 - 隐式策略.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "chomp代价函数_梯度计算设计技巧"
+              "title": "显式策略 - 隐式策略"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -209,10 +209,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "31ad9d64a762d68b",
+  "active": "147e0a122caac8e5",
   "lastOpenFiles": [
-    "Robotmanipulation/运动规划方法一览.md",
     "Robotmanipulation/chomp代价函数_梯度计算设计技巧.md",
+    "Robotmanipulation/显式策略 - 隐式策略.md",
+    "Robotmanipulation/运动规划方法一览.md",
     "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
     "未命名.md",
     "Robotmanipulation/IMG/Pasted image 20250624220407.png",
@@ -252,7 +253,6 @@
     "RobotRL/IMG/Pasted image 20250616161940.png",
     "RobotRL/IMG/Pasted image 20250616154526.png",
     "RobotRL/IMG",
-    "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
     "RobotRL/stable-baselines3 框架解析",
     "RobotRL",
     "Robotmanipulation/Imitation learning/编码器/IMG",
