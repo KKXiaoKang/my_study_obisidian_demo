@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation/Imitation learning/Diffusion Policy.md",
+                "file": "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Diffusion Policy"
+              "title": "※ Diffusion Policy - 扩散去噪动作策略模型"
             }
           },
           {
@@ -55,16 +55,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation/显式策略 - 隐式策略 - 扩散策略.md",
+                "file": "Robotmanipulation/Imitation learning/※ OpenVLA - Vision-Language-Action Model.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "显式策略 - 隐式策略 - 扩散策略"
+              "title": "※ OpenVLA - Vision-Language-Action Model"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -223,15 +223,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "31ad9d64a762d68b",
+  "active": "9363effa979369ad",
   "lastOpenFiles": [
-    "Robotmanipulation/Imitation learning/IMG/Pasted image 20250625160424.png",
-    "Robotmanipulation/Imitation learning/GenDP - 机器人操作语义几何表示.md",
-    "Robotmanipulation/Imitation learning/※ ACT -  Action Chunking Transformer.md",
-    "Robotmanipulation/Imitation learning/Diffusion Policy.md",
-    "Robotmanipulation/运动规划方法一览.md",
-    "Robotmanipulation/Imitation learning/IMG/DP.png",
+    "Robotmanipulation/Imitation learning/IMG/Pasted image 20250625205317.png",
+    "Robotmanipulation/Imitation learning/Diffusion Policy - Flow Matching 对比.md",
+    "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
+    "Robotmanipulation/Imitation learning/※ OpenVLA - Vision-Language-Action Model.md",
     "Robotmanipulation/显式策略 - 隐式策略 - 扩散策略.md",
+    "Robotmanipulation/运动规划方法一览.md",
+    "Robotmanipulation/Imitation learning/编码器/VAE - 变分自动编码器.md",
+    "Robotmanipulation/Imitation learning/编码器/CVAE - 差分变分自动编码器.md",
+    "Robotmanipulation/Imitation learning/※ GenDP - 机器人操作语义几何表示.md",
+    "Robotmanipulation/Imitation learning/※  ACT -  Transformer CVAE动作生成器.md",
+    "Robotmanipulation/Imitation learning/IMG/DP.png",
+    "Robotmanipulation/Imitation learning/IMG/Pasted image 20250625165905.png",
+    "Robotmanipulation/Imitation learning/IMG/Pasted image 20250625160424.png",
     "Robotmanipulation/chomp代价函数_梯度计算设计技巧.md",
     "Robotmanipulation/IMG/Pasted image 20250625145928.png",
     "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
@@ -252,10 +258,6 @@
     "RobotVision/SLAM/MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM.md",
     "RobotVision/三维重建/3D_Gaussian/3D Gaussian Splatting 原理.md",
     "RobotVision/三维重建/3D_Gaussian/3D GS 导入场景 Omniverse - 仅用于背景像素渲染.md",
-    "RobotVision/三维重建/3D_Gaussian/3D GS 训练过程 - 3DGS散点ply训练.md",
-    "RobotVision/三维重建/3D_Gaussian/Gaussian Opacity Fields - 高斯不透明度场.md",
-    "RobotVision/三维重建/3D_Gaussian/splatviz - 高斯离线本地可视化渲染器.md",
-    "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
     "RobotRL/SAC/IMG/Pasted image 20250619111249.png",
     "RobotRL/SAC/IMG/Pasted image 20250619104646.png",
     "RobotRL/SAC/IMG",
@@ -264,8 +266,6 @@
     "S",
     "RobotRL/IMG/Pasted image 20250618183018.png",
     "RobotRL/IMG/Pasted image 20250616181518.png",
-    "RobotRL/IMG/Pasted image 20250616173015.png",
-    "RobotRL/IMG/Pasted image 20250616171617.png",
     "RobotRL/IMG",
     "RobotRL/stable-baselines3 框架解析",
     "RobotRL",
