@@ -12,11 +12,11 @@
 
 OpenVLA 的微调过程可以概括为以下几个关键部分：
 
-|微调模块|用途|使用的数据|特殊技术|
-|---|---|---|---|
-|视觉-语言 encoder（CLIP）|匹配自然语言与目标图像区域|合成与真实场景图像、分割、物体框|保持大部分 frozen，仅对 projection 层微调|
-|Policy 模块（动作生成）|输入 embedding，输出动作参数|操控 demonstration 数据|行为克隆（Behavior Cloning）或 RL 微调|
-|Vision grounding 模块|从图像中识别目标物体位置|CLIP + ground-truth mask 或目标描述|提取 latent 区域 patch，优化匹配得分|
+| 微调模块                | 用途                  | 使用的数据                          | 特殊技术                           |
+| ------------------- | ------------------- | ------------------------------ | ------------------------------ |
+| 视觉-语言 encoder（CLIP） | 匹配自然语言与目标图像区域       | 合成与真实场景图像、分割、物体框               | 保持大部分 frozen，仅对 projection 层微调 |
+| Policy 模块（动作生成）     | 输入 embedding，输出动作参数 | 操控 demonstration 数据            | 行为克隆（Behavior Cloning）或 RL 微调  |
+| Vision grounding 模块 | 从图像中识别目标物体位置        | CLIP + ground-truth mask 或目标描述 | 提取 latent 区域 patch，优化匹配得分      |
 
 ---
 
