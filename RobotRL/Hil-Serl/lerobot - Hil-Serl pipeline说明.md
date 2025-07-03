@@ -21,3 +21,5 @@
 | 容量   | cfg.policy.online_buffer_capacity              | cfg.policy.offline_buffer_capacity                                    |
 | 用途   | 存储在线探索的经验                                      | 存储高质量的人类演示数据                                                          |
 |      |                                                |                                                                       |
+
+### 关于如何从两个Buffer当中采样 并且 完成融合
