@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotRL/Agent - basepipeline -  马尔可夫决策过程.md",
+                "file": "Robotmanipulation/Imitation learning/编码器/MLP - 多层感知机.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Agent - basepipeline -  马尔可夫决策过程"
+              "title": "MLP - 多层感知机"
             }
           },
           {
@@ -110,7 +110,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "curo",
+                "query": "MLP",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -237,10 +237,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "31ad9d64a762d68b",
+  "active": "86eaf77f5f480c18",
   "lastOpenFiles": [
-    "未命名.md",
     "RobotRL/Agent - basepipeline -  马尔可夫决策过程.md",
+    "未命名.md",
     "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
     "RobotRL/SAC/SAC - train and learn.md",
     "Robotmanipulation/Imitation learning/※  ACT -  Transformer CVAE动作生成器.md",
