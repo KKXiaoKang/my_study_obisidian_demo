@@ -75,9 +75,10 @@ obs = {
 ## 关于SAC当中的Buffer经验回放池的设计pipeline及区别
 ### 两种回放缓冲区的区别
 
-|特性|replay_buffer (在线)|offline_replay_buffer (离线)|
-|---|---|---|
-|数据来源|Actor实时收集的环境交互数据|预定义的数据集（如人类演示数据）|
-|更新方式|动态添加新的转换数据|静态加载，训练过程中不更新|
-|容量|cfg.policy.online_buffer_capacity|cfg.policy.offline_buffer_capacity|
-|用途|存储在线探索的经验|存储高质量的人类演示数据|
+| 特性   | replay_buffer (在线)                | offline_replay_buffer (离线)         |
+| ---- | --------------------------------- | ---------------------------------- |
+| 数据来源 | Actor实时收集的环境交互数据                  | 预定义的数据集（如人类演示数据）                   |
+| 更新方式 | 动态添加新的转换数据                        | 静态加载，训练过程中不更新                      |
+| 容量   | cfg.policy.online_buffer_capacity | cfg.policy.offline_buffer_capacity |
+| 用途   | 存储在线探索的经验                         | 存储高质量的人类演示数据                       |
+|      |                                   |                                    |
