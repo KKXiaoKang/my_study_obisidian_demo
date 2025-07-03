@@ -23,3 +23,35 @@
 |      |                                                |                                                                       |
 
 ### 关于如何从两个Buffer当中采样 并且 完成融合
+* 核心构建pipeline ： `生产者` or `消费者`
+
+*  只有在队列用完的情况下，需要重新再次创建`iterator`的时候，才会调用`offline_replay_buffer`当中的`sample`重新采样新的数据
+```python
+online_iterator = replay_buffer.get_iterator(
+	batch_size=batch_size, # 批量大小
+	async_prefetch=async_prefetch, # 是否异步预取
+	queue_size=2 # 队列大小
+)
+
+offline_iterator = offline_replay_buffer.get_iterator(
+	batch_size=batch_size, # 批量大小
+	async_prefetch=async_prefetch, # 是否异步预取
+	queue_size=2 # 队列大小
+)
+
+# **get_iterator** 会重新调用self.sample(batch_size) 获取新的batch
+```
+
+
+*  `replay_buffer`
+```python
+# 迭代获取状态
+batch = next(online_iterator)
+batch_offline = next(offline_iterator)
+
+# 将在线和离线批次数据连接起来 torch.cat
+batch = concatenate_batch_transitions(
+	left_batch_transitions=batch, # 在线批次
+	right_batch_transition=batch_offline # 离线批次
+)
+```
