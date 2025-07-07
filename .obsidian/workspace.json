@@ -193,6 +193,8 @@
   },
   "active": "91e3114f63fdc75d",
   "lastOpenFiles": [
+    "RobotRL/Q-learning DQN/IMG/Pasted image 20250707164428.png",
+    "RobotRL/Q-learning DQN/IMG/Pasted image 20250707164342.png",
     "RobotRL/Q-learning DQN/q-learning 方法一览.md",
     "RobotRL/stable-baselines3 框架解析/common.off_policy_algorithm.OffPolicyAlgorithm.md",
     "RobotRL/Agent - base - MDP马尔可夫决策过程.md",
@@ -224,7 +226,6 @@
     "RobotRL/DSRL/DSRL - 基于Diffusion策略的RL微调.md",
     "RobotRL/Q-learning DQN/IMG/Pasted image 20250707133948.png",
     "RobotRL/Q-learning DQN/IMG",
-    "RobotRL/ViTAL/ViTAL - Touch begins where vision ends.md",
     "RobotRL/ViTAL/IMG/Pasted image 20250707113453.png",
     "RobotRL/ViTAL/IMG",
     "RobotRL/ViTAL",
@@ -237,7 +238,6 @@
     "RobotRL/Hil-Serl/IMG/Pasted image 20250703140939.png",
     "RobotRL/Hil-Serl/IMG",
     "RobotRL/Hil-Serl",
-    "Robotmanipulation/Imitation learning/IMG/Pasted image 20250625205317.png",
     "Robotmanipulation/IMG",
     "未命名.canvas"
   ]
