@@ -50,6 +50,7 @@ Q值大体上有两种更新方式，一种是类似上面`小鸟游戏`例子�
 
 * 对状态s，执行动作a，`那么得到的reward是一定的，而且是不变的！`  因此需要考虑从reward下手，让预测Q值和真实Q值的比较问题转换成让模型实质上在拟合reward的问题
 ***loss function
+$$ \mathbb{E}_{(s,a,r,s')\sim\mathcal{D}}\left[\left(Q_{\theta}(s, a) - \left(r + \gamma \max_{a'} Q_{\bar{\theta}}(s', a')\right)\right)^2\right], $$
 * 损失函数（均方误差MSE）：
 ![[Pasted image 20250616171617.png]]
   
