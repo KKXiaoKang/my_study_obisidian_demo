@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotRL/Agent - explore - SMDP半马尔可夫决策过程.md",
+                "file": "RobotRL/Q-learning DQN/贝尔曼方程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Agent - explore - SMDP半马尔可夫决策过程"
+              "title": "贝尔曼方程"
+            }
+          },
+          {
+            "id": "e51bfda8257726e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RobotRL/Q-learning DQN/探索底层文章 - Q-learning is not yet scalable.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "探索底层文章 - Q-learning is not yet scalable"
             }
           }
         ]
@@ -182,9 +196,11 @@
   },
   "active": "7eea2fdd9941016a",
   "lastOpenFiles": [
+    "RobotRL/Agent - explore - SMDP半马尔可夫决策过程.md",
+    "RobotRL/Q-learning DQN/贝尔曼方程.md",
+    "RobotRL/Q-learning DQN/探索底层文章 - Q-learning is not yet scalable.md",
     "RobotRL/IMG/Pasted image 20250707140626.png",
     "RobotRL/Agent - base - MDP马尔可夫决策过程.md",
-    "RobotRL/Q-learning DQN/探索底层文章 - Q-learning is not yet scalable.md",
     "Robotmanipulation/显式策略 - 隐式策略 - 扩散策略.md",
     "Robotmanipulation/运动规划方法一览.md",
     "Robotmanipulation/Imitation learning/传统BC方法一览.md",
@@ -195,7 +211,6 @@
     "Robotmanipulation/chomp代价函数_梯度计算设计技巧.md",
     "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
     "RobotRL/DSRL/DSRL - 基于Diffusion策略的RL微调.md",
-    "RobotRL/Agent - explore - SMDP半马尔可夫决策过程.md",
     "RobotRL/Q-learning DQN/Deep Q Net-work.md",
     "RobotRL/Q-learning DQN/Q-learing变化表.md",
     "RobotRL/Q-learning DQN/DQN 变换表.md",
@@ -226,7 +241,6 @@
     "Robotmanipulation/Imitation learning/IMG/Pasted image 20250625205317.png",
     "Robotmanipulation/Imitation learning/IMG/DP.png",
     "Robotmanipulation/Imitation learning/IMG/Pasted image 20250625165905.png",
-    "Robotmanipulation/Imitation learning/IMG/Pasted image 20250625160424.png",
     "Robotmanipulation/IMG",
     "未命名.canvas"
   ]
