@@ -36,20 +36,6 @@
             }
           },
           {
-            "id": "31ad9d64a762d68b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RobotRL/SAC/SAC - train and learn.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SAC - train and learn"
-            }
-          },
-          {
             "id": "2335da9a3a1c31b9",
             "type": "leaf",
             "state": {
@@ -69,16 +55,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation/Imitation learning/※  ACT -  Transformer CVAE动作生成器.md",
+                "file": "RobotRL/DSRL/DSRL - 基于Diffusion策略的RL微调.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "※  ACT -  Transformer CVAE动作生成器"
+              "title": "DSRL - 基于Diffusion策略的RL微调"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -237,10 +223,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "86eaf77f5f480c18",
+  "active": "c458576eaf1913db",
   "lastOpenFiles": [
-    "RobotRL/Hil-Serl/lerobot - Hil-Serl pipeline说明.md",
+    "RobotRL/DSRL/IMG/Steering Your Diffusion Policy with Latent Space.pdf",
+    "RobotRL/DSRL/IMG/778507771be8a046288b2b1e7cda181d.jpg",
+    "RobotRL/DSRL/IMG/852a713e44573a782ef77298ab13e12a.jpg",
+    "RobotRL/DSRL/IMG/Pasted image 20250707101215.png",
+    "RobotRL/DSRL/IMG",
+    "Robotmanipulation/Imitation learning/※  ACT -  Transformer CVAE动作生成器.md",
+    "RobotRL/DSRL/DSRL - 基于Diffusion策略的RL微调.md",
+    "RobotRL/DSRL",
+    "Robotmanipulation/运动规划方法一览.md",
     "RobotRL/SAC/SAC - train and learn.md",
+    "RobotRL/Hil-Serl/lerobot - Hil-Serl pipeline说明.md",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250703140939.png",
     "RobotRL/Hil-Serl/IMG",
     "RobotRL/Agent - basepipeline -  马尔可夫决策过程.md",
@@ -248,7 +243,6 @@
     "Robotmanipulation/Imitation learning/编码器/MLP - 多层感知机.md",
     "未命名.md",
     "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
-    "Robotmanipulation/Imitation learning/※  ACT -  Transformer CVAE动作生成器.md",
     "RobotRL/SAC/SAC - load or save model.md",
     "Robotmanipulation/Imitation learning/※ OpenVLA - Vision-Language-Action Model.md",
     "Robot工具/curobo convert urdf 2 usd.md",
@@ -257,7 +251,6 @@
     "RobotVision/三维重建/3D_Gaussian/3D GS 训练过程 - 3DGS散点ply训练.md",
     "RobotVision/三维重建/3D_Gaussian/3D Gaussian Splatting 原理.md",
     "RobotVision/三维重建/3D_Gaussian/3D GS 导入场景 Omniverse - 仅用于背景像素渲染.md",
-    "Robotmanipulation/运动规划方法一览.md",
     "原子技能/操作组okr.md",
     "Robotmanipulation/Imitation learning/IMG/Pasted image 20250625205317.png",
     "Robotmanipulation/Imitation learning/Diffusion Policy - Flow Matching 对比.md",
@@ -272,18 +265,12 @@
     "Robotmanipulation/IMG/Pasted image 20250625145928.png",
     "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
     "Robotmanipulation/IMG/Pasted image 20250624220407.png",
-    "Robotmanipulation/LeRobot/LeRobot - PipeLine.md",
-    "Robotmanipulation/IMG/Pasted image 20250624163407.png",
     "Robotmanipulation/IMG",
-    "RobotRL/SAC/IMG/Pasted image 20250619111249.png",
-    "RobotRL/SAC/IMG/Pasted image 20250619104646.png",
     "RobotRL/SAC/IMG",
     "RobotRL/Q-learning DQN",
     "RobotRL/SAC",
     "S",
     "RobotRL/IMG",
-    "RobotRL/stable-baselines3 框架解析",
-    "RobotRL",
     "未命名.canvas"
   ]
 }
