@@ -82,3 +82,5 @@ obs = {
 | 容量   | cfg.policy.online_buffer_capacity | cfg.policy.offline_buffer_capacity |
 | 用途   | 存储在线探索的经验                         | 存储高质量的人类演示数据                       |
 |      |                                   |                                    |
+
+## 拓展：具体可以查看[[Agent - explore - SMDP半马尔可夫决策过程]]
