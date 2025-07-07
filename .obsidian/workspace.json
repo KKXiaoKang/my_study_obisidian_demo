@@ -60,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -219,8 +219,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2849475e1cfde916",
+  "active": "fad5cc4c6f27870d",
   "lastOpenFiles": [
+    "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
     "RobotRL/Diffusion-RL/DPPO - Diffusion Policy Policy Optimization.md",
     "RobotRL/Diffusion-RL/IMG/Pasted image 20250707180604.png",
     "RobotRL/Diffusion-RL/IMG/Diffusion Policy Policy Optimization.pdf",
@@ -258,7 +259,6 @@
     "Robotmanipulation/运动规划方法一览.md",
     "Robotmanipulation/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
     "※ ACT - Transformer CVAE动作生成器.md",
-    "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
     "Robotmanipulation/Imitation learning/未命名",
     "RobotRL/Q-learning DQN/IMG/Pasted image 20250707133948.png",
     "RobotRL/Q-learning DQN/IMG",
