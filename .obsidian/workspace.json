@@ -58,6 +58,16 @@
               "icon": "lucide-file",
               "title": "※ Diffusion Policy - 扩散去噪动作策略模型"
             }
+          },
+          {
+            "id": "bc2f9caa13ad9219",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
           }
         ],
         "currentTab": 2

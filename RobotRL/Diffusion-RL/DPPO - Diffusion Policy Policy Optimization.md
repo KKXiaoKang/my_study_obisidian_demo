@@ -3,6 +3,8 @@
 ## backward | forward 伪代码
 ![[Pasted image 20250707180604.png]]
 
+### 基础 dp 扩散loss定义请查看如下链接
+* [[※ Diffusion Policy - 扩散去噪动作策略模型]]
 ### 核心构建 - param参数说明
 * `denoising_steps = 20`
 	* 含义：扩散模型在生成动作块时，反向去噪的总步数（K）
