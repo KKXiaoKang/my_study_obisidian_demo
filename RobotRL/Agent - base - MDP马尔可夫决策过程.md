@@ -83,4 +83,9 @@ obs = {
 | 用途   | 存储在线探索的经验                         | 存储高质量的人类演示数据                       |
 |      |                                   |                                    |
 
-## 拓展：具体可以查看[[Agent - explore - SMDP半马尔可夫决策过程]]
+
+
+## links to this page  此页面的链接
+* 拓展：具体可以查看[[Agent - explore - SMDP半马尔可夫决策过程]]
+* Q-learing 经典解析，基于贝尔曼方程的动态规划求解方法，直至策略收敛
+	* [[q-learning 方法一览]] 
