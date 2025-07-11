@@ -123,8 +123,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -230,7 +229,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8f565fa2097fe86e",
+  "active": "86eaf77f5f480c18",
   "lastOpenFiles": [
     "RobotRL/Q-learning DQN/探索底层文章 - Q-learning is not yet scalable.md",
     "RobotRL/Q-learning DQN/贝尔曼方程 - Bellman Optimality Equation.md",
