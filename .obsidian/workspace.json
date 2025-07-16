@@ -23,12 +23,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotRL/Diffusion-RL/DPPO - Diffusion Policy Policy Optimization.md",
+                "file": "Robot工具/BugLog - bt2pro手柄机器人初始后乱走/BugLog.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DPPO - Diffusion Policy Policy Optimization"
+              "title": "BugLog"
             }
           },
           {
@@ -221,8 +221,13 @@
   },
   "active": "91e3114f63fdc75d",
   "lastOpenFiles": [
-    "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
+    "Robot工具/BugLog - bt2pro手柄机器人初始后乱走/IMG/Pasted image 20250716101436.png",
+    "Robot工具/BugLog - bt2pro手柄机器人初始后乱走/IMG",
     "RobotRL/Diffusion-RL/DPPO - Diffusion Policy Policy Optimization.md",
+    "Robot工具/BugLog - bt2pro手柄机器人初始后乱走/BugLog.md",
+    "Robot工具/BugLog - bt2pro手柄机器人初始后乱走",
+    "Robot工具/未命名.canvas",
+    "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
     "Robotmanipulation/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
     "RobotRL/DSRL/DSRL - 基于Diffusion策略的RL微调.md",
     "Robotmanipulation/Imitation learning/Diffusion Policy - Flow Matching 对比.md",
@@ -258,14 +263,10 @@
     "Robot工具/Pip3 输入时跳出的是路径是.md",
     "RobotRL/IMG/Pasted image 20250707140626.png",
     "Robotmanipulation/显式策略 - 隐式策略 - 扩散策略.md",
-    "Robotmanipulation/运动规划方法一览.md",
-    "※ ACT - Transformer CVAE动作生成器.md",
     "Robotmanipulation/Imitation learning/未命名",
     "RobotRL/Q-learning DQN/IMG/Pasted image 20250707133948.png",
     "RobotRL/Q-learning DQN/IMG",
     "RobotRL/ViTAL/IMG/Pasted image 20250707113453.png",
-    "RobotRL/ViTAL/IMG",
-    "RobotRL/ViTAL",
     "RobotRL/DSRL/IMG/778507771be8a046288b2b1e7cda181d.jpg",
     "未命名.canvas"
   ]
