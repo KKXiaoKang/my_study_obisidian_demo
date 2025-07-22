@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e51bfda8257726e4",
+            "id": "b3abd5300d9764bc",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -16,8 +16,23 @@
               "icon": "lucide-git-fork",
               "title": "关系图谱"
             }
+          },
+          {
+            "id": "d3a5a967f660c581",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Robotmanipulation/KL散度对比MSE计算loss.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "KL散度对比MSE计算loss"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -176,8 +191,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e51bfda8257726e4",
+  "active": "d3a5a967f660c581",
   "lastOpenFiles": [
+    "Robotmanipulation/Imitation learning/传统BC方法一览.md",
+    "Robotmanipulation/KL散度对比MSE计算loss.md",
+    "Robotmanipulation/Imitation learning/※ GenDP - 机器人操作语义几何表示.md",
     "Robot工具/BugLog - bt2pro手柄机器人初始后乱走/BugLog.md",
     "Robotmanipulation/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
     "Robot工具/IsaacLab - 多联体包含方法.md",
@@ -211,16 +229,13 @@
     "RobotRL/Agent - explore - SMDP半马尔可夫决策过程.md",
     "RobotRL/Q-learning DQN/IMG/Pasted image 20250707152859.png",
     "RobotRL/Q-learning DQN/IMG/Pasted image 20250707151726.png",
-    "Robotmanipulation/Imitation learning/传统BC方法一览.md",
     "Robot工具/Robot常见工具 & QA说明.md",
     "Robot工具/机器人版本/机器人版本.md",
     "Robot工具/零点标定优化问题/优化问题.md",
     "Robot工具/零点标定优化问题/软件定义.md",
     "Robot工具/添加catkin_tools权限/catkin tools - 添加catkin_tools权限.md",
     "Robot工具/curobo convert urdf 2 usd.md",
-    "Robot工具/Pip3 输入时跳出的是路径是.md",
     "RobotRL/IMG/Pasted image 20250707140626.png",
-    "Robotmanipulation/显式策略 - 隐式策略 - 扩散策略.md",
     "Robotmanipulation/Imitation learning/未命名",
     "RobotRL/Q-learning DQN/IMG/Pasted image 20250707133948.png",
     "RobotRL/Q-learning DQN/IMG",
