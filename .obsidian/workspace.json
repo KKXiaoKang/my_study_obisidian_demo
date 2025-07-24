@@ -30,9 +30,23 @@
               "icon": "lucide-file",
               "title": "KL散度对比MSE计算loss"
             }
+          },
+          {
+            "id": "cb511b2868208dea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SuGaR - GS To Mesh"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -64,7 +78,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "安装",
+                "query": "tag:#构建带颜色的ply点云文件",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -191,10 +205,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d3a5a967f660c581",
+  "active": "cb511b2868208dea",
   "lastOpenFiles": [
-    "Robotmanipulation/Imitation learning/传统BC方法一览.md",
+    "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
+    "RobotVision/SLAM/MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM.md",
+    "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
+    "RobotVision/SLAM/IMG/Pasted image 20250611174007.png",
+    "RobotVision/SLAM/IMG/Pasted image 20250513153805.png",
+    "RobotVision/SLAM/IMG/Pasted image 20250513143728.png",
+    "RobotVision/SLAM/IMG/Pasted image 20250513141611.png",
+    "RobotVision/三维重建/3D_Gaussian/3D GS 训练过程 - 3DGS散点ply训练.md",
+    "RobotVision/三维重建/3D_Gaussian/3D GS 导入场景 Omniverse - 仅用于背景像素渲染.md",
+    "RobotVision/三维重建/3D_Gaussian/3D Gaussian Splatting 原理.md",
     "Robotmanipulation/KL散度对比MSE计算loss.md",
+    "Robotmanipulation/Imitation learning/传统BC方法一览.md",
     "Robotmanipulation/Imitation learning/※ GenDP - 机器人操作语义几何表示.md",
     "Robot工具/BugLog - bt2pro手柄机器人初始后乱走/BugLog.md",
     "Robotmanipulation/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
@@ -228,18 +252,8 @@
     "RobotRL/Agent - base - MDP马尔可夫决策过程.md",
     "RobotRL/Agent - explore - SMDP半马尔可夫决策过程.md",
     "RobotRL/Q-learning DQN/IMG/Pasted image 20250707152859.png",
-    "RobotRL/Q-learning DQN/IMG/Pasted image 20250707151726.png",
-    "Robot工具/Robot常见工具 & QA说明.md",
-    "Robot工具/机器人版本/机器人版本.md",
-    "Robot工具/零点标定优化问题/优化问题.md",
-    "Robot工具/零点标定优化问题/软件定义.md",
-    "Robot工具/添加catkin_tools权限/catkin tools - 添加catkin_tools权限.md",
-    "Robot工具/curobo convert urdf 2 usd.md",
-    "RobotRL/IMG/Pasted image 20250707140626.png",
     "Robotmanipulation/Imitation learning/未命名",
-    "RobotRL/Q-learning DQN/IMG/Pasted image 20250707133948.png",
     "RobotRL/Q-learning DQN/IMG",
-    "RobotRL/ViTAL/IMG/Pasted image 20250707113453.png",
     "未命名.canvas"
   ]
 }
