@@ -8,17 +8,27 @@
         "type": "tabs",
         "children": [
           {
+            "id": "6048b431a3c223cf",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          },
+          {
             "id": "b3abd5300d9764bc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotRL/Hil-Serl/default joint reward - 设计思路.md",
+                "file": "RobotRL/Reward设计/manipulation reward 设计.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "default joint reward - 设计思路"
+              "title": "manipulation reward 设计"
             }
           },
           {
@@ -35,7 +45,8 @@
               "title": "KL散度对比MSE计算loss"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -196,8 +207,10 @@
   },
   "active": "b3abd5300d9764bc",
   "lastOpenFiles": [
+    "RobotRL/Reward设计/default joint reward - 设计思路.md",
+    "RobotRL/Reward设计/manipulation reward 设计.md",
+    "RobotRL/Reward设计",
     "RobotRL/Hil-Serl/lerobot - Hil-Serl pipeline说明.md",
-    "RobotRL/Hil-Serl/default joint reward - 设计思路.md",
     "Robotmanipulation/KL散度对比MSE计算loss.md",
     "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
     "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
@@ -239,10 +252,8 @@
     "RobotRL/Q-learning DQN/IMG/Pasted image 20250707172518.png",
     "RobotRL/Q-learning DQN/IMG/Pasted image 20250707164428.png",
     "RobotRL/Q-learning DQN/IMG/Pasted image 20250707164342.png",
-    "RobotRL/stable-baselines3 框架解析/common.off_policy_algorithm.OffPolicyAlgorithm.md",
     "RobotRL/Q-learning DQN/IMG/Pasted image 20250707152859.png",
     "Robotmanipulation/Imitation learning/未命名",
-    "RobotRL/Q-learning DQN/IMG",
     "未命名.canvas"
   ]
 }
