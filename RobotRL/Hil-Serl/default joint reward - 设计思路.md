@@ -105,3 +105,40 @@ reward = np.clip(reward, -5.0, 15.0)
 - 调试关节控制策略
 - 验证基础的关节空间学习能力
 - 作为更复杂任务的预训练基础
+
+
+```bash
+[DEMO CONSTRAINTS] Applied relaxed safety constraints:
+  Left pos: [0.338, -0.060, -0.035]
+  Right pos: [0.062, 0.091, 0.481]
+[INCREMENTAL DEBUG] Left increment: [-0.01400664  0.00501108  0.00214253], Right increment: [-0.00834038 -0.00618724  0.01377134]
+[INCREMENTAL DEBUG] Left absolute pos: [ 0.33794409 -0.05986074 -0.03498751], Right absolute pos: [0.06227585 0.09066066 0.48058272]
+[INCREMENTAL DEBUG] Current cumulative - Left: [ 0.02014145 -0.4602788  -0.01557023], Right: [-0.25552678  0.49107873  0.5       ]
+[DEMO MODE] Publishing action-based arm poses for joint space learning
+[DEMO MODE] Step 199: Mean deviation: 36.35°
+  Default joint reward: 0.967, Dense reward: 0.668
+  Total reward: 1.634, Best so far: 12.53°
+  All joints close: False, Terminated: False
+  Worst joint: R1 (139.01°)
+[VR INCREMENTAL DEBUG] VR positions - Left: [ 0.33794409 -0.05986074 -0.03498751], Right: [0.06227585 0.09066066 0.48058272]
+[VR INCREMENTAL DEBUG] Fixed positions - Left: [ 0.31780263  0.40041807 -0.01941728], Right: [ 0.31780263 -0.40041807 -0.01941728]
+[VR INCREMENTAL DEBUG] Calculated increments - Left: [ 0.02014145 -0.2        -0.01557023], Right: [-0.2  0.2  0.2]
+[DEMO CONSTRAINT] Relaxed constraints - only linear z disabled:
+    action[2] (linear z): 0.000
+  Left hand increment: x=-0.060, y=-0.060, z=0.035
+  Right hand increment: x=0.060, y=0.002, z=0.060
+  Max increment limit: ±0.060
+[DEMO CONSTRAINTS] Applied relaxed safety constraints:
+  Left pos: [0.323, -0.060, -0.029]
+  Right pos: [0.060, 0.086, 0.481]
+[INCREMENTAL DEBUG] Left increment: [-1.5205311e-02  8.8629313e-06  5.7140258e-03], Right increment: [-0.0026723  -0.00451872  0.01501707]
+[INCREMENTAL DEBUG] Left absolute pos: [ 0.32273877 -0.05985189 -0.02927348], Right absolute pos: [0.05960354 0.08614195 0.48058272]
+[INCREMENTAL DEBUG] Current cumulative - Left: [ 0.00493614 -0.46026996 -0.00985621], Right: [-0.2581991   0.48656002  0.5       ]
+[DEMO MODE] Publishing action-based arm poses for joint space learning
+[DEMO MODE] Step 200: Mean deviation: 35.98°
+  Default joint reward: 0.974, Dense reward: 0.678
+  Total reward: 1.650, Best so far: 12.53°
+  All joints close: False, Terminated: True
+  Worst joint: R1 (138.71°)
+
+```
