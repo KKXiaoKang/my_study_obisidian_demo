@@ -44,8 +44,23 @@
               "icon": "lucide-file",
               "title": "KL散度对比MSE计算loss"
             }
+          },
+          {
+            "id": "3455a8355596dce8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RobotRL/DEBUG LOG.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DEBUG LOG"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -204,13 +219,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6048b431a3c223cf",
+  "active": "3455a8355596dce8",
   "lastOpenFiles": [
+    "RobotRL/DEBUG LOG.md",
+    "Robotmanipulation/KL散度对比MSE计算loss.md",
     "RobotRL/Reward设计/default joint reward - 设计思路.md",
     "RobotRL/Reward设计/manipulation reward 设计.md",
     "RobotRL/Reward设计",
     "RobotRL/Hil-Serl/lerobot - Hil-Serl pipeline说明.md",
-    "Robotmanipulation/KL散度对比MSE计算loss.md",
     "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
     "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
     "RobotVision/SLAM/MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM.md",
@@ -247,7 +263,6 @@
     "Robotmanipulation/VLA/IMG",
     "Robotmanipulation/VLA",
     "RobotRL/Q-learning DQN/Deep Q Net-work.md",
-    "RobotRL/Q-learning DQN/DQN 变换表.md",
     "RobotRL/Q-learning DQN/IMG/Pasted image 20250707172518.png",
     "RobotRL/Q-learning DQN/IMG/Pasted image 20250707164428.png",
     "RobotRL/Q-learning DQN/IMG/Pasted image 20250707164342.png",
