@@ -13,16 +13,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation/Imitation learning/Attention Is All You Need - Transformer 开山之作.md",
+                "file": "Robotmanipulation/Imitation learning/传统BC方法一览.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Attention Is All You Need - Transformer 开山之作"
+              "title": "传统BC方法一览"
             }
           },
           {
-            "id": "470a9074362bb87e",
+            "id": "8b4b2909f021225a",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -192,12 +192,14 @@
   },
   "active": "6d413caf25ae8932",
   "lastOpenFiles": [
-    "Robotmanipulation/Imitation learning/Attention Is All You Need - Transformer 开山之作.md",
-    "Robotmanipulation/Imitation learning/IMG/Pasted image 20250731191407.png",
+    "RobotRL/Q-learning DQN/q-learning 方法一览.md",
     "Robotmanipulation/Imitation learning/传统BC方法一览.md",
+    "Robotmanipulation/Imitation learning/Attention Is All You Need -  Transformer 开山之作.md",
+    "RobotRL/0801 - KuavoEnv Debug log.md",
+    "RobotRL/0801 - DEBUG LOG - Learner.md",
+    "RobotRL/0801 - DEBUG LOG - Actor.md",
+    "Robotmanipulation/Imitation learning/IMG/Pasted image 20250731191407.png",
     "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
-    "RobotRL/DEBUG LOG - Learner.md",
-    "RobotRL/DEBUG LOG - Actor.md",
     "RobotRL/Reward设计/default joint reward - 设计思路.md",
     "Robotmanipulation/KL散度对比MSE计算loss.md",
     "RobotRL/Reward设计/manipulation reward 设计.md",
@@ -226,7 +228,6 @@
     "Robotmanipulation/Imitation learning/Diffusion Policy - Flow Matching 对比.md",
     "RobotRL/Q-learning DQN/贝尔曼方程 - Bellman Optimality Equation.md",
     "RobotRL/Q-learning DQN/探索底层文章 - Q-learning is not yet scalable.md",
-    "RobotRL/Q-learning DQN/q-learning 方法一览.md",
     "RobotRL/Diffusion-RL/IMG/Pasted image 20250707180604.png",
     "RobotRL/Diffusion-RL/IMG/Diffusion Policy Policy Optimization.pdf",
     "RobotRL/Diffusion-RL/IMG",
