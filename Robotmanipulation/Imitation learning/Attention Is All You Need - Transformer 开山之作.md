@@ -71,3 +71,28 @@
  -2.6192583e-04 -8.9137810e-01] ======================= 
  =============================================== 
 ```
+
+```bash
+INFO 2025-08-01 13:40:35 rl/actor.py:239 make_env online
+INFO 2025-08-01 13:40:35 ort/utils.py:72 [ACTOR] parameters Starting receiver
+INFO 2025-08-01 13:40:36 /topics.py:1132 topicmanager initialized
+ ----- RLKuavo Parameters -----
+vel_smoothing_factor: 0.2, arm_smoothing_factor: 0.2
+wbc_observation_enabled: False
+action_dim: 18
+ ----- RLKuavo Parameters -----
+[INFO] [1754026836.242156]: gym.Env: ROS node initialized.
+ arm_joint_centers: [-0.78539816  0.87266463  0.         -1.30899694  0.         -0.30543262
+  0.         -0.78539816 -0.87266463  0.         -1.30899694  0.
+  0.30543262  0.        ]
+ arm_joint_scales: [2.35619449 1.22173048 1.57079633 1.30899694 1.57079633 1.00356432
+ 0.6981317  2.35619449 1.22173048 1.57079633 1.30899694 1.57079633
+ 1.00356432 0.6981317 ]
+ arm_joint_center rad2deg: [
+ -45.   50.    0.  -75.    0.  -17.5   0.  
+ -45.  -50.    0.  -75.    0.   17.5   0. ]
+[INFO] [1754026836.258554]: Joint scales look reasonable (min: 40.0°)
+/home/lab/anaconda3/envs/lerobot/lib/python3.10/site-packages/gymnasium/utils/passive_env_checker.py:159: UserWarning: WARN: The obs returned by the `reset()` method is not within the observation space.
+  logger.warn(f"{pre} is not within the observation space.")
+
+```
