@@ -20,6 +20,16 @@
               "icon": "lucide-file",
               "title": "Attention Is All You Need - Transformer 开山之作"
             }
+          },
+          {
+            "id": "470a9074362bb87e",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
           }
         ]
       }
@@ -182,9 +192,9 @@
   },
   "active": "6d413caf25ae8932",
   "lastOpenFiles": [
+    "Robotmanipulation/Imitation learning/Attention Is All You Need - Transformer 开山之作.md",
     "Robotmanipulation/Imitation learning/IMG/Pasted image 20250731191407.png",
     "Robotmanipulation/Imitation learning/传统BC方法一览.md",
-    "Robotmanipulation/Imitation learning/Attention Is All You Need - Transformer 开山之作.md",
     "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
     "RobotRL/DEBUG LOG - Learner.md",
     "RobotRL/DEBUG LOG - Actor.md",
@@ -227,7 +237,6 @@
     "RobotRL/Q-learning DQN/IMG/Pasted image 20250707172518.png",
     "RobotRL/Q-learning DQN/IMG/Pasted image 20250707164428.png",
     "RobotRL/Q-learning DQN/IMG/Pasted image 20250707164342.png",
-    "RobotRL/Q-learning DQN/IMG/Pasted image 20250707152859.png",
     "Robotmanipulation/Imitation learning/未命名",
     "未命名.canvas"
   ]
