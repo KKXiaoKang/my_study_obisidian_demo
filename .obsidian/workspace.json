@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation/Imitation learning/传统BC方法一览.md",
+                "file": "Robotmanipulation/Imitation learning/编码器/MLP - 多层感知机.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "传统BC方法一览"
+              "title": "MLP - 多层感知机"
             }
           },
           {
@@ -30,8 +30,23 @@
               "icon": "lucide-git-fork",
               "title": "关系图谱"
             }
+          },
+          {
+            "id": "ff6eeded61e660c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Robotmanipulation/Imitation learning/Transformer/Transformer - 细节说明.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Transformer - 细节说明"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -88,7 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 367.5
+    "width": 457.5
   },
   "right": {
     "id": "f68e4ca4c1083328",
@@ -190,14 +205,25 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6d413caf25ae8932",
+  "active": "ff6eeded61e660c3",
   "lastOpenFiles": [
-    "Robotmanipulation/Imitation learning/传统BC方法一览.md",
-    "RobotRL/Q-learning DQN/q-learning 方法一览.md",
-    "Robotmanipulation/Imitation learning/Attention Is All You Need -  Transformer 开山之作.md",
+    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250805192602.png",
+    "Robotmanipulation/Imitation learning/Transformer/IMG",
+    "Robotmanipulation/Imitation learning/Transformer/Attention Is All You Need -  Transformer 开山之作 - pipeline.md",
+    "Robotmanipulation/Imitation learning/Transformer/Transformer - 细节说明.md",
+    "Robotmanipulation/Imitation learning/Transformer",
+    "Robotmanipulation/Imitation learning/IMG/Pasted image 20250805192313.png",
+    "Robotmanipulation/Imitation learning/IMG/Pasted image 20250805192117.png",
+    "Robotmanipulation/Imitation learning/IMG/Pasted image 20250805191619.png",
+    "Robotmanipulation/Imitation learning/IMG/Pasted image 20250805190846.png",
+    "Robotmanipulation/Imitation learning/IMG/Pasted image 20250805190845.png",
     "RobotRL/0801 - KuavoEnv Debug log.md",
     "RobotRL/0801 - DEBUG LOG - Learner.md",
     "RobotRL/0801 - DEBUG LOG - Actor.md",
+    "RobotRL/Q-learning DQN/贝尔曼方程 - Bellman Optimality Equation.md",
+    "Robotmanipulation/Imitation learning/编码器/MLP - 多层感知机.md",
+    "Robotmanipulation/Imitation learning/传统BC方法一览.md",
+    "RobotRL/Q-learning DQN/q-learning 方法一览.md",
     "Robotmanipulation/Imitation learning/IMG/Pasted image 20250731191407.png",
     "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
     "RobotRL/Reward设计/default joint reward - 设计思路.md",
@@ -219,26 +245,15 @@
     "Robot工具/BugLog - bt2pro手柄机器人初始后乱走/BugLog.md",
     "Robotmanipulation/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
     "Robot工具/IsaacLab - 多联体包含方法.md",
-    "Robot工具/BugLog - bt2pro手柄机器人初始后乱走/IMG/Pasted image 20250716101436.png",
     "Robot工具/BugLog - bt2pro手柄机器人初始后乱走/IMG",
     "RobotRL/Diffusion-RL/DPPO - Diffusion Policy Policy Optimization.md",
     "Robot工具/BugLog - bt2pro手柄机器人初始后乱走",
     "Robot工具/未命名.canvas",
-    "RobotRL/DSRL/DSRL - 基于Diffusion策略的RL微调.md",
-    "Robotmanipulation/Imitation learning/Diffusion Policy - Flow Matching 对比.md",
-    "RobotRL/Q-learning DQN/贝尔曼方程 - Bellman Optimality Equation.md",
-    "RobotRL/Q-learning DQN/探索底层文章 - Q-learning is not yet scalable.md",
-    "RobotRL/Diffusion-RL/IMG/Pasted image 20250707180604.png",
     "RobotRL/Diffusion-RL/IMG/Diffusion Policy Policy Optimization.pdf",
     "RobotRL/Diffusion-RL/IMG",
     "RobotRL/Diffusion-RL",
     "Robotmanipulation/VLA/IMG/Vision Language Models are In-Context Value.pdf",
     "Robotmanipulation/VLA/IMG",
-    "Robotmanipulation/VLA",
-    "RobotRL/Q-learning DQN/IMG/Pasted image 20250707172518.png",
-    "RobotRL/Q-learning DQN/IMG/Pasted image 20250707164428.png",
-    "RobotRL/Q-learning DQN/IMG/Pasted image 20250707164342.png",
-    "Robotmanipulation/Imitation learning/未命名",
     "未命名.canvas"
   ]
 }
