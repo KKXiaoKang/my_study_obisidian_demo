@@ -12,3 +12,6 @@
 
 ##### Self-Attention的输出
 * 得到矩阵 Q, K, V之后就可以计算出 Self-Attention 的输出了，计算的公式如下：
+* $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
+	* $d_k$ 是 $Q$ , $K$ 矩阵的列数，即向量维度
+* 
