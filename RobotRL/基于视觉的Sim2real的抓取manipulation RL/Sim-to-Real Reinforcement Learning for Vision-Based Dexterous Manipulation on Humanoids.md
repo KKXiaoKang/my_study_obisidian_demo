@@ -124,3 +124,6 @@ $$r_{contact} = \sum_i \left[ \frac{1}{1 + \alpha d(\mathbf{X}_i^L, \mathbf{F}_i
 
 #### 域随机化设置
 ![[Pasted image 20250806182415.png]]
+
+#### 蒸馏为通用策略的细节
+![[Pasted image 20250806183336.png]]
