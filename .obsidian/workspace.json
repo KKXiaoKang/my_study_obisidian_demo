@@ -25,16 +25,6 @@
             "id": "8b4b2909f021225a",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
-            }
-          },
-          {
-            "id": "ff6eeded61e660c3",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
                 "file": "Robotmanipulation/Imitation learning/Transformer/04 - Transformer - Decoder结构.md",
@@ -46,7 +36,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -205,29 +195,29 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ff6eeded61e660c3",
+  "active": "8b4b2909f021225a",
   "lastOpenFiles": [
-    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806203107.png",
+    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806211335.png",
+    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806211326.png",
+    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806211303.png",
+    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806211104.png",
+    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806211046.png",
+    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806211022.png",
     "Robotmanipulation/Imitation learning/Transformer/03 - Transformer - Encoder结构.md",
+    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806210810.png",
+    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250805192602.png",
     "Robotmanipulation/Imitation learning/Transformer/04 - Transformer - Decoder结构.md",
-    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806203037.png",
-    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806201555.png",
-    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806200713.png",
-    "Robotmanipulation/Imitation learning/Transformer/Attention Is All You Need -  Transformer 开山之作 - pipeline.md",
+    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806210756.png",
     "Robotmanipulation/Imitation learning/Transformer/02 - Transformer - Self-Attention（自注意力机制）.md",
+    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806210700.png",
+    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806210335.png",
+    "Robotmanipulation/Imitation learning/Transformer/Attention Is All You Need -  Transformer 开山之作 - pipeline.md",
     "Robotmanipulation/Imitation learning/Transformer/01 - Transformer - Transformer 输入.md",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
-    "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG/Pasted image 20250806183336.png",
-    "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG/Pasted image 20250806182415.png",
-    "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG/Pasted image 20250806170312.png",
-    "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG/Pasted image 20250806170301.png",
-    "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG/Pasted image 20250806170252.png",
-    "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG/Pasted image 20250806145311.png",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.pdf",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL",
     "RobotRL/未命名.md",
-    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250805211959.png",
     "Robotmanipulation/Imitation learning/Transformer/IMG",
     "Robotmanipulation/Imitation learning/Transformer",
     "RobotRL/0801 - KuavoEnv Debug log.md",
