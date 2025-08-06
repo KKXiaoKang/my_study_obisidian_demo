@@ -75,3 +75,44 @@ $$r_{contact} = \sum_i \left[ \frac{1}{1 + \alpha d(\mathbf{X}_i^L, \mathbf{F}_i
 * 如何解决sim2real policy的视觉gap和物体接触（动力学）gap？
 
 ##### Mixing object representations. |  混合物体表示
+*  数据增广（按维度和复杂度递增的顺序）
+	* 3D 物体 position
+	* 6D 物体 pose
+	* depth 深度信息
+	* pointCloud 点云信息
+	* RGB 图像
+* 论文采用如下进行数据增广
+	* 低维： 3D 物体 position
+	* 高维： 深度图像
+* 3D 物体 position 通过第三视角相机获取，同时物体也必须在第三相机视野内，并且其噪声位置必须保证可以持续跟踪
+* 深度图像补充了物体的集合信息
+
+##### Domain randomization for dynamics and perceptio | 动态和感知的域随机化
+* 详细定义参考如下
+
+###  训练细节
+
+#### obs space | action space 
+* 关节层ppo RL policy
+
+#### actor policy 输入如下
+######  obs
+* 包含物体位置 | grasp object position
+* 机器人关节角度 | robot joint position
+
+###### action
+* 机器人关节角度 | robot joint position
+
+#### critic network 提供如下特权状态输入
+* 手臂关节速度、
+* 手关节速度、
+* 所有指尖位置、
+* 物体 方向、
+* 物体 速度、
+* 物体 角速度、
+* 物体质量 随机化比例、
+* 物体摩擦 随机化比例
+* 物体形状 随机化比例
+
+#### actor network | critic network 构成
+* Both the actor and critic networks are 3-layer MLPs with units (512,512,512)
