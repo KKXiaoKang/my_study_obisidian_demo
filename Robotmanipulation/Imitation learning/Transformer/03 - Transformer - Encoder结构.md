@@ -21,4 +21,6 @@
 
 
 #### 4.3 组成 Encoder
-* 通过上面描述的 Multi-Head Attention, Feed Forward, Add & Norm 就可以构造出一个 Encoder block，Encoder block 接收输入矩阵  ，并输出一个矩阵  。通过多个 Encoder block 叠加就可以组成 Encoder。
+* 通过上面描述的 Multi-Head Attention, Feed Forward, Add & Norm 就可以构造出一个 Encoder block，Encoder block 接收输入矩阵 $X_(n \times d)$   ，并输出一个矩阵 $O_(n \times d)$   。通过多个 Encoder block 叠加就可以组成 Encoder。
+* 第一个 Encoder block 的输入为句子单词的表示向量矩阵，后续 Encoder block 的输入是前一个 Encoder block 的输出，最后一个 Encoder block 输出的矩阵就是**编码信息矩阵 C**，这一矩阵后续会用到 Decoder 中
+* ![[Pasted image 20250806203037.png]]
