@@ -121,3 +121,6 @@ $$r_{contact} = \sum_i \left[ \frac{1}{1 + \alpha d(\mathbf{X}_i^L, \mathbf{F}_i
 
 #### actor network | critic network 构成
 * Both the actor and critic networks are 3-layer MLPs with units (512,512,512)
+
+#### 域随机化设置
+![[Pasted image 20250806182415.png]]
