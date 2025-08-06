@@ -23,6 +23,12 @@ $$r_{contact} = \sum_i \left[ \frac{1}{1 + \alpha d(\mathbf{X}_i^L, \mathbf{F}_i
 * 其中每一项的含义如下：
 	* $\mathbf{X}_i^L$ , $\mathbf{X}_i^R$ 
 		* 在第$i$个任务中， 左/右手的目标接触点坐标（你希望它解除的物体上的点）
+	* $\mathbf{F}_i^L$ , $\mathbf{F}_i^R$
+		* 实际左/右手指尖的接触点坐标（实际当前接触位置）
+	* $d(\mathbf{A}, \mathbf{B})$ 
+		* 点之间的欧式距离 $min_i||A_i - X_i||_2$  
+	*  $\alpha, \beta$ 
+		* 缩放参数，调节距离误差在reward中的影响
 
 
 #### A.自动从真实到模拟调优的模块
