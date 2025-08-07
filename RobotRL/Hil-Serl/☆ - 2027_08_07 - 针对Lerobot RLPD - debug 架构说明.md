@@ -53,11 +53,17 @@
 		* kuavo_debug_20_test | no_action_dim | fps10_action_06_grad_clip_norm_10_reward_mse_no_batch_size_64 | lr_3e-4 | target_entropy_-6.0
 	* 对比如上实验，可以看到在MSE reward下，关于动作维度可以扩展到14都可以进行收敛到0
 		* ![[Pasted image 20250807191522.png]]
-* 对于超参，可以通过修改学习率lr从3e-4到1e-3，同时调节折扣因子，让sac学习输出14维度的action输出为0的学习效率大大加快
+* 对于超参，可以通过修改学习率lr从3e-4到1e-3，同时调节折扣因子，让sac学习action dim 为14的target action输出为0的学习效率大大加快
 	* kuavo_debug_23_test | discount 0.95 | fps10_action_14_grad_clip_norm_10_reward_mse_no_batch_size_256 | lr_1e-3 | target_entropy_null
 	* kuavo_debug_22_test | no_action_dim | fps10_action_14_grad_clip_norm_10_reward_mse_no_batch_size_64 | lr_1e-4 | target_entropy_null
-	* ![[Pasted image 20250807191908.png]]
+	* ![[Pasted image 20250807193505.png]]
+#### 对于stable-baseline3 PPO | stable-baseline3 SAC
+* 在action dim为6的情况下，SAC的reward会抖动，但是PPO会一直稳定上涨
+* ![[img_v3_02ou_29bac0a8-563e-431c-9ba9-24bdf419e94g.jpg]]
 
-
-### 2. 关于reward scale
-* 在实验当中，对比于
+### 2. 关于reward shift
+#### 在stable-baseline3 SAC 当中进行对比
+* 可以看到在 mean reward（倒数reward下），倒数reward和倒数reward-1
+	* 当前说明下的action dim默认为6
+	* 所以这个reward scale不对，一个是奖励一个是惩罚，奖励下可能会出现震荡，但是惩罚下SAC可以稳步学习到reward上涨
+* ![[img_v3_02ou_ef8dcdeb-6976-484b-862a-c73f06f5c77g.jpg]]
