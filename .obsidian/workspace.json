@@ -8,31 +8,27 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6d413caf25ae8932",
+            "id": "08475499fd671a9f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Robotmanipulation/Imitation learning/编码器/MLP - 多层感知机.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MLP - 多层感知机"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           },
           {
-            "id": "8b4b2909f021225a",
+            "id": "361336513b7ab1dd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation/Imitation learning/Transformer/04 - Transformer - Decoder结构.md",
+                "file": "RobotRL/Hil-Serl/☆ - 2027_08_07 - 针对Lerobot RLPD - debug 架构说明.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04 - Transformer - Decoder结构"
+              "title": "☆ - 2027_08_07 - 针对Lerobot RLPD - debug 架构说明"
             }
           }
         ],
@@ -195,25 +191,33 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8b4b2909f021225a",
+  "active": "361336513b7ab1dd",
   "lastOpenFiles": [
+    "RobotRL/Hil-Serl/lerobot - Hil-Serl pipeline说明.md",
+    "RobotRL/Hil-Serl/☆ - 2027_08_07 - 针对Lerobot RLPD - debug 架构说明.md",
+    "RobotRL/Hil-Serl/IMG/Pasted image 20250807183025.png",
+    "RobotRL/Hil-Serl/IMG/Pasted image 20250807183013.png",
+    "RobotRL/Hil-Serl/IMG/Pasted image 20250807182959.png",
+    "RobotRL/Hil-Serl/IMG/Pasted image 20250807182949.png",
+    "RobotRL/Reward设计/manipulation reward 设计.md",
+    "RobotRL/Reward设计/default joint reward - 设计思路.md",
+    "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
+    "Robotmanipulation/Imitation learning/编码器/MLP - 多层感知机.md",
+    "RobotRL/SAC/SAC - `RunningMeanStd` 观测归一化工具.md",
+    "RobotRL/SAC/SAC - load or save model.md",
+    "RobotRL/SAC/SAC - train and learn.md",
+    "RobotRL/SAC/SAC - (actor-Critic 架构).md",
+    "Robotmanipulation/Imitation learning/Transformer/04 - Transformer - Decoder结构.md",
     "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250807094952.png",
     "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806211335.png",
     "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806211326.png",
     "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806211303.png",
     "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806211104.png",
     "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806211046.png",
-    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806211022.png",
     "Robotmanipulation/Imitation learning/Transformer/03 - Transformer - Encoder结构.md",
-    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806210810.png",
-    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250805192602.png",
-    "Robotmanipulation/Imitation learning/Transformer/04 - Transformer - Decoder结构.md",
-    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806210756.png",
     "Robotmanipulation/Imitation learning/Transformer/02 - Transformer - Self-Attention（自注意力机制）.md",
-    "Robotmanipulation/Imitation learning/Transformer/IMG/Pasted image 20250806210700.png",
     "Robotmanipulation/Imitation learning/Transformer/Attention Is All You Need -  Transformer 开山之作 - pipeline.md",
     "Robotmanipulation/Imitation learning/Transformer/01 - Transformer - Transformer 输入.md",
-    "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.pdf",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL",
@@ -224,21 +228,12 @@
     "RobotRL/0801 - DEBUG LOG - Learner.md",
     "RobotRL/0801 - DEBUG LOG - Actor.md",
     "RobotRL/Q-learning DQN/贝尔曼方程 - Bellman Optimality Equation.md",
-    "Robotmanipulation/Imitation learning/编码器/MLP - 多层感知机.md",
     "Robotmanipulation/Imitation learning/传统BC方法一览.md",
     "RobotRL/Q-learning DQN/q-learning 方法一览.md",
     "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
-    "RobotRL/Reward设计/default joint reward - 设计思路.md",
     "Robotmanipulation/KL散度对比MSE计算loss.md",
-    "RobotRL/Reward设计/manipulation reward 设计.md",
     "RobotRL/Reward设计",
-    "RobotRL/Hil-Serl/lerobot - Hil-Serl pipeline说明.md",
     "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
-    "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
-    "RobotVision/SLAM/MASt3R-SLAM：具有 3D 重建先验的实时稠密 SLAM.md",
-    "RobotVision/三维重建/3D_Gaussian/3D GS 训练过程 - 3DGS散点ply训练.md",
-    "RobotVision/三维重建/3D_Gaussian/3D GS 导入场景 Omniverse - 仅用于背景像素渲染.md",
-    "RobotVision/三维重建/3D_Gaussian/3D Gaussian Splatting 原理.md",
     "Robot工具/BugLog - bt2pro手柄机器人初始后乱走/IMG",
     "Robot工具/BugLog - bt2pro手柄机器人初始后乱走",
     "Robot工具/未命名.canvas",
