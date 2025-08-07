@@ -66,4 +66,21 @@
 * 可以看到在 mean reward（倒数reward下），倒数reward和倒数reward-1
 	* 当前说明下的action dim默认为6
 	* 所以这个reward scale不对，一个是奖励一个是惩罚，奖励下可能会出现震荡，但是惩罚下SAC可以稳步学习到reward上涨
+	* ？提出问题：正向action下的输出是否可以作为一个奖励？具体的reward设计必须是要鼓励这种行为，而不是随机行为也给一个正奖励。
 * ![[img_v3_02ou_ef8dcdeb-6976-484b-862a-c73f06f5c77g.jpg]]
+* 对于奖励函数形态：倒数reward和 倒数reward-1 和 mse
+	* ![[img_v3_02ou_a73e1b6b-d075-47d5-931d-7afa865cd09g.jpg]]
+
+#### 在stable-baseline3 PPO 当中进行对比
+* PPO mse vs 倒数 mse vs 倒数mse-1 (惩罚形态下收敛较快)
+	* ![[img_v3_02ou_de5f4d9c-3a17-4404-882c-de545566694g.jpg]]
+### 3. 关于reward scale
+#### 在stable-baseline3 SAC 当中进行对比
+* 可以看到在reward scale越大的时候，SAC居然反向收敛的越快
+* sac action dim 为14。 reward分别 scale 1， 100， 1000，reward=mse
+* ![[img_v3_02ou_cbb2fe0f-1b6a-45bd-9e63-78c190c128bg.jpg]]
+
+#### 在stable-baseline3 PPO 当中进行对比
+* reward scale对于ppo来说，其实是有一丢丢负面影响，因为导致ppo收敛变慢了，但是最终ppo还是可以收敛的
+* ppo 14 dims; scale = 1 vs scale = 1000
+* ![[img_v3_02ou_9434b41e-782c-496c-a7a2-4bee03e1905g.jpg]]
