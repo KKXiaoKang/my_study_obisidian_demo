@@ -84,3 +84,12 @@
 * reward scale对于ppo来说，其实是有一丢丢负面影响，因为导致ppo收敛变慢了，但是最终ppo还是可以收敛的
 * ppo 14 dims; scale = 1 vs scale = 1000
 * ![[img_v3_02ou_9434b41e-782c-496c-a7a2-4bee03e1905g.jpg]]
+## 观察总结
+* [x] SAC对于reward的设计极为敏感，从某种程度上说，reward当中不能随意设计，对于具体的reward设计必须是要鼓励这种行为，而不是随机行为也给一个正奖励
+* [x] 在reward设计正确的情况下，SAC的训练收敛 确实 会比PPO快的多
+* [x] ppo关于actor policy下，始终会回归到收敛程度，没有说对于简单的输出target action为0的时候 崩掉的情况
+* [x] RLPD-Lerobot当中的SAC，对于梯度进行裁剪，防止训练爆炸，这部分和stable-baseline3 SAC官方的实现有所不同，所以在reward scale上的表现 lerobotSAC 确实无法做到像 stable-baseline3 SAC那样可以快速收敛
+
+## 后续更改
+* 可以定位到其实原本的RLPD的MetaVR遥操作的人工干预的buffer和transition当中并没有问题
+* 问题来源于reward type上的一些设计技巧，以及关于超参的一些设置   
