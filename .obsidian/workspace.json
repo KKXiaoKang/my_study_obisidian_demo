@@ -21,6 +21,30 @@
             "id": "361336513b7ab1dd",
             "type": "leaf",
             "state": {
+              "type": "image",
+              "state": {
+                "file": "RobotRL/Hil-Serl/IMG/Pasted image 20250703140939.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20250703140939"
+            }
+          },
+          {
+            "id": "3ca7bf858dfd3dde",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "RobotRL/Hil-Serl/IMG/Pasted image 20250807183013.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20250807183013"
+            }
+          },
+          {
+            "id": "80bdf80209d26b03",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
                 "file": "RobotRL/Hil-Serl/☆ - 2027_08_07 - 针对Lerobot RLPD - debug 架构说明.md",
@@ -32,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -191,21 +215,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "361336513b7ab1dd",
+  "active": "80bdf80209d26b03",
   "lastOpenFiles": [
-    "RobotRL/Hil-Serl/IMG/img_v3_02ou_9434b41e-782c-496c-a7a2-4bee03e1905g.jpg",
-    "RobotRL/Hil-Serl/IMG/img_v3_02ou_de5f4d9c-3a17-4404-882c-de545566694g.jpg",
-    "RobotRL/Hil-Serl/IMG/img_v3_02ou_a73e1b6b-d075-47d5-931d-7afa865cd09g.jpg",
-    "RobotRL/Hil-Serl/IMG/img_v3_02ou_cbb2fe0f-1b6a-45bd-9e63-78c190c128bg.jpg",
-    "RobotRL/Hil-Serl/IMG/Pasted image 20250807193505.png",
-    "RobotRL/Hil-Serl/IMG/img_v3_02ou_ef8dcdeb-6976-484b-862a-c73f06f5c77g.jpg",
-    "RobotRL/Hil-Serl/IMG/img_v3_02ou_29bac0a8-563e-431c-9ba9-24bdf419e94g.jpg",
-    "RobotRL/Hil-Serl/IMG/Pasted image 20250807191908.png",
-    "RobotRL/Hil-Serl/IMG/Pasted image 20250807191522.png",
-    "RobotRL/Hil-Serl/IMG/Pasted image 20250807191020.png",
-    "RobotRL/Hil-Serl/lerobot - Hil-Serl pipeline说明.md",
+    "RobotRL/Hil-Serl/IMG/Pasted image 20250807183013.png",
+    "RobotRL/Hil-Serl/IMG/Pasted image 20250703140939.png",
+    "RobotRL/Hil-Serl/IMG/Pasted image 20250807182949.png",
+    "RobotRL/Hil-Serl/IMG/Pasted image 20250807182959.png",
     "RobotRL/Hil-Serl/☆ - 2027_08_07 - 针对Lerobot RLPD - debug 架构说明.md",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807183025.png",
+    "RobotRL/Hil-Serl/IMG/Pasted image 20250807191020.png",
+    "RobotRL/Hil-Serl/IMG/Pasted image 20250807191522.png",
+    "RobotRL/Hil-Serl/IMG/Pasted image 20250807191908.png",
+    "RobotRL/Hil-Serl/IMG/Pasted image 20250807193505.png",
+    "RobotRL/Hil-Serl/IMG/img_v3_02ou_9434b41e-782c-496c-a7a2-4bee03e1905g.jpg",
+    "RobotRL/Hil-Serl/lerobot - Hil-Serl pipeline说明.md",
     "RobotRL/Reward设计/manipulation reward 设计.md",
     "RobotRL/Reward设计/default joint reward - 设计思路.md",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
