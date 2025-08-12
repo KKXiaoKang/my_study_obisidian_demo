@@ -11,10 +11,14 @@
             "id": "08475499fd671a9f",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "type": "markdown",
+              "state": {
+                "file": "Robot工具/关于Lerobot 中 torchcodec 视频编码Tensor工具库难装的问题.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "关于Lerobot 中 torchcodec 视频编码Tensor工具库难装的问题"
             }
           },
           {
@@ -61,16 +65,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
+                "file": "RobotRL/stable-baselines3 框架解析/common.base_class.BaseAlgorithm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids"
+              "title": "common.base_class.BaseAlgorithm"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -102,7 +105,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "transfor",
+                "query": "tensorb",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -229,8 +232,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "218fdcb872d484f5",
+  "active": "08475499fd671a9f",
   "lastOpenFiles": [
+    "Robot工具/IMG/img_v3_02p3_1aca9b99-bb1c-4a8f-9b30-acdb223f032g.jpg",
+    "Robot工具/IMG",
+    "Robot工具/关于Lerobot 中 torchcodec 视频编码Tensor工具库难装的问题.md",
+    "RobotRL/stable-baselines3 框架解析/common.base_class.BaseAlgorithm.md",
+    "RobotRL/stable-baselines3 框架解析/common.off_policy_algorithm.OffPolicyAlgorithm.md",
+    "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
     "RobotRL/Hil-Serl/☆ - SAC recipe experiments log 对比 baseline PPO.md",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807183013.png",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250703140939.png",
@@ -245,7 +254,6 @@
     "RobotRL/Hil-Serl/lerobot - Hil-Serl pipeline说明.md",
     "RobotRL/Reward设计/manipulation reward 设计.md",
     "RobotRL/Reward设计/default joint reward - 设计思路.md",
-    "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
     "Robotmanipulation/Imitation learning/编码器/MLP - 多层感知机.md",
     "RobotRL/SAC/SAC - `RunningMeanStd` 观测归一化工具.md",
     "RobotRL/SAC/SAC - load or save model.md",
@@ -268,15 +276,11 @@
     "RobotRL/Q-learning DQN/贝尔曼方程 - Bellman Optimality Equation.md",
     "Robotmanipulation/Imitation learning/传统BC方法一览.md",
     "RobotRL/Q-learning DQN/q-learning 方法一览.md",
-    "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
-    "Robotmanipulation/KL散度对比MSE计算loss.md",
     "RobotRL/Reward设计",
-    "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
     "Robot工具/BugLog - bt2pro手柄机器人初始后乱走/IMG",
     "Robot工具/BugLog - bt2pro手柄机器人初始后乱走",
     "Robot工具/未命名.canvas",
     "RobotRL/Diffusion-RL/IMG/Diffusion Policy Policy Optimization.pdf",
-    "RobotRL/Diffusion-RL/IMG",
     "未命名.canvas"
   ]
 }
