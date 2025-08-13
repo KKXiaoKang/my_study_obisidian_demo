@@ -3,7 +3,7 @@
 ```bash
 # 先确认对cuda下的torchcodec版本
 
-pip install torchcodec --index-url=[https://download.pytorch.org/whl/cu118](https://download.pytorch.org/whl/cu118)
+pip install torchcodec --index-url=https://download.pytorch.org/whl/cu118
 
 # 根据上表去找torchcodec对应的torch版本
 

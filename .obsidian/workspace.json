@@ -72,8 +72,23 @@
               "icon": "lucide-file",
               "title": "common.base_class.BaseAlgorithm"
             }
+          },
+          {
+            "id": "a3c128b840307982",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Robot工具/关于Lerobot 中 torchcodec 视频编码Tensor工具库难装的问题.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "关于Lerobot 中 torchcodec 视频编码Tensor工具库难装的问题"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -232,13 +247,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "08475499fd671a9f",
+  "active": "a3c128b840307982",
   "lastOpenFiles": [
+    "Robotmanipulation/Imitation learning/rewACT - 将MLP结构的reward model融合在ACT训练当中.md",
     "Robotmanipulation/Imitation learning/IMG/Pasted image 20250813165725.png",
     "Robotmanipulation/Imitation learning/IMG/reward_visualization_train.mp4",
     "Robotmanipulation/Imitation learning/IMG/0_A_rewACT_仿真演示测试_原子策略跑_reward拿obs去推测reward.mp4",
     "Robotmanipulation/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
-    "Robotmanipulation/Imitation learning/rewACT - 将MLP结构的reward model融合在ACT训练当中.md",
     "Robot工具/关于Lerobot 中 torchcodec 视频编码Tensor工具库难装的问题.md",
     "Robot工具/IMG/img_v3_02p3_1aca9b99-bb1c-4a8f-9b30-acdb223f032g.jpg",
     "Robot工具/IMG",
@@ -254,7 +269,6 @@
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807191020.png",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807191522.png",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807191908.png",
-    "RobotRL/Hil-Serl/IMG/Pasted image 20250807193505.png",
     "RobotRL/Hil-Serl/lerobot - Hil-Serl pipeline说明.md",
     "RobotRL/Reward设计/manipulation reward 设计.md",
     "RobotRL/Reward设计/default joint reward - 设计思路.md",
