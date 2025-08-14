@@ -250,11 +250,11 @@
   "active": "a3c128b840307982",
   "lastOpenFiles": [
     "Robotmanipulation/Imitation learning/rewACT - 将MLP结构的reward model融合在ACT训练当中.md",
+    "Robot工具/关于Lerobot 中 torchcodec 视频编码Tensor工具库难装的问题.md",
     "Robotmanipulation/Imitation learning/IMG/Pasted image 20250813165725.png",
     "Robotmanipulation/Imitation learning/IMG/reward_visualization_train.mp4",
     "Robotmanipulation/Imitation learning/IMG/0_A_rewACT_仿真演示测试_原子策略跑_reward拿obs去推测reward.mp4",
     "Robotmanipulation/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
-    "Robot工具/关于Lerobot 中 torchcodec 视频编码Tensor工具库难装的问题.md",
     "Robot工具/IMG/img_v3_02p3_1aca9b99-bb1c-4a8f-9b30-acdb223f032g.jpg",
     "Robot工具/IMG",
     "RobotRL/stable-baselines3 框架解析/common.base_class.BaseAlgorithm.md",
