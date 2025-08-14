@@ -1,6 +1,10 @@
 * torchcodec表格来源链接：（https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec）
 ![[img_v3_02p3_1aca9b99-bb1c-4a8f-9b30-acdb223f032g.jpg]]
 ```bash
+# 更新lerobot
+cd lerobot/
+pip3 install -e .
+
 # 先确认对cuda下的torchcodec版本
 pip install torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cu118
 
