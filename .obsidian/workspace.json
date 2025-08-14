@@ -53,14 +53,18 @@
             "id": "c3e3b2d79084637c",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "type": "markdown",
+              "state": {
+                "file": "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -92,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tensorb",
+                "query": "ref",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -219,13 +223,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c3e3b2d79084637c",
+  "active": "a3c128b840307982",
   "lastOpenFiles": [
-    "Robot工具/关于Lerobot 中 torchcodec 视频编码Tensor工具库难装的问题.md",
+    "RobotRL/Hil-Serl/☆ - SAC recipe experiments log 对比 baseline PPO.md",
     "Robotmanipulation/Imitation learning/rewACT - 将MLP结构的reward model融合在ACT训练当中.md",
+    "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
+    "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
+    "Robot工具/关于Lerobot 中 torchcodec 视频编码Tensor工具库难装的问题.md",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250703140939.png",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807183013.png",
-    "RobotRL/Hil-Serl/☆ - SAC recipe experiments log 对比 baseline PPO.md",
     "RobotRL/stable-baselines3 框架解析/common.base_class.BaseAlgorithm.md",
     "Robotmanipulation/Imitation learning/IMG/Pasted image 20250813165725.png",
     "Robotmanipulation/Imitation learning/IMG/reward_visualization_train.mp4",
@@ -234,7 +240,6 @@
     "Robot工具/IMG/img_v3_02p3_1aca9b99-bb1c-4a8f-9b30-acdb223f032g.jpg",
     "Robot工具/IMG",
     "RobotRL/stable-baselines3 框架解析/common.off_policy_algorithm.OffPolicyAlgorithm.md",
-    "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807182949.png",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807182959.png",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807183025.png",

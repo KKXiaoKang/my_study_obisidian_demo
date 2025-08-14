@@ -6,10 +6,10 @@ cd lerobot/
 pip3 install -e .
 
 # 先确认对cuda下的torchcodec版本
-pip install torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cu118
+pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
 
 # 根据上表去找torchcodec对应的torch版本
-pip install torchcodec --index-url=https://download.pytorch.org/whl/cu118
+pip install torchcodec --index-url=https://download.pytorch.org/whl/cu124
 
 # 补全一下ffmpeg
 conda install ffmpeg -c conda-forge
