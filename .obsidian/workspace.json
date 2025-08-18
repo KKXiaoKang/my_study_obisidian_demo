@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation/Imitation learning/rewACT - 将MLP结构的reward model融合在ACT训练当中.md",
+                "file": "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "rewACT - 将MLP结构的reward model融合在ACT训练当中"
+              "title": "※ Diffusion Policy - 扩散去噪动作策略模型"
             }
           },
           {
@@ -36,7 +36,21 @@
             }
           },
           {
-            "id": "a3c128b840307982",
+            "id": "c3e3b2d79084637c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids"
+            }
+          },
+          {
+            "id": "1560a766fc6b8b3c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -50,21 +64,17 @@
             }
           },
           {
-            "id": "c3e3b2d79084637c",
+            "id": "d2017eccb904e86a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids"
+              "title": "新标签页"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -96,7 +106,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ref",
+                "query": "CNN",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -223,20 +233,28 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a3c128b840307982",
+  "active": "1560a766fc6b8b3c",
   "lastOpenFiles": [
-    "RobotRL/Hil-Serl/☆ - SAC recipe experiments log 对比 baseline PPO.md",
-    "Robotmanipulation/Imitation learning/rewACT - 将MLP结构的reward model融合在ACT训练当中.md",
-    "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
-    "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
     "Robot工具/关于Lerobot 中 torchcodec 视频编码Tensor工具库难装的问题.md",
+    "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
+    "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
+    "Robotmanipulation/KL散度对比MSE计算loss.md",
+    "Robotmanipulation/VLA/VLM学习价值函数 - Vision Language Models are In-Context Value Learners 谷歌deepmind.md",
+    "Robotmanipulation/Imitation learning/※ OpenVLA - Vision-Language-Action Model.md",
+    "Robotmanipulation/Imitation learning/※ GenDP - 机器人操作语义几何表示.md",
+    "Robotmanipulation/Imitation learning/rewACT - 将MLP结构的reward model融合在ACT训练当中.md",
+    "Robotmanipulation/Imitation learning/Transformer/03 - Transformer - Encoder结构.md",
+    "Robotmanipulation/Imitation learning/Transformer/04 - Transformer - Decoder结构.md",
+    "Robotmanipulation/Imitation learning/Transformer/Attention Is All You Need -  Transformer 开山之作 - pipeline.md",
+    "Robotmanipulation/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
+    "RobotRL/Hil-Serl/☆ - SAC recipe experiments log 对比 baseline PPO.md",
+    "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250703140939.png",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807183013.png",
     "RobotRL/stable-baselines3 框架解析/common.base_class.BaseAlgorithm.md",
     "Robotmanipulation/Imitation learning/IMG/Pasted image 20250813165725.png",
     "Robotmanipulation/Imitation learning/IMG/reward_visualization_train.mp4",
     "Robotmanipulation/Imitation learning/IMG/0_A_rewACT_仿真演示测试_原子策略跑_reward拿obs去推测reward.mp4",
-    "Robotmanipulation/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
     "Robot工具/IMG/img_v3_02p3_1aca9b99-bb1c-4a8f-9b30-acdb223f032g.jpg",
     "Robot工具/IMG",
     "RobotRL/stable-baselines3 框架解析/common.off_policy_algorithm.OffPolicyAlgorithm.md",
@@ -254,21 +272,13 @@
     "RobotRL/SAC/SAC - load or save model.md",
     "RobotRL/SAC/SAC - train and learn.md",
     "RobotRL/SAC/SAC - (actor-Critic 架构).md",
-    "Robotmanipulation/Imitation learning/Transformer/04 - Transformer - Decoder结构.md",
-    "Robotmanipulation/Imitation learning/Transformer/03 - Transformer - Encoder结构.md",
     "Robotmanipulation/Imitation learning/Transformer/02 - Transformer - Self-Attention（自注意力机制）.md",
-    "Robotmanipulation/Imitation learning/Transformer/Attention Is All You Need -  Transformer 开山之作 - pipeline.md",
     "Robotmanipulation/Imitation learning/Transformer/01 - Transformer - Transformer 输入.md",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.pdf",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL",
-    "RobotRL/未命名.md",
     "Robotmanipulation/Imitation learning/Transformer/IMG",
     "Robotmanipulation/Imitation learning/Transformer",
-    "RobotRL/0801 - KuavoEnv Debug log.md",
-    "RobotRL/0801 - DEBUG LOG - Learner.md",
-    "RobotRL/0801 - DEBUG LOG - Actor.md",
-    "RobotRL/Q-learning DQN/贝尔曼方程 - Bellman Optimality Equation.md",
     "RobotRL/Reward设计",
     "Robot工具/BugLog - bt2pro手柄机器人初始后乱走/IMG",
     "Robot工具/未命名.canvas",
