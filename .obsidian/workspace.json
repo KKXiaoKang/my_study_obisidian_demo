@@ -62,9 +62,19 @@
               "icon": "lucide-file",
               "title": "※ Diffusion Policy - 扩散去噪动作策略模型"
             }
+          },
+          {
+            "id": "04d96d71b2027f62",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -224,13 +234,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "86eaf77f5f480c18",
+  "active": "04d96d71b2027f62",
   "lastOpenFiles": [
+    "RobotRL/Hil-Serl/☆ - SAC recipe experiments log 对比 baseline PPO.md",
+    "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
+    "Robotmanipulation/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
     "Robotmanipulation/Imitation learning/Transformer/其余优秀论文",
     "Robotmanipulation/Imitation learning/Transformer/Attention Is All You Need -  Transformer 开山之作 - pipeline.md",
     "Robotmanipulation/Imitation learning/Transformer/04 - Transformer - Decoder结构.md",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
-    "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
     "Robot工具/关于Lerobot 中 torchcodec 视频编码Tensor工具库难装的问题.md",
     "Robotmanipulation/KL散度对比MSE计算loss.md",
     "Robotmanipulation/VLA/VLM学习价值函数 - Vision Language Models are In-Context Value Learners 谷歌deepmind.md",
@@ -238,8 +250,6 @@
     "Robotmanipulation/Imitation learning/※ GenDP - 机器人操作语义几何表示.md",
     "Robotmanipulation/Imitation learning/rewACT - 将MLP结构的reward model融合在ACT训练当中.md",
     "Robotmanipulation/Imitation learning/Transformer/03 - Transformer - Encoder结构.md",
-    "Robotmanipulation/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
-    "RobotRL/Hil-Serl/☆ - SAC recipe experiments log 对比 baseline PPO.md",
     "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250703140939.png",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807183013.png",
@@ -271,7 +281,6 @@
     "Robotmanipulation/Imitation learning/Transformer/IMG",
     "Robotmanipulation/Imitation learning/Transformer",
     "RobotRL/Reward设计",
-    "Robot工具/BugLog - bt2pro手柄机器人初始后乱走/IMG",
     "Robot工具/未命名.canvas",
     "未命名.canvas"
   ]
