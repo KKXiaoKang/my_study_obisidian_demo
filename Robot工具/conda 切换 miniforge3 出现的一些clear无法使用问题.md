@@ -20,3 +20,12 @@ ln -s /lib/terminfo $CONDA_PREFIX/share/terminfo
 ```
 
 * 楼主方法2完成设置，成功可以继续使用clear命令
+
+## 创建软链接指向 - x11可视化
+```bash
+ls -la /home/lab/ | grep -E "(anaconda|miniforge)"
+
+ls -la /home/lab/ | grep -E "(anaconda|miniforge)"
+
+ls -la /home/lab/anaconda3/envs/lerobot_rl/share/X11/xkb
+```
