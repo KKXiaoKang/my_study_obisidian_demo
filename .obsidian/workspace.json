@@ -79,12 +79,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robot工具/conda 切换 miniforge3 出现的一些clear无法使用问题.md",
+                "file": "RobotRL/Hil-Serl/mlp actor 2 act actor.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "conda 切换 miniforge3 出现的一些clear无法使用问题"
+              "title": "mlp actor 2 act actor"
             }
           }
         ],
@@ -251,6 +251,7 @@
   "active": "5bbf23c5bfda2aae",
   "lastOpenFiles": [
     "Robot工具/conda 切换 miniforge3 出现的一些clear无法使用问题.md",
+    "RobotRL/Hil-Serl/mlp actor 2 act actor.md",
     "未命名.md",
     "未命名 1.md",
     "RobotRL/Hil-Serl/☆ - SAC recipe experiments log 对比 baseline PPO.md",
@@ -289,7 +290,6 @@
     "Robotmanipulation/Imitation learning/编码器/MLP - 多层感知机.md",
     "RobotRL/SAC/SAC - `RunningMeanStd` 观测归一化工具.md",
     "RobotRL/SAC/SAC - load or save model.md",
-    "RobotRL/SAC/SAC - train and learn.md",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.pdf",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL",
