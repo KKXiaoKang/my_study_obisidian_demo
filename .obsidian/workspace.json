@@ -236,6 +236,9 @@
   },
   "active": "04d96d71b2027f62",
   "lastOpenFiles": [
+    "Robot工具/conda 切换 miniforge3 出现的一些clear无法使用问题.md",
+    "未命名.md",
+    "未命名 1.md",
     "RobotRL/Hil-Serl/☆ - SAC recipe experiments log 对比 baseline PPO.md",
     "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
     "Robotmanipulation/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
@@ -273,8 +276,6 @@
     "RobotRL/SAC/SAC - `RunningMeanStd` 观测归一化工具.md",
     "RobotRL/SAC/SAC - load or save model.md",
     "RobotRL/SAC/SAC - train and learn.md",
-    "RobotRL/SAC/SAC - (actor-Critic 架构).md",
-    "Robotmanipulation/Imitation learning/Transformer/02 - Transformer - Self-Attention（自注意力机制）.md",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.pdf",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL",
