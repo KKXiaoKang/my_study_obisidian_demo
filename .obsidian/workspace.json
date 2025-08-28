@@ -250,6 +250,7 @@
   },
   "active": "5bbf23c5bfda2aae",
   "lastOpenFiles": [
+    "RobotRL/Hil-Serl/IMG/Pasted image 20250828155746.png",
     "Robot工具/conda 切换 miniforge3 出现的一些clear无法使用问题.md",
     "RobotRL/Hil-Serl/mlp actor 2 act actor.md",
     "未命名.md",
@@ -289,7 +290,6 @@
     "RobotRL/Reward设计/default joint reward - 设计思路.md",
     "Robotmanipulation/Imitation learning/编码器/MLP - 多层感知机.md",
     "RobotRL/SAC/SAC - `RunningMeanStd` 观测归一化工具.md",
-    "RobotRL/SAC/SAC - load or save model.md",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.pdf",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL",
