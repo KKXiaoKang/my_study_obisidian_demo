@@ -79,16 +79,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotRL/Q-chunk ACT actor/Q-chunking 联合概率公式说明.md",
+                "file": "RobotRL/Q-chunk ACT actor/2025_08_29 - 改进说明.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Q-chunking 联合概率公式说明"
+              "title": "2025_08_29 - 改进说明"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -248,12 +248,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5bbf23c5bfda2aae",
+  "active": "04d96d71b2027f62",
   "lastOpenFiles": [
+    "RobotRL/Q-chunk ACT actor/2025_08_29 - 改进说明.md",
+    "RobotRL/Q-chunk ACT actor/Q-chunking 联合概率公式说明.md",
     "RobotRL/Q-chunk ACT actor/IMG/Reinforcement Learning with Action Chunking.pdf",
     "RobotRL/Q-chunk ACT actor/IMG",
     "RobotRL/Q-chunk ACT actor/mlp actor 2 act actor - 架构升级说明.md",
-    "RobotRL/Q-chunk ACT actor/Q-chunking 联合概率公式说明.md",
     "RobotRL/Q-chunk ACT actor/ACT - latenX 推理时设置为None存在的漏洞.md",
     "RobotRL/Q-chunk ACT actor",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250828155746.png",
@@ -295,7 +296,6 @@
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.pdf",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/IMG",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL",
-    "Robotmanipulation/Imitation learning/Transformer/IMG",
     "Robot工具/未命名.canvas",
     "未命名.canvas"
   ]
