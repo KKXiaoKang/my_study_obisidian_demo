@@ -50,20 +50,6 @@
             }
           },
           {
-            "id": "1560a766fc6b8b3c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RobotRL/描述物体姿态 - 让Network学习到平坦可微的表示/On the Continuity of Rotation Representations in Neural Networks.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "On the Continuity of Rotation Representations in Neural Networks"
-            }
-          },
-          {
             "id": "5bbf23c5bfda2aae",
             "type": "leaf",
             "state": {
@@ -88,7 +74,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -248,14 +234,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1560a766fc6b8b3c",
+  "active": "11a41407e202c010",
   "lastOpenFiles": [
-    "RobotRL/描述物体姿态 - 让Network学习到平坦可微的表示/IMG/On the Continuity of Rotation Representations in Neural Networks.pdf",
+    "RobotRL/Q-chunk ACT actor/2025_08_29 - 改进说明.md",
+    "Robot工具/安装新固态-ubuntu挂载/挂载流程.md",
     "RobotRL/描述物体姿态 - 让Network学习到平坦可微的表示/On the Continuity of Rotation Representations in Neural Networks.md",
+    "Robot工具/安装新固态-ubuntu挂载",
+    "RobotRL/描述物体姿态 - 让Network学习到平坦可微的表示/IMG/On the Continuity of Rotation Representations in Neural Networks.pdf",
     "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
     "RobotRL/描述物体姿态 - 让Network学习到平坦可微的表示/IMG",
     "RobotRL/描述物体姿态 - 让Network学习到平坦可微的表示",
-    "RobotRL/Q-chunk ACT actor/2025_08_29 - 改进说明.md",
     "RobotRL/Q-chunk ACT actor/Q-chunking 联合概率公式说明.md",
     "RobotRL/Q-chunk ACT actor/IMG/Reinforcement Learning with Action Chunking.pdf",
     "RobotRL/Q-chunk ACT actor/IMG",
@@ -287,7 +275,6 @@
     "Robotmanipulation/Imitation learning/IMG/reward_visualization_train.mp4",
     "Robotmanipulation/Imitation learning/IMG/0_A_rewACT_仿真演示测试_原子策略跑_reward拿obs去推测reward.mp4",
     "Robot工具/IMG/img_v3_02p3_1aca9b99-bb1c-4a8f-9b30-acdb223f032g.jpg",
-    "Robot工具/IMG",
     "RobotRL/stable-baselines3 框架解析/common.off_policy_algorithm.OffPolicyAlgorithm.md",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807182949.png",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807182959.png",
