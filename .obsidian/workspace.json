@@ -55,26 +55,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotRL/Q-chunk ACT actor/2025_08_29 - 改进说明.md",
+                "file": "Robotmanipulation/VLA/Pi0 - lerobot/lerobot  - 工程化 pi0修复.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025_08_29 - 改进说明"
-            }
-          },
-          {
-            "id": "11a41407e202c010",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "title": "lerobot  - 工程化 pi0修复"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -106,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "CNN",
+                "query": "lerobot",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -234,9 +224,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "11a41407e202c010",
+  "active": "86eaf77f5f480c18",
   "lastOpenFiles": [
     "RobotRL/Q-chunk ACT actor/2025_08_29 - 改进说明.md",
+    "Robotmanipulation/VLA/Pi0 - lerobot/lerobot  - 工程化 pi0修复.md",
+    "Robotmanipulation/VLA/VLM学习价值函数 - Vision Language Models are In-Context Value Learners 谷歌deepmind.md",
+    "Robotmanipulation/VLA/Pi0 - lerobot",
     "Robot工具/安装新固态-ubuntu挂载/挂载流程.md",
     "RobotRL/描述物体姿态 - 让Network学习到平坦可微的表示/On the Continuity of Rotation Representations in Neural Networks.md",
     "Robot工具/安装新固态-ubuntu挂载",
@@ -262,7 +255,6 @@
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
     "Robot工具/关于Lerobot 中 torchcodec 视频编码Tensor工具库难装的问题.md",
     "Robotmanipulation/KL散度对比MSE计算loss.md",
-    "Robotmanipulation/VLA/VLM学习价值函数 - Vision Language Models are In-Context Value Learners 谷歌deepmind.md",
     "Robotmanipulation/Imitation learning/※ OpenVLA - Vision-Language-Action Model.md",
     "Robotmanipulation/Imitation learning/※ GenDP - 机器人操作语义几何表示.md",
     "Robotmanipulation/Imitation learning/rewACT - 将MLP结构的reward model融合在ACT训练当中.md",
@@ -273,7 +265,6 @@
     "RobotRL/stable-baselines3 框架解析/common.base_class.BaseAlgorithm.md",
     "Robotmanipulation/Imitation learning/IMG/Pasted image 20250813165725.png",
     "Robotmanipulation/Imitation learning/IMG/reward_visualization_train.mp4",
-    "Robotmanipulation/Imitation learning/IMG/0_A_rewACT_仿真演示测试_原子策略跑_reward拿obs去推测reward.mp4",
     "Robot工具/IMG/img_v3_02p3_1aca9b99-bb1c-4a8f-9b30-acdb223f032g.jpg",
     "RobotRL/stable-baselines3 框架解析/common.off_policy_algorithm.OffPolicyAlgorithm.md",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807182949.png",
@@ -281,7 +272,6 @@
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807183025.png",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807191020.png",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807191522.png",
-    "RobotRL/Hil-Serl/lerobot - Hil-Serl pipeline说明.md",
     "Robot工具/未命名.canvas",
     "未命名.canvas"
   ]
