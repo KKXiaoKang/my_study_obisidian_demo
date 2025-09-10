@@ -1,5 +1,8 @@
 * Deep Reactive Policy: Learning Reactive Manipulator  Motion Planning for Dynamic Environments
-* 
+* ![[Learning Reactive Manipulator.pdf]]
+
+
+![[Pasted image 20250910112353.png]]
 
 
 ---
@@ -73,16 +76,3 @@ RMP（Riemannian Motion Policy）本身是用几何和动力学一致性来构�
     
 4. **机器人实时执行**。
     
-
----
-
-## 3. 对比已有方法的贡献
-
-- 传统 **Geometric Fabrics** 依赖精确的障碍物信息（privileged knowledge），但实际点云输入不具备这些信息。
-    
-- 本文通过 **IMPACT**（基于点云的 Transformer 模仿学习）+ **DCP-RMP**（实时避障修正） → 在真实动态环境中实现快速、安全的反应式运动策略。
-    
-
----
-
-要不要我帮你画一个简化的 **流程图**，用文字框把 DCP-RMP 和 IMPACT 的关系画出来？这样你能更直观地看到论文 pipeline。
