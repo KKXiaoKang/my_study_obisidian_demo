@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "671a6e3ca615a642",
+        "id": "4a5a7df2bfbd1ee2",
         "type": "tabs",
         "children": [
           {
-            "id": "feaa515e654b1218",
+            "id": "1067c07ef4099ad3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Robotmanipulation/全局ACT 规划 + 局部避障DCP-RMP/DCP-RMP  -  ACT.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "DCP-RMP  -  ACT"
+              "title": "新标签页"
             }
           }
         ]
@@ -53,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "DSRL",
+                "query": "纹理",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +70,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -181,13 +178,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "feaa515e654b1218",
+  "active": "1067c07ef4099ad3",
   "lastOpenFiles": [
+    "未命名.base",
+    "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
+    "Robotmanipulation/全局ACT 规划 + 局部避障DCP-RMP/DCP-RMP  -  ACT.md",
     "Robotmanipulation/全局ACT 规划 + 局部避障DCP-RMP/IMG/Pasted image 20250910112353.png",
     "Robotmanipulation/全局ACT 规划 + 局部避障DCP-RMP/IMG/Learning Reactive Manipulator.pdf",
     "Robotmanipulation/全局ACT 规划 + 局部避障DCP-RMP/IMG",
     "Robotmanipulation/全局ACT 规划 + 局部避障DCP-RMP/IMG/A Careful Examination of Large Behavior Models.pdf",
-    "Robotmanipulation/全局ACT 规划 + 局部避障DCP-RMP/DCP-RMP  -  ACT.md",
     "RobotRL/描述物体姿态 - 让Network学习到平坦可微的表示/On the Continuity of Rotation Representations in Neural Networks.md",
     "RobotRL/描述物体姿态 - 让Network学习到平坦可微的表示/IMG/On the Continuity of Rotation Representations in Neural Networks.pdf",
     "Robotmanipulation/全局ACT 规划 + 局部避障DCP-RMP/IMG/Deep Reactive Policy: Learning Reactive Manipulator\nMotion Planning for Dynamic Environments",
@@ -203,7 +202,6 @@
     "Robotmanipulation/VLA/Pi0 - lerobot",
     "Robot工具/安装新固态-ubuntu挂载/挂载流程.md",
     "Robot工具/安装新固态-ubuntu挂载",
-    "RobotRL/描述物体姿态 - 让Network学习到平坦可微的表示/IMG",
     "RobotRL/Q-chunk ACT actor/Q-chunking 联合概率公式说明.md",
     "RobotRL/Q-chunk ACT actor/mlp actor 2 act actor - 架构升级说明.md",
     "RobotRL/Q-chunk ACT actor/ACT - latenX 推理时设置为None存在的漏洞.md",
@@ -219,7 +217,6 @@
     "Robotmanipulation/Imitation learning/※ OpenVLA - Vision-Language-Action Model.md",
     "Robotmanipulation/Imitation learning/※ GenDP - 机器人操作语义几何表示.md",
     "Robotmanipulation/Imitation learning/rewACT - 将MLP结构的reward model融合在ACT训练当中.md",
-    "Robotmanipulation/Imitation learning/Transformer/03 - Transformer - Encoder结构.md",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250703140939.png",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807183013.png",
     "Robotmanipulation/Imitation learning/IMG/Pasted image 20250813165725.png",
@@ -228,7 +225,6 @@
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807182959.png",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807183025.png",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807191020.png",
-    "RobotRL/Hil-Serl/IMG/Pasted image 20250807191522.png",
     "Robot工具/未命名.canvas",
     "未命名.canvas"
   ]
