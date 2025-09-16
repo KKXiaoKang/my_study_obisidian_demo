@@ -131,12 +131,12 @@ OpenVLA 中的策略模块通常包括以下几种类型：
 
 ## ✅ 总结：OpenVLA 微调流程关键点
 
-|微调内容|技术手段|数据类型|是否冻结|
-|---|---|---|---|
-|CLIP encoder|InfoNCE / projection tuning|图像 + 文本对|部分冻结|
-|Vision grounding|指令引导 attention|图像 + mask/bbox|微调|
-|动作策略|行为克隆 / RL|操作示范|训练|
-|多任务支持|Task embedding / condition policy|多任务数据|可共享 encoder|
+| 微调内容             | 技术手段                              | 数据类型           | 是否冻结        |
+| ---------------- | --------------------------------- | -------------- | ----------- |
+| CLIP encoder     | InfoNCE / projection tuning       | 图像 + 文本对       | 部分冻结        |
+| Vision grounding | 指令引导 attention                    | 图像 + mask/bbox | 微调          |
+| 动作策略             | 行为克隆 / RL                         | 操作示范           | 训练          |
+| 多任务支持            | Task embedding / condition policy | 多任务数据          | 可共享 encoder |
 
 ---
 
