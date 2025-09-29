@@ -35,8 +35,7 @@
               "title": "REMANI-Planner - 刚体约束考虑优化规划"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -196,8 +195,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "62d200d657f4db71",
+  "active": "7c97f872e2f626c7",
   "lastOpenFiles": [
+    "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
     "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
     "Robot工具/N 卡 - GPU 拉高风扇散热.md",
     "Robot工具/Robot常见工具 & QA说明.md",
@@ -237,7 +237,6 @@
     "Robotmanipulation/Imitation learning/Transformer/04 - Transformer - Decoder结构.md",
     "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
     "Robot工具/关于Lerobot 中 torchcodec 视频编码Tensor工具库难装的问题.md",
-    "Robotmanipulation/KL散度对比MSE计算loss.md",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250703140939.png",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807183013.png",
     "Robotmanipulation/Imitation learning/IMG/Pasted image 20250813165725.png",
