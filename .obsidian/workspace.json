@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robot工具/N 卡 - GPU 拉高风扇散热.md",
+                "file": "RobotRL/DSRL/DSRL - 基于Diffusion策略的RL微调.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "N 卡 - GPU 拉高风扇散热"
+              "title": "DSRL - 基于Diffusion策略的RL微调"
             }
           },
           {
@@ -67,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "conv",
+                "query": "Steering Your Diffusion",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -198,8 +198,9 @@
   "active": "7c97f872e2f626c7",
   "lastOpenFiles": [
     "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
-    "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
+    "RobotRL/DSRL/DSRL - 基于Diffusion策略的RL微调.md",
     "Robot工具/N 卡 - GPU 拉高风扇散热.md",
+    "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
     "Robot工具/Robot常见工具 & QA说明.md",
     "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
     "Robot工具/IMG/Pasted image 20250919151544.png",
@@ -219,7 +220,6 @@
     "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
     "Robotmanipulation/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
     "RobotRL/Hil-Serl/☆ - SAC recipe experiments log 对比 baseline PPO.md",
-    "RobotRL/DSRL/DSRL - 基于Diffusion策略的RL微调.md",
     "Robotmanipulation/全局ACT 规划 + 局部避障DCP-RMP",
     "Robotmanipulation/VLA/Pi0 - lerobot/lerobot  - 工程化 pi0修复.md",
     "RobotRL/Q-chunk ACT actor/2025_08_29 - 改进说明.md",
