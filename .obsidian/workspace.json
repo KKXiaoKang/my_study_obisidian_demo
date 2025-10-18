@@ -76,7 +76,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -129,8 +129,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -237,8 +236,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "80222d32826f266d",
+  "active": "b1325b392c920d7d",
   "lastOpenFiles": [
+    "RobotVision/三维重建/3D_Gaussian/3D Gaussian Splatting 原理.md",
     "Robotmanipulation/Imitation learning/Transformer/02 - Transformer - Self-Attention（自注意力机制）.md",
     "Robotmanipulation/Imitation learning/Transformer/01 - Transformer - Transformer 输入.md",
     "Robotmanipulation/Imitation learning/Transformer/04 - Transformer - Decoder结构.md",
@@ -278,7 +278,6 @@
     "RobotRL/Hil-Serl/IMG/Pasted image 20250828155746.png",
     "Robot工具/conda 切换 miniforge3 出现的一些clear无法使用问题.md",
     "未命名.md",
-    "未命名 1.md",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250703140939.png",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250807183013.png",
     "Robotmanipulation/Imitation learning/IMG/Pasted image 20250813165725.png",
