@@ -76,7 +76,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -108,7 +108,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "3dgs",
+                "query": "gpu",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -236,16 +236,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b1325b392c920d7d",
+  "active": "80222d32826f266d",
   "lastOpenFiles": [
+    "RobotRL/DSRL/DSRL - 基于Diffusion策略的RL微调.md",
+    "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
+    "Robot工具/N 卡 - GPU 拉高风扇散热.md",
     "RobotVision/三维重建/3D_Gaussian/3D Gaussian Splatting 原理.md",
     "Robotmanipulation/Imitation learning/Transformer/02 - Transformer - Self-Attention（自注意力机制）.md",
     "Robotmanipulation/Imitation learning/Transformer/01 - Transformer - Transformer 输入.md",
     "Robotmanipulation/Imitation learning/Transformer/04 - Transformer - Decoder结构.md",
     "Robotmanipulation/Imitation learning/Transformer/03 - Transformer - Encoder结构.md",
-    "Robot工具/N 卡 - GPU 拉高风扇散热.md",
-    "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
-    "RobotRL/DSRL/DSRL - 基于Diffusion策略的RL微调.md",
     "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
     "Robot工具/Robot常见工具 & QA说明.md",
     "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
