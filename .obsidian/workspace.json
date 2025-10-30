@@ -94,7 +94,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "gpu",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -223,7 +223,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "62d200d657f4db71",
+  "active": "8f565fa2097fe86e",
   "lastOpenFiles": [
     "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
     "Robot工具/N 卡 - GPU 拉高风扇散热.md",
