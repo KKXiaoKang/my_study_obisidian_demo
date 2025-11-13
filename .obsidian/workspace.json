@@ -195,12 +195,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "86eaf77f5f480c18",
+  "active": "b1325b392c920d7d",
   "lastOpenFiles": [
+    "RobotVision/三维重建/3D_Gaussian/3D Gaussian Splatting 原理.md",
     "Robot工具/N 卡 - GPU 拉高风扇散热.md",
     "未命名 2.base",
     "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
-    "RobotVision/三维重建/3D_Gaussian/3D Gaussian Splatting 原理.md",
     "RobotRL/DSRL/DSRL - 基于Diffusion策略的RL微调.md",
     "Robotmanipulation/Imitation learning/Transformer/02 - Transformer - Self-Attention（自注意力机制）.md",
     "Robotmanipulation/Imitation learning/Transformer/01 - Transformer - Transformer 输入.md",
