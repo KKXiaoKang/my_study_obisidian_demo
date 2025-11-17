@@ -22,6 +22,18 @@
             }
           },
           {
+            "id": "35406db8f0f202bd",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.3"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.10.3"
+            }
+          },
+          {
             "id": "80222d32826f266d",
             "type": "leaf",
             "state": {
