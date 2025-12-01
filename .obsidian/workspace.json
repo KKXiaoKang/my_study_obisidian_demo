@@ -22,6 +22,18 @@
             }
           },
           {
+            "id": "4b8f652000e33861",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.6"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.10.6"
+            }
+          },
+          {
             "id": "80222d32826f266d",
             "type": "leaf",
             "state": {
@@ -35,7 +47,8 @@
               "title": "3D Gaussian Splatting 原理"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -195,7 +208,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b1325b392c920d7d",
+  "active": "80222d32826f266d",
   "lastOpenFiles": [
     "RobotVision/三维重建/3D_Gaussian/3D Gaussian Splatting 原理.md",
     "Robot工具/N 卡 - GPU 拉高风扇散热.md",
