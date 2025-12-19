@@ -31,7 +31,7 @@
 * action token不进入Transformer
 	* 只在最后MLP回归
 
-### 👉关键训练目标 - action regression loss
+### 👉关键训练目标 - action regression loss/ action autoregressive
 例如：
 
 > _“把红色方块放到蓝色方块左边”_
@@ -56,6 +56,7 @@ VIMA 的目标是：理解指令 -> 直接输出动作
 ### 👉 重点差异
 * RT-2作为策略选择器，不直接参与action生成
 * 将action进行token化，  直接混合训练
+* 将action token， visual token 和 language token在同一个token空间下完成融合
 
 ### 👉关键训练目标 - softmax → cross entropy 分类交叉熵
 * token
