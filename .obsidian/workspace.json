@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotVLA/多模态对齐.md",
+                "file": "RobotVLA/VisionEncoder对比.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "多模态对齐"
+              "title": "VisionEncoder对比"
             }
           }
         ]
@@ -183,8 +183,9 @@
   },
   "active": "34746267f895f7bb",
   "lastOpenFiles": [
+    "RobotVLA/多模态对齐  - 特征融合部分.md",
+    "RobotVLA/VisionEncoder对比.md",
     "RobotVLA/VIMA vs RT2.md",
-    "RobotVLA/多模态对齐.md",
     "RobotVLA/论文随记 RT-X - RDT.md",
     "RobotVLA/IMG/Pasted image 20251219155940.png",
     "RobotVLA/IMG/Pasted image 20251219155932.png",
@@ -226,7 +227,6 @@
     "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
     "Robotmanipulation/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
     "RobotRL/Hil-Serl/☆ - SAC recipe experiments log 对比 baseline PPO.md",
-    "Robotmanipulation/VLA/Pi0 - lerobot/lerobot  - 工程化 pi0修复.md",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250828155746.png",
     "RobotRL/Hil-Serl/IMG/Pasted image 20250703140939.png",
     "Robot工具/未命名.canvas",
