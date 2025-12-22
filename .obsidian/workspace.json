@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotVLA/Vision - Encoder对比.md",
+                "file": "RobotVLA/OOD情况下如何定义 trigger进行重采样及行为降级（缩短 horizon，减小动作幅度， 降低末端速度）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Vision - Encoder对比"
+              "title": "OOD情况下如何定义 trigger进行重采样及行为降级（缩短 horizon，减小动作幅度， 降低末端速度）"
             }
           }
         ]
@@ -183,21 +183,21 @@
   },
   "active": "34746267f895f7bb",
   "lastOpenFiles": [
-    "RobotVLA/IMG/Pasted image 20251222202837.png",
-    "RobotVLA/IMG/Pasted image 20251222202044.png",
-    "RobotVLA/IMG/Pasted image 20251222202014.png",
-    "RobotVLA/IMG/Pasted image 20251222201957.png",
-    "RobotVLA/IMG/Pasted image 20251222194850.png",
-    "RobotVLA/IMG/Pasted image 20251222194022.png",
-    "RobotVLA/IMG/Pasted image 20251222194018.png",
     "RobotVLA/多模态对齐  - 特征融合部分.md",
     "RobotVLA/Vision - Encoder对比.md",
     "RobotVLA/VIMA vs RT2.md",
+    "RobotVLA/OOD情况下如何定义 trigger进行重采样及行为降级（缩短 horizon，减小动作幅度， 降低末端速度）.md",
+    "RobotVLA/IMG/Pasted image 20251222212953.png",
+    "RobotVLA/IMG/Pasted image 20251222212942.png",
+    "RobotVLA/IMG/Pasted image 20251222212901.png",
+    "RobotVLA/IMG/Pasted image 20251222212847.png",
+    "RobotVLA/IMG/Pasted image 20251222212738.png",
+    "RobotVLA/IMG/Pasted image 20251222212634.png",
+    "RobotVLA/IMG/Pasted image 20251222211643.png",
+    "RobotVLA/IMG/Pasted image 20251222202837.png",
+    "RobotVLA/IMG/Pasted image 20251222202044.png",
+    "RobotVLA/IMG/Pasted image 20251222202014.png",
     "RobotVLA/论文随记 RT-X - RDT.md",
-    "RobotVLA/IMG/Pasted image 20251219155940.png",
-    "RobotVLA/IMG/Pasted image 20251219155932.png",
-    "RobotVLA/IMG/Pasted image 20251219155930.png",
-    "RobotVLA/IMG/Pasted image 20251219155317.png",
     "未命名.base",
     "未命名 1.base",
     "未命名 2.base",
@@ -228,7 +228,6 @@
     "RobotRL/描述物体姿态 - 让Network学习到平坦可微的表示/IMG/On the Continuity of Rotation Representations in Neural Networks.pdf",
     "Robotmanipulation/全局ACT 规划 + 局部避障DCP-RMP/IMG/Deep Reactive Policy: Learning Reactive Manipulator\nMotion Planning for Dynamic Environments",
     "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
-    "Robotmanipulation/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
     "Robot工具/未命名.canvas",
     "未命名.canvas"
   ]
