@@ -1,3 +1,5 @@
+# VLA常见vision encoder架构方式
+* ![[Pasted image 20251222202837.png]]
 # MAE
 ## 关键loss训练信息
 ### MAE 的训练目标 ：和Clip很像，本意上都是在学习一个latent， 这个latent其实可以被下游任务使用
