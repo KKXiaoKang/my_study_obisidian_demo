@@ -1,6 +1,7 @@
 # MAE
 ## 关键loss训练信息
 ### MAE 的训练目标 ：和Clip很像，本意上都是在学习一个latent， 这个latent其实可以被下游任务使用
+* ![[Pasted image 20251222202014.png]]
 * ![[Pasted image 20251222194022.png]]
 * ![[Pasted image 20251222194850.png]]
 MAE 目标是：
@@ -12,4 +13,7 @@ MAE 目标是：
 - 对连续变化友好
 
 # DINOV2
-* 
+* ![[Pasted image 20251222201957.png]]
+
+# CLIP（跨模态对比学习）
+* ![[Pasted image 20251222202044.png]]
