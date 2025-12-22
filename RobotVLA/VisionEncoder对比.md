@@ -1,2 +1,0 @@
-# MAE
-# DINOV2

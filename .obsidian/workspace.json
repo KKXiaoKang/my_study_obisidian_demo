@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotVLA/VisionEncoder对比.md",
+                "file": "RobotVLA/Vision - Encoder对比.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "VisionEncoder对比"
+              "title": "Vision - Encoder对比"
             }
           }
         ]
@@ -183,8 +183,11 @@
   },
   "active": "34746267f895f7bb",
   "lastOpenFiles": [
+    "RobotVLA/IMG/Pasted image 20251222194850.png",
+    "RobotVLA/IMG/Pasted image 20251222194022.png",
+    "RobotVLA/IMG/Pasted image 20251222194018.png",
     "RobotVLA/多模态对齐  - 特征融合部分.md",
-    "RobotVLA/VisionEncoder对比.md",
+    "RobotVLA/Vision - Encoder对比.md",
     "RobotVLA/VIMA vs RT2.md",
     "RobotVLA/论文随记 RT-X - RDT.md",
     "RobotVLA/IMG/Pasted image 20251219155940.png",
@@ -226,9 +229,6 @@
     "Robotmanipulation/全局ACT 规划 + 局部避障DCP-RMP/IMG/Deep Reactive Policy: Learning Reactive Manipulator\nMotion Planning for Dynamic Environments",
     "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
     "Robotmanipulation/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
-    "RobotRL/Hil-Serl/☆ - SAC recipe experiments log 对比 baseline PPO.md",
-    "RobotRL/Hil-Serl/IMG/Pasted image 20250828155746.png",
-    "RobotRL/Hil-Serl/IMG/Pasted image 20250703140939.png",
     "Robot工具/未命名.canvas",
     "未命名.canvas"
   ]
