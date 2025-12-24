@@ -34,6 +34,16 @@
 
 👉 **在 human 视频中见过该概念的前提下，在机器上执行该任务的成功率**
 
+### 论文提到
+**X-Emb 不是新的编码器架构，也不是新 loss，而是一个预训练设计策略：**
+
+🔹 **跨实体数据的预训练混合策略（Cross-Embodiment Pretraining Mixture）**  
+🔹 增加多种不同机器人演示数据  
+🔹 扩展了模型的 representation 能力  
+🔹 有助于 human 与 robot 数据在 latent space（潜在空间）里更紧密对齐  
+🔹 从而改善 human-to-robot transfer 的表现证据
+
+### benchmark说明
 ## 📌 **1 — Scene Generalization（场景泛化）**
 
 **例子：**  
