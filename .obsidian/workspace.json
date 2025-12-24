@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "45e65e7ace11d813",
+        "id": "545d61b5a3a2f42a",
         "type": "tabs",
         "children": [
           {
-            "id": "34746267f895f7bb",
+            "id": "46e0810cdcf54588",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotVLA/OOD情况下如何定义 trigger进行重采样及行为降级（缩短 horizon，减小动作幅度， 降低末端速度）.md",
+                "file": "RobotVLA/physicalintelligence/Emergence of Human to Robot Transfer in VLAs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "OOD情况下如何定义 trigger进行重采样及行为降级（缩短 horizon，减小动作幅度， 降低末端速度）"
+              "title": "Emergence of Human to Robot Transfer in VLAs"
             }
           }
         ]
@@ -181,12 +181,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "34746267f895f7bb",
+  "active": "46e0810cdcf54588",
   "lastOpenFiles": [
+    "RobotVLA/physicalintelligence/IMG/Emergence of Human to Robot Transfer in.pdf",
+    "RobotVLA/physicalintelligence/IMG",
+    "RobotVLA/physicalintelligence/Emergence of Human to Robot Transfer in VLAs.md",
+    "RobotVLA/physicalintelligence",
+    "Robotmanipulation - opt_VA/Imitation learning/rewACT - 将MLP结构的reward model融合在ACT训练当中.md",
+    "Robotmanipulation - opt_VA/Imitation learning/※ OpenVLA - Vision-Language-Action Model.md",
+    "Robotmanipulation - opt_VA/Imitation learning/Transformer/Attention Is All You Need -  Transformer 开山之作 - pipeline.md",
+    "Robotmanipulation - opt_VA/Imitation learning/Transformer/04 - Transformer - Decoder结构.md",
+    "Robotmanipulation - opt_VA/KL散度对比MSE计算loss.md",
+    "Robotmanipulation - opt_VA/chomp代价函数_梯度计算设计技巧.md",
+    "Robotmanipulation - opt_VA/运动规划方法一览.md",
+    "Robotmanipulation - opt_VA/显式策略 - 隐式策略 - 扩散策略.md",
+    "Robotmanipulation - opt_VA/VLA/VLM学习价值函数 - Vision Language Models are In-Context Value Learners 谷歌deepmind.md",
+    "RobotVLA/OOD情况下如何定义 trigger进行重采样及行为降级（缩短 horizon，减小动作幅度， 降低末端速度）.md",
+    "Robotmanipulation/VLA/Pi0 - lerobot/lerobot  - 工程化 pi0修复.md",
     "RobotVLA/多模态对齐  - 特征融合部分.md",
     "RobotVLA/Vision - Encoder对比.md",
     "RobotVLA/VIMA vs RT2.md",
-    "RobotVLA/OOD情况下如何定义 trigger进行重采样及行为降级（缩短 horizon，减小动作幅度， 降低末端速度）.md",
     "RobotVLA/IMG/Pasted image 20251222212953.png",
     "RobotVLA/IMG/Pasted image 20251222212942.png",
     "RobotVLA/IMG/Pasted image 20251222212901.png",
@@ -212,22 +226,9 @@
     "RobotVision/三维重建/3D_Gaussian/3D GS 导入场景 Omniverse - 仅用于背景像素渲染.md",
     "RobotVision/三维重建/AGS-Mesh 高斯结合Mesh.md",
     "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
-    "Robotmanipulation/优化规划/REMANI-Planner - 刚体约束考虑优化规划.md",
-    "RobotRL/DSRL/DSRL - 基于Diffusion策略的RL微调.md",
-    "Robotmanipulation/Imitation learning/Transformer/02 - Transformer - Self-Attention（自注意力机制）.md",
-    "Robotmanipulation/Imitation learning/Transformer/01 - Transformer - Transformer 输入.md",
-    "Robotmanipulation/Imitation learning/Transformer/04 - Transformer - Decoder结构.md",
-    "Robotmanipulation/Imitation learning/Transformer/03 - Transformer - Encoder结构.md",
-    "Robot工具/Robot常见工具 & QA说明.md",
-    "Robotmanipulation/Imitation learning/※ OpenVLA - Vision-Language-Action Model.md",
-    "Robotmanipulation/全局ACT 规划 + 局部避障DCP-RMP/DCP-RMP  -  ACT.md",
-    "Robotmanipulation/全局ACT 规划 + 局部避障DCP-RMP/IMG/Learning Reactive Manipulator.pdf",
-    "Robotmanipulation/全局ACT 规划 + 局部避障DCP-RMP/IMG",
+    "Robotmanipulation - opt_VA/全局ACT 规划 + 局部避障DCP-RMP/IMG/Learning Reactive Manipulator.pdf",
+    "Robotmanipulation - opt_VA/全局ACT 规划 + 局部避障DCP-RMP/IMG",
     "Robotmanipulation/全局ACT 规划 + 局部避障DCP-RMP/IMG/A Careful Examination of Large Behavior Models.pdf",
-    "RobotRL/描述物体姿态 - 让Network学习到平坦可微的表示/On the Continuity of Rotation Representations in Neural Networks.md",
-    "RobotRL/描述物体姿态 - 让Network学习到平坦可微的表示/IMG/On the Continuity of Rotation Representations in Neural Networks.pdf",
-    "Robotmanipulation/全局ACT 规划 + 局部避障DCP-RMP/IMG/Deep Reactive Policy: Learning Reactive Manipulator\nMotion Planning for Dynamic Environments",
-    "Robotmanipulation/Imitation learning/※ Diffusion Policy - 扩散去噪动作策略模型.md",
     "Robot工具/未命名.canvas",
     "未命名.canvas"
   ]
