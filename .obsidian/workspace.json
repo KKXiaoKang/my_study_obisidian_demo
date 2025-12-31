@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotVLA/physicalintelligence/Emergence of Human to Robot Transfer in VLAs.md",
+                "file": "RobotVLA/模型optimize/MLP multi head v2.0.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Emergence of Human to Robot Transfer in VLAs"
+              "title": "MLP multi head v2.0"
             }
           }
         ]
@@ -183,9 +183,13 @@
   },
   "active": "46e0810cdcf54588",
   "lastOpenFiles": [
+    "RobotVLA/模型optimize/MLP multi head v1.0.md",
+    "RobotVLA/模型optimize/MLP multi head v2.0.md",
+    "RobotVision/SLAM/IMG/Pasted image 20250611174007.png",
+    "RobotVLA/模型optimize",
+    "RobotVLA/physicalintelligence/Emergence of Human to Robot Transfer in VLAs.md",
     "RobotVLA/physicalintelligence/IMG/Emergence of Human to Robot Transfer in.pdf",
     "RobotVLA/physicalintelligence/IMG",
-    "RobotVLA/physicalintelligence/Emergence of Human to Robot Transfer in VLAs.md",
     "RobotVLA/physicalintelligence",
     "Robotmanipulation - opt_VA/Imitation learning/rewACT - 将MLP结构的reward model融合在ACT训练当中.md",
     "Robotmanipulation - opt_VA/Imitation learning/※ OpenVLA - Vision-Language-Action Model.md",
@@ -210,7 +214,6 @@
     "RobotVLA/IMG/Pasted image 20251222211643.png",
     "RobotVLA/IMG/Pasted image 20251222202837.png",
     "RobotVLA/IMG/Pasted image 20251222202044.png",
-    "RobotVLA/IMG/Pasted image 20251222202014.png",
     "RobotVLA/论文随记 RT-X - RDT.md",
     "未命名.base",
     "未命名 1.base",
@@ -225,10 +228,7 @@
     "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh 1.md",
     "RobotVision/三维重建/3D_Gaussian/3D GS 导入场景 Omniverse - 仅用于背景像素渲染.md",
     "RobotVision/三维重建/AGS-Mesh 高斯结合Mesh.md",
-    "RobotVision/工具流讲解/PLY 带颜色点云文件 如何 转换为obj+纹理材质.md",
     "Robotmanipulation - opt_VA/全局ACT 规划 + 局部避障DCP-RMP/IMG/Learning Reactive Manipulator.pdf",
-    "Robotmanipulation - opt_VA/全局ACT 规划 + 局部避障DCP-RMP/IMG",
-    "Robotmanipulation/全局ACT 规划 + 局部避障DCP-RMP/IMG/A Careful Examination of Large Behavior Models.pdf",
     "Robot工具/未命名.canvas",
     "未命名.canvas"
   ]
