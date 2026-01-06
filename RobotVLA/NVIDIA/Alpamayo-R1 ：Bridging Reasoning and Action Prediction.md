@@ -71,7 +71,7 @@
 ### pre-training VLA 阶段2 
 * 训练时参考Physical Intelligence的做法，把KV Cache的梯度进行截断，防止梯度传播到VLM当中
 	* **![[Pasted image 20260106175640.png]]**
-*  动作专家使用普通的flow-matching head loss，本质上确实是MSE loss
+*  动作专家使用普通的flow-matching head loss，本质上确实是MSE loss Flow Matching (L2回归)
 	* $$L_{cfm}(\Theta) = \mathbb{E}{t \in P{schedule}, (\mathbf{o}, \text{REASON}) \in \mathcal{D}{data}} || \mathbf{v}{\Theta}(\mathbf{a}t, \mathbf{o}, \text{REASON}) - \mathbf{u}(\mathbf{a}_t | \mathbf{a}) ||$$
 	* 核心特点：
 
@@ -94,6 +94,31 @@
 			- 使用时间步采样 $t \in P_{schedule}$（Flow Matching的标准做法）
 
 			- 学习从任意噪声状态 $\mathbf{a}t$ 到真实动作 $\mathbf{a}$ 的速度方向
-### 阶段3 CoT SFT 训练目标：
-* 
-	* ![[Pasted image 20260106182304.png]]
+
+
+### 阶段3 CoT SFT 监督微调 - 语言模型损失 数学关系：负对数似然 = 交叉熵（在分类问题中）：
+Loss函数：
+
+$$\mathcal{L}{\text{SFT}}(\theta) = -\mathbb{E}{(o, \text{REASON}, a) \sim \mathcal{D}{\text{CoC}}} [\log \pi{\theta}(\text{REASON}, a \mid o)]$$
+
+核心特点：
+
+1. 目标：最大化联合生成概率， 负对数似然 (分类)
+
+- 同时生成结构化的推理 $\text{REASON}$ 和动作 $a$
+
+- 通过最大化对数似然来学习
+
+1. 输入结构：
+
+- $o$：观察（视觉输入）
+
+- 输出：$\text{REASON}$ 和 $a$ 的联合序列
+
+1. 训练方式：
+
+- 使用高质量的CoC数据集 $\mathcal{D}{\text{CoC}}$（包含因果链推理）
+
+- 标准的自回归语言模型训练（token-by-token生成）
+
+1. 损失类型：负对数似然（分类损失，离散token空间）
