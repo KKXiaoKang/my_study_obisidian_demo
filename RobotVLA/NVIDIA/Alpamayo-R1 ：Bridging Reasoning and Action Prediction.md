@@ -125,4 +125,99 @@ $$\mathcal{L}{\text{SFT}}(\theta) = -\mathbb{E}{(o, \text{REASON}, a) \sim \mat
 
 
 ### 阶段4 - Post-Training Algorithm RL 后训练
+*  目标是评估三类
+	*  Reasoning 质量（推理本身是否合理）（通过大型推理模型反馈）
+	*  Action 质量（行为是否合理、安全）
+	*  推理-动作一致性（最核心）
 *  使用GRPO作为对齐算法
+
+	在 post-training 阶段，目标是：
+	
+	- 提升推理质量（reasoning quality）
+	
+	- 增强推理-动作一致性（reasoning-action consistency）
+	
+	- 优化轨迹质量（trajectory quality）
+	
+	传统 RL 方法（如 PPO）的问题：
+	
+	- 依赖绝对奖励信号，可能不稳定
+	
+	- 奖励函数可能有噪声或偏差
+	
+	- 容易过度优化，偏离 SFT 模型学到的先验
+	
+	GRPO（Grouped Relative Policy Optimization）的核心思想：
+	
+	- 不依赖绝对奖励，而是优化组内相对优势
+	
+	- 通过组内对比，更稳定、更鲁棒
+	
+	- KL 正则化防止过度偏离 SFT 模型
+	
+	根据论文和图片描述，GRPO 的目标函数为：
+	
+	$$\mathcal{L}{\text{GRPO}}(\theta) = -\mathbb{E}{\tau_i \sim \pi_\theta} \left[ \frac{\exp(\beta A_i)}{\sum_j \exp(\beta A_j)} \left( \log \pi_\theta(\tau_i) - \lambda_{\text{KL}} \text{KL}[\pi_\theta(\tau_i)||\pi_{\text{ref}}(\tau_i)] \right) \right]$$
+	
+	其中相对优势定义为：
+	
+	$$A_i = r_i - \bar{r}$$
+	
+	### 公式各部分解析
+	
+	#### 1. 相对优势 $A_i = r_i - \bar{r}$
+	
+| 符号                                      | 含义           | 作用                     |
+| --------------------------------------- | ------------ | ---------------------- |
+| $r_i$                                   | 第 $i$ 个轨迹的奖励 | 由奖励模型（如大型推理模型critic）给出 |
+| $\bar{r} = \frac{1}{K}\sum_{j=1}^K r_j$ | 组内平均奖励       | 归一化基准                  |
+| $A_i$                                   | 相对优势         | 衡量该轨迹在组内的相对表现          |
+
+要点：
+
+- 使用相对优势而非绝对奖励，减少奖励尺度影响
+
+- 组内归一化使训练更稳定
+
+#### 2. 权重项 $\frac{\exp(\beta A_i)}{\sum_j \exp(\beta A_j)}$
+
+这是 Softmax 权重：
+
+- $\beta$：温度参数，控制权重分布的尖锐程度
+
+- $\beta \to 0$：权重趋于均匀
+
+- $\beta \to \infty$：只关注最优轨迹
+
+作用：
+
+- 为表现更好的轨迹分配更高权重
+
+- 通过组内归一化，自动适应奖励尺度
+
+#### 3. 策略项 $\log \pi_\theta(\tau_i)$
+
+- $\pi_\theta(\tau_i)$：当前策略生成轨迹 $\tau_i$ 的概率
+
+- $\log \pi_\theta(\tau_i)$：对数概率，用于策略梯度
+
+#### 4. KL 正则化项 $\lambda_{\text{KL}} \text{KL}[\pi_\theta(\tau_i)||\pi_{\text{ref}}(\tau_i)]$
+	
+| 符号                                        | 含义               |
+| ----------------------------------------- | ---------------- |
+| $\pi_{\text{ref}}$                        | 参考策略（通常是 SFT 模型） |
+| $\text{KL}[\pi_\theta\|\pi_{\text{ref}}]$ | KL 散度，衡量策略偏离程度   |
+| $\lambda_{\text{KL}}$                     | 正则化系数            |
+
+	作用：
+	- 防止过度优化有噪声/偏差的奖励
+	- 保留 SFT 阶段学到的语言和行为先验
+	- 保持模型稳定性和可解释性
+
+-   Grading Reasoning with Large Reasoning Models
+	-  使用大型推理模型对推理进行评分。
+- Reasoning Critic Design.
+	-  推理评论家设计
+	-  对于每个训练样本，LRM 批评家将 2 秒历史窗口最后一帧的多摄像机视觉观察图像、数据集中的真实 CoC 推理轨迹 ReasonGT 以及当前策略 πθ 产生的模型生成推理轨迹 Reasonpred 作为输入。评论家从两个维度评估 Reasonpred 与 ReasonGT 的一致性：行为一致性，预测推理是否描述了与地面事实一致的驾驶决策；因果推理质量，是否根据 CoC 原则正确识别场景历史中可观察到的因果因素（第 4.1 节）。批评者根据关注行为一致性和因果推理一致性的结构化评分标准对预测推理进行评分：
+	- 参考prompt
+		- ![[Pasted image 20260106203134.png]]
