@@ -56,4 +56,10 @@
 #### 只在决策时刻时介入标注CoT（给定一些元动作，当元动作发生变换时该帧作为keyframe进行标注）
 * driving decisions (驾驶决策) - 下图中使用绿色标识  
 * critical components (因果组成) - 下图中使用蓝色标识  
-* ![[Pasted image 20260106170607.png]]
+* CoT标注示例如下
+	* ![[Pasted image 20260106170607.png]]
+* Meta action 元动作示例：
+	* ![[Pasted image 20260106172836.png]]
+#### Labeling Procedure
+* **Next, we employ state-of-the-art VLMs such as GPT-5 (OpenAI, 2025) to perform offline auto-labeling through a multi-step reasoning process.** 
+* 为了减轻因果混乱，在识别关键组件时，系统会提示 VLM 使用 2 秒历史视频。随后的 6 秒未来视频以及自我的轨迹和元动作，然后用于解决多模态问题并确定相应的驾驶决策。在此过程中，模型对已识别的因果因素进行重要性排序，并在最终推理轨迹中仅保留那些直接影响驾驶决策的因素。
