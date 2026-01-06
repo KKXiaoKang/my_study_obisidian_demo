@@ -43,4 +43,17 @@
 * the causal factors (critical components) - 因果关系组成部分
 * the composed CoC trace : 思维链
 *  CoT的最终结果必定是结构化的driving decision ： 包含了纵向选择 和 横向选择
+##### driving decision - 驾驶决策
 * ![[Pasted image 20260106164626.png]]
+#####  因果关系组成部分
+* ![[Pasted image 20260106165612.png]]
+
+##### 因果链：确定了因果关系和驾驶决策后，就可以结构化思维链输出了
+![[Pasted image 20260106165910.png]]
+
+
+### Hybrid Labeling Procedure - 混合标签注入
+#### 只在决策时刻时介入标注CoT（给定一些元动作，当元动作发生变换时该帧作为keyframe进行标注）
+* driving decisions (驾驶决策) - 下图中使用绿色标识  
+* critical components (因果组成) - 下图中使用蓝色标识  
+* ![[Pasted image 20260106170607.png]]
