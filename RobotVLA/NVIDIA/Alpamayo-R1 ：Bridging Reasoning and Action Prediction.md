@@ -42,3 +42,5 @@
 * the driving decision - 驾驶决策
 * the causal factors (critical components) - 因果关系组成部分
 * the composed CoC trace : 思维链
+*  CoT的最终结果必定是结构化的driving decision ： 包含了纵向选择 和 横向选择
+* ![[Pasted image 20260106164626.png]]
