@@ -12,4 +12,10 @@
 
 * Domain-Specific Adaptations ： 特定领域的小组件升级
 	* Vision Encoding ：目标机载部署，所以在vision token中要生成尽可能少的token
-		*  
+		*  Single-Image Tokenization
+			* 传统 SigLip2 （2025）
+			* ReWiND （2023）
+		*  Multi-Camera Tokenization
+			* 参考: [Efficient Multi-Camera Tokenization with Triplanes for End-to-End Driving](https://arxiv.org/abs/2506.12251)
+		*  Multi-Camera Video Tokenization 多相机视频编码
+			*  参考: [Towards Efficient and Effective Multi-Camera Encoding for End-to-End Driving](https://www.arxiv.org/pdf/2512.10947)  
