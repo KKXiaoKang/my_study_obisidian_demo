@@ -19,3 +19,13 @@
 			* 参考: [Efficient Multi-Camera Tokenization with Triplanes for End-to-End Driving](https://arxiv.org/abs/2506.12251)
 		*  Multi-Camera Video Tokenization 多相机视频编码
 			*  参考: [Towards Efficient and Effective Multi-Camera Encoding for End-to-End Driving](https://www.arxiv.org/pdf/2512.10947)  
+
+* 对于VLA reasoning traces 来说，
+	* 哪些 reasoning traces 是低信息密度的 - 黄色标识
+	* 哪些 reasoning traces 是和当前自身行为相反或者冲突的 - 红色标识
+	* 哪些 reasoning traces 是思考的的不够深刻 - 蓝色标识
+	* ![[Pasted image 20260106161603.png]]
+* CoC labeling pipeline :
+	* ![[Pasted image 20260106161312.png]]
+	* 1 ) Clip 剪辑选择：
+		*  针对刚刚 reasoning traces  
