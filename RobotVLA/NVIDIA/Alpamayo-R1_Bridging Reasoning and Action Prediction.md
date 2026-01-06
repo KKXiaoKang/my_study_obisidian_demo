@@ -9,3 +9,7 @@
 
 * VLM training: 使用24700个专注于驾驶场景的精选视频 VQA样本，包含场景描述，驾驶难度注释以及从DeepSeek-R1 中提取的推理轨迹及预测下一步动作
 	* The model incorporates 24.7K curated video VQA samples focused on driving scenarios, including scene descriptions, driving difficulty annotations, and reasoning traces distilled from DeepSeek-R1 (DeepSeek-AI, 2025) to predict the next action
+
+* Domain-Specific Adaptations ： 特定领域的小组件升级
+	* Vision Encoding ：目标机载部署，所以在vision token中要生成尽可能少的token
+		*  
