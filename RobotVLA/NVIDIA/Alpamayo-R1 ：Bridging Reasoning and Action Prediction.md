@@ -216,12 +216,17 @@ $$\mathcal{L}{\text{SFT}}(\theta) = -\mathbb{E}{(o, \text{REASON}, a) \sim \mat
 	- 保持模型稳定性和可解释性
 
 #### 优秀设计点解析
-- Grading Reasoning with Large Reasoning Models : 对推理思维链进行评分
-	-  使用大型推理模型
-- Reasoning Critic Design. : 推理评论家设计
+- Grading Reasoning with Large Reasoning Models : 对推理思维链进行评分（（推理是否“因果正确”））
+	-  使用大型推理模型 Cosmos-Reason | DeepSeek-R1
+- Reasoning Critic Design. : 推理评论家设计（（推理是否“因果正确”））
 	-  对于每个训练样本，LRM 批评家将 2 秒历史窗口最后一帧的多摄像机视觉观察图像、数据集中的真实 CoC 推理轨迹 ReasonGT 以及当前策略 πθ 产生的模型生成推理轨迹 Reasonpred 作为输入。评论家从两个维度评估 Reasonpred 与 ReasonGT 的一致性：行为一致性，预测推理是否描述了与地面事实一致的驾驶决策；因果推理质量，是否根据 CoC 原则正确识别场景历史中可观察到的因果因素（第 4.1 节）。批评者根据关注行为一致性和因果推理一致性的结构化评分标准对预测推理进行评分：
 	- 参考prompt
 		- ![[Pasted image 20260106203134.png]]
 		-  The resulting scalar score rreason is used as the reasoning reward. This signal encourages the model to generate reasoning traces that not only describe correct driving behaviors but also maintain causal fidelity, accurately explaining why an action is taken based on visual context and traffic cues.
 - CoC-Action Consistency ： 动作一致性奖励
-	- 为了确保模型的动作生成忠实地遵循其推理，我们引入了 CoC-动作一致性奖励，用于衡量生成的推理轨迹与相应的预测自我轨迹之间的行为一致性。具体来说，对于每个推理-动作推出，我们将预测的运动轨迹转换为第 2 节中描述的一系列元动作（可解释的运动原语）。 4.3.1.这些元动作对自我车辆沿纵向（加速/制动）和横向（转向）方向的控制行为进行编码。然后，我们解析生成的推理轨迹，以推断自我的预期行为，并将其与使用基于规则的匹配从预测轨迹得出的元动作进行比较。如果推理轨迹和元动作中描述的行为在两个轴上一致，我们指定 rconsistency = 1；否则，rconsistency = 0。在推理无法解析为有效驾驶决策的情况下（即，在用于自动标记的封闭决策集中未识别意图），我们保守地分配rconsistency = 0。虽然基于简单的基于规则的逻辑，但这种二元奖励在提高模型推理-动作耦合的可信度方面发挥着至关重要的作用。通过明确惩罚不一致性并仅奖励正确的匹配，它鼓励模型生成不仅听起来合理，而且可以转化为连贯、物理一致的行为的推理。
+	- （你说的和你做的是不是一回事）
+	-  maybe？用二值奖励式子？因为这种driver decision的结构化格式只有对或者不对的情况，需要进一步查看源码如何查找相对性
+- Low-Level Trajectory Quality： 低层次轨迹质量
+	- （你做得好不好）
+	-  reward 公式
+		- ![[Pasted image 20260106211135.png]]
