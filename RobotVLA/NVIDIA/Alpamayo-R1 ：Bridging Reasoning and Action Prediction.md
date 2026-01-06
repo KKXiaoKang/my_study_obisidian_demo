@@ -36,7 +36,7 @@
 	* 3) - 5) Structured CoC Labeling
 		* 结构化 CoC 标签，为了构建最终的 CoC 并进一步减轻因果混乱，我们首先注释观察中的关键组件，同时避免引用未来帧中的因果因素，然后标记相应的驾驶决策。然后，我们用自然语言从驱动决策和因果因素中构建推理轨迹。
 
-## Chain of Causation Dataset: Learning Causally Grounded Reasoning VLAs - 从因果链数据集当中构建VLA
+## 阶段3：Chain of Causation Dataset: Learning Causally Grounded Reasoning VLAs - 从因果链数据集当中构建VLA
 ### labeling framework - 因果链标注框架
 #### 结构化的标注格式 - Structured Chain of Causation
 * the driving decision - 驾驶决策
@@ -65,6 +65,14 @@
 * 为了减轻因果混乱，在识别关键组件时，系统会提示 VLM 使用 2 秒历史视频。随后的 6 秒未来视频以及自我的轨迹和元动作，然后用于解决多模态问题并确定相应的驾驶决策。在此过程中，模型对已识别的因果因素进行重要性排序，并在最终推理轨迹中仅保留那些直接影响驾驶决策的因素。
 
 
-## 训练方法
-### pre-training VLA - 训练时参考Physical Intelligence的做法，把KV Cache的梯度进行截断，防止梯度传播到VLM当中
-* **![[Pasted image 20260106175640.png]]**
+## 训练策略
+### pre-train VLM - 阶段1
+*  参考KeyNote上的方法
+### pre-training VLA 阶段2 
+* 训练时参考Physical Intelligence的做法，把KV Cache的梯度进行截断，防止梯度传播到VLM当中
+	* **![[Pasted image 20260106175640.png]]**
+*  动作专家使用普通的flow-matching head loss
+	* ![[Pasted image 20260106182245.png]]
+### 阶段3 CoT SFT 训练目标：
+* 
+	* ![[Pasted image 20260106182304.png]]
