@@ -66,9 +66,9 @@
 
 
 ## 训练策略
-### pre-train VLM - 阶段1
+### 阶段1 pre-training VLM 
 *  参考KeyNote上的方法
-### pre-training VLA 阶段2 
+### 阶段2 pre-training VLA  
 * 训练时参考Physical Intelligence的做法，把KV Cache的梯度进行截断，防止梯度传播到VLM当中
 	* **![[Pasted image 20260106175640.png]]**
 *  动作专家使用普通的flow-matching head loss，本质上确实是MSE loss Flow Matching (L2回归)
@@ -122,3 +122,7 @@ $$\mathcal{L}{\text{SFT}}(\theta) = -\mathbb{E}{(o, \text{REASON}, a) \sim \mat
 - 标准的自回归语言模型训练（token-by-token生成）
 
 1. 损失类型：负对数似然（分类损失，离散token空间）
+
+
+### 阶段4 - Post-Training Algorithm RL 后训练
+*  使用GRPO作为对齐算法
