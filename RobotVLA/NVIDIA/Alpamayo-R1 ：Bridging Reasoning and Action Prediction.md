@@ -66,5 +66,5 @@
 
 
 ## 训练方法
-### 训练时参考Physical Intelligence的做法，把KV Cache的梯度进行截断，防止梯度传播到VLM当中
+### pre-training VLA - 训练时参考Physical Intelligence的做法，把KV Cache的梯度进行截断，防止梯度传播到VLM当中
 * **![[Pasted image 20260106175640.png]]**
