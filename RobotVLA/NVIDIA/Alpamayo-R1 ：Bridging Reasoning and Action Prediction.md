@@ -71,8 +71,29 @@
 ### pre-training VLA 阶段2 
 * 训练时参考Physical Intelligence的做法，把KV Cache的梯度进行截断，防止梯度传播到VLM当中
 	* **![[Pasted image 20260106175640.png]]**
-*  动作专家使用普通的flow-matching head loss
-	* ![[Pasted image 20260106182245.png]]
+*  动作专家使用普通的flow-matching head loss，本质上确实是MSE loss
+	* $$L_{cfm}(\Theta) = \mathbb{E}{t \in P{schedule}, (\mathbf{o}, \text{REASON}) \in \mathcal{D}{data}} || \mathbf{v}{\Theta}(\mathbf{a}t, \mathbf{o}, \text{REASON}) - \mathbf{u}(\mathbf{a}_t | \mathbf{a}) ||$$
+	* 核心特点：
+
+		1. 目标：学习速度场（velocity field）
+
+			- 模型预测速度向量 $\mathbf{v}{\Theta}$，而非直接预测动作
+
+			- 通过速度场从噪声逐步生成动作轨迹
+
+		2. 输入结构：
+
+			- $\mathbf{a}t$：加噪后的动作（训练时从噪声到真实动作的中间状态）
+
+			- $\mathbf{o}$：观察（视觉输入）
+
+			- $\text{REASON}$：推理文本（可能来自预训练或简单生成）
+
+		3. 训练方式：
+
+			- 使用时间步采样 $t \in P_{schedule}$（Flow Matching的标准做法）
+
+			- 学习从任意噪声状态 $\mathbf{a}t$ 到真实动作 $\mathbf{a}$ 的速度方向
 ### 阶段3 CoT SFT 训练目标：
 * 
 	* ![[Pasted image 20260106182304.png]]
