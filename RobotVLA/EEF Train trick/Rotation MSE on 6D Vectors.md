@@ -4,7 +4,7 @@
 
 ![[Pasted image 20260126161221.png]]
 
-两种损失计算方式的主要区别：（MSE为GROOT N1.5的训练代码 | 6D Vectors重建为来自Astribot）
+两种损失计算方式的主要区别：（MSE为GROOT N1.5的训练代码 | 6D Vectors重建为来自 Astribot）
 
 ## 1. **当前方法：MSE on 6D Vectors**
 
