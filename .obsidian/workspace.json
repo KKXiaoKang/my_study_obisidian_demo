@@ -34,22 +34,9 @@
               "icon": "lucide-file",
               "title": "SuGaR - GS To Mesh"
             }
-          },
-          {
-            "id": "37003b7f63e77321",
-            "type": "leaf",
-            "state": {
-              "type": "bases",
-              "state": {
-                "file": "未命名.base",
-                "viewName": "表格"
-              },
-              "icon": "lucide-table",
-              "title": "未命名"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -209,11 +196,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "86eaf77f5f480c18",
+  "active": "03448d7147935775",
   "lastOpenFiles": [
-    "Robot工具/curobo convert urdf 2 usd.md",
     "未命名.base",
     "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
+    "Robot工具/curobo convert urdf 2 usd.md",
     "RobotVision/三维重建/3D_Gaussian/splatviz - 高斯离线本地可视化渲染器.md",
     "RobotVision/三维重建/3D_Gaussian/Gaussian Opacity Fields - 高斯不透明度场.md",
     "RobotVision/三维重建/3D_Gaussian/3D GS 训练过程 - 3DGS散点ply训练.md",
