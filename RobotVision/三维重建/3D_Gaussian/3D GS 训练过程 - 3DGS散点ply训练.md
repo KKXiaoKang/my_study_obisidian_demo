@@ -46,7 +46,7 @@ python3 convert.py -s data/crane/
 
 ```bash
 
-0428 14:23:28.802250 523157 feature_extraction.cc:258] Processed file [37/38]
+0428 14:23:28.802250 523157 feature_extraction.isaac_simcc:258] Processed file [37/38]
 
 I0428 14:23:28.802270 523157 feature_extraction.cc:261] Name: 0037.jpg
 
