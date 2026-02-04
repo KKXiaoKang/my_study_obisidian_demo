@@ -39,14 +39,13 @@
             "id": "37003b7f63e77321",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "Robot工具/curobo convert urdf 2 usd.md",
-                "mode": "source",
-                "source": false
+                "file": "未命名.base",
+                "viewName": "表格"
               },
-              "icon": "lucide-file",
-              "title": "curobo convert urdf 2 usd"
+              "icon": "lucide-table",
+              "title": "未命名"
             }
           }
         ],
@@ -82,7 +81,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "usd",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -212,13 +211,14 @@
   },
   "active": "86eaf77f5f480c18",
   "lastOpenFiles": [
+    "Robot工具/curobo convert urdf 2 usd.md",
+    "未命名.base",
     "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
     "RobotVision/三维重建/3D_Gaussian/splatviz - 高斯离线本地可视化渲染器.md",
     "RobotVision/三维重建/3D_Gaussian/Gaussian Opacity Fields - 高斯不透明度场.md",
     "RobotVision/三维重建/3D_Gaussian/3D GS 训练过程 - 3DGS散点ply训练.md",
     "RobotVision/三维重建/3D_Gaussian/3D GS 导入场景 Omniverse - 仅用于背景像素渲染.md",
     "RobotVision/三维重建/3D_Gaussian/3D Gaussian Splatting 原理.md",
-    "Robot工具/curobo convert urdf 2 usd.md",
     "Robot工具/Robot常见工具 & QA说明.md",
     "RobotVLA/EEF Train trick/Rotation(6D) Normalization way.md",
     "RobotRL/Q-learning DQN/贝尔曼方程 - Bellman Optimality Equation.md",
@@ -256,8 +256,6 @@
     "RobotVLA/physicalintelligence",
     "Robotmanipulation - opt_VA/Imitation learning/rewACT - 将MLP结构的reward model融合在ACT训练当中.md",
     "Robotmanipulation - opt_VA/Imitation learning/※ OpenVLA - Vision-Language-Action Model.md",
-    "Robotmanipulation - opt_VA/KL散度对比MSE计算loss.md",
-    "未命名.base",
     "Robot工具/未命名.canvas",
     "未命名.canvas"
   ]
