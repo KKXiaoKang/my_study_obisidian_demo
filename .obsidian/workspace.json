@@ -35,8 +35,7 @@
               "title": "SuGaR - GS To Mesh"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -196,10 +195,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "03448d7147935775",
+  "active": "fe827a562359956a",
   "lastOpenFiles": [
-    "未命名.base",
     "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
+    "未命名.base",
     "Robot工具/curobo convert urdf 2 usd.md",
     "RobotVision/三维重建/3D_Gaussian/splatviz - 高斯离线本地可视化渲染器.md",
     "RobotVision/三维重建/3D_Gaussian/Gaussian Opacity Fields - 高斯不透明度场.md",
