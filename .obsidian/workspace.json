@@ -22,20 +22,35 @@
             }
           },
           {
-            "id": "03448d7147935775",
+            "id": "c580d92a6688212f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
+                "file": "RobotRL/VLA-RL/GROOT N1.5 flow-matching head 如何修改带advantage优势值条件生成.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SuGaR - GS To Mesh"
+              "title": "GROOT N1.5 flow-matching head 如何修改带advantage优势值条件生成"
+            }
+          },
+          {
+            "id": "f02ebd056f27b618",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RobotRL/VLA-RL/路线总览.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "路线总览"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -67,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "SAC",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -195,25 +210,40 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fe827a562359956a",
+  "active": "c580d92a6688212f",
   "lastOpenFiles": [
+    "RobotRL/VLA-RL/路线总览.md",
+    "RobotRL/VLA-RL/GROOT N1.5 flow-matching head 如何修改带advantage优势值条件生成.md",
+    "RobotRL/SAC/SAC - train and learn.md",
+    "RobotRL/VLA-RL",
     "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
+    "RobotRL/Q-learning DQN/贝尔曼方程 - Bellman Optimality Equation.md",
+    "RobotRL/SAC/SAC - load or save model.md",
+    "RobotRL/SAC/SAC - `RunningMeanStd` 观测归一化工具.md",
+    "RobotRL/SAC/SAC - (actor-Critic 架构).md",
+    "RobotRL/Reward设计/manipulation reward 设计.md",
+    "RobotRL/Reward设计/default joint reward - 设计思路.md",
+    "RobotRL/Q-learning DQN/探索底层文章 - Q-learning is not yet scalable.md",
+    "RobotRL/Q-learning DQN/Deep Q Net-work.md",
+    "RobotRL/Q-learning DQN/DQN 变换表.md",
+    "RobotRL/Q-learning DQN/q-learning 方法一览.md",
+    "RobotRL/Q-learning DQN/Q-learing变化表.md",
+    "RobotRL/Hil-Serl/lerobot - Hil-Serl pipeline说明.md",
+    "RobotRL/Hil-Serl/☆ - SAC recipe experiments log 对比 baseline PPO.md",
+    "RobotRL/Diffusion-RL/DPPO - Diffusion Policy Policy Optimization.md",
+    "RobotRL/DSRL/DSRL - 基于Diffusion策略的RL微调.md",
+    "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
+    "RobotRL/ViTAL/ViTAL - Touch begins where vision ends.md",
+    "RobotRL/ViTAL/IMG/Pasted image 20250707113453.png",
+    "RobotRL/Q-chunk ACT actor/mlp actor 2 act actor - 架构升级说明.md",
     "未命名.base",
     "Robot工具/curobo convert urdf 2 usd.md",
     "RobotVision/三维重建/3D_Gaussian/splatviz - 高斯离线本地可视化渲染器.md",
     "RobotVision/三维重建/3D_Gaussian/Gaussian Opacity Fields - 高斯不透明度场.md",
     "RobotVision/三维重建/3D_Gaussian/3D GS 训练过程 - 3DGS散点ply训练.md",
-    "RobotVision/三维重建/3D_Gaussian/3D GS 导入场景 Omniverse - 仅用于背景像素渲染.md",
-    "RobotVision/三维重建/3D_Gaussian/3D Gaussian Splatting 原理.md",
-    "Robot工具/Robot常见工具 & QA说明.md",
-    "RobotVLA/EEF Train trick/Rotation(6D) Normalization way.md",
-    "RobotRL/Q-learning DQN/贝尔曼方程 - Bellman Optimality Equation.md",
-    "RobotVLA/EEF Train trick/Rotation MSE on 6D Vectors.md",
     "RobotVLA/EEF Train trick/IMG/Pasted image 20260126161221.png",
     "RobotVLA/EEF Train trick/IMG",
-    "RobotVLA/NVIDIA/Alpamayo-R1 ：Bridging Reasoning and Action Prediction.md",
     "RobotVLA/EEF Train trick",
-    "Robotmanipulation - opt_VA/VLA/VLM学习价值函数 - Vision Language Models are In-Context Value Learners 谷歌deepmind.md",
     "RobotVLA/NVIDIA/IMG/Pasted image 20260106211135.png",
     "RobotVLA/NVIDIA/IMG/Pasted image 20260106203134.png",
     "RobotVLA/NVIDIA/IMG/Pasted image 20260106182304.png",
@@ -222,26 +252,12 @@
     "RobotVLA/NVIDIA/IMG/Pasted image 20260106172836.png",
     "RobotVLA/NVIDIA/IMG/Pasted image 20260106170607.png",
     "RobotVLA/NVIDIA/IMG/Pasted image 20260106165910.png",
-    "RobotVLA/NVIDIA/IMG/Pasted image 20260106165612.png",
     "RobotVLA/NVIDIA/IMG/Alpamayo-R1_Bridging Reasoning and Action Prediction.pdf",
-    "RobotVLA/physicalintelligence/Emergence of Human to Robot Transfer in VLAs.md",
-    "Robotmanipulation - opt_VA/Imitation learning/Transformer/04 - Transformer - Decoder结构.md",
-    "Robot工具/N 卡 - GPU 拉高风扇散热.md",
     "RobotVLA/NVIDIA/IMG",
     "RobotVLA/NVIDIA",
-    "RobotVLA/模型optimize/MLP multi head v2.0.md",
-    "RobotVLA/模型optimize/MLP multi head v1.0.md",
-    "Robot工具/IsaacLab - 多联体包含方法.md",
-    "Robotmanipulation - opt_VA/Imitation learning/Transformer/03 - Transformer - Encoder结构.md",
-    "Robotmanipulation - opt_VA/Imitation learning/Transformer/Attention Is All You Need -  Transformer 开山之作 - pipeline.md",
-    "Robotmanipulation - opt_VA/Imitation learning/Transformer/02 - Transformer - Self-Attention（自注意力机制）.md",
-    "Robotmanipulation - opt_VA/Imitation learning/Transformer/01 - Transformer - Transformer 输入.md",
     "RobotVLA/模型optimize",
     "RobotVLA/physicalintelligence/IMG/Emergence of Human to Robot Transfer in.pdf",
     "RobotVLA/physicalintelligence/IMG",
-    "RobotVLA/physicalintelligence",
-    "Robotmanipulation - opt_VA/Imitation learning/rewACT - 将MLP结构的reward model融合在ACT训练当中.md",
-    "Robotmanipulation - opt_VA/Imitation learning/※ OpenVLA - Vision-Language-Action Model.md",
     "Robot工具/未命名.canvas",
     "未命名.canvas"
   ]
