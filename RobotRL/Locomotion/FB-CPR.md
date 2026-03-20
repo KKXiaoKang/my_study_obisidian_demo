@@ -1,0 +1,1 @@
+![[RobotRL/Locomotion/IMG/BFM-Zero A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning]]
