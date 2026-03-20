@@ -214,10 +214,10 @@
   "lastOpenFiles": [
     "RobotRL/VLA-RL/路线总览.md",
     "RobotRL/VLA-RL/GROOT N1.5 flow-matching head 如何修改带advantage优势值条件生成.md",
+    "RobotRL/Q-learning DQN/贝尔曼方程 - Bellman Optimality Equation.md",
     "RobotRL/SAC/SAC - train and learn.md",
     "RobotRL/VLA-RL",
     "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
-    "RobotRL/Q-learning DQN/贝尔曼方程 - Bellman Optimality Equation.md",
     "RobotRL/SAC/SAC - load or save model.md",
     "RobotRL/SAC/SAC - `RunningMeanStd` 观测归一化工具.md",
     "RobotRL/SAC/SAC - (actor-Critic 架构).md",
