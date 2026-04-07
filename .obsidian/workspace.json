@@ -74,8 +74,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -182,7 +181,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cefa160b3e3c3f8e",
+  "active": "86eaf77f5f480c18",
   "lastOpenFiles": [
     "RobotRL/Locomotion/IMG/BFM-Zero A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning.md",
     "RobotRL/Locomotion/IMG/IMG/BFM-Zero.pdf",
