@@ -181,10 +181,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "86eaf77f5f480c18",
+  "active": "9d70501928feeef9",
   "lastOpenFiles": [
-    "Robotmanipulation - opt_VA/Imitation learning/编码器/MLP - 多层感知机.md",
+    "Robotmanipulation - opt_VA/VLA/test.md",
     "Robotmanipulation - opt_VA/VLA/GROOT N1.5 action expert改动一览.md",
+    "Robotmanipulation - opt_VA/Imitation learning/编码器/MLP - 多层感知机.md",
     "RobotRL/VLA-RL/GROOT N1.5 flow-matching head 如何修改带advantage优势值条件生成.md",
     "Robot工具/curobo convert urdf 2 usd.md",
     "RobotRL/Locomotion/IMG/BFM-Zero A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning.md",
@@ -215,7 +216,6 @@
     "RobotRL/Hil-Serl/☆ - SAC recipe experiments log 对比 baseline PPO.md",
     "RobotRL/Diffusion-RL/DPPO - Diffusion Policy Policy Optimization.md",
     "RobotRL/DSRL/DSRL - 基于Diffusion策略的RL微调.md",
-    "RobotRL/☆  基于视觉的Sim2real的抓取manipulation RL/Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids.md",
     "RobotRL/ViTAL/IMG/Pasted image 20250707113453.png",
     "未命名.base",
     "RobotVLA/EEF Train trick/IMG/Pasted image 20260126161221.png",

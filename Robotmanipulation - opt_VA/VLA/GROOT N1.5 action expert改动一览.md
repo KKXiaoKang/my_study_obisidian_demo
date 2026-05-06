@@ -67,7 +67,34 @@ A：
 
 > "分头和不分头，**输出维度一样、最终向量也一样**；但带隐层时，**函数族不同、瓶颈秩不同、梯度路径不同**。分头本质上是用更小的代价拿到 (1) 更宽松的归纳偏置，(2) 更干净的梯度路径，(3) head 级的 loss 接口——这后一点是后续做 uncertainty weighting 和双臂 cross-attention 的前提。"
 ---
+#### Q2：梯度干扰的数字例子，给点真数
+A：为了直观，把 hidden bottleneck $z$ 简化成 3 维（实际是 1024 维，但原理一致）。
+##### 设定
+- 共享隐藏特征 $z \in \mathbb{R}^3$
+- arm 输出 $a^{\text{arm}} \in \mathbb{R}^1$（简化为 1 维），权重 $W_2^{\text{arm}} = (1,\, 0,\, 0)$
+- claw 输出 $a^{\text{c}} \in \mathbb{R}^1$，权重 $W_2^{\text{c}} = (-5,\, 5,\, 0)$
+也就是 arm 主要从 $z$ 的第 1 维读，claw 从第 1, 2 维读（且符号还跟 arm 反着）。
+##### 这一步的梯度
+设这个 batch 上：
+- arm 的输出误差小：$\nabla_{a^{\text{arm}}} \mathcal L_{\text{arm}} = 1$（关节误差 ~ 0.01 rad 量级）
+- claw 正在做开 / 合的跳变阶段，输出误差大：$\nabla_{a^{\text{c}}} \mathcal L_{\text{c}} = 1$（夹爪指令 0 ↔ 100 的跨度）
+回传到 $z$：
+$$
+g_{\text{arm}} = (W_2^{\text{arm}})^\top \cdot 1 = (1,\, 0,\, 0),\quad \|g_{\text{arm}}\| = 1
+$$
+$$
+g_{\text{c}} = (W_2^{\text{c}})^\top \cdot 1 = (-5,\, 5,\, 0),\quad \|g_{\text{c}}\| = \sqrt{50} \approx 7.07
+$$
+注意：claw 的梯度幅度比 arm 大 7 倍。这不是我编的——夹爪指令的物理范围（~100 个单位）和误差量级（开合切换时整段差值）天然就比关节角误差大一个量级以上。
+##### 算两者夹角
+$$
+g_{\text{arm}} \cdot g_{\text{c}} = (1)(-5) + (0)(5) + (0)(0) = -5
+$$
+$$
+\cos\theta = \frac{-5}{1 \cdot 7.07} \approx -0.707\quad\Rightarrow\quad \theta \approx 135°
+$$
 
+明显是冲突方向。
 
 ### 2) Homoscedastic Uncertainty-Weighted Multi-Task Loss（基于同方差不确定性的可学习多任务损失加权）
 
