@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/GROOT N1.5 action expert改动一览.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/Homoscedastic Uncertainty-Weighted Multi-Task Loss（基于同方差不确定性的可学习多任务损失加权）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GROOT N1.5 action expert改动一览"
+              "title": "Homoscedastic Uncertainty-Weighted Multi-Task Loss（基于同方差不确定性的可学习多任务损失加权）"
             }
           }
         ],
@@ -198,8 +198,9 @@
   },
   "active": "06f75c5b4de9b0d7",
   "lastOpenFiles": [
-    "Robotmanipulation - opt_VA/YouKnow3M/CategorySpecificMLP 手臂夹爪维度 - 梯度冲突.md",
     "Robotmanipulation - opt_VA/YouKnow3M/GROOT N1.5 action expert改动一览.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/Homoscedastic Uncertainty-Weighted Multi-Task Loss（基于同方差不确定性的可学习多任务损失加权）.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/CategorySpecificMLP 手臂夹爪维度 - 梯度冲突.md",
     "Robotmanipulation - opt_VA/YouKnow3M",
     "Robotmanipulation - opt_VA/Imitation learning/编码器/MLP - 多层感知机.md",
     "RobotRL/VLA-RL/GROOT N1.5 flow-matching head 如何修改带advantage优势值条件生成.md",
