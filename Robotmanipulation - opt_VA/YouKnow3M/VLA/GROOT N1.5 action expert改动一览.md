@@ -130,7 +130,9 @@ $$
 ![[Pasted image 20260506152241.png]]
 
 ### 3) Bimanual Cross-Attention with Geometry-Preserving Decoupling（带几何约束保护的双臂跨注意力解码器）
-**问题现象：代码当中的long-tail场景，或者左手没能到位**
+* 参考文献:  Learning Bimanual Manipulation via Action Chunking and Inter-Arm  Coordination with Transformers
+
+**问题现象：码当中的long-tail场景，或者左手没能到位**
 
 **问题动机.** 单纯的 hard parameter sharing 只在共享主干上学习了**隐式**的双臂耦合。在协同性强的 bimanual 任务（如双手扶箱、对接、协同搬运）中，左右臂之间的几何/时间一致性对成功率至关重要，但解码端缺乏**显式**的左右信息流，模型只能依赖 DiT 内部隐式协同，样本效率较低。
 
