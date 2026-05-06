@@ -97,7 +97,7 @@ $$
 
 线性层的权重决定了输出从 latent 表示的哪些方向读取信息，同时也决定了梯度如何回传到表示空间。当多个任务共享表示时，如果它们通过各自的输出层诱导出的梯度在表示空间中方向不一致（尤其是相反），则会产生梯度冲突，导致优化过程中出现负迁移。
 
-### 2) Homoscedastic Uncertainty-Weighted Multi-Task Loss（基于同方差不确定性的可学习多任务损失加权）
+### 2) Homoscedastic Uncertainty-Weighted Multi-Task Loss（基于同方差不确定性的可学习多任务损失加权）- "用每个 task 当前的 loss 量级，反推出该 task 的合理 noise 假设 σ，再用 1/σ² 作为权重"
 
 **问题动机.** 当 multi-head 解耦后，损失合成 $\mathcal{L} = \sum_k w_k \mathcal{L}_k$ 中的 $w_k$ 通常需人为调参。由于左臂、右臂与夹爪三个子任务的**任务噪声尺度不同、难度不同**，固定权重在不同数据集与不同动作空间（Joint / Absolute eef / Delta eef）下都需要重新搜索，极不稳健。
 
