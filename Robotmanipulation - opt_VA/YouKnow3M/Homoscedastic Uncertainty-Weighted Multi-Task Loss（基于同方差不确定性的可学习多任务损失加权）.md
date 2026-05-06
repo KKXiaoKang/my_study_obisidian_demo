@@ -134,12 +134,12 @@ $$
 \mathcal L_{\text{total}}\;=\;\underbrace{\sum_k \frac{1}{\sigma_k^2}\,\mathcal L_k}_{\text{加权 MSE}}\;+\;\underbrace{\sum_k s_k}_{\text{anti-degeneracy 正则项}}
 $$
 
-| 项 | 数学符号 | 代码变量 | 初始值 |
-|---|---|---|---|
-| 同方差参数 | $s_k = \log \sigma_k$ | `task_log_sigma["k"]` | **0**（即 $\sigma_k=1$） |
-| 精度 / 权重 | $1/\sigma_k^2$ | `precision_k` | **1** |
-| 正则项 | $\sum_k s_k$ | `aux_loss` | **0** |
-| 任务 loss | $\mathcal L_k$ = MSE per task | `ps_la / ps_ra / ps_c` | 取决于初始 prediction |
+| 项       | 数学符号                          | 代码变量                   | 初始值                   |
+| ------- | ----------------------------- | ---------------------- | --------------------- |
+| 同方差参数   | $s_k = \log \sigma_k$         | `task_log_sigma["k"]`  | **0**（即 $\sigma_k=1$） |
+| 精度 / 权重 | $1/\sigma_k^2$                | `precision_k`          | **1**                 |
+| 正则项     | $\sum_k s_k$                  | `aux_loss`             | **0**                 |
+| 任务 loss | $\mathcal L_k$ = MSE per task | `ps_la / ps_ra / ps_c` | 取决于初始 prediction      |
 
 ---
 
