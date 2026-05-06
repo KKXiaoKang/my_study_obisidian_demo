@@ -74,8 +74,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -182,7 +181,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9d70501928feeef9",
+  "active": "86eaf77f5f480c18",
   "lastOpenFiles": [
     "Robotmanipulation - opt_VA/Imitation learning/编码器/MLP - 多层感知机.md",
     "Robotmanipulation - opt_VA/VLA/GROOT N1.5 action expert改动一览.md",
