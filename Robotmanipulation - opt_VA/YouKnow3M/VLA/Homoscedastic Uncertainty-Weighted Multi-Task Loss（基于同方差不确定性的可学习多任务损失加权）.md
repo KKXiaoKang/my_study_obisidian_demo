@@ -265,3 +265,122 @@ $$
 > "**数据是真实的遥操；高斯似然是我们主动施加的统计假设；MSE 不是我们选的损失，是 Gaussian NLL 的副产品**。代码里 $s_k$ 初始化为 0（即 $\sigma=1$）、$\mathrm{precision}=1$、$\mathrm{aux}=0$——三任务从均权重起步；SGD 把 $\theta_k$ 和 $s_k$ 一起优化，让 $\sigma_k$ 收敛到与 $\sqrt{\mathrm{MSE}_k}$ 同阶的位置；最终 precision $\propto 1/\mathrm{MSE}_k$，等于自动给 loss 大的任务降权。"
 
 如果你想再深一层，下一道题会是："**为什么这套方法不会让 σ 协同跑到无穷大让 aux_loss 也无穷大？aux_loss 项是怎么和数据项达到博弈平衡的？**"——本质就是 step 5 那个 "平衡点" 推导的几何意义。这道题是个不错的自检。
+
+
+# 关于具体的优化参数的部分，其实是除了可学习权重之外，还在优化整个网格参数
+直接答案：**除了 3 个 σ 标量，几乎整个网络的参数都在被优化**——而且优化的"主角"其实是 θ，σ 是配角。我把全清单按模块列给你。
+
+---
+
+## 1. 全清单：这套 loss 到底在优化哪些参数？
+
+回顾损失函数：
+
+$$
+\mathcal L = \sum_k \frac{1}{\sigma_k^2}\,\mathcal L_k(\theta) \;+\; \sum_k \log\sigma_k
+$$
+
+注意 $\mathcal L_k(\theta)$ 的括号——它是**网络参数 θ 的函数**。所以损失同时含两组未知量：
+
+### 组 A：**3 个 σ 标量**（uncertainty 加权用）
+
+| 参数 | 代码位置 | 量级 |
+|---|---|---|
+| `task_log_sigma["left_arm"]` | L717 | 1 个标量 |
+| `task_log_sigma["right_arm"]` | L718 | 1 个标量 |
+| `task_log_sigma["claw"]` | L719 | 1 个标量 |
+
+→ **共 3 个标量**。
+
+### 组 B：**整个 NN 的所有可训练权重 θ**（产生预测 μ 用）
+
+```
+θ_视觉编码器       (Eagle vision tower)
+θ_语言编码器       (Eagle LLM)
+θ_视觉-语言投影    (vl projector / VLLN)
+θ_state_encoder   (CategorySpecificMLP, L566)         # 把 state 映射到 hidden
+θ_action_encoder  (MultiEmbodimentActionEncoder, L577) # 编码 noisy action
+θ_future_tokens   (nn.Embedding, L731)                 # 可学习的 future query
+θ_position_embed  (nn.Embedding，可选)
+θ_DiT             (DiT 主干, L516)                     # cross-attention transformer
+─────────────  以下是多头 decoder ────────────
+θ_shared_arm_decoder.shared_layer       (CategorySpecificLinear)
+θ_shared_arm_decoder.cross_attn_left    (MultiheadAttention 4 头)
+θ_shared_arm_decoder.cross_attn_right   (MultiheadAttention 4 头)
+θ_shared_arm_decoder.layer_norm_left/right
+θ_shared_arm_decoder.left_pos_output_layer / right_pos_output_layer
+θ_shared_arm_decoder.left_rot_output_layer / right_rot_output_layer
+θ_action_claw_decoder    (CategorySpecificMLP)
+```
+
+→ **共约 7.5 亿（750M）参数**，按 GR00T-N1.5-3B 的规模。
+
+---
+
+## 2. 量级对比，看清主角和配角
+
+| 角色 | 参数量 | 占比 |
+|---|---|---|
+| **主角 θ**（网络） | ~750,000,000 | **99.9999996%** |
+| **配角 σ**（uncertainty） | 3 | 0.0000004% |
+
+> σ 加进来不是为了"靠 σ 学到东西"，σ 自己学不出预测能力。  
+> σ 的作用是**调节 θ 的更新方向**——通过 $\frac{1}{\sigma_k^2}$ 重加权 $\nabla_\theta \mathcal L_k$。
+
+也就是：
+
+| 损失中的项 | 优化的对象 | 物理意义 |
+|---|---|---|
+| $\mathcal L_k(\theta)$ 本身 | **θ** | 让预测 $\mu_k(x) = f_{\theta}(x)$ 更准 |
+| $\frac{1}{\sigma_k^2}$ 系数 | **θ + σ** | σ 把 task 权重调到合理位置；θ 在调好的权重下被更新 |
+| $\sum_k \log\sigma_k$ | **σ only** | anti-degeneracy 正则项，把 σ 拉回来 |
+
+---
+
+## 3. 一个直白的解读：σ 不是优化目标，而是优化机制的一部分
+
+很多人第一次接触这套方法，会以为"optimize σ"是这个方法的卖点。其实正好反过来：
+
+> **真正在被优化的是 θ（让模型学会预测）。σ 的存在只是为了让 θ 在多任务场景下被"正确地"优化。**
+
+打个比方：
+
+> 想象你在学一道有 3 道大题的考卷，你想让自己 3 题都做对（这是 θ 在做的事——把预测做准）。  
+> 老师告诉你"如果某题特别难、错的人多（loss 大），就少练它，多练你能学到东西的题（σ 自动加权）"。  
+> 这套加权规则不是你要学的内容（不是考点），它是**学习策略**。考点本身永远是 3 道题怎么做对。  
+> σ 就是这条加权规则；θ 才是真正"考点"。
+
+---
+
+## 4. 与"凭空学权重"的方法严格对比
+
+| 方法 | 优化的参数 | 学习信号来源 | 收敛吗？ |
+|---|---|---|---|
+| **凭空学权重**：$\mathcal L = \sum w_k L_k$，$w_k$ 可学 | $\theta$ + $w_k$ | $w_k$ 没有独立信号 | ❌ degenerate（$w_k → 0$） |
+| **Uncertainty weighting**：$\mathcal L = \sum \frac{1}{\sigma_k^2} L_k + \log\sigma_k$ | **$\theta$ + $\sigma_k$** | $\sigma_k$ 有 $\log \sigma_k$ 这个 anti-degeneracy 项；同时被 $L_k$ 反向引导 | ✓ 平衡到 $\sigma_k^2 = \mathcal L_k$ 附近 |
+
+→ uncertainty weighting **本质是把 multi-task 加权问题嵌入到 likelihood 里**，让权重学习有数学约束（$\log\sigma$）和数据信号（$\mathcal L_k$）；同时**主要参数仍然是 θ**。
+
+---
+
+## 5. 最终一张图：谁在被优化、为什么
+
+$$
+\boxed{
+\begin{array}{c}
+\textbf{优化目标} \\[4pt]
+\mathcal L \;=\; \sum_{k\in\{\text{LA, RA, C}\}}\Bigl[\underbrace{\frac{1}{\sigma_k^2}\,\mathcal L_k(\theta)}_{\text{数据项}} + \underbrace{\log\sigma_k}_{\text{正则项}}\Bigr] \\[10pt]\hline\\[-6pt]
+\begin{array}{l}
+\textbf{被 SGD 更新的参数：} \\[4pt]
+\;\;\;\;\bullet\; \theta\;\text{（NN 全部权重，~750M）}  \;\;\to\;\; \text{学预测}\;\mu_k(x)\\[2pt]
+\;\;\;\;\bullet\; s_k = \log\sigma_k\;\text{（3 个标量）} \;\;\to\;\; \text{学 task 权重平衡}
+\end{array}
+\end{array}
+}
+$$
+
+---
+
+## 一句话收口
+
+> "**这套 loss 同时优化两组参数：(1) 网络全部权重 θ（数量级 7.5 亿，决定模型把 $x$ 映射成预测 $\mu_k(x)$ 的能力——这是真正的学习主体）；(2) 3 个 σ 标量（数量级 3，决定 task 间权重平衡——这是辅助机制）。** σ 不是这个方法的优化目标，而是让 θ 在多任务场景下被**正确加权地**优化的工具。把它说成'我在用 uncertainty weighting 学权重'容易让人误以为权重是主角，更准确的表述是：**我在用 SGD 学网络 θ，并用同方差不确定性 σ 作为可学习的多任务平衡器。**"

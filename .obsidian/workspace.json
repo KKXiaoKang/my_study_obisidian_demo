@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/CategorySpecificMLP 手臂夹爪维度 - 梯度冲突.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/CategorySpecificMLP 手臂夹爪维度 - 梯度冲突.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/Homoscedastic Uncertainty-Weighted Multi-Task Loss（基于同方差不确定性的可学习多任务损失加权）.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/GROOT N1.5 action expert改动一览.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Homoscedastic Uncertainty-Weighted Multi-Task Loss（基于同方差不确定性的可学习多任务损失加权）"
+              "title": "GROOT N1.5 action expert改动一览"
             }
           }
         ],
@@ -198,9 +198,12 @@
   },
   "active": "06f75c5b4de9b0d7",
   "lastOpenFiles": [
-    "Robotmanipulation - opt_VA/YouKnow3M/CategorySpecificMLP 手臂夹爪维度 - 梯度冲突.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/GROOT N1.5 action expert改动一览.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/Homoscedastic Uncertainty-Weighted Multi-Task Loss（基于同方差不确定性的可学习多任务损失加权）.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/Homoscedastic Uncertainty-Weighted Multi-Task Loss（基于同方差不确定性的可学习多任务损失加权）.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/GROOT N1.5 action expert改动一览.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/CategorySpecificMLP 手臂夹爪维度 - 梯度冲突.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA",
+    "Robotmanipulation - opt_VA/YouKnow3M/IMG/Pasted image 20260506152241.png",
+    "Robotmanipulation - opt_VA/YouKnow3M/IMG",
     "Robotmanipulation - opt_VA/YouKnow3M",
     "Robotmanipulation - opt_VA/Imitation learning/编码器/MLP - 多层感知机.md",
     "RobotRL/VLA-RL/GROOT N1.5 flow-matching head 如何修改带advantage优势值条件生成.md",
@@ -231,11 +234,8 @@
     "RobotRL/Q-learning DQN/Q-learing变化表.md",
     "RobotRL/Hil-Serl/lerobot - Hil-Serl pipeline说明.md",
     "RobotRL/Hil-Serl/☆ - SAC recipe experiments log 对比 baseline PPO.md",
-    "RobotRL/Diffusion-RL/DPPO - Diffusion Policy Policy Optimization.md",
     "RobotRL/ViTAL/IMG/Pasted image 20250707113453.png",
-    "未命名.base",
     "RobotVLA/EEF Train trick/IMG/Pasted image 20260126161221.png",
-    "RobotVLA/EEF Train trick/IMG",
     "RobotVLA/NVIDIA/IMG/Pasted image 20260106211135.png",
     "RobotVLA/NVIDIA/IMG/Pasted image 20260106203134.png",
     "RobotVLA/NVIDIA/IMG/Pasted image 20260106182304.png",
@@ -243,7 +243,6 @@
     "RobotVLA/NVIDIA/IMG/Pasted image 20260106175640.png",
     "RobotVLA/NVIDIA/IMG/Pasted image 20260106172836.png",
     "RobotVLA/NVIDIA/IMG/Pasted image 20260106170607.png",
-    "RobotVLA/NVIDIA/IMG/Pasted image 20260106165910.png",
     "Robot工具/未命名.canvas",
     "未命名.canvas"
   ]

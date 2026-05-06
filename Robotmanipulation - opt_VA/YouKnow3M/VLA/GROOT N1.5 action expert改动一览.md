@@ -98,6 +98,7 @@ $$
 线性层的权重决定了输出从 latent 表示的哪些方向读取信息，同时也决定了梯度如何回传到表示空间。当多个任务共享表示时，如果它们通过各自的输出层诱导出的梯度在表示空间中方向不一致（尤其是相反），则会产生梯度冲突，导致优化过程中出现负迁移。
 
 ### 2) Homoscedastic Uncertainty-Weighted Multi-Task Loss（基于同方差不确定性的可学习多任务损失加权）- "用每个 task 当前的 loss 量级，反推出该 task 的合理 noise 假设 σ，再用 1/σ² 作为权重"
+**问题现象：调参困难，关于multi head每个head的学习权重不知道给多少较好才可以学习到位？**
 
 **问题动机.** 当 multi-head 解耦后，损失合成 $\mathcal{L} = \sum_k w_k \mathcal{L}_k$ 中的 $w_k$ 通常需人为调参。由于左臂、右臂与夹爪三个子任务的**任务噪声尺度不同、难度不同**，固定权重在不同数据集与不同动作空间（Joint / Absolute eef / Delta eef）下都需要重新搜索，极不稳健。
 
@@ -120,9 +121,16 @@ $$
 (2) 在 left/right/claw 三头任务噪声差异极大的双臂场景下，自动赋予高难度子任务更高 precision；  
 (3) 与 component-wise `action_mask` 兼容，对部分缺失的子空间样本仍可稳健加权。
 
+三个任务初始 precision（即损失里的实际加权系数）都是 `1.0`，且彼此完全相等。
+
+ > "**这套 loss 同时优化两组参数：(1) 网络全部权重 θ（数量级 7.5 亿，决定模型把 $x$ 映射成预测 $\mu_k(x)$ 的能力——这是真正的学习主体）；(2) 3 个 σ 标量（数量级 3，决定 task 间权重平衡——这是辅助机制）。** σ 不是这个方法的优化目标，而是让 θ 在多任务场景下被**正确加权地**优化的工具。把它说成'我在用 uncertainty weighting 学权重'容易让人误以为权重是主角，更准确的表述是：**我在用 SGD 学网络 θ，并用同方差不确定性 σ 作为可学习的多任务平衡器。**"
+ 
+ > **"μ 不是手动给的初值，是网络 forward 实时产生的预测——具体到代码就是 `pred_left_arm/pred_right_arm/pred_claw`，对应 L1129–1135；它们预测的不是 action，而是 flow matching 的 velocity。σ 是 `task_log_sigma`，初始化在 L703–720，全是 `torch.zeros(())`，也就是 `log σ = 0 ⇒ σ = 1.0`，三个 task 起点完全等权。整套机制是用 GT velocity 算的 MSE 反推 σ 的大小，从而把 task 间权重学出来——μ 来自网络、σ 来自 task_log_sigma、GT 是 velocity、MSE 是这两者的平方差——四件事一起作用。"**
 ---
+![[Pasted image 20260506152241.png]]
 
 ### 3) Bimanual Cross-Attention with Geometry-Preserving Decoupling（带几何约束保护的双臂跨注意力解码器）
+**问题现象：代码当中的long-tail场景，或者左手没能到位**
 
 **问题动机.** 单纯的 hard parameter sharing 只在共享主干上学习了**隐式**的双臂耦合。在协同性强的 bimanual 任务（如双手扶箱、对接、协同搬运）中，左右臂之间的几何/时间一致性对成功率至关重要，但解码端缺乏**显式**的左右信息流，模型只能依赖 DiT 内部隐式协同，样本效率较低。
 
