@@ -67,6 +67,7 @@ A：
 > "分头和不分头，**输出维度一样、最终向量也一样**；但带隐层时，**函数族不同、瓶颈秩不同、梯度路径不同**。分头本质上是用更小的代价拿到 (1) 更宽松的归纳偏置，(2) 更干净的梯度路径，(3) head 级的 loss 接口——这后一点是后续做 uncertainty weighting 和双臂 cross-attention 的前提。"
 ---
 
+
 ### 2) Homoscedastic Uncertainty-Weighted Multi-Task Loss（基于同方差不确定性的可学习多任务损失加权）
 
 **问题动机.** 当 multi-head 解耦后，损失合成 $\mathcal{L} = \sum_k w_k \mathcal{L}_k$ 中的 $w_k$ 通常需人为调参。由于左臂、右臂与夹爪三个子任务的**任务噪声尺度不同、难度不同**，固定权重在不同数据集与不同动作空间（Joint / Absolute eef / Delta eef）下都需要重新搜索，极不稳健。
