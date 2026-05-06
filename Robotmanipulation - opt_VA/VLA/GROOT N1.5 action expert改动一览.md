@@ -4,6 +4,7 @@
 ---
 
 ### 1) Task-decomposed Multi-Head Action Decoder（按运动学语义解耦的多头动作解码器）
+**解决现象：pick&place任务中，手臂末端没移动到抓取位就提前收爪，或者arm轨迹在抓取点附近变得不平滑chunk内抖动剧烈**
 
 **问题动机.** 在 GR00T-N1.5 的原始 action expert 中，DiT 主干预测的 token 表征经由单一线性 / MLP 投影一次性回归整段动作向量 $a \in \mathbb{R}^{D}$。然而在双臂人形操作（bimanual humanoid manipulation）中，动作向量天然由若干**异质子空间**构成：左臂关节、右臂关节与夹爪。三者在 (i) 物理量纲（rad 与 0–100 的位移指令）、(ii) 输出动态范围、(iii) 噪声水平、(iv) 任务相关性 上差异显著，使用单一 head 进行联合回归会引入跨子空间的梯度干扰（gradient interference / negative transfer）。
 
