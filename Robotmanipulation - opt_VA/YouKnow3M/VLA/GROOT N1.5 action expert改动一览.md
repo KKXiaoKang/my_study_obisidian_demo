@@ -157,3 +157,89 @@ $$
 (1) 在 hard parameter sharing 之上引入显式的跨臂归纳偏置（inductive bias），改善 bimanual 协同任务的样本效率；  
 (2) 通过「pos-only attention + rot-independent head」保护 6D 旋转的几何约束；  
 (3) 协调正则提供任务级、方向无关的同步性 prior，与 head-wise uncertainty weighting 解耦设计无冲突，可即插即用。
+
+太好了，这个问题问到点子上了。你现在其实在做一件很有价值的“**机制迁移**”：把论文里在 encoder 侧验证过的耦合思想，迁到你这里更贴近控制输出的 decoder 侧。下面我用面试式 QA 来讲。
+
+---
+
+## Q1：你这个 `Bimanual Cross-Attention with Geometry-Preserving Decoupling` 在代码里到底做了什么？
+
+**答：三步。**
+
+1. 先用共享底层特征（`shared_layer`）得到左右臂共同语义；
+2. 左右臂做**对称 cross-attention**（left 看 right，right 看 left）；
+3. 在 EEF 9D 情况下，**只让 position(3D)走 cross-attention，rotation(6D)走独立分支**，最后再拼回 9D。
+
+核心是 `SharedBottomArmDecoder` 这块（在 `flow_matching_action_head.py`）。
+
+---
+
+## Q2：为什么论文（你提到的 2503.13916）主要讲 encoder 耦合，你却放在 decoder？是不是“跑偏”了？
+
+**答：不是跑偏，是“同一归纳偏置放到不同层级”。**
+
+- **encoder 耦合**：强调输入表征层面，让左右手共享上下文（视觉、语言、任务）；
+- **decoder 耦合**：强调输出生成层面，让左右手在动作生成时直接互相约束。
+
+你可以把它理解成：
+
+- encoder 耦合解决的是“**看懂同一个世界**”；
+- decoder 耦合解决的是“**产出互相协调的动作**”。
+
+所以你不是反论文，而是把“bimanual coupling”从 representation 空间往 control 输出空间再推进了一步，这在工程上很合理。
+
+---
+
+## Q3：那为什么不把所有 9D（pos+rot6d）都做 cross-attention？你为什么只耦合 position？
+
+**答：因为要保 6D 旋转表示的几何约束。**
+
+你现在的设计是：
+
+- `pos(3D)`：可耦合（双臂空间协同通常首先体现为相对位移与轨迹关系）；
+- `rot6d(6D)`：独立解码（避免 attention 混合后破坏 rotation 表示稳定性）。
+
+这是“Geometry-Preserving Decoupling”的核心：  
+**在耦合收益最大的子空间耦合，在几何敏感子空间保守处理**。
+
+---
+
+## Q4：那这和“单个 MLP 输出后再 split”本质区别在哪？
+
+**答：区别在“信息交互路径”。**
+
+- 单 MLP+split：左右手共享前向通路，但**没有显式 left↔right 交互算子**；
+- 你现在：有显式 cross-attention，左输出会直接依赖右特征，右输出反之亦然。
+
+这就是为什么你在注释里写“without cross-attn，几乎等价 single MLP then split；with cross-attn 才有真正价值”——这个判断是对的。
+
+---
+
+## Q5：追问——“你为什么不只在 encoder 做耦合？decoder 再做是不是重复？”
+
+**答（可直接背）：**
+
+> 不重复，层级不同。encoder 的耦合是“共享语义先验”，decoder 的耦合是“动作生成约束”。前者提高可理解性，后者提高可执行协同性。尤其在双臂控制中，最终误差是动作空间误差，decoder 侧的耦合对最终控制信号更直接。
+
+---
+
+## Q6：你这套机制可能的风险是什么？
+
+**答：三点。**
+
+1. 过耦合：两手被绑太紧，独立操作能力下降；
+2. 计算增加：双向 attention 增加一点开销；
+3. 训练不稳：如果 loss 权重没平衡好，cross-attn 可能把一侧噪声传给另一侧。
+
+你已经用两招在缓解：
+
+- position/rotation 解耦（降低错误传播）；
+- `arm_coordination_loss_weight` 和 uncertainty weighting（平衡协同与独立）。
+
+---
+
+## Q7：一句话总结你这套设计的学术定位？
+
+> 我们借鉴了双臂耦合在 encoder 侧的归纳偏置，但将其进一步下沉到 action decoder，提出了**位置耦合、旋转解耦**的几何约束保护机制，使双臂在保持姿态表示稳定性的前提下获得更强的输出层协同。
+
+---
