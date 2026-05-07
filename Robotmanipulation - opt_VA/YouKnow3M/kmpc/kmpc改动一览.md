@@ -11,3 +11,6 @@
 * `MPC_MRT_Interface` 是 OCS2 经典的 MPC + Model Reference Tracking 模式：MPC 在自己线程里慢慢求一个完整最优策略，主线程按 1ms / 10ms 在策略里插值出当前参考送下去 → 即便 MPC 求解一次要 30~50ms，VR 端拿到的"下一帧 next_state"始终是平滑的、低延迟的。
 
 ![[Pasted image 20260506183040.png]]![[Pasted image 20260506183049.png]]
+
+# demo
+![[Pasted image 20260507164023.png]]
