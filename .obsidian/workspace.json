@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/AMP & locomotion/上楼梯奖励一览.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/GROOT N1.5 action expert改动一览.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "上楼梯奖励一览"
+              "title": "GROOT N1.5 action expert改动一览"
             }
           }
         ],
@@ -198,13 +198,14 @@
   },
   "active": "06f75c5b4de9b0d7",
   "lastOpenFiles": [
-    "Robotmanipulation - opt_VA/YouKnow3M/kmpc/kmpc改动一览.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/Uncertainty-Weighted Multi-Task Loss.md",
     "Robotmanipulation - opt_VA/YouKnow3M/AMP & locomotion/上楼梯奖励一览.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/kmpc/kmpc改动一览.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/kmpc/bringup.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/GROOT N1.5 action expert改动一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/AMP & locomotion",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/IMG/Pasted image 20260507164023.png",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/IMG/Pasted image 20260507163414.png",
-    "Robotmanipulation - opt_VA/YouKnow3M/kmpc/bringup.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/GROOT N1.5 action expert改动一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/CategorySpecificMLP 手臂夹爪维度 - 梯度冲突.md",
     "Robotmanipulation - opt_VA/YouKnow3M/demo.md",
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/cumotion & Gendexgrasp 改动一览.md",
@@ -220,7 +221,6 @@
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/IMG",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/Bimanual Cross-Attention.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/Uncertainty-Weighted Multi-Task Loss.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA",
     "Robotmanipulation - opt_VA/YouKnow3M/IMG/Pasted image 20260506152241.png",
     "Robotmanipulation - opt_VA/YouKnow3M/IMG",
