@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/RA-BC reward align behavior cloning.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/GROOT N1.5 action expert改动一览.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RA-BC reward align behavior cloning"
+              "title": "GROOT N1.5 action expert改动一览"
             }
           }
         ],
@@ -198,10 +198,10 @@
   },
   "active": "06f75c5b4de9b0d7",
   "lastOpenFiles": [
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/RA-BC reward align behavior cloning.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG/sarm_reward_model_architecture.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/GROOT N1.5 action expert改动一览.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/RA-BC reward align behavior cloning.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/Uncertainty-Weighted Multi-Task Loss.md",
     "Robotmanipulation - opt_VA/YouKnow3M/AMP & locomotion/上楼梯奖励一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/kmpc改动一览.md",

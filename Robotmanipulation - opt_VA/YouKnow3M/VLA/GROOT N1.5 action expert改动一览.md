@@ -1,5 +1,5 @@
 所有表述都和你 `flow_matching_action_head.py` 里的实现一一对应，**没有任何夸大**——主要替换了术语、补齐了 motivation 与对应文献。
-
+_"当前 head 的 loss 就是经典 Conditional Flow Matching 公式：MSE between pred_velocity 和 GT_velocity (= actions − noise)，外加多头不确定性加权和双臂协调正则。没有 KL 散度，而且不应该有——Lipman et al. 2023 的 CFM 等价定理已经证明：在最优传输路径下最小化 velocity MSE，等价于学习从噪声分布到数据分布的边缘传输向量场。这正是 Flow Matching 比 Diffusion 工程上更轻的核心原因——分布匹配的保证是定理给的，不是 KL 项约束出来的。"_
 ---
 
 ### 1) Task-decomposed Multi-Head Action Decoder（按运动学语义解耦的多头动作解码器）
