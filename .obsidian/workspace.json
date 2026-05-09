@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/CategorySpecificMLP 手臂夹爪维度 - 梯度冲突.md",
+                "file": "RobotRL/Q-learning DQN/公式探索/贝尔曼方程 - Bellman Optimality Equation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CategorySpecificMLP 手臂夹爪维度 - 梯度冲突"
+              "title": "贝尔曼方程 - Bellman Optimality Equation"
             }
           },
           {
@@ -27,16 +27,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/模型loss差异.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/AMP & locomotion/上楼梯奖励一览.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "模型loss差异"
+              "title": "上楼梯奖励一览"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -68,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "sac",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -196,25 +195,38 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "06f75c5b4de9b0d7",
+  "active": "9d70501928feeef9",
   "lastOpenFiles": [
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/未命名.md",
+    "RobotRL/Q-learning DQN/公式探索/Deep Q Net-work.md",
+    "RobotRL/Q-learning DQN/公式探索/DQN_vs_贝尔曼.md.md",
+    "RobotRL/Q-learning DQN/公式探索/贝尔曼方程 - Bellman Optimality Equation.md",
+    "RobotRL/Q-learning DQN/公式探索",
+    "RobotRL/Q-learning DQN/未命名.md",
+    "RobotRL/Q-learning DQN/DQN 变换表.md",
+    "RobotRL/Q-learning DQN/q-learning 方法一览.md",
+    "RobotRL/Q-learning DQN/Q-learing变化表.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/AMP & locomotion/上楼梯奖励一览.md",
+    "RobotRL/SAC/SAC - (actor-Critic 架构).md",
+    "RobotRL/SAC/SAC - `RunningMeanStd` 观测归一化工具.md",
+    "RobotRL/Q-learning DQN/探索底层文章 - Q-learning is not yet scalable.md",
+    "RobotRL/Hil-Serl/lerobot - Hil-Serl pipeline说明.md",
+    "RobotRL/Hil-Serl/☆ - SAC recipe experiments log 对比 baseline PPO.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/模型loss差异.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/CategorySpecificMLP 手臂夹爪维度 - 梯度冲突.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/GROOT N1.5 action expert改动一览.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/Bimanual Cross-Attention.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/未命名.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/RA-BC reward align behavior cloning.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG/sarm_reward_model_architecture.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/Uncertainty-Weighted Multi-Task Loss.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/AMP & locomotion/上楼梯奖励一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/kmpc改动一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/bringup.md",
     "Robotmanipulation - opt_VA/YouKnow3M/AMP & locomotion",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/IMG/Pasted image 20260507164023.png",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/IMG/Pasted image 20260507163414.png",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/CategorySpecificMLP 手臂夹爪维度 - 梯度冲突.md",
     "Robotmanipulation - opt_VA/YouKnow3M/demo.md",
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/cumotion & Gendexgrasp 改动一览.md",
-    "Robotmanipulation - opt_VA/VLA/VLM学习价值函数 - Vision Language Models are In-Context Value Learners 谷歌deepmind.md",
     "Robotmanipulation - opt_VA/YouKnow3M.zip",
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/IMG/Pasted image 20260506201538.png",
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/IMG",
@@ -225,23 +237,9 @@
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/IMG/Pasted image 20260506175453.png",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/IMG",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/Bimanual Cross-Attention.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA",
     "Robotmanipulation - opt_VA/YouKnow3M/IMG/Pasted image 20260506152241.png",
     "Robotmanipulation - opt_VA/YouKnow3M/IMG",
-    "Robotmanipulation - opt_VA/YouKnow3M",
-    "Robotmanipulation - opt_VA/Imitation learning/编码器/MLP - 多层感知机.md",
-    "RobotRL/VLA-RL/GROOT N1.5 flow-matching head 如何修改带advantage优势值条件生成.md",
-    "Robot工具/curobo convert urdf 2 usd.md",
-    "RobotRL/Locomotion/IMG/BFM-Zero A Promptable Behavioral Foundation Model for Humanoid Control Using Unsupervised Reinforcement Learning.md",
-    "RobotRL/Locomotion/FB-CPR.md",
-    "RobotRL/Q-learning DQN/贝尔曼方程 - Bellman Optimality Equation.md",
-    "RobotRL/Agent - explore - SMDP半马尔可夫决策过程.md",
-    "RobotRL/VLA-RL/路线总览.md",
-    "RobotRL/SAC/SAC - train and learn.md",
-    "RobotVision/三维重建/3D_Gaussian/SuGaR - GS To Mesh.md",
-    "RobotRL/SAC/SAC - load or save model.md",
-    "RobotRL/SAC/SAC - `RunningMeanStd` 观测归一化工具.md",
     "RobotRL/ViTAL/IMG/Pasted image 20250707113453.png",
     "RobotVLA/EEF Train trick/IMG/Pasted image 20260126161221.png",
     "Robot工具/未命名.canvas",
