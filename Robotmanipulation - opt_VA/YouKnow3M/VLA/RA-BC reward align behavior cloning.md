@@ -1,0 +1,1 @@
+![[sarm_reward_model_architecture]]
