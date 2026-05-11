@@ -1,5 +1,8 @@
-下面按你的项目代码把链路理清楚，后面用 QA 形式整理可讲点。全程不写“面试”两个字。
+对这个带末端位姿 soft constraint、关节/速度/base box limit、自碰撞 barrier 的 IK-MPC，SQP 的 multiple-shooting QP 子问题能更直接地表达约束和局部二次代价。DDP 对动力学 rollout 很高效，但不等式约束主要靠 penalty/barrier 进入代价，在高频 VR 目标变化和单次迭代预算下更容易受惩罚参数影响。因此默认用 SQP，更利于约束收敛和实时稳定性。
 
+SQP 解的是非线性最优控制问题的一阶最优性条件。每次把问题近似成 QP，求 `δx, δu`，再 line search 更新轨迹。因此它属于 Newton/SQP 类方法。
+
+DDP 解的是动态规划形式的局部二次问题。Gauss-Newton DDP 使用二阶/近似二阶信息，通过 Riccati 方程反向传播 value function，再前向 rollout 更新轨迹。它也是二阶方法家族，但不是标准的“牛顿法直接解 Hessian 方程”。
 ## 1. 异步 MPC + MRT 架构
 
 你的链路可以这样理解：
