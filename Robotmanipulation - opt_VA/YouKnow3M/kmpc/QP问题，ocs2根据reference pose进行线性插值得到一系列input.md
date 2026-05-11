@@ -125,3 +125,176 @@ KMPC：
 
 
 > 不是“线性插值得到 input”，而是：reference anchor 在 MPC 网格上做线性插值（姿态 slerp）得到目标值，SQP 在此基础上把非线性 OCP 局部化成 QP 求解，得到 state/input。KMPC 到这一步就结束；人形下肢还会再把 MPC 的 (state, input) 经过一次有限差分/雅可比映射成 q̈、F_c 目标，由 WBC 的 qpOASES QP 解出最终关节力矩。
+
+
+# QP项都有哪些？QP问题构建
+
+### QP 标准形式
+
+```text
+min_x  1/2 x^T H x + g^T x
+
+s.t.   A_eq x = b_eq
+       A_ineq x ≤ b_ineq
+```
+
+约束：`H` 半正定（凸）；`x` 是决策变量。
+
+### 例子：两个二次跟踪目标 + 一个线性等式
+
+假设有两个目标，写成最小二乘形式：
+
+```text
+min   1/2 ||A1 x - b1||^2  +  1/2 ||A2 x - b2||^2
+s.t.  C x = d
+```
+
+**第一步：展开成 H, g**
+
+```text
+||Ai x - bi||^2
+= (Ai x - bi)^T (Ai x - bi)
+= x^T Ai^T Ai x  -  2 bi^T Ai x  +  bi^T bi
+```
+
+把 1/2 加上、把所有 task 相加：
+
+```text
+1/2 Σ ||Ai x - bi||^2
+= 1/2 x^T (Σ Ai^T Ai) x  +  (- Σ Ai^T bi)^T x  +  const
+```
+
+对照 QP 标准形式：
+
+```text
+H = Σ Ai^T Ai
+g = - Σ Ai^T bi
+```
+
+这正是 WBC 代码里的写法：
+
+```86:90:/home/lab/kuavo-ros-control-amp/src/humanoid-control/humanoid_wbc/src/WeightedWbc.cpp
+Task weighedTask = formulateWeightedTasks(stateDesired, inputDesired, period);
+Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor> H =
+    weighedTask.a_.transpose() * weighedTask.a_;
+vector_t g = -weighedTask.a_.transpose() * weighedTask.b_;
+```
+
+每个 task 给一个 `(A_i, b_i)`，加权时直接 `(w_i * A_i, w_i * b_i)`（代码里是 `task * weight`），最后竖着堆起来再做 `Aᵀ A` 就行。
+
+**第二步：把等式 / 不等式约束塞进 lbA, ubA**
+
+WBC 里所有约束 `(a, b)` 等式 + `(d, f)` 不等式（`d x ≤ f`）拼起来：
+
+```text
+A = [ a;
+      d ]
+
+lbA = [ b;
+        -inf ]
+
+ubA = [ b;
+         f ]
+```
+
+代码：
+
+```76:84:/home/lab/kuavo-ros-control-amp/src/humanoid-control/humanoid_wbc/src/WeightedWbc.cpp
+Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor> A(numConstraints, getNumDecisionVars());
+vector_t lbA(numConstraints), ubA(numConstraints); // clang-format off
+A << constraints.a_,
+    constraints.d_;
+
+lbA << constraints.b_,
+      -qpOASES::INFTY * vector_t::Ones(constraints.f_.size());
+ubA << constraints.b_,
+      constraints.f_;
+```
+
+`lbA ≤ A x ≤ ubA` 就同时表达了等式（`lbA = ubA = b`）和不等式（`lbA = -inf`）。
+
+**第三步：调求解器**
+
+```text
+qpProblem.init(H, g, A, nullptr, nullptr, lbA, ubA, nWsr, &cpu_time);
+```
+
+具体到 KMPC 的 SQP，OCS2 会把每个 shooting node 的 cost、动力学线性化、约束线性化拼成一个超大的 sparse QP，交给 HPIPM 解。流程一样，只是规模大、并且每次 MPC 迭代只解一个 QP（因为 task.info 里 `sqpIteration = 1`）。
+
+### 一个具体小数字例子
+
+让 x ∈ R²。两个 task：
+
+```text
+task1: 让 x 接近 [1, 0]    →  A1 = I,  b1 = [1, 0]^T
+task2: 让 x1 + x2 接近 0   →  A2 = [1, 1],  b2 = 0
+```
+
+一个等式约束：
+
+```text
+x1 - x2 = 0
+```
+
+写成 QP：
+
+```text
+H = A1^T A1 + A2^T A2
+  = I + [1; 1][1, 1]
+  = [[2, 1],
+     [1, 2]]
+
+g = -A1^T b1 - A2^T b2
+  = -[1, 0]^T
+  = [-1, 0]^T
+
+A_eq = [1, -1],   b_eq = 0
+```
+
+最优化结果：把 `x1 = x2 = a` 带入，目标变成 `1/2 (a-1)^2 + (1/2)(0)^2 + 1/2 (2a)^2` 对 a 求导得 `a = 1/5`，即 `x* = [0.2, 0.2]`。这就是 QP 给出的解。
+
+### 构建指南（按顺序）
+
+```text
+1. 先确定决策变量 x：
+   - WBC: [q̈, F_c, τ]
+   - MPC: 所有 node 上的 [δx_k, δu_k] 拼起来
+
+2. 把所有要追踪的目标写成 ||A_i x - b_i||^2：
+   - 跟踪目标值 b_i, 雅可比矩阵作 A_i
+   - 比如 CoM 跟踪: A = J_com, b = a_com_des - J̇_com v
+
+3. 加权: A_i ← sqrt(w_i) A_i, b_i ← sqrt(w_i) b_i
+
+4. 竖着堆: A_total = [A_1; A_2; ...], b_total = [b_1; b_2; ...]
+   H = A_total^T A_total,  g = -A_total^T b_total
+
+5. 写硬约束:
+   - 等式（动力学方程、接触零速等）→ a x = b
+   - 不等式（摩擦锥、力矩限、关节限位等）→ d x ≤ f
+   合成 lbA ≤ A_c x ≤ ubA
+
+6. 检查 H 是否半正定（每个 task 自带 A^T A 一定半正定，正常情况下不用调）
+
+7. 给 QP 求解器: qpOASES / HPIPM / OSQP 都行
+```
+
+### 为什么 SQP MPC 也是这套
+
+非线性的 OCP 在当前轨迹上做一次泰勒展开：
+
+```text
+cost:        L(x_k + δx, u_k + δu)
+            ≈ L_k + ∇L_k [δx, δu] + 1/2 [δx, δu]^T H_k [δx, δu]
+
+dynamics:    x_{k+1} + δx_{k+1} = f(x_k + δx, u_k + δu)
+            ≈ f(x_k, u_k) + A_k δx_k + B_k δu_k
+            → δx_{k+1} = A_k δx_k + B_k δu_k + b_k
+
+constraint:  g(x_k + δx, u_k + δu) ≤ 0
+            ≈ g_k + C_k [δx, δu] ≤ 0
+```
+
+代进 QP 模板，决策变量是所有 `[δx_k, δu_k]` 拼成的大向量，约束包括所有 `δx_{k+1} - A_k δx_k - B_k δu_k = b_k` 和线性化后的不等式，目标就是局部二次的 cost。这就是 `setupQuadraticSubproblem → getOCPSolution (HPIPM) → takeStep` 里在做的事情。
+
+如果想验证，可以打开 task.info 把 `sqp.sqpIteration` 改成 1，就能看清 SQP 单次只迭代一个 QP 这件事；如果改大它会循环“构造 QP → 解 QP → line search → 重新线性化”直到收敛。
