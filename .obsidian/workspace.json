@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -210,13 +210,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b536e7db1e047c57",
+  "active": "f418bf23d65ddf32",
   "lastOpenFiles": [
+    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/常见QA.md",
+    "RobotRL/SAC/SAC - train and learn.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/IMG/Pasted image 20260511104609.png",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/IMG",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/公式探索/DQN_vs_贝尔曼.md.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/常见QA.md",
-    "RobotRL/SAC/SAC - train and learn.md",
     "RobotRL/SAC/SAC - load or save model.md",
     "RobotRL/SAC/SAC - `RunningMeanStd` 观测归一化工具.md",
     "RobotRL/SAC/SAC - (actor-Critic 架构).md",
@@ -257,7 +257,6 @@
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/IMG",
     "Robotmanipulation - opt_VA/YouKnow3M/IMG/Pasted image 20260506152241.png",
     "RobotRL/ViTAL/IMG/Pasted image 20250707113453.png",
-    "RobotVLA/EEF Train trick/IMG/Pasted image 20260126161221.png",
     "Robot工具/未命名.canvas",
     "未命名.canvas"
   ]
