@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/Deep RL Critic 谱系总览表.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/常见QA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Deep RL Critic 谱系总览表"
+              "title": "常见QA"
             }
           },
           {
@@ -212,9 +212,9 @@
   },
   "active": "f418bf23d65ddf32",
   "lastOpenFiles": [
+    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/Deep RL Critic 谱系总览表.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/公式探索/DQN_vs_贝尔曼.md.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/常见QA.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/Deep RL Critic 谱系总览表.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/IMG/Pasted image 20260511113828.png",
     "RobotRL/SAC/SAC - train and learn.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/IMG/Pasted image 20260511104609.png",
