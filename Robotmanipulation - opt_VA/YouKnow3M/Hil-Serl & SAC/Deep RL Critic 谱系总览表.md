@@ -28,6 +28,7 @@ $$y = r + \gamma\, \max_{a'} Q_\theta(s', a')$$
 $$L(\theta) = \mathbb{E}_{(s,a,r,s')\sim\mathcal{D}}\Big[\big(Q_\theta(s,a) - y\big)^2\Big]$$
 
 **逐项功能**：
+
 | 项 | 用什么网络 | 功能 |
 |---|---|---|
 | $Q_\theta(s,a)$ | $Q_\theta$ | TD 误差的"当前估计" |
@@ -179,6 +180,7 @@ target action ──┤                          ├──→ min ──→ 接�
 - 取最小值 = 一个保守的（悲观的）下界估计
 
 **TD3 三个改进**：
+
 | 改进 | 公式上的体现 | 解决什么 |
 |---|---|---|
 | ① Clipped double-Q | $\min_{i=1,2}$ | Q 值高估偏差 |
@@ -225,6 +227,7 @@ $$
 $$\max_a Q(s', a) \;\longrightarrow\; \mathbb{E}_{a'\sim\pi}\big[Q(s', a') - \alpha\log\pi(a'|s')\big]$$
 
 **逐项含义**：
+
 | 项 | 含义 |
 |---|---|
 | $a' \sim \pi_\theta$ | 从随机策略采样一个动作（不是确定性的 argmax）|
@@ -241,6 +244,7 @@ $$\max_a Q(s', a) \;\longrightarrow\; \mathbb{E}_{a'\sim\pi}\big[Q(s', a') - \al
 **为什么 SAC 不需要 target actor**：策略本身是随机的，已经自带 stochasticity，不需要额外做"延迟动作"来稳定。
 
 **改进于谁（相对 TD3）**：
+
 | 改动 | 目的 |
 |---|---|
 | 确定性 actor → **随机 actor** | 支持熵框架 |
