@@ -4,14 +4,14 @@
 
 # 一、总览大表
 
-| 算法 | 年份 | 动作 | 网络结构 | TD Target | Critic Loss | Actor Loss / 选动作 |
-|---|---|---|---|---|---|---|
-| **DQN v1** | 2013 | 离散 | **1 个** Q 网络 $Q_\theta$ | $r + \gamma\, \max_{a'} Q_\theta(s', a')$ | $\mathbb{E}\big[(Q_\theta(s,a) - y)^2\big]$ | $a = \arg\max_a Q_\theta(s, a)$ |
-| **DQN v2** | 2015 | 离散 | online $Q_\theta$ + target $Q_{\bar\theta}$（硬更新） | $r + \gamma\, \max_{a'} Q_{\bar\theta}(s', a')$ | $\mathbb{E}\big[(Q_\theta(s,a) - y)^2\big]$ | $a = \arg\max_a Q_\theta(s, a)$ |
-| **Double DQN** | 2016 | 离散 | online + target（同 v2） | $r + \gamma\, Q_{\bar\theta}\big(s',\, \arg\max_{a'} Q_\theta(s', a')\big)$ | $\mathbb{E}\big[(Q_\theta(s,a) - y)^2\big]$ | $a = \arg\max_a Q_\theta(s, a)$ |
-| **DDPG** | 2015 | 连续 | actor $\mu_\phi$ + critic $Q_\omega$ + 各自 target（**软更新**） | $r + \gamma\, Q_{\bar\omega}\big(s',\, \mu_{\bar\phi}(s')\big)$ | $\mathbb{E}\big[(Q_\omega(s,a) - y)^2\big]$ | $-\mathbb{E}\big[Q_\omega(s, \mu_\phi(s))\big]$ |
-| **TD3** | 2018 | 连续 | actor + **twin** critic + 各自 target | $r + \gamma\, \min_{i=1,2} Q_{\bar\omega_i}\big(s',\, \mu_{\bar\phi}(s') + \epsilon\big)$ | $\mathbb{E}\big[(Q_{\omega_i}(s,a) - y)^2\big],\, i=1,2$ | $-\mathbb{E}\big[Q_{\omega_1}(s, \mu_\phi(s))\big]$（**延迟更新**） |
-| **SAC** | 2018 | 连续 | 随机 actor $\pi_\theta$ + twin critic + critic target（**无 actor target**） | $r + \gamma\big[\min_{i=1,2} Q_{\bar\omega_i}(s', a') - \alpha\log\pi_\theta(a'\|s')\big]$, $a' \sim \pi_\theta$ | 同上 | $\mathbb{E}_{a\sim\pi}\big[\alpha\log\pi(a\|s) - \min_i Q_{\omega_i}(s,a)\big]$ |
+| 算法             | 年份   | 动作  | 网络结构                                                                    | TD Target                                                                                                        | Critic Loss                                              | Actor Loss / 选动作                                                                |
+| -------------- | ---- | --- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| **DQN v1**     | 2013 | 离散  | **1 个** Q 网络 $Q_\theta$                                                 | $r + \gamma\, \max_{a'} Q_\theta(s', a')$                                                                        | $\mathbb{E}\big[(Q_\theta(s,a) - y)^2\big]$              | $a = \arg\max_a Q_\theta(s, a)$                                                 |
+| **DQN v2**     | 2015 | 离散  | online $Q_\theta$ + target $Q_{\bar\theta}$（硬更新）                        | $r + \gamma\, \max_{a'} Q_{\bar\theta}(s', a')$                                                                  | $\mathbb{E}\big[(Q_\theta(s,a) - y)^2\big]$              | $a = \arg\max_a Q_\theta(s, a)$                                                 |
+| **Double DQN** | 2016 | 离散  | online + target（同 v2）                                                   | $r + \gamma\, Q_{\bar\theta}\big(s',\, \arg\max_{a'} Q_\theta(s', a')\big)$                                      | $\mathbb{E}\big[(Q_\theta(s,a) - y)^2\big]$              | $a = \arg\max_a Q_\theta(s, a)$                                                 |
+| **DDPG**       | 2015 | 连续  | actor $\mu_\phi$ + critic $Q_\omega$ + 各自 target（**软更新**）               | $r + \gamma\, Q_{\bar\omega}\big(s',\, \mu_{\bar\phi}(s')\big)$                                                  | $\mathbb{E}\big[(Q_\omega(s,a) - y)^2\big]$              | $-\mathbb{E}\big[Q_\omega(s, \mu_\phi(s))\big]$                                 |
+| **TD3**        | 2018 | 连续  | actor + **twin** critic + 各自 target                                     | $r + \gamma\, \min_{i=1,2} Q_{\bar\omega_i}\big(s',\, \mu_{\bar\phi}(s') + \epsilon\big)$                        | $\mathbb{E}\big[(Q_{\omega_i}(s,a) - y)^2\big],\, i=1,2$ | $-\mathbb{E}\big[Q_{\omega_1}(s, \mu_\phi(s))\big]$（**延迟更新**）                   |
+| **SAC**        | 2018 | 连续  | 随机 actor $\pi_\theta$ + twin critic + critic target（**无 actor target**） | $r + \gamma\big[\min_{i=1,2} Q_{\bar\omega_i}(s', a') - \alpha\log\pi_\theta(a'\|s')\big]$, $a' \sim \pi_\theta$ | 同上                                                       | $\mathbb{E}_{a\sim\pi}\big[\alpha\log\pi(a\|s) - \min_i Q_{\omega_i}(s,a)\big]$ |
 
 ---
 
