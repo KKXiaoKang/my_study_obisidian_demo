@@ -1,27 +1,6 @@
 ## 1) 为什么SAC的loss带了一个熵项？传统DQN的MaxQ function，是怎么和SAC的熵项结合在一起的。
-我先把代码里的关键实现确认了一下，然后逐个回答你的两个问题。代码里 `compute_loss_critic` 的逻辑与你给的公式一一对应：
-
-```292:462:/home/lab/RL/lerobot/lerobot/common/policies/sac/modeling_sac.py
-    def compute_loss_critic(
-        ...
-        # next_action_preds 来自 actor
-        next_action_preds, next_log_probs, _ = self.actor(next_observations, next_observation_features)
-        # 用 target critic 算 Q
-        q_targets = self.critic_forward(
-            observations=next_observations,
-            actions=next_action_preds,
-            use_target=True,                       # ← 用 target critic
-            observation_features=next_observation_features,
-        )
-        # 取多个 critic 的最小值（clipped double-Q）
-        min_q, _ = q_targets.min(dim=0)
-        if self.config.use_backup_entropy:
-            min_q = min_q - (self.temperature * next_log_probs)   # ← 减熵项 α·log π
-        td_target = rewards + (1 - done) * self.config.discount * min_q
-```
 
 ---
-
 # 第一个问题：`max_{a'} Q*(s', a')` 是怎么变成 `min_i Q_target(s', a') − α·log π(a'|s')` 的？
 
 这一步其实是**两件不同的事被合在了一起**，必须拆开看。
@@ -127,11 +106,11 @@ $$
 
 ## 三个网络的精确分工
 
-| 网络 | 输入 | 输出 | 在 critic loss 里的角色 |
-|---|---|---|---|
-| **Actor** $\pi_\theta(a\|s)$ | s | 动作分布（mean、std） | (1) 给 $s_{t+1}$ 采一个 $a_{t+1}$；(2) 输出 $\log\pi(a_{t+1}\|s_{t+1})$ |
-| **Online Critic** $Q_\omega(s,a)$ | (s, a) | 标量 Q 值 | 算 $Q_\omega(s_t, a_t)$，**这就是要被训练的网络** |
-| **Target Critic** $Q_{\omega^-}(s,a)$ | (s, a) | 标量 Q 值 | 算 target 里的 $Q_{\omega^-_j}(s_{t+1}, a_{t+1})$ |
+| 网络                                    | 输入     | 输出             | 在 critic loss 里的角色                                               |
+| ------------------------------------- | ------ | -------------- | ---------------------------------------------------------------- |
+| **Actor** $\pi_\theta(a\|s)$          | s      | 动作分布（mean、std） | (1) 给 $s_{t+1}$ 采一个 $a_{t+1}$；(2) 输出 $\log\pi(a_{t+1}\|s_{t+1})$ |
+| **Online Critic** $Q_\omega(s,a)$     | (s, a) | 标量 Q 值         | 算 $Q_\omega(s_t, a_t)$，**这就是要被训练的网络**                            |
+| **Target Critic** $Q_{\omega^-}(s,a)$ | (s, a) | 标量 Q 值         | 算 target 里的 $Q_{\omega^-_j}(s_{t+1}, a_{t+1})$                   |
 
 对应到代码里看得最清楚：
 
