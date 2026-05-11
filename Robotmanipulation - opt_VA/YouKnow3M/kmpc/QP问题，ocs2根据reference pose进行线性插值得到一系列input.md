@@ -128,173 +128,506 @@ KMPC：
 
 
 # QP项都有哪些？QP问题构建
+# 为什么“泰勒展开 + QP”可以指导优化？
 
-### QP 标准形式
+---
 
-```text
-min_x  1/2 x^T H x + g^T x
+# 1. 先看一个简单函数
 
-s.t.   A_eq x = b_eq
-       A_ineq x ≤ b_ineq
-```
+$$
+f(x)=x^2+4x+1
+$$
 
-约束：`H` 半正定（凸）；`x` 是决策变量。
+这是一个标准抛物线。
 
-### 例子：两个二次跟踪目标 + 一个线性等式
+它的最优点其实在：
 
-假设有两个目标，写成最小二乘形式：
+$$
+x^*=-2
+$$
 
-```text
-min   1/2 ||A1 x - b1||^2  +  1/2 ||A2 x - b2||^2
-s.t.  C x = d
-```
+因为：
 
-**第一步：展开成 H, g**
+$$
+f'(x)=2x+4=0
+\Rightarrow x=-2
+$$
 
-```text
-||Ai x - bi||^2
-= (Ai x - bi)^T (Ai x - bi)
-= x^T Ai^T Ai x  -  2 bi^T Ai x  +  bi^T bi
-```
+但优化器一开始并不知道这个答案。
 
-把 1/2 加上、把所有 task 相加：
+---
 
-```text
-1/2 Σ ||Ai x - bi||^2
-= 1/2 x^T (Σ Ai^T Ai) x  +  (- Σ Ai^T bi)^T x  +  const
-```
+# 2. 假设当前站在：
 
-对照 QP 标准形式：
+$$
+x_k=0
+$$
 
-```text
-H = Σ Ai^T Ai
-g = - Σ Ai^T bi
-```
+优化器现在真正的问题是：
 
-这正是 WBC 代码里的写法：
+> “从当前位置往哪里走，会下降最快？”
 
-```86:90:/home/lab/kuavo-ros-control-amp/src/humanoid-control/humanoid_wbc/src/WeightedWbc.cpp
-Task weighedTask = formulateWeightedTasks(stateDesired, inputDesired, period);
-Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor> H =
-    weighedTask.a_.transpose() * weighedTask.a_;
-vector_t g = -weighedTask.a_.transpose() * weighedTask.b_;
-```
+---
 
-每个 task 给一个 `(A_i, b_i)`，加权时直接 `(w_i * A_i, w_i * b_i)`（代码里是 `task * weight`），最后竖着堆起来再做 `Aᵀ A` 就行。
+# 3. Gradient（梯度）是什么？
 
-**第二步：把等式 / 不等式约束塞进 lbA, ubA**
+先求导：
 
-WBC 里所有约束 `(a, b)` 等式 + `(d, f)` 不等式（`d x ≤ f`）拼起来：
+$$
+f'(x)=2x+4
+$$
 
-```text
-A = [ a;
-      d ]
+代入当前位置：
 
-lbA = [ b;
-        -inf ]
+$$
+f'(0)=4
+$$
 
-ubA = [ b;
-         f ]
-```
+于是：
 
-代码：
+$$
+g_k=4
+$$
 
-```76:84:/home/lab/kuavo-ros-control-amp/src/humanoid-control/humanoid_wbc/src/WeightedWbc.cpp
-Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor> A(numConstraints, getNumDecisionVars());
-vector_t lbA(numConstraints), ubA(numConstraints); // clang-format off
-A << constraints.a_,
-    constraints.d_;
+---
 
-lbA << constraints.b_,
-      -qpOASES::INFTY * vector_t::Ones(constraints.f_.size());
-ubA << constraints.b_,
-      constraints.f_;
-```
+## Gradient 的意义
 
-`lbA ≤ A x ≤ ubA` 就同时表达了等式（`lbA = ubA = b`）和不等式（`lbA = -inf`）。
+gradient 本质：
 
-**第三步：调求解器**
+> 当前的“坡度”。
 
-```text
-qpProblem.init(H, g, A, nullptr, nullptr, lbA, ubA, nWsr, &cpu_time);
-```
+这里：
 
-具体到 KMPC 的 SQP，OCS2 会把每个 shooting node 的 cost、动力学线性化、约束线性化拼成一个超大的 sparse QP，交给 HPIPM 解。流程一样，只是规模大、并且每次 MPC 迭代只解一个 QP（因为 task.info 里 `sqpIteration = 1`）。
+$$
+g_k=4>0
+$$
 
-### 一个具体小数字例子
+说明：
 
-让 x ∈ R²。两个 task：
+- 往右走，函数会上升
+- 往左走，函数会下降
 
-```text
-task1: 让 x 接近 [1, 0]    →  A1 = I,  b1 = [1, 0]^T
-task2: 让 x1 + x2 接近 0   →  A2 = [1, 1],  b2 = 0
-```
+所以优化器知道：
 
-一个等式约束：
+> 应该往左移动。
 
-```text
-x1 - x2 = 0
-```
+---
 
-写成 QP：
+# 4. Hessian（海森矩阵）是什么？
 
-```text
-H = A1^T A1 + A2^T A2
-  = I + [1; 1][1, 1]
-  = [[2, 1],
-     [1, 2]]
+再求一次导：
 
-g = -A1^T b1 - A2^T b2
-  = -[1, 0]^T
-  = [-1, 0]^T
+$$
+f''(x)=2
+$$
 
-A_eq = [1, -1],   b_eq = 0
-```
+于是：
 
-最优化结果：把 `x1 = x2 = a` 带入，目标变成 `1/2 (a-1)^2 + (1/2)(0)^2 + 1/2 (2a)^2` 对 a 求导得 `a = 1/5`，即 `x* = [0.2, 0.2]`。这就是 QP 给出的解。
+$$
+H_k=2
+$$
 
-### 构建指南（按顺序）
+---
 
-```text
-1. 先确定决策变量 x：
-   - WBC: [q̈, F_c, τ]
-   - MPC: 所有 node 上的 [δx_k, δu_k] 拼起来
+## Hessian 的意义
 
-2. 把所有要追踪的目标写成 ||A_i x - b_i||^2：
-   - 跟踪目标值 b_i, 雅可比矩阵作 A_i
-   - 比如 CoM 跟踪: A = J_com, b = a_com_des - J̇_com v
+Hessian 本质：
 
-3. 加权: A_i ← sqrt(w_i) A_i, b_i ← sqrt(w_i) b_i
+> 当前函数的“曲率”。
 
-4. 竖着堆: A_total = [A_1; A_2; ...], b_total = [b_1; b_2; ...]
-   H = A_total^T A_total,  g = -A_total^T b_total
+也就是：
 
-5. 写硬约束:
-   - 等式（动力学方程、接触零速等）→ a x = b
-   - 不等式（摩擦锥、力矩限、关节限位等）→ d x ≤ f
-   合成 lbA ≤ A_c x ≤ ubA
+> 这个碗弯得有多厉害。
 
-6. 检查 H 是否半正定（每个 task 自带 A^T A 一定半正定，正常情况下不用调）
+---
 
-7. 给 QP 求解器: qpOASES / HPIPM / OSQP 都行
-```
+### 曲率小
 
-### 为什么 SQP MPC 也是这套
+地形平：
 
-非线性的 OCP 在当前轨迹上做一次泰勒展开：
+- 可以大胆走
+- 步子可以大
 
-```text
-cost:        L(x_k + δx, u_k + δu)
-            ≈ L_k + ∇L_k [δx, δu] + 1/2 [δx, δu]^T H_k [δx, δu]
+---
 
-dynamics:    x_{k+1} + δx_{k+1} = f(x_k + δx, u_k + δu)
-            ≈ f(x_k, u_k) + A_k δx_k + B_k δu_k
-            → δx_{k+1} = A_k δx_k + B_k δu_k + b_k
+### 曲率大
 
-constraint:  g(x_k + δx, u_k + δu) ≤ 0
-            ≈ g_k + C_k [δx, δu] ≤ 0
-```
+地形陡：
 
-代进 QP 模板，决策变量是所有 `[δx_k, δu_k]` 拼成的大向量，约束包括所有 `δx_{k+1} - A_k δx_k - B_k δu_k = b_k` 和线性化后的不等式，目标就是局部二次的 cost。这就是 `setupQuadraticSubproblem → getOCPSolution (HPIPM) → takeStep` 里在做的事情。
+- 必须小步走
+- 否则容易冲过头
 
-如果想验证，可以打开 task.info 把 `sqp.sqpIteration` 改成 1，就能看清 SQP 单次只迭代一个 QP 这件事；如果改大它会循环“构造 QP → 解 QP → line search → 重新线性化”直到收敛。
+---
+
+# 5. 泰勒展开真正干了什么？
+
+二阶泰勒展开：
+
+$$
+f(x_k+\Delta x)
+\approx
+f(x_k)
++
+g_k\Delta x
++
+\frac12 H_k(\Delta x)^2
+$$
+
+现在代入：
+
+---
+
+## 当前函数值
+
+$$
+f(0)=1
+$$
+
+---
+
+## 当前梯度
+
+$$
+g_k=4
+$$
+
+---
+
+## 当前 Hessian
+
+$$
+H_k=2
+$$
+
+---
+
+得到：
+
+$$
+f(0+\Delta x)
+\approx
+1+4\Delta x+\frac12\cdot2(\Delta x)^2
+$$
+
+整理：
+
+$$
+=
+1+4\Delta x+(\Delta x)^2
+$$
+
+---
+
+# 6. 这个式子到底意味着什么？
+
+注意：
+
+优化器现在：
+
+## 已经不直接优化原函数了
+
+而是：
+
+## 在当前位置附近
+
+构造了一个：
+
+# “局部抛物面模型”
+
+这个模型告诉优化器：
+
+> “如果你移动 $\Delta x$，函数大概会怎么变化。”
+
+---
+
+# 7. 为什么这会变成 QP？
+
+因为：
+
+现在目标函数已经变成：
+
+$$
+\min_{\Delta x}
+\quad
+1+4\Delta x+(\Delta x)^2
+$$
+
+这是一个：
+
+# 标准二次函数
+
+而：
+
+# QP（Quadratic Programming）
+
+本质：
+
+就是：
+
+# 优化二次函数。
+
+---
+
+# 8. 求这个局部模型的最低点
+
+对：
+
+$$
+1+4\Delta x+(\Delta x)^2
+$$
+
+求导：
+
+$$
+2\Delta x+4=0
+$$
+
+得到：
+
+$$
+\Delta x=-2
+$$
+
+---
+
+# 9. 这个 $\Delta x=-2$ 是什么？
+
+它不是：
+
+> “最终答案”
+
+而是：
+
+> “下一步建议移动方向”
+
+意思是：
+
+- 当前在 $x_k=0$
+- 优化器建议：
+  - 向左移动 2
+
+---
+
+# 10. 更新位置
+
+更新规则：
+
+$$
+x_{k+1}=x_k+\Delta x
+$$
+
+代入：
+
+$$
+x_{k+1}=0+(-2)
+$$
+
+得到：
+
+$$
+x_{k+1}=-2
+$$
+
+---
+
+# 11. 下一步会发生什么？
+
+优化器会：
+
+## 重新站在新位置
+
+$$
+x=-2
+$$
+
+然后：
+
+## 再做一次泰勒展开。
+
+---
+
+# 12. 在新位置重新计算
+
+---
+
+## Gradient
+
+$$
+f'(-2)=2(-2)+4=0
+$$
+
+---
+
+## Hessian
+
+$$
+f''(-2)=2
+$$
+
+---
+
+于是：
+
+新的局部模型：
+
+$$
+f(-2+\Delta x)
+\approx
+-3
++
+0\cdot\Delta x
++
+\frac12\cdot2(\Delta x)^2
+$$
+
+变成：
+
+$$
+=-3+(\Delta x)^2
+$$
+
+---
+
+# 13. 为什么现在不动了？
+
+因为：
+
+$$
+g_k=0
+$$
+
+意思：
+
+> 坡度已经为0。
+
+也就是说：
+
+# 已经到谷底了。
+
+---
+
+# 14. 泰勒展开真正目的
+
+泰勒展开不是：
+
+> “把函数展开好看”
+
+而是：
+
+# “在当前位置附近，构造一个容易优化的局部模型”
+
+---
+
+# 15. 为什么机器人控制里特别重要？
+
+真实机器人里的函数可能是：
+
+- $\sin(q)$
+- $\cos(q)$
+- 动力学
+- 接触约束
+- 摩擦锥
+- 复杂非线性
+
+根本没法直接全局优化。
+
+---
+
+于是：
+
+优化器每一步：
+
+---
+
+## Step1：当前位置
+
+$$
+q_k
+$$
+
+---
+
+## Step2：局部二次化
+
+$$
+f(q_k+\Delta q)
+\approx
+f(q_k)
++
+g_k^T\Delta q
++
+\frac12\Delta q^TH_k\Delta q
+$$
+
+---
+
+## Step3：构造QP
+
+$$
+\min_{\Delta q}
+\quad
+\frac12\Delta q^TH_k\Delta q
++
+g_k^T\Delta q
+$$
+
+---
+
+## Step4：解QP
+
+得到：
+
+$$
+\Delta q
+$$
+
+---
+
+## Step5：更新状态
+
+$$
+q_{k+1}=q_k+\Delta q
+$$
+
+---
+
+## Step6：重新线性化
+
+继续迭代。
+
+---
+
+# 16. 最终核心总结
+
+---
+
+## Gradient
+
+告诉优化器：
+
+> “往哪边走”
+
+---
+
+## Hessian
+
+告诉优化器：
+
+> “应该走多远”
+
+---
+
+## 泰勒展开
+
+告诉优化器：
+
+> “当前位置附近的世界长什么样”
+
+---
+
+## QP
+
+负责：
+
+> “快速找到这个局部世界里的最低点”
