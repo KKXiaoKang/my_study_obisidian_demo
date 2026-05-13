@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/kmpc/QP问题，ocs2根据reference pose进行线性插值得到一系列input.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/Gendexgrasp网络 - 接触面网络讲解.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "QP问题，ocs2根据reference pose进行线性插值得到一系列input"
+              "title": "Gendexgrasp网络 - 接触面网络讲解"
             }
           },
           {
@@ -55,16 +55,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/技术讨论.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/ocs2 CPU vs curobo GPU 优化架构对比.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "技术讨论"
+              "title": "ocs2 CPU vs curobo GPU 优化架构对比"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -224,12 +224,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dcb0dcdf2e800a30",
+  "active": "f418bf23d65ddf32",
   "lastOpenFiles": [
-    "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/cumotion & Gendexgrasp 改动一览.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/技术讨论.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/AMP & locomotion/上楼梯奖励一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/QP问题，ocs2根据reference pose进行线性插值得到一系列input.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/Gendexgrasp网络 - 接触面网络讲解.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/ocs2 CPU vs curobo GPU 优化架构对比.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/GROOT N1.5 action expert改动一览.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/技术讨论.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/cumotion & Gendexgrasp 改动一览.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/AMP & locomotion/上楼梯奖励一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/MPC + MRT 说明 & 常见QA.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/公式探索/贝尔曼方程 - Bellman Optimality Equation.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/公式探索/Deep Q Net-work.md",
@@ -239,7 +242,6 @@
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/kmpc改动一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/VR遥操retarget.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/bringup.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/GROOT N1.5 action expert改动一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/CategorySpecificMLP 手臂夹爪维度 - 梯度冲突.md",
     "RobotRL/SAC/SAC - train and learn.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/IMG/Pasted image 20260511113828.png",
@@ -256,8 +258,6 @@
     "RobotRL/Q-learning DQN/公式探索/Deep Q Net-work.md",
     "RobotRL/Q-learning DQN/公式探索",
     "RobotRL/Q-learning DQN/未命名.md",
-    "RobotRL/Q-learning DQN/DQN 变换表.md",
-    "RobotRL/Q-learning DQN/Q-learing变化表.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG",
     "Robotmanipulation - opt_VA/YouKnow3M/AMP & locomotion",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/IMG/Pasted image 20260507164023.png",
