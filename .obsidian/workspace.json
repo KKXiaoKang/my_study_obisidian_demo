@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/Gendexgrasp网络 - 接触面网络讲解.md",
+                "file": "Robotmanipulation - opt_VA/Imitation learning/编码器/VAE - 变分自动编码器.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Gendexgrasp网络 - 接触面网络讲解"
+              "title": "VAE - 变分自动编码器"
             }
           },
           {
@@ -96,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "sac",
+                "query": "tag:#VAE架构",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -224,10 +224,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f418bf23d65ddf32",
+  "active": "86eaf77f5f480c18",
   "lastOpenFiles": [
-    "Robotmanipulation - opt_VA/YouKnow3M/kmpc/QP问题，ocs2根据reference pose进行线性插值得到一系列input.md",
+    "Robotmanipulation - opt_VA/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
+    "Robotmanipulation - opt_VA/Imitation learning/传统BC方法一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/Gendexgrasp网络 - 接触面网络讲解.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/kmpc/QP问题，ocs2根据reference pose进行线性插值得到一系列input.md",
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/ocs2 CPU vs curobo GPU 优化架构对比.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/GROOT N1.5 action expert改动一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/技术讨论.md",
@@ -255,9 +257,7 @@
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC",
     "RobotRL/Q-learning DQN/公式探索/DQN_vs_贝尔曼.md.md",
     "RobotRL/Q-learning DQN/公式探索/贝尔曼方程 - Bellman Optimality Equation.md",
-    "RobotRL/Q-learning DQN/公式探索/Deep Q Net-work.md",
     "RobotRL/Q-learning DQN/公式探索",
-    "RobotRL/Q-learning DQN/未命名.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG",
     "Robotmanipulation - opt_VA/YouKnow3M/AMP & locomotion",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/IMG/Pasted image 20260507164023.png",
