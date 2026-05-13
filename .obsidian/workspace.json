@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/kmpc/QP问题，ocs2根据reference pose进行线性插值得到一系列input.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/AMP & locomotion/上楼梯奖励一览.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "QP问题，ocs2根据reference pose进行线性插值得到一系列input"
+              "title": "上楼梯奖励一览"
             }
           }
         ],
@@ -226,8 +226,8 @@
   },
   "active": "dcb0dcdf2e800a30",
   "lastOpenFiles": [
-    "Robotmanipulation - opt_VA/YouKnow3M/kmpc/MPC + MRT 说明 & 常见QA.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/QP问题，ocs2根据reference pose进行线性插值得到一系列input.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/kmpc/MPC + MRT 说明 & 常见QA.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/kmpc改动一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/VR遥操retarget.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/bringup.md",
