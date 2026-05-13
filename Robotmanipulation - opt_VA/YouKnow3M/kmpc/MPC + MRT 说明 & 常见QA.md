@@ -1,4 +1,4 @@
-对这个带末端位姿 soft constraint、关节/速度/base box limit、自碰撞 barrier 的 IK-MPC，SQP 的 multiple-shooting QP 子问题能更直接地表达约束和局部二次代价。DDP 对动力学 rollout 很高效，但不等式约束主要靠 penalty/barrier 进入代价，在高频 VR 目标变化和单次迭代预算下更容易受惩罚参数影响。因此默认用 SQP，更利于约束收敛和实时稳定性。
+ 对这个带末端位姿 soft constraint、关节/速度/base box limit、自碰撞 barrier 的 IK-MPC，SQP 的 multiple-shooting QP 子问题能更直接地表达约束和局部二次代价。DDP 对动力学 rollout 很高效，但不等式约束主要靠 penalty/barrier 进入代价，在高频 VR 目标变化和单次迭代预算下更容易受惩罚参数影响。因此默认用 SQP，更利于约束收敛和实时稳定性。
 
 SQP 解的是非线性最优控制问题的一阶最优性条件。每次把问题近似成 QP，求 `δx, δu`，再 line search 更新轨迹。因此它属于 Newton/SQP 类方法。
 
