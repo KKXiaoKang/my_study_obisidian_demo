@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/未命名.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/技术讨论.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "技术讨论"
             }
           }
         ],
@@ -227,7 +227,7 @@
   "active": "dcb0dcdf2e800a30",
   "lastOpenFiles": [
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/cumotion & Gendexgrasp 改动一览.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/未命名.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/技术讨论.md",
     "Robotmanipulation - opt_VA/YouKnow3M/AMP & locomotion/上楼梯奖励一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/QP问题，ocs2根据reference pose进行线性插值得到一系列input.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/MPC + MRT 说明 & 常见QA.md",
