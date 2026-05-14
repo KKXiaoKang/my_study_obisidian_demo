@@ -120,7 +120,7 @@ $$z_{rl} = g_\phi([z_{1:M}, e_{rl}])_{M+1}$$
 - $\theta_{vla}$ 冻结，$\phi$（含 encoder/decoder/MLP）也冻结；
 - **online RL 阶段只用 encoder $g_\phi$ 这条路**，输出 $z_{rl}$；
 - **decoder 和 MLP 不会再被调用**，它们只是训练 token 时的"陪练"；
-- actor / critic 的输入是 $x = [\,z_{rl},\, s_p\,]$，即 **压缩后的瓶颈向量 + 本体感受**；
+- actor / critic 的输入是 $x = [\,z_{rl},\, s_p\,]$，即 **压缩后的瓶颈向量 + 本体感受**（latent space）；
 - actor / critic **不会看到"重建出来的 $\hat z_{1:M}$"**。重建只是训练阶段用来约束 $z_{rl}$ 信息量的代理任务。
 
 换句话说，整条数据流是：
@@ -159,3 +159,165 @@ $$z_{rl} = g_\phi([z_{1:M}, e_{rl}])_{M+1}$$
 | actor/critic 输入是"重建后的 VLM 特征" | ❌ 错 | 输入是 encoder 的瓶颈输出 $z_{rl}$（再拼上 proprioception $s_p$），decoder 训练完就不再使用 |
 
 如果你之后要在 lerobot 里把 HIL-SERL 改造成 RLT 风格，关键改动其实就是三件事：把 actor loss 里的 `temperature * log_probs` 项替换成 `β * ||a - ã||²`、关掉 `use_backup_entropy`、再把 VLA 输出的 `z_{1:M}` 经过一个冻结的 encoder 压成 `z_rl` 作为状态特征输入到 actor/critic（替换/补充现在的 `self.encoder`）。
+
+---
+# Q：你的decoder是不是摆设来的？
+这是个非常好的问题，触到了**表征学习（representation learning）/ 自编码器（autoencoder）这一类方法的核心**。我分几层来回答你。
+
+## 短答
+
+**decoder + MLP 不是"装样子"，它们是 encoder 唯一的训练信号源。** 没有它们，你根本没办法把 encoder 训出来。一旦训完，它们才被丢掉。
+
+## 长答：为什么必须有 decoder？
+
+你可以想象一下：如果只有 encoder，那么 encoder 的训练目标是什么？
+
+$$z_{rl} = g_\phi([z_{1:M}, e_{rl}])_{M+1}$$
+
+这个 encoder 把一串 token 压成一个向量。问题是——**怎么知道压得好不好？怎么定义"好的 $z_{rl}$"？**
+
+可能的几种选项：
+
+| 方案 | 问题 |
+|---|---|
+| (A) 用 RL 信号梯度直接训 encoder | 不行。RL 信号稀疏、噪声大、样本效率低，而 encoder 又是个 transformer，参数很多。这样训会需要海量交互数据——这正是 RLT 要避免的事 |
+| (B) 不训 encoder，随机初始化 | 那它就是个随机投影，$z_{rl}$ 完全不能保证含有任务信息 |
+| (C) 监督学习（标签是什么？） | VLA 嵌入 $z_{1:M}$ 没有现成标签 |
+| (D) 自监督——让 $z_{rl}$ 能还原 $z_{1:M}$ | ✅ 这就是 RLT 选的方案 |
+
+方案 (D) 就是经典 autoencoder / 信息瓶颈思路：
+
+```
+            ┌─────────────────── 训练阶段才用 ─────────────────┐
+            │                                                  │
+z_{1:M} ──► encoder g_φ ──► z_rl ──► decoder d_φ ──► h_φ ──► ẑ_{1:M}
+                              │                                  │
+                              │       Loss = ‖ẑ_{1:M} - z_{1:M}‖²
+                              │       (停止梯度只让信号回流到 encoder/decoder/MLP)
+                              │
+                              └─► [z_rl, s_p] ──► actor / critic   （推理才用）
+```
+
+**reconstruction loss 是 encoder 的"导师"**。它的逻辑是：
+
+> 如果 $z_{rl}$ 这个向量足够把整串 $z_{1:M}$ 重建回来，那它就保留了 $z_{1:M}$ 里"几乎所有"的信息。
+
+decoder + MLP 就是用来**评判 $z_{rl}$ 是否真的保留了信息**的工具。如果你不让 decoder 把它解开看看，你就没法判断 encoder 是不是只学了一堆毫无意义的常数向量。
+
+## 一个更直观的类比
+
+这其实就是经典 autoencoder：
+
+```python
+# 训练阶段
+x ──► encoder ──► z ──► decoder ──► x_hat
+                  │       ↑
+                  │       └── 训练目标: ||x_hat - x||²
+                  │
+# 推理阶段
+x ──► encoder ──► z   ←── 只用 encoder 当 feature extractor，decoder 丢掉
+```
+
+你用过的几乎所有"先预训练再用 encoder"的模型都长这样：
+
+- **Vanilla Autoencoder / VAE**：训练时要 decoder，下游任务只要 encoder
+- **MAE (Masked Autoencoder)** for vision：训练时 decoder 重建被 mask 掉的 patch，下游分类只用 encoder
+- **Word2Vec 的 CBOW/Skip-gram**：训练时要 softmax 头预测周围词，最后只留 embedding 表
+- **BERT 的 MLM 头**：预训练完，下游任务砍掉 MLM 头，只用 backbone
+
+> 这是表征学习里一个反复出现的范式：**"创造一个代理任务（pretext task）逼模型学到好的特征，等特征学好了就把代理任务扔掉。"**
+
+RL Token 里的 decoder + MLP 就是这个"代理任务"的执行者。
+
+## 为什么 RLT 偏偏选"自回归重建"作为代理任务？
+
+论文用的是**自回归重建**：
+
+$$L_{ro} = \mathbb{E}\Big[\sum_{i=1}^M \big\|h_\phi d_\phi([z_{rl}, \bar z_{1:i-1}])_i - \bar z_i\big\|^2\Big]$$
+
+这个公式说的是：给 decoder 看 $z_{rl}$（瓶颈）外加已经重建出来的 $\bar z_{1:i-1}$，让它预测下一个 $\bar z_i$。换句话说，decoder 是一个**条件在 $z_{rl}$ 上的"小 GPT"**。
+
+为什么要这么做，而不是用 decoder 一次性输出所有 $z_{1:M}$？
+
+1. **token 序列本来就是序列结构**，自回归解码天然契合；
+2. **强迫 $z_{rl}$ 承载全局信息**：因为 decoder 每一步只能依赖 $z_{rl}$ + 之前的部分，要想把整段都准确还原，$z_{rl}$ 就必须包含足以推断后续每一步的高层语义；
+3. 和 GPT-style 预训练同一个思路，已经被证明能学出非常好的表征。
+
+## 为什么不直接拿 VLA 已有的 token 当 RL 输入？
+
+你可能会接着问：既然要重建 $z_{1:M}$，那干嘛绕一圈，直接拿 $z_{1:M}$ 当 actor/critic 的输入不就好了？
+
+这正是 RLT 要解决的核心痛点。论文里也强调了：
+
+- $z_{1:M}$ 是**高维、长序列**（一串 token，每个都是几百到几千维），直接喂给 actor/critic 会让小模型样本效率极差；
+- VLM 的 token 包含很多和当前任务无关的通用知识（语言、视觉常识等等）；
+- 直接用 $z_{1:M}$ 训练 actor/critic 的话，要么 actor/critic 变得很大（违背"轻量级"初衷），要么训不出来。
+
+所以需要一个**任务相关、紧凑的瓶颈**——这就是 $z_{rl}$ 的角色，decoder 只是用来**确保它真的紧凑且任务相关**的训练装置。
+
+## 一句话总结
+
+> decoder + MLP 不是 online RL 的一部分，而是 **online RL 之前那一阶段预训练 encoder 的工具**。它们的存在让 reconstruction loss 有意义；reconstruction loss 反过来强迫 encoder 把 $z_{1:M}$ 压成一个保留任务信息的小瓶颈 $z_{rl}$。训练结束后，"脚手架"（decoder + MLP）拆掉，留下"骨架"（encoder + $z_{rl}$）给后续 RL 用。
+
+这是 autoencoder / MAE / BERT 这一脉表征学习方法的标准做法，不是 RLT 独有的设计。
+
+
+# Q：decoder重建计算KL散度的时候，为什么不是encoder过后的latent feature和原输入做重建Loss，而是decoder重建之后的feature和原输入做重建loss？
+先纠正一个小用词：这一步叫 **reconstruction loss（重建损失，$L_{ro}$）**，不叫 BC loss。BC loss 是 online RL 阶段 actor 那条目标函数里的 $\beta\|a-\tilde a\|^2$ 项，两者完全不是一回事，不要混。
+
+回到你的问题——答案是：
+
+**是 $\hat z_{1:M}$（解码器输出）和 $z_{1:M}$（原始 VLA 特征）做 MSE，不是 $z_{rl}$ 和 $z_{1:M}$。**
+
+直接看论文里的公式：
+
+$$
+L_{ro} = \mathbb{E}_{\mathcal{D}}\Big[\sum_{i=1}^{M}\underbrace{\big\| \underbrace{h_\phi\, d_\phi([z_{rl}, \bar z_{1:i-1}])_i}_{=\ \hat z_i\ (\text{重建出来的第}\,i\,\text{个 token})} \;-\; \underbrace{\bar z_i}_{=\ \text{sg}(z_i)\ (\text{原始 VLA 特征})} \big\|^2}_{\text{逐 token 的 MSE}}\Big]
+$$
+
+逐项拆开：
+
+| 符号 | 是什么 | 形状 |
+|---|---|---|
+| $z_{1:M}$ | VLA 主干输出的原始 token 序列 | $M \times d$ |
+| $\bar z_i = \text{sg}(z_i)$ | 同上，只是停掉梯度（防止反传进 VLA） | $d$ |
+| $z_{rl}$ | encoder 压出来的瓶颈向量 | $d_{rl}$（单个向量） |
+| $d_\phi(\cdots)_i$ | decoder 在第 $i$ 个位置的输出 | $d_{dec}$ |
+| $h_\phi d_\phi(\cdots)_i = \hat z_i$ | 经线性投影后重建出的第 $i$ 个 VLA token | $d$（要和 $\bar z_i$ 同维度） |
+
+注意几个关键点：
+
+1. **维度上就决定了不可能是 $z_{rl}$ 和 $z_{1:M}$ 做 MSE**：$z_{rl}$ 是一个向量，$z_{1:M}$ 是 $M$ 个向量。维度都对不上。
+
+2. **MSE 是逐 token 求和的**：对 $i = 1, 2, \dots, M$ 每个位置，都让 decoder 重建一个 $\hat z_i$，再和对应的 $\bar z_i$ 算平方误差，最后加起来。
+
+3. **梯度怎么走**：
+   - $\bar z_i = \text{sg}(z_i)$ 这个 stop-gradient 保证 loss **不会** 回传到 VLA 主干 $\theta_{vla}$；
+   - 但梯度会回传到 $\phi$ 里所有可训练参数：
+     - $h_\phi$（投影头）
+     - $d_\phi$（decoder）
+     - $z_{rl}$ 这条路径上的 $g_\phi$（encoder）和 $e_\phi$（`<rl>` token embedding）
+
+   也就是说，**$z_{rl}$ 是中间变量，梯度透过 decoder 流过它，再继续流回到 encoder**——这才是 encoder 被训出来的方式。
+
+4. **自回归条件**：decoder 在预测第 $i$ 个位置时，输入是 $[z_{rl}, \bar z_{1:i-1}]$，即"瓶颈向量 + 已经知道的前 $i-1$ 个真值 token"（典型的 teacher forcing 训练范式，和 GPT 训练时一样）。
+
+把数据流再画一遍就很清楚了：
+
+```
+z_{1:M} ──► encoder g_φ ──► z_rl
+                              │
+              ┌───────────────┘
+              ▼
+       [z_rl, z̄_{1:i-1}] ──► decoder d_φ ──► h_φ ──► ẑ_i
+                                                      │
+                                                      ▼
+                                        MSE( ẑ_i ,  z̄_i = sg(z_i) )
+                                                      ▲
+                                                      │
+                                              原始 VLA 特征
+```
+
+所以你只要记一句话：
+
+> **重建损失是"解码器重建出来的 token"和"原始 VLA token"逐位置做 MSE；$z_{rl}$ 只是中间瓶颈，梯度穿过它来训 encoder。**
