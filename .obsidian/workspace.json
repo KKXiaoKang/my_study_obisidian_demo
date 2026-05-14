@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi系列  - MEM pi06长程能力分解.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi系列 -RL Token 单独建一个Transformer用于重建VLM的输出嵌入feature，之后RL训练用此模型作为基座，加快RL训练效率.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pi系列  - MEM pi06长程能力分解"
+              "title": "pi系列 -RL Token 单独建一个Transformer用于重建VLM的输出嵌入feature，之后RL训练用此模型作为基座，加快RL训练效率"
             }
           },
           {
@@ -226,9 +226,12 @@
   },
   "active": "f418bf23d65ddf32",
   "lastOpenFiles": [
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG/RL Token Bootstrapping Online RL with.pdf",
+    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/Deep RL Critic 谱系总览表.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi系列 -RL Token 单独建一个Transformer用于重建VLM的输出嵌入feature，之后RL训练用此模型作为基座，加快RL训练效率.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi系列  - MEM pi06长程能力分解.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG/Pasted image 20260514143034.png",
     "Robotmanipulation - opt_VA/显式策略 - 隐式策略 - 扩散策略.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi系列  - MEM pi06长程能力分解.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Benchmark/设计方式.md",
     "RobotRL/DSRL/DSRL - 基于Diffusion策略的RL微调.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Benchmark",
@@ -249,10 +252,8 @@
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/公式探索/Deep Q Net-work.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/公式探索/DQN_vs_贝尔曼.md.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/常见QA.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/Deep RL Critic 谱系总览表.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/kmpc改动一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/VR遥操retarget.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/kmpc/bringup.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/IMG/Pasted image 20260511113828.png",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/IMG/Pasted image 20260511104609.png",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/IMG",
@@ -271,7 +272,6 @@
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/IMG/Pasted image 20260506183040.png",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/IMG/Pasted image 20260506175456.png",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/IMG/Pasted image 20260506175453.png",
-    "Robotmanipulation - opt_VA/YouKnow3M/IMG/Pasted image 20260506152241.png",
     "Robot工具/未命名.canvas",
     "未命名.canvas"
   ]
