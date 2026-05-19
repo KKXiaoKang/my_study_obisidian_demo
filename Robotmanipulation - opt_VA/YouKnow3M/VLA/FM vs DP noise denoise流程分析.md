@@ -1,4 +1,11 @@
-好的，我把所有公式用 `$$` 重新整理一遍：
+###  DP / FM：表征是"采样过程"而不是"显式分布"
+
+DP 和 FM 的确解决了 mode averaging（因为它们隐式表达分布），但有几个深层局限：
+
+- 隐式表征不可解释：你拿不到一个"动作 embedding"做下游任务（检索、组合、解释）。
+- 生成是黑盒：模型直接学 $\varepsilon$ 或 $v$ ，但没有显式的"动作概念"。比如"抓"和"推"在网络里没有任何符号化的区分。
+- 难以做 plan/compose：DP/FM 生成的是 numerical sequence，没法像 LLM 那样做 chain-of-thought、做 in-context learning。
+- 每个任务都要 fine-tune：因为动作空间是 raw float，跟语言空间断裂。
 
 ## 一、你对 FM 流程的理解：基本正确
 
