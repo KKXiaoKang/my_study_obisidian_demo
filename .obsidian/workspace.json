@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/kmpc/SSM state space model 详解 ocs2.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/FM vs DP noise denoise流程分析.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SSM state space model 详解 ocs2"
+              "title": "FM vs DP noise denoise流程分析"
             }
           }
         ],
@@ -110,7 +110,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "CVAE",
+                "query": "flow-ma",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -240,8 +240,9 @@
   },
   "active": "2f930c115f631e2e",
   "lastOpenFiles": [
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi系列 -RL Token 单独建一个Transformer用于重建VLM的输出嵌入feature，之后RL训练用此模型作为基座，加快RL训练效率.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/SSM state space model 详解 ocs2.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/FM vs DP noise denoise流程分析.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi系列 -RL Token 单独建一个Transformer用于重建VLM的输出嵌入feature，之后RL训练用此模型作为基座，加快RL训练效率.md",
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/Gendexgrasp网络 - 后验概率如何拟合先验.md",
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/Gendexgrasp网络 - 网络架构 - 训练流程讲解.md",
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/Gendexgrasp网络 - 详解PointNetCVAE流程.md",
@@ -268,7 +269,6 @@
     "Robotmanipulation - opt_VA/YouKnow3M/AMP & locomotion/上楼梯奖励一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/MPC + MRT 说明 & 常见QA.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/公式探索/贝尔曼方程 - Bellman Optimality Equation.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/公式探索/Deep Q Net-work.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/IMG/Pasted image 20260511113828.png",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/IMG/Pasted image 20260511104609.png",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/IMG",
