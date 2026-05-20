@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/生成模型新范式 - JiT or Drifting Model.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/未来发展 - 一些分层可实现的思考.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "生成模型新范式 - JiT or Drifting Model"
+              "title": "未来发展 - 一些分层可实现的思考"
             }
           }
         ],
@@ -240,10 +240,11 @@
   "active": "2f930c115f631e2e",
   "lastOpenFiles": [
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/未来发展 - pi05 GROOT future 范式下视觉-动作联立建模下的流如何融合?.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/模型loss差异.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/未来发展 - 具身发展表征学习未来存在的范式.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/生成模型新范式 - JiT or Drifting Model.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi05 - 详细解析joint attn怎么一步+mask实现类似于交叉attn效果.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/未来发展 - 一些分层可实现的思考.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/未来发展 - 具身发展表征学习未来存在的范式.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi系列 -RL Token 单独建一个Transformer用于重建VLM的输出嵌入feature，之后RL训练用此模型作为基座，加快RL训练效率.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi05 vs GROOT.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/FM vs DP noise denoise流程分析.md",
@@ -253,7 +254,6 @@
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/Gendexgrasp网络 - 详解PointNetCVAE流程.md",
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/ocs2 CPU vs curobo GPU 优化架构对比.md",
     "Robotmanipulation - opt_VA/Imitation learning/编码器/VAE - 变分自动编码器.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/模型loss差异.md",
     "Robotmanipulation - opt_VA/Imitation learning/传统BC方法一览.md",
     "Robotmanipulation - opt_VA/KL散度对比MSE计算loss.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG/RL Token Bootstrapping Online RL with.pdf",
