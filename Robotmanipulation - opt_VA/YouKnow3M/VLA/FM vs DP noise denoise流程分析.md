@@ -228,3 +228,201 @@ $$
 > **FM 把整个 noise → action 的变换设计成一条直线 $x_t = (1-t)\,\varepsilon + t\,x_1$，所以前半部分（加噪轨迹形状）和后半部分（监督目标 $v = x_1 - \varepsilon$ + 采样方式 $x \mathrel{+}= \Delta t \cdot v$）都跟 DP 不一样。DP 的弯曲路径 $x_t = \sqrt{\bar\alpha_t}\, x_1 + \sqrt{1-\bar\alpha_t}\, \varepsilon$ 是历史包袱（从 score-based / SDE 框架继承下来的），FM 用 ODE 视角重写了整套流程，得到一个更简洁、推理更快的方案。**
 
 你脑子里把 FM 想成"DP 的进化版"是没错的，但本质上 FM 不是改了一个 loss 函数那么简单，而是**把整条变换路径都拉直了**——这才是它能 4 步推理还效果不差的根本原因。
+
+
+# Q:  在这里flow-matching预测的是速度场，通过速度去噪还原干净动作，那么dp模型每一步预测的是什么？预测的是去噪的噪声吗，通过预测去噪的噪声来最终获得干净动作？
+非常好的问题——这正好让我们把 DP 和 FM 在"预测目标"上的对比讲透。直接看代码，**DP 实际上支持两种预测模式**：
+
+## 一、DP 代码里的两种预测目标
+
+```345:351:src/lerobot/policies/diffusion/modeling_diffusion.py
+        # Compute the loss.
+        # The target is either the original trajectory, or the noise.
+        if self.config.prediction_type == "epsilon":
+            target = eps
+        elif self.config.prediction_type == "sample":
+            target = batch[ACTION]
+        else:
+            raise ValueError(f"Unsupported prediction type {self.config.prediction_type}")
+```
+
+| `prediction_type` | 模型预测的是 | 目标含义 |
+|------------------|--------------|----------|
+| `"epsilon"` ⭐**主流** | $\hat{\varepsilon}$ —— **预测噪声** | 模型学"我加了什么噪声进去" |
+| `"sample"` | $\hat{x}_0$ —— **预测干净动作** | 模型学"原本干净动作长什么样" |
+
+**LeRobot 和原版 DP 论文默认都是 `"epsilon"`**（预测噪声）——这是 DDPM 论文 (Ho et al., 2020) 的经典做法。
+
+所以你的理解**完全正确**：**DP 每一步的模型确实是预测噪声**（默认情况下）。
+
+## 二、完整的训练/推理流程对比
+
+### 训练阶段（compute_loss）
+
+```327:353:src/lerobot/policies/diffusion/modeling_diffusion.py
+        # Forward diffusion.
+        trajectory = batch[ACTION]
+        # Sample noise to add to the trajectory.
+        eps = torch.randn(trajectory.shape, device=trajectory.device)
+        # Sample a random noising timestep for each item in the batch.
+        timesteps = torch.randint(
+            low=0,
+            high=self.noise_scheduler.config.num_train_timesteps,
+            size=(trajectory.shape[0],),
+            device=trajectory.device,
+        ).long()
+        # Add noise to the clean trajectories according to the noise magnitude at each timestep.
+        noisy_trajectory = self.noise_scheduler.add_noise(trajectory, eps, timesteps)
+
+        # Run the denoising network (that might denoise the trajectory, or attempt to predict the noise).
+        pred = self.unet(noisy_trajectory, timesteps, global_cond=global_cond)
+
+        # Compute the loss.
+        # The target is either the original trajectory, or the noise.
+        if self.config.prediction_type == "epsilon":
+            target = eps
+        ...
+        loss = F.mse_loss(pred, target, reduction="none")
+```
+
+数学描述：
+
+**Forward diffusion（加噪过程）**：
+
+$$
+x_t = \sqrt{\bar\alpha_t}\, x_0 + \sqrt{1 - \bar\alpha_t}\, \varepsilon, \quad \varepsilon \sim \mathcal{N}(0, I)
+$$
+
+**Loss 函数（ε-prediction）**：
+
+$$
+\mathcal{L}_{\text{DP}} = \mathbb{E}_{t,\,x_0,\,\varepsilon}\Big[\big\|\,\epsilon_\theta(x_t, t, c) - \varepsilon\,\big\|^2\Big]
+$$
+
+模型 $\epsilon_\theta$ 输入是**加噪后的动作** $x_t$ 和**时间步** $t$，输出**预测的噪声** $\hat\varepsilon$，监督目标是**真实加的噪声** $\varepsilon$。
+
+### 推理阶段（conditional_sample）
+
+```225:233:src/lerobot/policies/diffusion/modeling_diffusion.py
+        for t in self.noise_scheduler.timesteps:
+            # Predict model output.
+            model_output = self.unet(
+                sample,
+                torch.full(sample.shape[:1], t, dtype=torch.long, device=sample.device),
+                global_cond=global_cond,
+            )
+            # Compute previous image: x_t -> x_t-1
+            sample = self.noise_scheduler.step(model_output, t, sample, generator=generator).prev_sample
+```
+
+**关键的两步循环**：
+1. `model_output = unet(sample, t)` —— 用模型预测噪声 $\hat\varepsilon$
+2. `sample = noise_scheduler.step(...)` —— **用 scheduler 把 $x_t$ 推到 $x_{t-1}$**
+
+这第二步是关键。**模型只预测噪声，真正"去噪一步"是 scheduler 干的事**。scheduler 内部做的事是：
+
+$$
+x_{t-1} = \frac{1}{\sqrt{\alpha_t}}\left(x_t - \frac{1-\alpha_t}{\sqrt{1-\bar\alpha_t}}\hat\varepsilon\right) + \sigma_t z, \quad z \sim \mathcal{N}(0, I)
+$$
+
+或者通过 **Tweedie 公式**先反推 $\hat{x}_0$，再走过去：
+
+$$
+\hat{x}_0 = \frac{x_t - \sqrt{1-\bar\alpha_t}\,\hat\varepsilon}{\sqrt{\bar\alpha_t}}
+$$
+
+然后基于 $\hat{x}_0$ 和 $x_t$ 推 $x_{t-1}$。
+
+## 三、三种方法对比（DP-ε / DP-x₀ / FM-v）
+
+| 方法 | 模型预测的目标 | 物理含义 | 推理一步公式 |
+|------|----------------|----------|---------------|
+| **DP (ε-prediction)** | $\hat\varepsilon \approx \varepsilon$ | "加在动作上的噪声" | $x_{t-1} = \frac{1}{\sqrt{\alpha_t}}(x_t - c_t \hat\varepsilon) + \sigma_t z$ |
+| **DP (sample / x₀-prediction)** | $\hat{x}_0 \approx x_0$ | "干净动作本身" | 用 $\hat{x}_0$ 反推 $x_{t-1}$ |
+| **FM (velocity)** | $\hat{v} \approx x_1 - \varepsilon$ | "干净动作 - 噪声"（路径切向量） | $x_{t+\Delta t} = x_t + \Delta t \cdot \hat{v}$ |
+
+### 一个直观的几何类比
+
+把 $x_t$ 在 $x_0$ 和 $\varepsilon$ 之间的连线想象成一条路径：
+
+```text
+   x_0 (干净动作) ────────●────────── ε (纯噪声)
+                          ↑
+                         x_t (当前位置)
+                         
+   DP-ε   预测的是: "指向 ε 那边的多少"  
+   DP-x₀  预测的是: "指向 x_0 那边的位置"
+   FM-v   预测的是: "从 ε 走到 x_0 的方向向量"
+```
+
+三者在数学上**互相可转换**（因为 $x_t = a \cdot x_0 + b \cdot \varepsilon$，知道任意一个未知量就能算出另外两个），只是**监督目标的"形状"**不同。
+
+## 四、用浅显的话总结：DP 和 FM 的核心差异
+
+### DP（默认 ε-prediction）
+
+```text
+训练:
+  - 给模型 x_t (加噪后的动作)
+  - 让模型预测 ε (我加的是什么噪声)
+  - Loss = MSE(预测噪声, 真实噪声)
+
+推理 (100 步):
+  - 从纯噪声 x_T = ε 开始
+  - 每步: ε̂ = model(x_t, t)        ← 模型预测噪声
+         x_{t-1} = scheduler.step(ε̂, x_t, t)  ← scheduler 把 x_t 推到 x_{t-1}
+  - 100 步后得到 x_0 ≈ 干净动作
+```
+
+### FM（v-prediction）
+
+```text
+训练:
+  - 给模型 x_t (噪声和动作的线性插值)
+  - 让模型预测 v = x_1 - ε (从噪声到动作的方向)
+  - Loss = MSE(预测速度, 真实速度)
+
+推理 (4-10 步):
+  - 从纯噪声 x_0 = ε 开始
+  - 每步: v̂ = model(x_t, t)         ← 模型预测速度
+         x_{t+dt} = x_t + dt * v̂    ← 简单欧拉积分
+  - 4-10 步后得到 x_1 ≈ 干净动作
+```
+
+### 两者的本质区别
+
+| 维度 | DP (ε-prediction) | FM (v-prediction) |
+|------|-------------------|---------------------|
+| 加噪轨迹 | **弯曲**（cosine/linear schedule）| **直线**（线性插值） |
+| 预测目标 | 噪声 ε（间接的、需要换算） | 速度 v（几何上直接的方向） |
+| 推理一步 | 需要 scheduler 做复杂的反向 SDE | 简单的 `x += dt*v` |
+| 推理步数 | 50~100（DDPM）/ 10~20（DDIM） | **4~10** |
+| 模型输出"含义" | "我加的噪声有多少" | "应该往哪走" |
+| 数学路径 | Score-based diffusion / SDE | Continuous Normalizing Flow / ODE |
+
+## 五、为什么 DP 默认选 ε-prediction 而不是 x₀-prediction？
+
+这是一个有趣的细节。理论上预测 $x_0$ 也行，为什么 DDPM 经典论文用 ε？
+
+1. **训练时方差稳定**：噪声 $\varepsilon \sim \mathcal{N}(0, I)$ 是标准正态分布，**所有时间步 t 下方差都是 1**。而 $x_0$ 的方差跟数据本身有关，不同 t 下监督信号的尺度可能不平衡。
+2. **损失函数自然加权**：预测 $\varepsilon$ 实际上等价于给不同 $t$ 的 loss 自动加了一个 SNR 加权（与去噪难度匹配）。
+3. **数值稳定**：$\hat{x}_0$ 的反推公式有 $\sqrt{\bar\alpha_t}$ 在分母，$t \to T$ 时数值不稳定。
+
+但 ε-prediction 也有自己的问题：$t \to 0$（接近干净动作）时 $\hat\varepsilon$ 的方差很小，梯度信号弱。所以后来又有 **v-prediction**（DDIM/Imagen 论文）这种混合方案。
+
+而 **FM 直接选了"预测 $x_1 - \varepsilon$"**——这个目标的方差既不依赖 $t$（对一条直线路径，速度是常数），又有明确的几何含义，**一举解决了 DP 训练目标在不同 $t$ 下不均匀的问题**。
+
+## 六、一句话回答你的问题
+
+> **是的，DP 每一步预测的就是噪声 $\hat\varepsilon$**（默认 `prediction_type="epsilon"`）——模型学"我刚才加了什么噪声进去"，然后由 `noise_scheduler.step()` 用这个预测的噪声**反向去噪一步**（从 $x_t$ 走到 $x_{t-1}$），如此迭代 50~100 次最终还原出干净动作 $x_0$。
+> 
+> **但 DP 也支持直接预测干净动作 $\hat{x}_0$**（`prediction_type="sample"`），只是不常用。
+>
+> **对比 FM**：FM 预测的是"从噪声到动作的速度向量 $v = x_1 - \varepsilon$"——一个几何上直接的方向，所以推理时只需要简单地 `x += dt*v`，4~10 步就能到达，远比 DP 的 50~100 步快。
+
+**三者的本质都是回归任务**，只是回归目标不同：
+- DP-ε 回归"加了多少噪声"
+- DP-x₀ 回归"原本是什么"
+- FM-v 回归"该往哪走"
+
+而 **FM 的路径是直线，速度是常数**，所以"该往哪走"这个目标天然简洁——这是 FM 比 DP 优雅的根本原因。

@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi07 一览 - 个人思考.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/FM vs DP noise denoise流程分析.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "pi07 一览 - 个人思考"
+              "title": "FM vs DP noise denoise流程分析"
             }
           }
         ],
@@ -239,8 +239,8 @@
   },
   "active": "2f930c115f631e2e",
   "lastOpenFiles": [
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/GROOT N1.5 action expert改动一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi07 一览 - 个人思考.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/GROOT N1.5 action expert改动一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/未来发展 - 一些分层可实现的思考.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/未来发展 - pi05 GROOT future 范式下视觉-动作联立建模下的流如何融合?.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/模型loss差异.md",
