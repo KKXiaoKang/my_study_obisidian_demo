@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/TODO - WAM综述，新的范式如何视觉表征-联立动作建模.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/TODO - Reward设计.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TODO - WAM综述，新的范式如何视觉表征-联立动作建模"
+              "title": "TODO - Reward设计"
             }
           }
         ],
@@ -239,8 +239,9 @@
   },
   "active": "2f930c115f631e2e",
   "lastOpenFiles": [
-    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/TODO - Reward设计.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/TODO - WAM综述，新的范式如何视觉表征-联立动作建模.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/ocs2 CPU vs curobo GPU 优化架构对比.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/TODO - Reward设计.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/生成模型新范式 - JiT or Drifting Model.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/FM vs DP noise denoise流程分析.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi07 一览 - 个人思考.md",
@@ -256,7 +257,6 @@
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/Gendexgrasp网络 - 后验概率如何拟合先验.md",
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/Gendexgrasp网络 - 网络架构 - 训练流程讲解.md",
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/Gendexgrasp网络 - 详解PointNetCVAE流程.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/ocs2 CPU vs curobo GPU 优化架构对比.md",
     "Robotmanipulation - opt_VA/Imitation learning/编码器/VAE - 变分自动编码器.md",
     "Robotmanipulation - opt_VA/Imitation learning/传统BC方法一览.md",
     "Robotmanipulation - opt_VA/KL散度对比MSE计算loss.md",
