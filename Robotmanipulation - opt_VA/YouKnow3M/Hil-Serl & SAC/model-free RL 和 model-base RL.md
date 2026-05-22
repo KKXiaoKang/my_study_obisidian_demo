@@ -26,8 +26,7 @@ $$v(s) \leftarrow v(s) + \alpha\underbrace{[r + \gamma v(s') - v(s)]}_{\text{TD 
 | **TD(λ)** | $\sum_n (1-\lambda)\lambda^{n-1} G^{(n)}_t$ | n-step 的几何加权平均 |
 | **MC** | $G_t = \sum_{k=0}^\infty \gamma^k r_{t+k}$ | 整条回合的回报 |
 
-直观上：**MC 用真值（高方差、无偏）；TD(0) 用 bootstrap（低方差、有偏）；TD(λ) 在两者之间插值**。1
-
+直观上：**MC 用真值（高方差、无偏）；TD(0) 用 bootstrap（低方差、有偏）；TD(λ) 在两者之间插值**。
 ---
 
 ## 二、SAC 用的是什么 TD？—— **Soft Q-learning（off-policy TD(0)）**
