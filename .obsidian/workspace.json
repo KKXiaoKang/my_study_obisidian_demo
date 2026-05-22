@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/Octo vs pi05.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/model-free RL 和 model-base RL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Octo vs pi05"
+              "title": "model-free RL 和 model-base RL"
             }
           },
           {
@@ -213,13 +213,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/Octo vs pi05.md",
+                "file": "RobotVision/三维重建/AGS-Mesh 高斯结合Mesh.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Octo vs pi05 的大纲"
+              "title": "AGS-Mesh 高斯结合Mesh 的大纲"
             }
           },
           {
@@ -251,10 +251,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2f930c115f631e2e",
+  "active": "476eac75ac6d0b04",
   "lastOpenFiles": [
-    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/Deep RL Critic 谱系总览表.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/Octo vs pi05.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/Deep RL Critic 谱系总览表.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/model-free RL 和 model-base RL.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/公式探索/贝尔曼方程 - Bellman Optimality Equation.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/Reward设计 - ppo vs SAC 说明.md",
