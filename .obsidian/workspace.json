@@ -97,12 +97,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/Imitation learning/编码器/VAE - 变分自动编码器.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/VA & CVAE/latent space dim的思考.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "VAE - 变分自动编码器"
+              "title": "latent space dim的思考"
             }
           }
         ],
@@ -265,8 +265,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "86eaf77f5f480c18",
+  "active": "c1308e44a0757bbd",
   "lastOpenFiles": [
+    "Robotmanipulation - opt_VA/YouKnow3M/VA & CVAE/CVAE & VAE 关于半月图之争.md",
+    "Robotmanipulation - opt_VA/Imitation learning/编码器/VAE - 变分自动编码器.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VA & CVAE/latent space dim的思考.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/公式探索/贝尔曼方程 - Bellman Optimality Equation.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/model-free RL 和 model-base RL.md",
@@ -292,8 +294,6 @@
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi05 vs GROOT.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/SSM state space model 详解 ocs2.md",
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/Gendexgrasp网络 - 后验概率如何拟合先验.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/Gendexgrasp网络 - 网络架构 - 训练流程讲解.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/Gendexgrasp网络 - 详解PointNetCVAE流程.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG/RL Token Bootstrapping Online RL with.pdf",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG/Pasted image 20260514143034.png",
     "Robotmanipulation - opt_VA/YouKnow3M/Benchmark",
