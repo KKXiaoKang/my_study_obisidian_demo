@@ -1,8 +1,23 @@
 ![[Exploring the Limits of Vision-Language-Action.pdf]]
 
 本文深入探讨了视觉-语言-动作（Vision-Language-Action, VLA）模型在跨任务泛化能力方面的极限，并提出了一个新颖的仿真基准AGNOSTOS和一个名为Cross-Task In-Context Manipulation (X-ICM) 的方法，以提升机器人在未见任务中的零样本泛化能力。
+```
+【范式 A】In-domain 专用网络 (PerAct/RVT)
+  RLBench demo ──BC──► 专用 π(a|o,L) ──► 连续/体素动作
 
+【范式 B】互联网 VLA (OpenVLA, π₀, …)
+  Web/视频预训练 ──► + RLBench SFT ──► π(a|图像,L)  [扩散 / FAST token / …]
 
+【范式 C】本仓库 Qwen2.5-VL SFT
+  预训练 VLM ──► AGNOSTOS seen SFT ──► 生成动作 **文本** + 图像 token
+
+【范式 D】本仓库 X-ICM
+  Dynamics diffusion ──► 选 K 条 seen demo 文本
+  纯文本 LLM(ICL) ──► 动作 **文本** ──► 解析为 RLBench 离散动作
+  （无 FAST；无图像进 LLM）
+```
+
+* X-ICM 范式
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
 │  Dynamics diffusion（InstructPix2Pix 微调）                              │
