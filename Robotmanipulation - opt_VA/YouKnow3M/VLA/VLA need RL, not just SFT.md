@@ -97,13 +97,13 @@ NeurIPS 2025 的 [What Can RL Bring to VLA Generalization?](https://rlvla.github
 
 ## 四、按你"实物机器、SFT 后再 RL"这个具体诉求的推荐路线
 
-| 你的现状 | 推荐组合 | 理由 |
-|---------|----------|------|
-| 已有 GROOT (flow matching) + 真机 + 少量 demo | **ConRFT + ReinFlow** | ConRFT 给真机 RL 的工程框架（HIL/HIL-SERL 底座），ReinFlow 提供"flow matching policy 怎么算 likelihood、怎么 PG"的理论 |
-| 已有真机 + 想最小工程量 | **RIPT-VLA 思路 + HIL-SERL 框架** | 只要写一个"成功/失败"判定，剩下交给 LOOP/PPO |
-| 真机不安全/贵，但有大量回放数据 | **VLA-RFT 思路** | 训 world model + GRPO，全程不上真机 |
-| 想跟齐工业界最先进 | **π* 0.6 / Recap** + Safe-Sentinel 开源实现 | flow-matching 原生友好，Physical Intelligence 在真机上已验证规模化可行 |
-| 仿真够好，想做 sim-to-real | **SimpleVLA-RL** | 工业级训练基建，已展示 sim-to-real 增益 |
+| 你的现状                                    | 推荐组合                                    | 理由                                                                                             |
+| --------------------------------------- | --------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| 已有 GROOT (flow matching) + 真机 + 少量 demo | **ConRFT + ReinFlow**                   | ConRFT 给真机 RL 的工程框架（HIL/HIL-SERL 底座），ReinFlow 提供"flow matching policy 怎么算 likelihood、怎么 PG"的理论 |
+| 已有真机 + 想最小工程量                           | **RIPT-VLA 思路 + HIL-SERL 框架**           | 只要写一个"成功/失败"判定，剩下交给 LOOP/PPO                                                                   |
+| 真机不安全/贵，但有大量回放数据                        | **VLA-RFT 思路**                          | 训 world model + GRPO，全程不上真机                                                                    |
+| 想跟齐工业界最先进                               | **π* 0.6 / Recap** + Safe-Sentinel 开源实现 | flow-matching 原生友好，Physical Intelligence 在真机上已验证规模化可行                                          |
+| 仿真够好，想做 sim-to-real                     | **SimpleVLA-RL**                        | 工业级训练基建，已展示 sim-to-real 增益                                                                     |
 
 ---
 
