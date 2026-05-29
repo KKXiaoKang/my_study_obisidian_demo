@@ -18,6 +18,13 @@
 ```
 
 * X-ICM 范式
+* ![[Pasted image 20260529155722.png]]
+	* 系统文本 
+```
+        self.SYSTEM_PROMPT = "You are a Franka Panda robot with a parallel gripper. We provide you with some demos from some seen tasks, in the format of [task_instruction, observation]>[ 7-dim action_1, 7-dim action_2, ..., 7-dim action_N ]. Then you will receive an unseen task instruction with a new observation, and you need to output a list of 7-dim actions that match the trends in the demos. Do not output anything else."
+```
+	  * seen demo 文本（指令 + 物体坐标 + 关键动作序列）
+	  * 当前 unseen 观测文本  只有「指令 + 物体结构化 3D 网格坐标」的一段纯文本字符串
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
 │  Dynamics diffusion（InstructPix2Pix 微调）                              │
@@ -85,3 +92,146 @@ X-ICM框架包含两个核心模块：
 **结论：**
 本文提出了AGNOSTOS这一开创性的基准，揭示了当前VLA模型在零样本跨任务泛化方面的局限性。同时，提出的X-ICM方法，结合上下文学习和动态引导样本选择，显著提升了机器人在未见任务上的泛化性能。AGNOSTOS和X-ICM为推动通用机器人操作研究提供了宝贵的工具。未来工作可进一步探索多模态推理和通用概念（如物体轨迹）的整合，以提升模型的泛化能力。
 
+
+你的理解 **大方向完全正确**，只需要纠 3 个小偏差。然后我会把「X-ICM vs Qwen2.5-VL SFT」的关键差异点对齐。
+
+---
+# Q：全文通读这篇论文和这个代码仓库，对于X-ICM的方法，它的本质上是不微调LLM，只是训了一个video generate model，这个video generate model的主要作用就是输入unseen obs，从而找seen obs中最相似的obs，找到最相似的obs之后我看到你说的是拼成system + K 条 seen demo 文本 + 当前 unseen 观测文本，然后给Qwen2.5-7B/72B让它去输出输出：文本，如 [53,57,17,0,36,53,0], [52,50,19,...], ... ，这个做法是对的吗？默认的Qwen2.5-VL SFT是不是就是没有这K条seen demo文本的区别啊？
+# A 
+1. 你的描述哪些对、哪些要修
+
+| 你的说法 | 实际情况 |
+|---------|---------|
+| **「不微调 LLM」** | ✅ 正确。Qwen2.5-Instruct 权重完全冻结。 |
+| **「只是训了一个 video generate model」** | ⚠️ 严格说是 **单帧终态预测的 image-to-image diffusion**（InstructPix2Pix 微调），**不是 video**。输入 `v_1 + L`，预测 **完成后那一帧** `v_T`，没有时间序列。 |
+| **「输入 unseen obs，找 seen obs 中最相似的 obs」** | ⚠️ 两点要补：①输入还包括 **语言指令 L**；②检索时比的是 **diffusion 提取的 [语言特征 + 预测终态 latent]**（2048 维），不是原始 obs；命中后 **取回整条 seen demo**（指令 + 物体坐标 + 关键动作序列），不是只取一帧 obs。 |
+| **「拼成 system + K 条 seen demo 文本 + 当前 unseen 观测文本，给 Qwen 输出 7 维动作列表」** | ✅ 完全正确。 |
+
+实际的 prompt 模板：
+
+```26:26:crosstask_icl_agent.py
+        self.SYSTEM_PROMPT = "You are a Franka Panda robot with a parallel gripper. We provide you with some demos from some seen tasks, in the format of [task_instruction, observation]>[ 7-dim action_1, 7-dim action_2, ..., 7-dim action_N ]. Then you will receive an unseen task instruction with a new observation, and you need to output a list of 7-dim actions that match the trends in the demos. Do not output anything else."
+```
+
+用户消息是把 K 条 seen demo 串起来，最后接当前 unseen 观测：
+
+```81:92:form_icl_demonstrations_crosstask_ranking.py
+        output = ""
+        for i, selected_idx in enumerate(selected_indices):
+            icl_episode_path=all_demo_paths[selected_idx]
+            ...
+            train_demos = get_stored_demos_crosstask(seen_path, icl_task_name, icl_episode_id, 1, seen_sim_name_to_real_name[icl_task_name])
+
+            for epi in train_demos:
+                output += f"{epi[0]}>{epi[1]}, "
+        
+        return output + obs + ">"
+```
+
+每个 `epi[0]` 是 `[instruction, {物体: [x,y,z]}]`，`epi[1]` 是 `[7维动作1, 7维动作2, ...]`。
+
+整段 user_prompt 形如（示意）：
+
+```
+['instruction': open_drawer, {'drawer': [50,50,80]}]>[[53,57,17,0,36,53,0], [54,57,17,0,36,53,1], ...],
+['instruction': close_jar, {'lid': [49,52,82], 'jar': [49,52,80]}]>[[52,50,19,...], ...],
+... (共 K=18 条 seen demo)
+['instruction': <unseen 任务名>, {当前物体坐标}]>
+```
+
+最后那个 **悬挂的 `>`** 就是让 LLM **续写动作列表**。
+
+---
+
+## 2. 「默认 Qwen2.5-VL SFT 就是没有 K 条 seen demo 的区别」对吗？
+
+**对一半。** 没有 K 条 demo 是 **最显眼** 的差异，但还有 **3 个其它差别**，否则就和 X-ICM 等价了：
+
+| 差异点 | X-ICM | Qwen2.5-VL SFT |
+|--------|-------|----------------|
+| ① **K 条 seen demo** | **有**（18 条文本范例） | **无** |
+| ② **模型权重** | **完全冻结**（off-the-shelf Qwen-Instruct） | **在 `train.json` 上 SFT**（LLM/Vision/Merger 都可调） |
+| ③ **视觉输入** | **不进模型**；物体用 **文本 3D 坐标** | **front + wrist 两张图** 进 VLM 的 `<image>` token |
+| ④ **检索 / dynamics diffusion** | **用**（决定取哪 K 条） | **不用** |
+| ⑤ **当前观测格式** | 文本物体坐标 + 任务指令 | 文本物体坐标 + **历史动作** + 任务指令 + **图像** |
+| ⑥ **动作输出格式** | 7 维整数列表文本 | 7 维整数列表文本 **（共用 RoboPrompt 格式）** |
+
+第 ⑥ 点是它们的 **共同点**——动作离散方案、`re_match` 解析、`utils.py` 的反离散化都一样。所以你说的「就是没有 K 条 seen demo 的区别」**抓到了最核心的方法论差异**：
+
+- **X-ICM = 用 ICL（K 条 demo 写在 prompt 里）代替微调** 让模型懂任务  
+- **Qwen-VL SFT = 用 SFT（把任务知识写进权重）代替 ICL** 让模型懂任务
+
+两条路在「让模型学会输出 7 维动作」上是 **可互相替代** 的两种范式（[Moonlight](https://www.themoonlight.io/paper/829bebf6-adb3-4388-af8b-7634de6fc087) 那份摘要也按 in-context 范式描述 X-ICM）。
+
+---
+
+## 3. 一张图把你脑里的链路对齐
+
+### X-ICM（论文方法）
+
+```
+unseen 首帧 v + 指令 L
+        │
+        ▼
+[Dynamics diffusion (image→image)]
+预测「任务完成后的那一帧 latent」
+        │
+        ▼
+得到 query = [lang_feat(1024) | pred_final_latent(1024)]
+        │  dot product
+        ▼
+seen 演示库 (3600 条) 离线特征 → Top-18 命中
+        │
+        ▼
+读回 18 条 seen demo 文本（指令 + 物体坐标 + 关键动作序列）
+        │
+        ▼
+拼 user_prompt = demo1, demo2, ..., demo18, <当前 unseen 文本观测>>
+        │
+        ▼
+冻结的 Qwen2.5-Instruct (7B/72B, 纯文本)
+        │
+        ▼
+输出文本: [[53,57,17,0,36,53,0], [52,50,19,0,36,53,1], ...]
+        │
+        ▼
+re_match → discrete_euler_to_quaternion → RLBench 执行
+```
+
+### Qwen2.5-VL SFT（仓库里另一条线，作为 baseline）
+
+```
+unseen 首帧 + 腕部图 + 指令 L + 物体坐标 + 历史动作
+        │
+        ▼
+微调过的 Qwen2.5-VL-7B（看图 + 看文本）
+        │
+        ▼
+输出文本: [[x,y,z,r,p,y,g], ...]   ← 同款离散动作格式
+        │
+        ▼
+re_match → ... → RLBench 执行
+```
+
+注意：**没有 dynamics diffusion，没有 K 条 demo**；任务知识全靠 SFT 权重。
+
+---
+
+## 4. 直接对你那句总结打个分
+
+> **「不微调 LLM，只是训了一个 video generate model，作用是用当前 unseen 找 seen 中最相似的 obs，再拼 system + K 条 seen demo + 当前 unseen 观测，让 Qwen 输出 7 维动作文本」**
+
+✅ 主线全对。  
+🔧 三处小修：
+
+1. **不是 video，是单帧 image-to-image 扩散**（预测「终态」一帧的 latent）。  
+2. **检索时也喂语言指令**，相似度是在 **dynamics 特征空间**（拼接 `lang_feat + pred_final_latent`）算的，不是原始像素相似度。  
+3. **检索命中的是整条 seen demo**（含动作序列），不是只取相似的 obs 这一帧；K 条 demo 进 prompt 时 **动作序列才是给 LLM 模仿的关键信号**。
+
+> **「默认 Qwen2.5-VL SFT 就是没有这 K 条 seen demo 文本的区别」**
+
+✅ 这是 **最大区别**（ICL vs SFT 的范式之分）；另外还顺带差「权重是否更新、视觉是否进模型、是否用 dynamics 检索」3 点。两条路 **共用** 同一套 7 维整数动作格式和 RLBench 反离散化代码。
+
+---
+
+如果你想再把直觉落实到一个具体例子（比如 `open_drawer` 这个 unseen 任务上，X-ICM 选回的 18 条 seen demo 长什么样、prompt 大致多少 token、Qwen 给出的 raw 文本是啥），可以告诉我，我可以基于 `logs/` 下保存的真实运行结果给你抽一段出来对照。
