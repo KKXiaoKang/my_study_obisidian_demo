@@ -6,6 +6,7 @@
 > 阅读日期：2026-08-12。已读完正文 8 页 + 附录 A–E（共 22 页）
 > 对照代码：`/Users/felix/Desktop/Project/motionwam/`（DiT4DiT）、`/Users/felix/Desktop/Project/Xiaomi-Robotics-1/`（XR-1）
 > 相关笔记：[[未来发展 - pi05 GROOT future 范式下视觉-动作联立建模下的流如何融合?]]、[[生成模型新范式 - JiT or Drifting Model]]、[[模型loss差异]]
+> 📘 **基础知识补充篇**：[[JEPA-WAM 补充 - 消融实验清单 与「探针 probe」到底是什么]] —— 讲清"什么是探针"、"什么是消融"、7 个消融变体完整清单、δ 与 g 的区别
 
 ---
 

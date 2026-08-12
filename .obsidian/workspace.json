@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 453.5
+    "width": 528.2868919372559
   },
   "right": {
     "id": "f68e4ca4c1083328",
@@ -184,6 +184,7 @@
   },
   "active": "7c8a036a34197b4c",
   "lastOpenFiles": [
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/JEPA-WAM 补充 - 消融实验清单 与「探针 probe」到底是什么.md",
     "Robotmanipulation - opt_VA/Imitation learning/编码器/VAE - 变分自动编码器.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/VLA need RL, not just SFT.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/JEPA-WAM 精读 - latent WAM 四类范式与 motionWAM 的归类.md",
@@ -216,7 +217,6 @@
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/模型loss差异.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/GROOT N1.5 action expert改动一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/未来发展 - 具身发展表征学习未来存在的范式.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/未来发展 - 一些分层可实现的思考.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG/RL Token Bootstrapping Online RL with.pdf",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG/Pasted image 20260514143034.png",
     "Robotmanipulation - opt_VA/YouKnow3M/Benchmark",
