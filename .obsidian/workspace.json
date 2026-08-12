@@ -49,8 +49,7 @@
               "title": "VLA need RL, not just SFT"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -70,7 +69,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true
+                "autoReveal": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -209,11 +210,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a95503fcd9941567",
+  "active": "f418bf23d65ddf32",
   "lastOpenFiles": [
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi系列 -RL Token 单独建一个Transformer用于重建VLM的输出嵌入feature，之后RL训练用此模型作为基座，加快RL训练效率.md",
     "Robotmanipulation - opt_VA/Imitation learning/编码器/VAE - 变分自动编码器.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/VLA need RL, not just SFT.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi系列 -RL Token 单独建一个Transformer用于重建VLM的输出嵌入feature，之后RL训练用此模型作为基座，加快RL训练效率.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VA & CVAE/CVAE & VAE 关于半月图之争.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VA & CVAE/latent space dim的思考.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG/Pasted image 20260529155722.png",
