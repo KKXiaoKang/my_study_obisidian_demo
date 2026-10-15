@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "eab2757be556b015",
+        "id": "286dec91d08c1c65",
         "type": "tabs",
         "children": [
           {
-            "id": "ffe76e21d4950c37",
+            "id": "013151d2935600e2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/kmpc/MPC + MRT 说明 & 常见QA.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "MPC + MRT 说明 & 常见QA"
+              "title": "新标签页"
             }
           }
         ]
@@ -55,7 +51,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "bc",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -182,11 +178,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ffe76e21d4950c37",
+  "active": "86eaf77f5f480c18",
   "lastOpenFiles": [
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/GROOT N1.5 action expert改动一览.md",
+    "未命名 1.base",
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/未来发展 - pi05 GROOT future 范式下视觉-动作联立建模下的流如何融合?.md",
+    "Robotmanipulation - opt_VA/YouKnow3M/kmpc/MPC + MRT 说明 & 常见QA.md",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/QP问题，ocs2根据reference pose进行线性插值得到一系列input.md",
     "RobotRL/VLA-RL/路线总览.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/GROOT N1.5 action expert改动一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi05 - 详细解析joint attn怎么一步+mask实现类似于交叉attn效果.md",
     "Robotmanipulation - opt_VA/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/JEPA-WAM 补充 - 消融实验清单 与「探针 probe」到底是什么.md",
@@ -207,7 +206,6 @@
     "未命名.base",
     "Robotmanipulation - opt_VA/YouKnow3M/VA & CVAE",
     "conflict-files-obsidian-git.md",
-    "未命名 1.base",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/Reward设计 - ppo vs SAC 说明.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/Reward设计 - 计算对比说明.md",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/model-free RL 和 model-base RL.md",
@@ -215,9 +213,6 @@
     "RobotRL/SAC/SAC - train and learn.md",
     "Robotmanipulation - opt_VA/Imitation learning/传统BC方法一览.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/Octo vs pi05.md",
-    "RobotRL/0801 - KuavoEnv Debug log.md",
-    "Robotmanipulation - opt_VA/Imitation learning/编码器/MLP - 多层感知机.md",
-    "Robotmanipulation - opt_VA/Imitation learning/编码器/AE - 自动编码器.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG/RL Token Bootstrapping Online RL with.pdf",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG/Pasted image 20260514143034.png",
     "Robotmanipulation - opt_VA/YouKnow3M/Benchmark",
