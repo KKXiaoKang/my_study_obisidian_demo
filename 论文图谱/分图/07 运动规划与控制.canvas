@@ -1,0 +1,204 @@
+{
+  "nodes": [
+    {
+      "id": "heading",
+      "type": "text",
+      "x": 0,
+      "y": -370,
+      "width": 1660,
+      "height": 250,
+      "text": "# 07 运动规划与控制\n\n怎样把任务目标变成满足约束的可执行轨迹？\n\n区分采样搜索、轨迹优化、反应式避障和 MPC；再看感知、抓取目标与控制器之间的接口。\n\n[[论文图谱/主题/07 运动规划与控制|主题目录与全部原始材料]] · [[论文图谱/00-论文关系总图.canvas|返回总图]]"
+    },
+    {
+      "id": "sampling",
+      "type": "file",
+      "x": 0,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/PRM 与 RRT 系列 — 采样运动规划.md",
+      "subpath": "#节点摘要",
+      "color": "#c79b6b"
+    },
+    {
+      "id": "chomp",
+      "type": "file",
+      "x": 620,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/CHOMP 与 GPMP — 轨迹优化的两种视角.md",
+      "subpath": "#节点摘要",
+      "color": "#c79b6b"
+    },
+    {
+      "id": "gendex",
+      "type": "file",
+      "x": 1240,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/GenDexGrasp — 接触图驱动灵巧抓取.md",
+      "subpath": "#节点摘要",
+      "color": "#c79b6b"
+    },
+    {
+      "id": "curobo",
+      "type": "file",
+      "x": 0,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/cuRobo — GPU 并行运动生成.md",
+      "subpath": "#节点摘要",
+      "color": "#c79b6b"
+    },
+    {
+      "id": "ocs2",
+      "type": "file",
+      "x": 620,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/OCS2 与 KMPC — 滚动优化和实时执行.md",
+      "subpath": "#节点摘要",
+      "color": "#c79b6b"
+    },
+    {
+      "id": "esdf",
+      "type": "file",
+      "x": 1240,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/ESDF 与碰撞表示 — 从感知到约束.md",
+      "subpath": "#节点摘要",
+      "color": "#c79b6b"
+    },
+    {
+      "id": "remani",
+      "type": "file",
+      "x": 0,
+      "y": 1040,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/REMANI-Planner — 移动操作约束规划.md",
+      "subpath": "#节点摘要",
+      "color": "#c79b6b"
+    },
+    {
+      "id": "drp",
+      "type": "file",
+      "x": 620,
+      "y": 1040,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/Deep Reactive Policy — 全局意图与局部避障.md",
+      "subpath": "#节点摘要",
+      "color": "#c79b6b"
+    },
+    {
+      "id": "retarget",
+      "type": "file",
+      "x": 1240,
+      "y": 1040,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/VR Retarget — 人体到机器人目标映射.md",
+      "subpath": "#节点摘要",
+      "color": "#c79b6b"
+    },
+    {
+      "id": "bridges-0",
+      "type": "text",
+      "x": 0,
+      "y": 1640,
+      "width": 560,
+      "height": 640,
+      "text": "### 跨主题关联 1\n\n- [[论文图谱/节点/VAE 与 CVAE — 潜变量和条件生成|VAE 与 CVAE — 潜变量和条件生成]] — **基础** — [[论文图谱/节点/GenDexGrasp — 接触图驱动灵巧抓取|GenDexGrasp — 接触图驱动灵巧抓取]]：条件接触图生成\n\n- [[论文图谱/节点/仿真资产与工具 — 从重建到实验环境|仿真资产与工具 — 从重建到实验环境]] — **应用** — [[论文图谱/节点/ESDF 与碰撞表示 — 从感知到约束|ESDF 与碰撞表示 — 从感知到约束]]：场景几何到距离约束\n\n- [[论文图谱/节点/ACT — 动作块模仿学习|ACT — 动作块模仿学习]] — **方案** — [[论文图谱/节点/Deep Reactive Policy — 全局意图与局部避障|Deep Reactive Policy — 全局意图与局部避障]]：学习的全局意图与局部反应接口\n\n- [[论文图谱/节点/Rotation 6D — 连续旋转表示|Rotation 6D — 连续旋转表示]] — **基础** — [[论文图谱/节点/VR Retarget — 人体到机器人目标映射|VR Retarget — 人体到机器人目标映射]]：坐标与姿态表示一致性\n\n- [[论文图谱/节点/标定与状态估计 — 几何可信度|标定与状态估计 — 几何可信度]] — **基础** — [[论文图谱/节点/VR Retarget — 人体到机器人目标映射|VR Retarget — 人体到机器人目标映射]]：参考坐标和几何参数"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e80",
+      "fromNode": "sampling",
+      "toNode": "chomp",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e81",
+      "fromNode": "chomp",
+      "toNode": "curobo",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "关联",
+      "toEnd": "none"
+    },
+    {
+      "id": "e82",
+      "fromNode": "esdf",
+      "toNode": "curobo",
+      "fromSide": "left",
+      "toSide": "right",
+      "label": "基础",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e83",
+      "fromNode": "esdf",
+      "toNode": "ocs2",
+      "fromSide": "left",
+      "toSide": "right",
+      "label": "应用",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e84",
+      "fromNode": "curobo",
+      "toNode": "ocs2",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e85",
+      "fromNode": "gendex",
+      "toNode": "curobo",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "应用",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e86",
+      "fromNode": "ocs2",
+      "toNode": "remani",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e88",
+      "fromNode": "esdf",
+      "toNode": "drp",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "关联",
+      "toEnd": "none"
+    },
+    {
+      "id": "e89",
+      "fromNode": "retarget",
+      "toNode": "ocs2",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "label": "应用",
+      "toEnd": "arrow"
+    }
+  ]
+}

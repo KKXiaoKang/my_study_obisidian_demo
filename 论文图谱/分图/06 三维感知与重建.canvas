@@ -1,0 +1,144 @@
+{
+  "nodes": [
+    {
+      "id": "heading",
+      "type": "text",
+      "x": 0,
+      "y": -370,
+      "width": 1660,
+      "height": 250,
+      "text": "# 06 三维感知与重建\n\n如何从图像建立可渲染、可定位、可用的几何？\n\n定位 → 场景表示 → 表面提取 → 仿真资产；新视角渲染质量不能替代几何和碰撞验收。\n\n[[论文图谱/主题/06 三维感知与重建|主题目录与全部原始材料]] · [[论文图谱/00-论文关系总图.canvas|返回总图]]"
+    },
+    {
+      "id": "gs",
+      "type": "file",
+      "x": 0,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/3DGS — 可微高斯场景渲染.md",
+      "subpath": "#节点摘要",
+      "color": "#5dace2"
+    },
+    {
+      "id": "mast3r",
+      "type": "file",
+      "x": 620,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/MASt3R-SLAM — 先验驱动稠密定位建图.md",
+      "subpath": "#节点摘要",
+      "color": "#5dace2"
+    },
+    {
+      "id": "hislam",
+      "type": "file",
+      "x": 1240,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/HI-SLAM2 — 几何感知高斯 SLAM.md",
+      "subpath": "#节点摘要",
+      "color": "#5dace2"
+    },
+    {
+      "id": "sugar",
+      "type": "file",
+      "x": 0,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/SuGaR — 表面对齐高斯与网格.md",
+      "subpath": "#节点摘要",
+      "color": "#5dace2"
+    },
+    {
+      "id": "gof",
+      "type": "file",
+      "x": 620,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/Gaussian Opacity Fields — 从高斯提取表面.md",
+      "subpath": "#节点摘要",
+      "color": "#5dace2"
+    },
+    {
+      "id": "ags",
+      "type": "file",
+      "x": 1240,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/AGS-Mesh 与 DN-Splatter — 几何监督重建.md",
+      "subpath": "#节点摘要",
+      "color": "#5dace2"
+    },
+    {
+      "id": "bridges-0",
+      "type": "text",
+      "x": 0,
+      "y": 1120,
+      "width": 560,
+      "height": 640,
+      "text": "### 跨主题关联 1\n\n- [[论文图谱/节点/MASt3R-SLAM — 先验驱动稠密定位建图|MASt3R-SLAM — 先验驱动稠密定位建图]] — **应用** — [[论文图谱/节点/仿真资产与工具 — 从重建到实验环境|仿真资产与工具 — 从重建到实验环境]]：点云到网格与纹理\n\n- [[论文图谱/节点/SuGaR — 表面对齐高斯与网格|SuGaR — 表面对齐高斯与网格]] — **应用** — [[论文图谱/节点/仿真资产与工具 — 从重建到实验环境|仿真资产与工具 — 从重建到实验环境]]：网格导入和物理验收\n\n- [[论文图谱/节点/Gaussian Opacity Fields — 从高斯提取表面|Gaussian Opacity Fields — 从高斯提取表面]] — **应用** — [[论文图谱/节点/仿真资产与工具 — 从重建到实验环境|仿真资产与工具 — 从重建到实验环境]]：几何质量与仿真用途"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e70",
+      "fromNode": "gs",
+      "toNode": "sugar",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "扩展",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e71",
+      "fromNode": "gs",
+      "toNode": "gof",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "扩展",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e72",
+      "fromNode": "sugar",
+      "toNode": "gof",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e73",
+      "fromNode": "gs",
+      "toNode": "hislam",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "应用",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e74",
+      "fromNode": "mast3r",
+      "toNode": "hislam",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e75",
+      "fromNode": "ags",
+      "toNode": "sugar",
+      "fromSide": "left",
+      "toSide": "right",
+      "label": "对比",
+      "toEnd": "none"
+    }
+  ]
+}

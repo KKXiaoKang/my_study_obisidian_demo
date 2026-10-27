@@ -1,0 +1,317 @@
+{
+  "nodes": [
+    {
+      "id": "heading",
+      "type": "text",
+      "x": 0,
+      "y": -370,
+      "width": 1660,
+      "height": 250,
+      "text": "# 04 VLA 后训练与奖励\n\n怎样利用失败、进度和在线经验改进已有策略？\n\n先看监督信号，再看优化接口：样本重加权、优势条件化、噪声空间引导、策略梯度与轻量 actor-critic。\n\n[[论文图谱/主题/04 VLA 后训练与奖励|主题目录与全部原始材料]] · [[论文图谱/00-论文关系总图.canvas|返回总图]]"
+    },
+    {
+      "id": "dppo",
+      "type": "file",
+      "x": 0,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/DPPO — 扩散策略的策略梯度优化.md",
+      "subpath": "#节点摘要",
+      "color": "#e37ca9"
+    },
+    {
+      "id": "dsrl",
+      "type": "file",
+      "x": 620,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/DSRL — 在扩散噪声空间中学习引导.md",
+      "subpath": "#节点摘要",
+      "color": "#e37ca9"
+    },
+    {
+      "id": "reinflow",
+      "type": "file",
+      "x": 1240,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/ReinFlow — Flow Policy 的在线 RL.md",
+      "subpath": "#节点摘要",
+      "color": "#e37ca9"
+    },
+    {
+      "id": "recap",
+      "type": "file",
+      "x": 0,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/RECAP 与 π*0.6 — 从经验和纠正学习.md",
+      "subpath": "#节点摘要",
+      "color": "#e37ca9"
+    },
+    {
+      "id": "conrft",
+      "type": "file",
+      "x": 620,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/ConRFT — 一致性策略的强化微调.md",
+      "subpath": "#节点摘要",
+      "color": "#e37ca9"
+    },
+    {
+      "id": "rlt",
+      "type": "file",
+      "x": 1240,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/RL Token — 轻量强化学习接口.md",
+      "subpath": "#节点摘要",
+      "color": "#e37ca9"
+    },
+    {
+      "id": "sarm",
+      "type": "file",
+      "x": 0,
+      "y": 1040,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/SARM — 阶段感知的进度奖励.md",
+      "subpath": "#节点摘要",
+      "color": "#e37ca9"
+    },
+    {
+      "id": "rabc",
+      "type": "file",
+      "x": 620,
+      "y": 1040,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/RA-BC — 用进度信号重加权示教.md",
+      "subpath": "#节点摘要",
+      "color": "#e37ca9"
+    },
+    {
+      "id": "gvl",
+      "type": "file",
+      "x": 1240,
+      "y": 1040,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/GVL — 用 VLM 估计任务进展.md",
+      "subpath": "#节点摘要",
+      "color": "#e37ca9"
+    },
+    {
+      "id": "simplevla",
+      "type": "file",
+      "x": 0,
+      "y": 1560,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/SimpleVLA-RL — 可扩展的 VLA 强化学习.md",
+      "subpath": "#节点摘要",
+      "color": "#e37ca9"
+    },
+    {
+      "id": "irevla",
+      "type": "file",
+      "x": 620,
+      "y": 1560,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/iRe-VLA — RL 与监督学习交替.md",
+      "subpath": "#节点摘要",
+      "color": "#e37ca9"
+    },
+    {
+      "id": "vlarft",
+      "type": "file",
+      "x": 1240,
+      "y": 1560,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/VLA-RFT — 世界模拟器中的强化微调.md",
+      "subpath": "#节点摘要",
+      "color": "#e37ca9"
+    },
+    {
+      "id": "lifelong",
+      "type": "file",
+      "x": 0,
+      "y": 2080,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/LifeLong-RFT — 持续学习的过程奖励.md",
+      "subpath": "#节点摘要",
+      "color": "#e37ca9"
+    },
+    {
+      "id": "kai0",
+      "type": "file",
+      "x": 620,
+      "y": 2080,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/χ0（kai0）— 阶段优势与训练部署对齐.md",
+      "subpath": "#节点摘要",
+      "color": "#e37ca9"
+    },
+    {
+      "id": "grrl",
+      "type": "file",
+      "x": 1240,
+      "y": 2080,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/GR-RL — 从通用策略到精细专家.md",
+      "subpath": "#节点摘要",
+      "color": "#e37ca9"
+    },
+    {
+      "id": "posttrainpending",
+      "type": "file",
+      "x": 0,
+      "y": 2600,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/RIPT-VLA、HIL-DAFT 与 RLVLA — 扩展阅读.md",
+      "subpath": "#节点摘要",
+      "color": "#e37ca9"
+    },
+    {
+      "id": "bridges-0",
+      "type": "text",
+      "x": 0,
+      "y": 3200,
+      "width": 560,
+      "height": 640,
+      "text": "### 跨主题关联 1\n\n- [[论文图谱/节点/Model-based RL — 模型用于哪里|Model-based RL — 模型用于哪里]] — **应用** — [[论文图谱/节点/VLA-RFT — 世界模拟器中的强化微调|VLA-RFT — 世界模拟器中的强化微调]]：世界模型作为 rollout 环境\n\n- [[论文图谱/节点/Diffusion Policy — 扩散动作策略|Diffusion Policy — 扩散动作策略]] — **扩展** — [[论文图谱/节点/DPPO — 扩散策略的策略梯度优化|DPPO — 扩散策略的策略梯度优化]]：用策略梯度改进扩散策略\n\n- [[论文图谱/节点/PPO — 受约束的策略更新|PPO — 受约束的策略更新]] — **基础** — [[论文图谱/节点/DPPO — 扩散策略的策略梯度优化|DPPO — 扩散策略的策略梯度优化]]：概率比与优势估计\n\n- [[论文图谱/节点/Diffusion Policy — 扩散动作策略|Diffusion Policy — 扩散动作策略]] — **扩展** — [[论文图谱/节点/DSRL — 在扩散噪声空间中学习引导|DSRL — 在扩散噪声空间中学习引导]]：冻结生成器，优化噪声选择\n\n- [[论文图谱/节点/Flow Matching — 条件速度场|Flow Matching — 条件速度场]] — **扩展** — [[论文图谱/节点/ReinFlow — Flow Policy 的在线 RL|ReinFlow — Flow Policy 的在线 RL]]：为 flow 路径引入训练期随机性\n\n- [[论文图谱/节点/π0.5 — 异构协同训练与开放环境泛化|π0.5 — 异构协同训练与开放环境泛化]] — **关联** — [[论文图谱/节点/RECAP 与 π*0.6 — 从经验和纠正学习|RECAP 与 π*0.6 — 从经验和纠正学习]]：VLA 从经验中改进的阅读顺序\n\n- [[论文图谱/节点/HIL-SERL — 人类干预与样本高效 RL|HIL-SERL — 人类干预与样本高效 RL]] — **关联** — [[论文图谱/节点/ConRFT — 一致性策略的强化微调|ConRFT — 一致性策略的强化微调]]：人类干预的在线学习闭环"
+    },
+    {
+      "id": "bridges-7",
+      "type": "text",
+      "x": 620,
+      "y": 3200,
+      "width": 560,
+      "height": 640,
+      "text": "### 跨主题关联 2\n\n- [[论文图谱/节点/SAC — 最大熵 Actor-Critic|SAC — 最大熵 Actor-Critic]] — **基础** — [[论文图谱/节点/RL Token — 轻量强化学习接口|RL Token — 轻量强化学习接口]]：轻量 actor-critic 的价值学习\n\n- [[论文图谱/节点/RECAP 与 π*0.6 — 从经验和纠正学习|RECAP 与 π*0.6 — 从经验和纠正学习]] — **借鉴** — [[论文图谱/节点/GR00T 优势条件化 — 后训练方案|GR00T 优势条件化 — 后训练方案]]：优势标签和推理条件\n\n- [[论文图谱/节点/χ0（kai0）— 阶段优势与训练部署对齐|χ0（kai0）— 阶段优势与训练部署对齐]] — **借鉴** — [[论文图谱/节点/GR00T 优势条件化 — 后训练方案|GR00T 优势条件化 — 后训练方案]]：阶段信号与训练部署对齐\n\n- [[论文图谱/节点/OpenVLA — 开源视觉语言动作模型|OpenVLA — 开源视觉语言动作模型]] — **关联** — [[论文图谱/节点/SimpleVLA-RL — 可扩展的 VLA 强化学习|SimpleVLA-RL — 可扩展的 VLA 强化学习]]：OpenVLA-OFT 为后续变体，核对动作 head\n\n- [[论文图谱/节点/行为克隆 — 策略表示与监督基线|行为克隆 — 策略表示与监督基线]] — **扩展** — [[论文图谱/节点/iRe-VLA — RL 与监督学习交替|iRe-VLA — RL 与监督学习交替]]：将监督阶段与 RL 交替\n\n- [[论文图谱/节点/RECAP 与 π*0.6 — 从经验和纠正学习|RECAP 与 π*0.6 — 从经验和纠正学习]] — **辨析** — [[论文图谱/节点/MEM 与 π0.7 — 长程记忆和可引导性待核对|MEM 与 π0.7 — 长程记忆和可引导性待核对]]：π*0.6 与记忆版本命名分开\n\n- [[论文图谱/节点/rewACT — 动作策略上的奖励辅助头|rewACT — 动作策略上的奖励辅助头]] — **对比** — [[论文图谱/节点/RA-BC — 用进度信号重加权示教|RA-BC — 用进度信号重加权示教]]：辅助预测与样本重加权"
+    },
+    {
+      "id": "bridges-14",
+      "type": "text",
+      "x": 1240,
+      "y": 3200,
+      "width": 560,
+      "height": 640,
+      "text": "### 跨主题关联 3\n\n- [[论文图谱/节点/SARM — 阶段感知的进度奖励|SARM — 阶段感知的进度奖励]] — **对比** — [[论文图谱/节点/rewACT — 动作策略上的奖励辅助头|rewACT — 动作策略上的奖励辅助头]]：独立进度模型与共享 reward head"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e39",
+      "fromNode": "dppo",
+      "toNode": "dsrl",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e41",
+      "fromNode": "dppo",
+      "toNode": "reinflow",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e43",
+      "fromNode": "reinflow",
+      "toNode": "recap",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e49",
+      "fromNode": "sarm",
+      "toNode": "rabc",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "应用",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e50",
+      "fromNode": "gvl",
+      "toNode": "sarm",
+      "fromSide": "left",
+      "toSide": "right",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e51",
+      "fromNode": "rabc",
+      "toNode": "recap",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e52",
+      "fromNode": "sarm",
+      "toNode": "kai0",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e53",
+      "fromNode": "dsrl",
+      "toNode": "grrl",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "关联",
+      "toEnd": "none"
+    },
+    {
+      "id": "e54",
+      "fromNode": "sarm",
+      "toNode": "grrl",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e57",
+      "fromNode": "irevla",
+      "toNode": "lifelong",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e58",
+      "fromNode": "simplevla",
+      "toNode": "posttrainpending",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "关联",
+      "toEnd": "none"
+    }
+  ]
+}

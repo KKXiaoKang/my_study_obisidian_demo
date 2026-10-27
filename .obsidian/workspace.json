@@ -13,12 +13,29 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Robotmanipulation - opt_VA/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
+                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/JEPA-WAM 精读 - latent WAM 四类范式与 motionWAM 的归类.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "※ ACT -  Transformer CVAE动作生成器"
+              "title": "JEPA-WAM 精读 - latent WAM 四类范式与 motionWAM 的归类"
+            }
+          },
+          {
+            "id": "679d5d11f7211fdd",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "论文图谱/00-论文关系总图.canvas",
+                "viewState": {
+                  "x": 1560,
+                  "y": 1650,
+                  "zoom": -1.9545086158412583
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "00-论文关系总图"
             }
           }
         ]
@@ -80,7 +97,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 658.0050315856934
+    "width": 548.0025291442871
   },
   "right": {
     "id": "f68e4ca4c1083328",
@@ -168,7 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 456.6893310546875
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,52 +201,60 @@
   },
   "active": "0a56a47a86bddb15",
   "lastOpenFiles": [
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/GROOT N1.5 action expert改动一览.md",
-    "未命名 1.base",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/未来发展 - pi05 GROOT future 范式下视觉-动作联立建模下的流如何融合?.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/kmpc/MPC + MRT 说明 & 常见QA.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/kmpc/QP问题，ocs2根据reference pose进行线性插值得到一系列input.md",
-    "RobotRL/VLA-RL/路线总览.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi05 - 详细解析joint attn怎么一步+mask实现类似于交叉attn效果.md",
+    "论文图谱/节点/JEPA-WAM — 联合嵌入世界动作模型.md",
+    "论文图谱/节点/VAE 与 CVAE — 潜变量和条件生成.md",
+    "00-论文知识图谱.md",
     "Robotmanipulation - opt_VA/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/JEPA-WAM 补充 - 消融实验清单 与「探针 probe」到底是什么.md",
-    "1.md",
-    "1.txt",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/JEPA-WAM 精读 - latent WAM 四类范式与 motionWAM 的归类.md",
-    "Robotmanipulation - opt_VA/Imitation learning/编码器/VAE - 变分自动编码器.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/VLA need RL, not just SFT.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/pi系列 -RL Token 单独建一个Transformer用于重建VLM的输出嵌入feature，之后RL训练用此模型作为基座，加快RL训练效率.md",
+    "论文图谱/00-论文关系总图.canvas",
+    "论文图谱/_数据/validation-report.json",
+    "论文图谱/_数据/validate.py",
+    "论文图谱/整理说明与待核对.md",
+    "论文图谱/_数据/graph.json",
+    "论文图谱/_数据",
+    "论文图谱/模板/论文节点模板.md",
+    "论文图谱/模板",
+    "论文图谱/全量笔记覆盖清单.md",
+    "论文图谱/分图/08 工程实验与评测.canvas",
+    "论文图谱/分图/07 运动规划与控制.canvas",
+    "论文图谱/分图/06 三维感知与重建.canvas",
+    "论文图谱/分图/05 世界模型与长程能力.canvas",
+    "论文图谱/分图/04 VLA 后训练与奖励.canvas",
+    "论文图谱/分图/03 价值学习与强化学习.canvas",
+    "论文图谱/分图/02 模仿学习与 VLA.canvas",
+    "论文图谱/分图/01 表征与生成基础.canvas",
+    "论文图谱/分图",
+    "论文图谱/节点/视觉灵巧操作 Sim-to-Real — 训练配方.md",
+    "论文图谱/节点/行为克隆 — 策略表示与监督基线.md",
+    "论文图谱/节点/标定与状态估计 — 几何可信度.md",
+    "论文图谱/节点/工具与项目记录 — 环境及任务背景.md",
+    "论文图谱/节点/动作头分解 — 尺度、共享与双臂协调.md",
+    "论文图谱/节点/仿真资产与工具 — 从重建到实验环境.md",
+    "论文图谱/节点/χ0（kai0）— 阶段优势与训练部署对齐.md",
+    "论文图谱/节点/π0.5 — 异构协同训练与开放环境泛化.md",
+    "论文图谱/节点/π0 — 视觉语言动作流模型.md",
+    "论文图谱/节点/rewACT — 动作策略上的奖励辅助头.md",
+    "论文图谱/节点/iRe-VLA — RL 与监督学习交替.md",
+    "论文图谱/节点/cuRobo — GPU 并行运动生成.md",
+    "论文图谱/节点/X-ICM 与 AGNOSTOS — 跨任务泛化.md",
+    "论文图谱/节点/WAM 融合方案 — 从设想到可检验假设.md",
+    "论文图谱/节点/ViTAL — 视觉与触觉残差学习.md",
+    "论文图谱/节点/VR Retarget — 人体到机器人目标映射.md",
+    "论文图谱/节点/VLA-RFT — 世界模拟器中的强化微调.md",
+    "论文图谱/节点/VIMA — 多模态提示操控.md",
+    "论文图谱/节点",
+    "论文图谱/主题",
+    "论文图谱",
+    "未命名 1.base",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG/JEPA-WAM-figure2-latent-wam-paradigms.png",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/JEPA-WAM- Learning Vision-Language-Action Policies with Joint-Embedding World Modeling.pdf",
-    "Robotmanipulation - opt_VA/YouKnow3M/VA & CVAE/CVAE & VAE 关于半月图之争.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/VA & CVAE/latent space dim的思考.md",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG/Pasted image 20260529155722.png",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG/Exploring the Limits of Vision-Language-Action.pdf",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/Exploring the Limits of Vision-Language-ActionManipulation in Cross-task Generalization.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/公式探索/贝尔曼方程 - Bellman Optimality Equation.md",
-    "未命名.base",
-    "Robotmanipulation - opt_VA/YouKnow3M/VA & CVAE",
-    "conflict-files-obsidian-git.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/Reward设计 - ppo vs SAC 说明.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/Reward设计 - 计算对比说明.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/model-free RL 和 model-base RL.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/Deep RL Critic 谱系总览表.md",
-    "RobotRL/SAC/SAC - train and learn.md",
-    "Robotmanipulation - opt_VA/Imitation learning/传统BC方法一览.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/Octo vs pi05.md",
-    "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG/RL Token Bootstrapping Online RL with.pdf",
     "Robotmanipulation - opt_VA/YouKnow3M/VLA/IMG/Pasted image 20260514143034.png",
-    "Robotmanipulation - opt_VA/YouKnow3M/Benchmark",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/IMG/Pasted image 20260511113828.png",
     "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/IMG/Pasted image 20260511104609.png",
-    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/IMG",
-    "Robotmanipulation - opt_VA/YouKnow3M/Hil-Serl & SAC/公式探索",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/IMG/Pasted image 20260507164023.png",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/IMG/Pasted image 20260507163414.png",
     "Robotmanipulation - opt_VA/YouKnow3M/cumotion & Gendexgrasp/IMG/Pasted image 20260506201538.png",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/IMG/Pasted image 20260506183049.png",
     "Robotmanipulation - opt_VA/YouKnow3M/kmpc/IMG/Pasted image 20260506183040.png",
-    "Robot工具/未命名.canvas",
-    "未命名.canvas"
+    "Robot工具/未命名.canvas"
   ]
 }

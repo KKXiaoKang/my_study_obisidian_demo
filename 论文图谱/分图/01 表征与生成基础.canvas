@@ -1,0 +1,87 @@
+{
+  "nodes": [
+    {
+      "id": "heading",
+      "type": "text",
+      "x": 0,
+      "y": -370,
+      "width": 1660,
+      "height": 250,
+      "text": "# 01 表征与生成基础\n\n输入如何变成可学习的表征，动作分布怎样生成？\n\n先理解条件、潜变量和训练目标，再读具体策略；区分模型输出、损失函数和采样过程。\n\n[[论文图谱/主题/01 表征与生成基础|主题目录与全部原始材料]] · [[论文图谱/00-论文关系总图.canvas|返回总图]]"
+    },
+    {
+      "id": "transformer",
+      "type": "file",
+      "x": 0,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/Transformer — 注意力与信息通路.md",
+      "subpath": "#节点摘要",
+      "color": "#7c83fd"
+    },
+    {
+      "id": "vae",
+      "type": "file",
+      "x": 620,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/VAE 与 CVAE — 潜变量和条件生成.md",
+      "subpath": "#节点摘要",
+      "color": "#7c83fd"
+    },
+    {
+      "id": "flow",
+      "type": "file",
+      "x": 1240,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/Flow Matching — 条件速度场.md",
+      "subpath": "#节点摘要",
+      "color": "#7c83fd"
+    },
+    {
+      "id": "rotation",
+      "type": "file",
+      "x": 0,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/Rotation 6D — 连续旋转表示.md",
+      "subpath": "#节点摘要",
+      "color": "#7c83fd"
+    },
+    {
+      "id": "uncertainty",
+      "type": "file",
+      "x": 620,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/Uncertainty Weighting — 多任务损失加权.md",
+      "subpath": "#节点摘要",
+      "color": "#7c83fd"
+    },
+    {
+      "id": "bridges-0",
+      "type": "text",
+      "x": 0,
+      "y": 1120,
+      "width": 560,
+      "height": 640,
+      "text": "### 跨主题关联 1\n\n- [[论文图谱/节点/Transformer — 注意力与信息通路|Transformer — 注意力与信息通路]] — **基础** — [[论文图谱/节点/ACT — 动作块模仿学习|ACT — 动作块模仿学习]]：动作块模型使用注意力结构\n\n- [[论文图谱/节点/VAE 与 CVAE — 潜变量和条件生成|VAE 与 CVAE — 潜变量和条件生成]] — **基础** — [[论文图谱/节点/ACT — 动作块模仿学习|ACT — 动作块模仿学习]]：CVAE 潜变量与重构正则\n\n- [[论文图谱/节点/VAE 与 CVAE — 潜变量和条件生成|VAE 与 CVAE — 潜变量和条件生成]] — **基础** — [[论文图谱/节点/GenDexGrasp — 接触图驱动灵巧抓取|GenDexGrasp — 接触图驱动灵巧抓取]]：条件接触图生成\n\n- [[论文图谱/节点/Transformer — 注意力与信息通路|Transformer — 注意力与信息通路]] — **基础** — [[论文图谱/节点/π0.5 — 异构协同训练与开放环境泛化|π0.5 — 异构协同训练与开放环境泛化]]：用 QKV 与 mask 理解通路\n\n- [[论文图谱/节点/Flow Matching — 条件速度场|Flow Matching — 条件速度场]] — **基础** — [[论文图谱/节点/π0 — 视觉语言动作流模型|π0 — 视觉语言动作流模型]]：连续动作的向量场生成\n\n- [[论文图谱/节点/Flow Matching — 条件速度场|Flow Matching — 条件速度场]] — **基础** — [[论文图谱/节点/GR00T N1 与 N1.5 — 通用模型及实现分支|GR00T N1 与 N1.5 — 通用模型及实现分支]]：理解笔记中的 flow action head\n\n- [[论文图谱/节点/Rotation 6D — 连续旋转表示|Rotation 6D — 连续旋转表示]] — **应用** — [[论文图谱/节点/动作头分解 — 尺度、共享与双臂协调|动作头分解 — 尺度、共享与双臂协调]]：旋转表示影响动作头与损失"
+    },
+    {
+      "id": "bridges-7",
+      "type": "text",
+      "x": 620,
+      "y": 1120,
+      "width": 560,
+      "height": 640,
+      "text": "### 跨主题关联 2\n\n- [[论文图谱/节点/Uncertainty Weighting — 多任务损失加权|Uncertainty Weighting — 多任务损失加权]] — **应用** — [[论文图谱/节点/动作头分解 — 尺度、共享与双臂协调|动作头分解 — 尺度、共享与双臂协调]]：不同动作任务的尺度加权\n\n- [[论文图谱/节点/Diffusion Policy — 扩散动作策略|Diffusion Policy — 扩散动作策略]] — **对比** — [[论文图谱/节点/Flow Matching — 条件速度场|Flow Matching — 条件速度场]]：路径、目标与采样器\n\n- [[论文图谱/节点/Flow Matching — 条件速度场|Flow Matching — 条件速度场]] — **扩展** — [[论文图谱/节点/ReinFlow — Flow Policy 的在线 RL|ReinFlow — Flow Policy 的在线 RL]]：为 flow 路径引入训练期随机性\n\n- [[论文图谱/节点/Flow Matching — 条件速度场|Flow Matching — 条件速度场]] — **基础** — [[论文图谱/节点/DiT4DiT — 视频与动作的级联建模|DiT4DiT — 视频与动作的级联建模]]：视频与动作双 flow 目标\n\n- [[论文图谱/节点/Flow Matching — 条件速度场|Flow Matching — 条件速度场]] — **对比** — [[论文图谱/节点/JiT 与 Drifting — 生成参数化阅读线索|JiT 与 Drifting — 生成参数化阅读线索]]：输出参数化与损失参数化\n\n- [[论文图谱/节点/Rotation 6D — 连续旋转表示|Rotation 6D — 连续旋转表示]] — **基础** — [[论文图谱/节点/VR Retarget — 人体到机器人目标映射|VR Retarget — 人体到机器人目标映射]]：坐标与姿态表示一致性\n\n- [[论文图谱/节点/Uncertainty Weighting — 多任务损失加权|Uncertainty Weighting — 多任务损失加权]] — **辨析** — [[论文图谱/节点/OOD Trigger — 不确定性与恢复行为|OOD Trigger — 不确定性与恢复行为]]：任务级尺度与样本级置信度不同"
+    }
+  ],
+  "edges": []
+}

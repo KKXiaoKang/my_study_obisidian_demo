@@ -1,0 +1,135 @@
+{
+  "nodes": [
+    {
+      "id": "heading",
+      "type": "text",
+      "x": 0,
+      "y": -370,
+      "width": 1660,
+      "height": 250,
+      "text": "# 05 世界模型与长程能力\n\n预测什么未来，怎样帮助动作，部署时需要什么？\n\n按预测目标、动作耦合方式、梯度路径和推理成本四轴比较；记忆、世界模型和规划不是同一概念。\n\n[[论文图谱/主题/05 世界模型与长程能力|主题目录与全部原始材料]] · [[论文图谱/00-论文关系总图.canvas|返回总图]]"
+    },
+    {
+      "id": "jepawam",
+      "type": "file",
+      "x": 0,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/JEPA-WAM — 联合嵌入世界动作模型.md",
+      "subpath": "#节点摘要",
+      "color": "#a88ee5"
+    },
+    {
+      "id": "dit4dit",
+      "type": "file",
+      "x": 620,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/DiT4DiT — 视频与动作的级联建模.md",
+      "subpath": "#节点摘要",
+      "color": "#a88ee5"
+    },
+    {
+      "id": "latent",
+      "type": "file",
+      "x": 1240,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/Latent 容量与探针 — 怎样评价表征.md",
+      "subpath": "#节点摘要",
+      "color": "#a88ee5"
+    },
+    {
+      "id": "wamproposal",
+      "type": "file",
+      "x": 0,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/WAM 融合方案 — 从设想到可检验假设.md",
+      "subpath": "#节点摘要",
+      "color": "#a88ee5"
+    },
+    {
+      "id": "memory",
+      "type": "file",
+      "x": 620,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/MEM 与 π0.7 — 长程记忆和可引导性待核对.md",
+      "subpath": "#节点摘要",
+      "color": "#a88ee5"
+    },
+    {
+      "id": "jit",
+      "type": "file",
+      "x": 1240,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/JiT 与 Drifting — 生成参数化阅读线索.md",
+      "subpath": "#节点摘要",
+      "color": "#a88ee5"
+    },
+    {
+      "id": "bridges-0",
+      "type": "text",
+      "x": 0,
+      "y": 1120,
+      "width": 560,
+      "height": 640,
+      "text": "### 跨主题关联 1\n\n- [[论文图谱/节点/Flow Matching — 条件速度场|Flow Matching — 条件速度场]] — **基础** — [[论文图谱/节点/DiT4DiT — 视频与动作的级联建模|DiT4DiT — 视频与动作的级联建模]]：视频与动作双 flow 目标\n\n- [[论文图谱/节点/π0.5 — 异构协同训练与开放环境泛化|π0.5 — 异构协同训练与开放环境泛化]] — **扩展** — [[论文图谱/节点/JEPA-WAM — 联合嵌入世界动作模型|JEPA-WAM — 联合嵌入世界动作模型]]：预测性辅助监督的迁移实例\n\n- [[论文图谱/节点/Flow Matching — 条件速度场|Flow Matching — 条件速度场]] — **对比** — [[论文图谱/节点/JiT 与 Drifting — 生成参数化阅读线索|JiT 与 Drifting — 生成参数化阅读线索]]：输出参数化与损失参数化\n\n- [[论文图谱/节点/GR00T N1 与 N1.5 — 通用模型及实现分支|GR00T N1 与 N1.5 — 通用模型及实现分支]] — **方案** — [[论文图谱/节点/WAM 融合方案 — 从设想到可检验假设|WAM 融合方案 — 从设想到可检验假设]]：动作专家与多视觉流融合\n\n- [[论文图谱/节点/π0.5 — 异构协同训练与开放环境泛化|π0.5 — 异构协同训练与开放环境泛化]] — **关联** — [[论文图谱/节点/MEM 与 π0.7 — 长程记忆和可引导性待核对|MEM 与 π0.7 — 长程记忆和可引导性待核对]]：高层子任务与长程能力的分解\n\n- [[论文图谱/节点/RECAP 与 π*0.6 — 从经验和纠正学习|RECAP 与 π*0.6 — 从经验和纠正学习]] — **辨析** — [[论文图谱/节点/MEM 与 π0.7 — 长程记忆和可引导性待核对|MEM 与 π0.7 — 长程记忆和可引导性待核对]]：π*0.6 与记忆版本命名分开\n\n- [[论文图谱/节点/Benchmark 与消融 — 让比较可解释|Benchmark 与消融 — 让比较可解释]] — **评测** — [[论文图谱/节点/JEPA-WAM — 联合嵌入世界动作模型|JEPA-WAM — 联合嵌入世界动作模型]]：同训练预算比较消融和泛化"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e60",
+      "fromNode": "dit4dit",
+      "toNode": "jepawam",
+      "fromSide": "left",
+      "toSide": "right",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e62",
+      "fromNode": "latent",
+      "toNode": "jepawam",
+      "fromSide": "left",
+      "toSide": "right",
+      "label": "评测",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e63",
+      "fromNode": "latent",
+      "toNode": "dit4dit",
+      "fromSide": "left",
+      "toSide": "right",
+      "label": "评测",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e65",
+      "fromNode": "jepawam",
+      "toNode": "wamproposal",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "借鉴",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e68",
+      "fromNode": "memory",
+      "toNode": "wamproposal",
+      "fromSide": "left",
+      "toSide": "right",
+      "label": "方案",
+      "toEnd": "arrow"
+    }
+  ]
+}

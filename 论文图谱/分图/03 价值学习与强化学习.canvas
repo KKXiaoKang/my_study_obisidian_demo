@@ -1,0 +1,282 @@
+{
+  "nodes": [
+    {
+      "id": "heading",
+      "type": "text",
+      "x": 0,
+      "y": -370,
+      "width": 1660,
+      "height": 250,
+      "text": "# 03 价值学习与强化学习\n\n如何从交互回报学习，并把决策扩展到动作块？\n\nMDP → Bellman → DQN／SAC／PPO → 动作块与人类干预；公式、工程改造和实验结果分开读。\n\n[[论文图谱/主题/03 价值学习与强化学习|主题目录与全部原始材料]] · [[论文图谱/00-论文关系总图.canvas|返回总图]]"
+    },
+    {
+      "id": "mdp",
+      "type": "file",
+      "x": 0,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/MDP 与 SMDP — 状态、回报与时间尺度.md",
+      "subpath": "#节点摘要",
+      "color": "#e4ad53"
+    },
+    {
+      "id": "bellman",
+      "type": "file",
+      "x": 620,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/Bellman 与 DQN — 价值估计基础.md",
+      "subpath": "#节点摘要",
+      "color": "#e4ad53"
+    },
+    {
+      "id": "sac",
+      "type": "file",
+      "x": 1240,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/SAC — 最大熵 Actor-Critic.md",
+      "subpath": "#节点摘要",
+      "color": "#e4ad53"
+    },
+    {
+      "id": "ppo",
+      "type": "file",
+      "x": 0,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/PPO — 受约束的策略更新.md",
+      "subpath": "#节点摘要",
+      "color": "#e4ad53"
+    },
+    {
+      "id": "critic",
+      "type": "file",
+      "x": 620,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/Critic 谱系 — DQN 到连续控制.md",
+      "subpath": "#节点摘要",
+      "color": "#e4ad53"
+    },
+    {
+      "id": "modelbased",
+      "type": "file",
+      "x": 1240,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/Model-based RL — 模型用于哪里.md",
+      "subpath": "#节点摘要",
+      "color": "#e4ad53"
+    },
+    {
+      "id": "qchunk",
+      "type": "file",
+      "x": 0,
+      "y": 1040,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/Q-chunking — 动作块空间中的 RL.md",
+      "subpath": "#节点摘要",
+      "color": "#e4ad53"
+    },
+    {
+      "id": "hilserl",
+      "type": "file",
+      "x": 620,
+      "y": 1040,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/HIL-SERL — 人类干预与样本高效 RL.md",
+      "subpath": "#节点摘要",
+      "color": "#e4ad53"
+    },
+    {
+      "id": "rewarddiag",
+      "type": "file",
+      "x": 1240,
+      "y": 1040,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/SAC 奖励诊断 — 假设与修正.md",
+      "subpath": "#节点摘要",
+      "color": "#e4ad53"
+    },
+    {
+      "id": "vital",
+      "type": "file",
+      "x": 0,
+      "y": 1560,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/ViTAL — 视觉与触觉残差学习.md",
+      "subpath": "#节点摘要",
+      "color": "#e4ad53"
+    },
+    {
+      "id": "sim2real",
+      "type": "file",
+      "x": 620,
+      "y": 1560,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/视觉灵巧操作 Sim-to-Real — 训练配方.md",
+      "subpath": "#节点摘要",
+      "color": "#e4ad53"
+    },
+    {
+      "id": "bfm",
+      "type": "file",
+      "x": 1240,
+      "y": 1560,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/BFM-Zero 与 FB-CPR — 待拆分阅读入口.md",
+      "subpath": "#节点摘要",
+      "color": "#e4ad53"
+    },
+    {
+      "id": "bridges-0",
+      "type": "text",
+      "x": 0,
+      "y": 2160,
+      "width": 560,
+      "height": 640,
+      "text": "### 跨主题关联 1\n\n- [[论文图谱/节点/ACT — 动作块模仿学习|ACT — 动作块模仿学习]] — **关联** — [[论文图谱/节点/Q-chunking — 动作块空间中的 RL|Q-chunking — 动作块空间中的 RL]]：共享动作块思想，训练目标不同\n\n- [[论文图谱/节点/Model-based RL — 模型用于哪里|Model-based RL — 模型用于哪里]] — **应用** — [[论文图谱/节点/VLA-RFT — 世界模拟器中的强化微调|VLA-RFT — 世界模拟器中的强化微调]]：世界模型作为 rollout 环境\n\n- [[论文图谱/节点/PPO — 受约束的策略更新|PPO — 受约束的策略更新]] — **基础** — [[论文图谱/节点/DPPO — 扩散策略的策略梯度优化|DPPO — 扩散策略的策略梯度优化]]：概率比与优势估计\n\n- [[论文图谱/节点/HIL-SERL — 人类干预与样本高效 RL|HIL-SERL — 人类干预与样本高效 RL]] — **关联** — [[论文图谱/节点/ConRFT — 一致性策略的强化微调|ConRFT — 一致性策略的强化微调]]：人类干预的在线学习闭环\n\n- [[论文图谱/节点/SAC — 最大熵 Actor-Critic|SAC — 最大熵 Actor-Critic]] — **基础** — [[论文图谱/节点/RL Token — 轻量强化学习接口|RL Token — 轻量强化学习接口]]：轻量 actor-critic 的价值学习\n\n- [[论文图谱/节点/LeRobot 与 RL 工程链路|LeRobot 与 RL 工程链路]] — **工程** — [[论文图谱/节点/HIL-SERL — 人类干预与样本高效 RL|HIL-SERL — 人类干预与样本高效 RL]]：采样、回放与 actor-learner\n\n- [[论文图谱/节点/仿真资产与工具 — 从重建到实验环境|仿真资产与工具 — 从重建到实验环境]] — **工程** — [[论文图谱/节点/视觉灵巧操作 Sim-to-Real — 训练配方|视觉灵巧操作 Sim-to-Real — 训练配方]]：仿真与现实输入匹配"
+    },
+    {
+      "id": "bridges-7",
+      "type": "text",
+      "x": 620,
+      "y": 2160,
+      "width": 560,
+      "height": 640,
+      "text": "### 跨主题关联 2\n\n- [[论文图谱/节点/标定与状态估计 — 几何可信度|标定与状态估计 — 几何可信度]] — **基础** — [[论文图谱/节点/视觉灵巧操作 Sim-to-Real — 训练配方|视觉灵巧操作 Sim-to-Real — 训练配方]]：几何和相机误差影响迁移"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e24",
+      "fromNode": "mdp",
+      "toNode": "bellman",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "基础",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e25",
+      "fromNode": "bellman",
+      "toNode": "critic",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "扩展",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e26",
+      "fromNode": "critic",
+      "toNode": "sac",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "label": "基础",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e27",
+      "fromNode": "sac",
+      "toNode": "ppo",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e28",
+      "fromNode": "mdp",
+      "toNode": "qchunk",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "基础",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e30",
+      "fromNode": "sac",
+      "toNode": "qchunk",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e31",
+      "fromNode": "sac",
+      "toNode": "hilserl",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "应用",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e32",
+      "fromNode": "sac",
+      "toNode": "rewarddiag",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "诊断",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e33",
+      "fromNode": "ppo",
+      "toNode": "rewarddiag",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e34",
+      "fromNode": "bellman",
+      "toNode": "modelbased",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "基础",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e104",
+      "fromNode": "vital",
+      "toNode": "sim2real",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e105",
+      "fromNode": "vital",
+      "toNode": "hilserl",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "label": "关联",
+      "toEnd": "none"
+    },
+    {
+      "id": "e106",
+      "fromNode": "bfm",
+      "toNode": "modelbased",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "label": "辨析",
+      "toEnd": "none"
+    }
+  ]
+}

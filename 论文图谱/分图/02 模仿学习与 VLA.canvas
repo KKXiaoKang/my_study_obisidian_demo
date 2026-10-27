@@ -1,0 +1,331 @@
+{
+  "nodes": [
+    {
+      "id": "heading",
+      "type": "text",
+      "x": 0,
+      "y": -370,
+      "width": 1660,
+      "height": 250,
+      "text": "# 02 模仿学习与 VLA\n\n如何从示教、图像与语言生成机器人动作？\n\n按动作表示比较 ACT、Diffusion Policy、离散 token VLA 和连续流模型；不要只按模型规模排列。\n\n[[论文图谱/主题/02 模仿学习与 VLA|主题目录与全部原始材料]] · [[论文图谱/00-论文关系总图.canvas|返回总图]]"
+    },
+    {
+      "id": "bc",
+      "type": "file",
+      "x": 0,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/行为克隆 — 策略表示与监督基线.md",
+      "subpath": "#节点摘要",
+      "color": "#32b8a5"
+    },
+    {
+      "id": "act",
+      "type": "file",
+      "x": 620,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/ACT — 动作块模仿学习.md",
+      "subpath": "#节点摘要",
+      "color": "#32b8a5"
+    },
+    {
+      "id": "dp",
+      "type": "file",
+      "x": 1240,
+      "y": 0,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/Diffusion Policy — 扩散动作策略.md",
+      "subpath": "#节点摘要",
+      "color": "#32b8a5"
+    },
+    {
+      "id": "gendp",
+      "type": "file",
+      "x": 0,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/GenDP — 三维语义场与扩散策略.md",
+      "subpath": "#节点摘要",
+      "color": "#32b8a5"
+    },
+    {
+      "id": "openvla",
+      "type": "file",
+      "x": 620,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/OpenVLA — 开源视觉语言动作模型.md",
+      "subpath": "#节点摘要",
+      "color": "#32b8a5"
+    },
+    {
+      "id": "rt2",
+      "type": "file",
+      "x": 1240,
+      "y": 520,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/RT-2 — 把动作纳入语言模型输出.md",
+      "subpath": "#节点摘要",
+      "color": "#32b8a5"
+    },
+    {
+      "id": "vima",
+      "type": "file",
+      "x": 0,
+      "y": 1040,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/VIMA — 多模态提示操控.md",
+      "subpath": "#节点摘要",
+      "color": "#32b8a5"
+    },
+    {
+      "id": "octo",
+      "type": "file",
+      "x": 620,
+      "y": 1040,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/Octo — 可适配的通用机器人策略.md",
+      "subpath": "#节点摘要",
+      "color": "#32b8a5"
+    },
+    {
+      "id": "pi0",
+      "type": "file",
+      "x": 1240,
+      "y": 1040,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/π0 — 视觉语言动作流模型.md",
+      "subpath": "#节点摘要",
+      "color": "#32b8a5"
+    },
+    {
+      "id": "pi05",
+      "type": "file",
+      "x": 0,
+      "y": 1560,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/π0.5 — 异构协同训练与开放环境泛化.md",
+      "subpath": "#节点摘要",
+      "color": "#32b8a5"
+    },
+    {
+      "id": "groot",
+      "type": "file",
+      "x": 620,
+      "y": 1560,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/GR00T N1 与 N1.5 — 通用模型及实现分支.md",
+      "subpath": "#节点摘要",
+      "color": "#32b8a5"
+    },
+    {
+      "id": "alpamayo",
+      "type": "file",
+      "x": 1240,
+      "y": 1560,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/Alpamayo-R1 — 推理与动作预测.md",
+      "subpath": "#节点摘要",
+      "color": "#32b8a5"
+    },
+    {
+      "id": "humantransfer",
+      "type": "file",
+      "x": 0,
+      "y": 2080,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/Human-to-Robot Transfer — 人类示教迁移.md",
+      "subpath": "#节点摘要",
+      "color": "#32b8a5"
+    },
+    {
+      "id": "xicm",
+      "type": "file",
+      "x": 620,
+      "y": 2080,
+      "width": 470,
+      "height": 370,
+      "file": "论文图谱/节点/X-ICM 与 AGNOSTOS — 跨任务泛化.md",
+      "subpath": "#节点摘要",
+      "color": "#32b8a5"
+    },
+    {
+      "id": "bridges-0",
+      "type": "text",
+      "x": 0,
+      "y": 2680,
+      "width": 560,
+      "height": 640,
+      "text": "### 跨主题关联 1\n\n- [[论文图谱/节点/Transformer — 注意力与信息通路|Transformer — 注意力与信息通路]] — **基础** — [[论文图谱/节点/ACT — 动作块模仿学习|ACT — 动作块模仿学习]]：动作块模型使用注意力结构\n\n- [[论文图谱/节点/VAE 与 CVAE — 潜变量和条件生成|VAE 与 CVAE — 潜变量和条件生成]] — **基础** — [[论文图谱/节点/ACT — 动作块模仿学习|ACT — 动作块模仿学习]]：CVAE 潜变量与重构正则\n\n- [[论文图谱/节点/Transformer — 注意力与信息通路|Transformer — 注意力与信息通路]] — **基础** — [[论文图谱/节点/π0.5 — 异构协同训练与开放环境泛化|π0.5 — 异构协同训练与开放环境泛化]]：用 QKV 与 mask 理解通路\n\n- [[论文图谱/节点/Flow Matching — 条件速度场|Flow Matching — 条件速度场]] — **基础** — [[论文图谱/节点/π0 — 视觉语言动作流模型|π0 — 视觉语言动作流模型]]：连续动作的向量场生成\n\n- [[论文图谱/节点/Flow Matching — 条件速度场|Flow Matching — 条件速度场]] — **基础** — [[论文图谱/节点/GR00T N1 与 N1.5 — 通用模型及实现分支|GR00T N1 与 N1.5 — 通用模型及实现分支]]：理解笔记中的 flow action head\n\n- [[论文图谱/节点/Diffusion Policy — 扩散动作策略|Diffusion Policy — 扩散动作策略]] — **对比** — [[论文图谱/节点/Flow Matching — 条件速度场|Flow Matching — 条件速度场]]：路径、目标与采样器\n\n- [[论文图谱/节点/ACT — 动作块模仿学习|ACT — 动作块模仿学习]] — **关联** — [[论文图谱/节点/Q-chunking — 动作块空间中的 RL|Q-chunking — 动作块空间中的 RL]]：共享动作块思想，训练目标不同"
+    },
+    {
+      "id": "bridges-7",
+      "type": "text",
+      "x": 620,
+      "y": 2680,
+      "width": 560,
+      "height": 640,
+      "text": "### 跨主题关联 2\n\n- [[论文图谱/节点/Diffusion Policy — 扩散动作策略|Diffusion Policy — 扩散动作策略]] — **扩展** — [[论文图谱/节点/DPPO — 扩散策略的策略梯度优化|DPPO — 扩散策略的策略梯度优化]]：用策略梯度改进扩散策略\n\n- [[论文图谱/节点/Diffusion Policy — 扩散动作策略|Diffusion Policy — 扩散动作策略]] — **扩展** — [[论文图谱/节点/DSRL — 在扩散噪声空间中学习引导|DSRL — 在扩散噪声空间中学习引导]]：冻结生成器，优化噪声选择\n\n- [[论文图谱/节点/π0.5 — 异构协同训练与开放环境泛化|π0.5 — 异构协同训练与开放环境泛化]] — **关联** — [[论文图谱/节点/RECAP 与 π*0.6 — 从经验和纠正学习|RECAP 与 π*0.6 — 从经验和纠正学习]]：VLA 从经验中改进的阅读顺序\n\n- [[论文图谱/节点/GR00T N1 与 N1.5 — 通用模型及实现分支|GR00T N1 与 N1.5 — 通用模型及实现分支]] — **方案** — [[论文图谱/节点/GR00T 优势条件化 — 后训练方案|GR00T 优势条件化 — 后训练方案]]：向本地 flow head 注入优势条件\n\n- [[论文图谱/节点/OpenVLA — 开源视觉语言动作模型|OpenVLA — 开源视觉语言动作模型]] — **关联** — [[论文图谱/节点/SimpleVLA-RL — 可扩展的 VLA 强化学习|SimpleVLA-RL — 可扩展的 VLA 强化学习]]：OpenVLA-OFT 为后续变体，核对动作 head\n\n- [[论文图谱/节点/行为克隆 — 策略表示与监督基线|行为克隆 — 策略表示与监督基线]] — **扩展** — [[论文图谱/节点/iRe-VLA — RL 与监督学习交替|iRe-VLA — RL 与监督学习交替]]：将监督阶段与 RL 交替\n\n- [[论文图谱/节点/π0.5 — 异构协同训练与开放环境泛化|π0.5 — 异构协同训练与开放环境泛化]] — **扩展** — [[论文图谱/节点/JEPA-WAM — 联合嵌入世界动作模型|JEPA-WAM — 联合嵌入世界动作模型]]：预测性辅助监督的迁移实例"
+    },
+    {
+      "id": "bridges-14",
+      "type": "text",
+      "x": 1240,
+      "y": 2680,
+      "width": 560,
+      "height": 640,
+      "text": "### 跨主题关联 3\n\n- [[论文图谱/节点/GR00T N1 与 N1.5 — 通用模型及实现分支|GR00T N1 与 N1.5 — 通用模型及实现分支]] — **方案** — [[论文图谱/节点/WAM 融合方案 — 从设想到可检验假设|WAM 融合方案 — 从设想到可检验假设]]：动作专家与多视觉流融合\n\n- [[论文图谱/节点/π0.5 — 异构协同训练与开放环境泛化|π0.5 — 异构协同训练与开放环境泛化]] — **关联** — [[论文图谱/节点/MEM 与 π0.7 — 长程记忆和可引导性待核对|MEM 与 π0.7 — 长程记忆和可引导性待核对]]：高层子任务与长程能力的分解\n\n- [[论文图谱/节点/ACT — 动作块模仿学习|ACT — 动作块模仿学习]] — **方案** — [[论文图谱/节点/Deep Reactive Policy — 全局意图与局部避障|Deep Reactive Policy — 全局意图与局部避障]]：学习的全局意图与局部反应接口\n\n- [[论文图谱/节点/GR00T N1 与 N1.5 — 通用模型及实现分支|GR00T N1 与 N1.5 — 通用模型及实现分支]] — **方案** — [[论文图谱/节点/动作头分解 — 尺度、共享与双臂协调|动作头分解 — 尺度、共享与双臂协调]]：按动作语义拆解输出头\n\n- [[论文图谱/节点/LeRobot 与 RL 工程链路|LeRobot 与 RL 工程链路]] — **工程** — [[论文图谱/节点/ACT — 动作块模仿学习|ACT — 动作块模仿学习]]：数据归一化与动作接口\n\n- [[论文图谱/节点/ACT — 动作块模仿学习|ACT — 动作块模仿学习]] — **扩展** — [[论文图谱/节点/rewACT — 动作策略上的奖励辅助头|rewACT — 动作策略上的奖励辅助头]]：本地奖励辅助头实验"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e8",
+      "fromNode": "bc",
+      "toNode": "act",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "实例",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e9",
+      "fromNode": "bc",
+      "toNode": "dp",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "实例",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e10",
+      "fromNode": "bc",
+      "toNode": "openvla",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "实例",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e11",
+      "fromNode": "act",
+      "toNode": "dp",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e13",
+      "fromNode": "dp",
+      "toNode": "gendp",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "扩展",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e14",
+      "fromNode": "rt2",
+      "toNode": "vima",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e15",
+      "fromNode": "rt2",
+      "toNode": "openvla",
+      "fromSide": "left",
+      "toSide": "right",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e16",
+      "fromNode": "openvla",
+      "toNode": "pi0",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e17",
+      "fromNode": "octo",
+      "toNode": "pi05",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e18",
+      "fromNode": "pi0",
+      "toNode": "pi05",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "扩展",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "e19",
+      "fromNode": "pi05",
+      "toNode": "groot",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e20",
+      "fromNode": "pi05",
+      "toNode": "humantransfer",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "关联",
+      "toEnd": "none"
+    },
+    {
+      "id": "e21",
+      "fromNode": "vima",
+      "toNode": "xicm",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e22",
+      "fromNode": "humantransfer",
+      "toNode": "xicm",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "对比",
+      "toEnd": "none"
+    },
+    {
+      "id": "e23",
+      "fromNode": "alpamayo",
+      "toNode": "pi05",
+      "fromSide": "left",
+      "toSide": "right",
+      "label": "类比",
+      "toEnd": "none"
+    }
+  ]
+}
