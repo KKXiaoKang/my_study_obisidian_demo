@@ -4,38 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "93ab91c5093c231b",
+        "id": "54ca1d6896d1e5ea",
         "type": "tabs",
         "children": [
           {
-            "id": "0a56a47a86bddb15",
+            "id": "50048a6f948744a5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Robotmanipulation - opt_VA/YouKnow3M/VLA/JEPA-WAM 精读 - latent WAM 四类范式与 motionWAM 的归类.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "JEPA-WAM 精读 - latent WAM 四类范式与 motionWAM 的归类"
-            }
-          },
-          {
-            "id": "679d5d11f7211fdd",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "论文图谱/00-论文关系总图.canvas",
-                "viewState": {
-                  "x": 1560,
-                  "y": 1650,
-                  "zoom": -1.9545086158412583
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "00-论文关系总图"
+              "title": "新标签页"
             }
           }
         ]
@@ -199,13 +178,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0a56a47a86bddb15",
+  "active": "50048a6f948744a5",
   "lastOpenFiles": [
+    "Robotmanipulation - opt_VA/YouKnow3M/VLA/JEPA-WAM 精读 - latent WAM 四类范式与 motionWAM 的归类.md",
+    "论文图谱/00-论文关系总图.canvas",
     "论文图谱/节点/JEPA-WAM — 联合嵌入世界动作模型.md",
     "论文图谱/节点/VAE 与 CVAE — 潜变量和条件生成.md",
     "00-论文知识图谱.md",
     "Robotmanipulation - opt_VA/Imitation learning/※ ACT -  Transformer CVAE动作生成器.md",
-    "论文图谱/00-论文关系总图.canvas",
     "论文图谱/_数据/validation-report.json",
     "论文图谱/_数据/validate.py",
     "论文图谱/整理说明与待核对.md",
@@ -240,7 +220,6 @@
     "论文图谱/节点/ViTAL — 视觉与触觉残差学习.md",
     "论文图谱/节点/VR Retarget — 人体到机器人目标映射.md",
     "论文图谱/节点/VLA-RFT — 世界模拟器中的强化微调.md",
-    "论文图谱/节点/VIMA — 多模态提示操控.md",
     "论文图谱/节点",
     "论文图谱/主题",
     "论文图谱",
